@@ -1,57 +1,39 @@
 /* =====================================================
    FACETRA COLLECTION SYSTEM CSS
-   Used by:
+   Works with:
    - /collection.html (Category Hub)
-   - /collection/diamonds.html (Portfolio Page)
+   - /collection/diamonds.html (Portfolio)
    ===================================================== */
 
 
-/* ---------------- GLOBAL COLLECTION STYLES ---------------- */
+/* ================= HERO ================= */
 
 .collection-hero {
   background: radial-gradient(circle at top, #0f1a16, #050505 70%);
-  padding: 120px 0 90px;
+  padding: 130px 0 100px;
   text-align: center;
 }
 
-.collection-hero h1 {
+.hero-inner {
+  max-width: 900px;
+  margin: auto;
+}
+
+.hero-title {
   color: #d4af37;
   font-size: clamp(2.2rem, 4vw, 3rem);
   letter-spacing: 1px;
 }
 
-.hero-subtext {
-  max-width: 900px;
-  margin: 22px auto 0;
+.hero-description {
+  margin-top: 18px;
   color: #cfcfcf;
   line-height: 1.8;
   font-size: 0.95rem;
 }
 
 
-/* ---------------- COLLECTION NAV (INSIDE CATEGORY PAGES) ---------------- */
-
-.collection-nav {
-  margin-top: 40px;
-}
-
-.collection-nav a {
-  margin: 0 14px;
-  color: #aaa;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s ease;
-}
-
-.collection-nav a.active,
-.collection-nav a:hover {
-  color: #d4af37;
-}
-
-
-/* =====================================================
-   PHASE 0 — COLLECTION LANDING PAGE (CATEGORY HUB)
-   ===================================================== */
+/* ================= CATEGORY BLOCKS ================= */
 
 .category-block {
   padding: 90px 0;
@@ -76,7 +58,7 @@
 }
 
 
-/* ---------- CAROUSEL ---------- */
+/* ================= CAROUSEL ================= */
 
 .carousel {
   overflow-x: auto;
@@ -120,7 +102,7 @@
 }
 
 
-/* ---------- CATEGORY CTA ---------- */
+/* ================= CATEGORY CTA ================= */
 
 .btn-category {
   display: inline-block;
@@ -145,7 +127,7 @@
 
 
 /* =====================================================
-   PHASE 1 — PORTFOLIO PAGES (DIAMONDS, SAPPHIRES, ETC)
+   PORTFOLIO PAGES (DIAMONDS / SAPPHIRES ETC)
    ===================================================== */
 
 .collection-wrapper {
@@ -167,7 +149,7 @@
 }
 
 
-/* ---------- GEM GRID ---------- */
+/* ================= GRID ================= */
 
 .gem-grid {
   display: grid;
@@ -176,7 +158,7 @@
 }
 
 
-/* ---------- GEM CARD ---------- */
+/* ================= GEM CARD ================= */
 
 .gem-card {
   background: #0e0e0e;
@@ -217,7 +199,7 @@
 }
 
 
-/* ---------- VIEW BUTTON ---------- */
+/* ================= VIEW BUTTON ================= */
 
 .btn-view {
   background: transparent;
@@ -234,7 +216,7 @@
 }
 
 
-/* ---------- MODAL ---------- */
+/* ================= MODAL ================= */
 
 .gem-modal {
   position: fixed;
@@ -293,7 +275,7 @@
 }
 
 
-/* ---------- WHATSAPP CTA ---------- */
+/* ================= WHATSAPP CTA ================= */
 
 .btn-whatsapp {
   display: inline-block;
@@ -307,14 +289,16 @@
 
 
 /* =====================================================
-   ANIMATIONS
+   SCROLL REVEAL ANIMATION (MATCHES YOUR JS)
    ===================================================== */
 
-.fade-up {
-  animation: fadeUp 0.9s ease both;
+.fade-up, .reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s ease;
 }
 
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to   { opacity: 1; transform: translateY(0); }
+.fade-up.show, .reveal.show {
+  opacity: 1;
+  transform: none;
 }
