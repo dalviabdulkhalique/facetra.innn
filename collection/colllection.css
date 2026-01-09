@@ -1,20 +1,38 @@
+/* =====================================================
+   FACETRA COLLECTION SYSTEM CSS
+   Used by:
+   - /collection.html (Category Hub)
+   - /collection/diamonds.html (Portfolio Page)
+   ===================================================== */
+
+
+/* ---------------- GLOBAL COLLECTION STYLES ---------------- */
+
 .collection-hero {
-  background: linear-gradient(180deg, #050505, #0b0b0b);
-  padding: 110px 0 80px;
+  background: radial-gradient(circle at top, #0f1a16, #050505 70%);
+  padding: 120px 0 90px;
   text-align: center;
 }
 
 .collection-hero h1 {
   color: #d4af37;
-  font-size: 3rem;
+  font-size: clamp(2.2rem, 4vw, 3rem);
   letter-spacing: 1px;
 }
 
 .hero-subtext {
-  max-width: 820px;
-  margin: 20px auto 35px;
+  max-width: 900px;
+  margin: 22px auto 0;
   color: #cfcfcf;
-  line-height: 1.7;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+
+/* ---------------- COLLECTION NAV (INSIDE CATEGORY PAGES) ---------------- */
+
+.collection-nav {
+  margin-top: 40px;
 }
 
 .collection-nav a {
@@ -22,11 +40,116 @@
   color: #aaa;
   text-decoration: none;
   font-weight: 500;
+  transition: 0.3s ease;
 }
 
 .collection-nav a.active,
 .collection-nav a:hover {
   color: #d4af37;
+}
+
+
+/* =====================================================
+   PHASE 0 — COLLECTION LANDING PAGE (CATEGORY HUB)
+   ===================================================== */
+
+.category-block {
+  padding: 90px 0;
+  background: #050505;
+}
+
+.category-block:nth-of-type(even) {
+  background: #0b0b0b;
+}
+
+.category-block h2 {
+  color: #d4af37;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.section-intro {
+  max-width: 820px;
+  color: #bfbfbf;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+
+/* ---------- CAROUSEL ---------- */
+
+.carousel {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #d4af37 #050505;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.carousel::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background: #d4af37;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 18px;
+  padding-bottom: 10px;
+}
+
+.carousel-item {
+  min-width: 230px;
+  background: #0e0e0e;
+  border: 1px solid rgba(212,175,55,0.25);
+  transition: all 0.35s ease;
+}
+
+.carousel-item:hover {
+  transform: translateY(-8px);
+  border-color: #d4af37;
+}
+
+.carousel-item img {
+  width: 100%;
+  display: block;
+}
+
+
+/* ---------- CATEGORY CTA ---------- */
+
+.btn-category {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 10px 26px;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease;
+}
+
+.btn-category:hover {
+  background: #d4af37;
+  color: #000;
+}
+
+.coming-soon {
+  color: #888;
+  font-style: italic;
+}
+
+
+/* =====================================================
+   PHASE 1 — PORTFOLIO PAGES (DIAMONDS, SAPPHIRES, ETC)
+   ===================================================== */
+
+.collection-wrapper {
+  background: #050505;
 }
 
 .collection-section {
@@ -38,17 +161,22 @@
   background: #0b0b0b;
 }
 
-.section-intro {
-  max-width: 720px;
-  color: #bfbfbf;
-  margin-bottom: 40px;
+.collection-section h2 {
+  color: #d4af37;
+  margin-bottom: 8px;
 }
+
+
+/* ---------- GEM GRID ---------- */
 
 .gem-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 28px;
 }
+
+
+/* ---------- GEM CARD ---------- */
 
 .gem-card {
   background: #0e0e0e;
@@ -57,7 +185,7 @@
 }
 
 .gem-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px);
   border-color: #d4af37;
 }
 
@@ -73,10 +201,11 @@
 .gem-info h3 {
   color: #d4af37;
   font-size: 1.05rem;
+  margin-bottom: 4px;
 }
 
 .gem-meta {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: #aaa;
 }
 
@@ -84,7 +213,11 @@
   margin: 10px 0 14px;
   font-size: 0.85rem;
   color: #bbb;
+  line-height: 1.6;
 }
+
+
+/* ---------- VIEW BUTTON ---------- */
 
 .btn-view {
   background: transparent;
@@ -92,12 +225,16 @@
   color: #d4af37;
   padding: 8px 14px;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .btn-view:hover {
   background: #d4af37;
   color: #000;
 }
+
+
+/* ---------- MODAL ---------- */
 
 .gem-modal {
   position: fixed;
@@ -116,26 +253,32 @@
 .modal-content {
   background: #0d0d0d;
   padding: 30px;
-  max-width: 520px;
-  width: 90%;
+  max-width: 540px;
+  width: 92%;
   position: relative;
   border: 1px solid rgba(212,175,55,0.4);
 }
 
 .modal-content img {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .modal-content h3 {
   color: #d4af37;
+  margin-bottom: 8px;
+}
+
+.modal-content p,
+.modal-content ul {
+  color: #bbb;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 .modal-content ul {
-  margin: 12px 0;
   padding-left: 18px;
-  color: #bbb;
-  font-size: 0.9rem;
+  margin-top: 10px;
 }
 
 .modal-close {
@@ -149,22 +292,29 @@
   cursor: pointer;
 }
 
+
+/* ---------- WHATSAPP CTA ---------- */
+
 .btn-whatsapp {
   display: inline-block;
-  margin-top: 14px;
-  padding: 10px 18px;
+  margin-top: 16px;
+  padding: 10px 22px;
   background: #d4af37;
   color: #000;
   text-decoration: none;
   font-weight: 600;
 }
 
+
+/* =====================================================
+   ANIMATIONS
+   ===================================================== */
+
 .fade-up {
   animation: fadeUp 0.9s ease both;
 }
 
 @keyframes fadeUp {
-  from {opacity:0; transform: translateY(40px);}
-  to {opacity:1; transform: translateY(0);}
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
-
