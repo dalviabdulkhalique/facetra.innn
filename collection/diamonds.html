@@ -1,26 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Luxury Diamonds Collection | FACETRA Fine Diamonds</title>
 
-  <meta name="description" content="Explore FACETRA’s luxury diamond collection featuring Round Brilliant, Fancy Shapes, Fancy Color Diamonds and Investment Grade Stones. Certified, natural, premium quality diamonds." />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ================= BASIC SEO ================= -->
+  <meta charset="UTF-8">
+  <title>Luxury Diamond Collection in India | Certified Natural Diamonds – FACETRA</title>
 
-  <link rel="canonical" href="https://facetra.in/collection/diamonds.html" />
+  <meta name="description" content="Explore FACETRA’s luxury diamond collection in India featuring Round Brilliant, Fancy Shape and Fancy Color Diamonds. Natural, certified and investment grade stones available for private clients and jewellers.">
 
-  <!-- Main Site CSS -->
-  <link rel="stylesheet" href="../assets/css/style.css" />
+  <meta name="keywords" content="diamond collection India, luxury diamonds Mumbai, certified diamonds India, fancy color diamonds, investment grade diamonds, FACETRA diamonds">
 
-  <!-- Collection CSS (can be merged into style.css) -->
-  <link rel="stylesheet" href="../assets/css/collection.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="canonical" href="https://facetra.in/collection/diamonds.html">
+
+  <!-- ================= OPEN GRAPH ================= -->
+  <meta property="og:title" content="FACETRA Luxury Diamond Collection">
+  <meta property="og:description" content="Premium certified diamonds curated for collectors and fine jewellery houses.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://facetra.in/collection/diamonds.html">
+  <meta property="og:image" content="https://facetra.in/assets/collection/diamonds/diamond-round-brilliant-1.jpg">
+
+  <!-- ================= TWITTER ================= -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FACETRA Luxury Diamond Collection">
+  <meta name="twitter:description" content="Explore natural certified diamonds by FACETRA.">
+  <meta name="twitter:image" content="https://facetra.in/assets/collection/diamonds/diamond-round-brilliant-1.jpg">
+
+  <!-- ================= STYLES ================= -->
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="collection.css">
+
+  <!-- ================= SCHEMA ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "JewelryStore",
+    "name": "FACETRA",
+    "url": "https://facetra.in",
+    "logo": "https://facetra.in/logo.png",
+    "sameAs": [
+      "https://www.instagram.com/facetra.in"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-8055113448",
+      "contactType": "sales",
+      "areaServed": "IN"
+    }
+  }
+  </script>
+
 </head>
 
 <body class="page collection-page">
 
-<!-- ================= HEADER (USE SAME AS MAIN SITE) ================= -->
-<!-- PASTE YOUR MAIN HEADER CODE HERE -->
-<!-- ================================================================ -->
+<!-- ======== PASTE YOUR MAIN HEADER HERE ======== -->
 
 
 <main class="collection-wrapper">
@@ -28,11 +63,12 @@
   <!-- ================= HERO ================= -->
   <section class="collection-hero fade-up">
     <div class="container">
-      <h1>FACETRA Diamond Collection</h1>
+      <h1>Luxury Diamond Collection</h1>
+
       <p class="hero-subtext">
-        Discover exceptional natural diamonds curated for brilliance, rarity and long-term value. 
-        From classic Round Brilliant to rare Fancy Color and Investment Grade stones, each diamond is selected
-        for elite private collectors and fine jewellery connoisseurs.
+        FACETRA presents a curated portfolio of natural diamonds selected for brilliance, rarity and long-term value.
+        Our collection includes classic Round Brilliant diamonds, elegant fancy shapes and rare fancy color stones,
+        suitable for fine jewellery manufacturing and private investment.
       </p>
 
       <nav class="collection-nav">
@@ -49,27 +85,28 @@
   <!-- ================= ROUND BRILLIANT ================= -->
   <section class="collection-section fade-up" id="round-brilliant">
     <div class="container">
-      <h2>Round Brilliant Diamonds</h2>
+      <h2>Round Brilliant Cut Diamonds</h2>
+
       <p class="section-intro">
-        The most iconic diamond cut, engineered for maximum brilliance and fire. 
-        Ideal for engagement rings and high jewellery.
+        Round Brilliant is the most advanced diamond cut, designed to reflect maximum light.
+        These diamonds are preferred for engagement rings and premium jewellery pieces.
       </p>
 
       <div class="gem-grid">
 
-        <!-- CARD -->
-        <article class="gem-card" id="diamond-round-brilliant-1">
-          <img src="../assets/collection/diamonds/diamond-round-brilliant-1.jpg" alt="Round Brilliant Diamond" />
+        <article class="gem-card" id="diamond-round-brilliant-1" itemscope itemtype="https://schema.org/Product">
+          <img src="../assets/collection/diamonds/diamond-round-brilliant-1.jpg" alt="Round Brilliant Cut Natural Diamond" itemprop="image">
+
           <div class="gem-info">
-            <h3>Round Brilliant Diamond</h3>
+            <h3 itemprop="name">Round Brilliant Diamond</h3>
             <p class="gem-meta">Cut: Round Brilliant</p>
             <p class="gem-meta">Color: D–F</p>
-            <p class="gem-desc">Exceptional brilliance with top symmetry and polish.</p>
-            <button class="btn-view" data-modal="modal-diamond-round-1">View Details</button>
+            <p class="gem-desc" itemprop="description">
+              Ideal cut diamond offering maximum fire and scintillation.
+            </p>
+            <button class="btn-view" data-modal="modal-round-1">View Details</button>
           </div>
         </article>
-
-        <!-- ADD MORE CARDS AS YOU UPLOAD IMAGES -->
 
       </div>
     </div>
@@ -80,20 +117,65 @@
   <section class="collection-section fade-up" id="fancy-shapes">
     <div class="container">
       <h2>Fancy Shape Diamonds</h2>
+
       <p class="section-intro">
-        Unique silhouettes offering character and individuality — preferred by bespoke jewellery designers.
+        Fancy shapes provide distinctive character and are popular in bespoke jewellery manufacturing.
       </p>
 
       <div class="gem-grid">
 
-        <article class="gem-card" id="diamond-pear-1">
-          <img src="../assets/collection/diamonds/diamond-pear-cut-1.jpg" alt="Pear Cut Diamond" />
+        <article class="gem-card" id="diamond-oval-cut-1">
+          <img src="../assets/collection/diamonds/diamond-oval-cut-1.jpg" alt="Oval Cut Natural Diamond">
+          <div class="gem-info">
+            <h3>Oval Cut Diamond</h3>
+            <p class="gem-meta">Cut: Oval</p>
+            <p class="gem-meta">Color: F–H</p>
+            <p class="gem-desc">Elongated shape creating greater visual size.</p>
+            <button class="btn-view" data-modal="modal-oval-1">View Details</button>
+          </div>
+        </article>
+
+        <article class="gem-card" id="diamond-pear-cut-1">
+          <img src="../assets/collection/diamonds/diamond-pear-cut-1.jpg" alt="Pear Cut Natural Diamond">
           <div class="gem-info">
             <h3>Pear Cut Diamond</h3>
             <p class="gem-meta">Cut: Pear</p>
+            <p class="gem-meta">Color: G–I</p>
+            <p class="gem-desc">Elegant teardrop silhouette with strong brilliance.</p>
+            <button class="btn-view" data-modal="modal-pear-1">View Details</button>
+          </div>
+        </article>
+
+        <article class="gem-card" id="diamond-princess-cut-1">
+          <img src="../assets/collection/diamonds/diamond-princess-cut-1.jpg" alt="Princess Cut Natural Diamond">
+          <div class="gem-info">
+            <h3>Princess Cut Diamond</h3>
+            <p class="gem-meta">Cut: Princess</p>
             <p class="gem-meta">Color: F–H</p>
-            <p class="gem-desc">Elegant teardrop shape with excellent brilliance.</p>
-            <button class="btn-view" data-modal="modal-diamond-pear-1">View Details</button>
+            <p class="gem-desc">Modern square cut with excellent sparkle.</p>
+            <button class="btn-view" data-modal="modal-princess-1">View Details</button>
+          </div>
+        </article>
+
+        <article class="gem-card" id="diamond-emerald-cut-1">
+          <img src="../assets/collection/diamonds/diamond-emerald-cut-1.jpg" alt="Emerald Cut Natural Diamond">
+          <div class="gem-info">
+            <h3>Emerald Cut Diamond</h3>
+            <p class="gem-meta">Cut: Emerald</p>
+            <p class="gem-meta">Color: E–G</p>
+            <p class="gem-desc">Step-cut elegance highlighting clarity.</p>
+            <button class="btn-view" data-modal="modal-emerald-1">View Details</button>
+          </div>
+        </article>
+
+        <article class="gem-card" id="diamond-cushion-cut-1">
+          <img src="../assets/collection/diamonds/diamond-cushion-cut-1.jpg" alt="Cushion Cut Natural Diamond">
+          <div class="gem-info">
+            <h3>Cushion Cut Diamond</h3>
+            <p class="gem-meta">Cut: Cushion</p>
+            <p class="gem-meta">Color: F–I</p>
+            <p class="gem-desc">Vintage style combined with modern brilliance.</p>
+            <button class="btn-view" data-modal="modal-cushion-1">View Details</button>
           </div>
         </article>
 
@@ -103,49 +185,24 @@
 
 
   <!-- ================= FANCY COLOR ================= -->
-  <section class="collection-section fade-up" id="fancy-colors">
+  <section class="collection-section fade-up" id="fancy-color">
     <div class="container">
       <h2>Fancy Color Diamonds</h2>
+
       <p class="section-intro">
-        Rare naturally colored diamonds including yellow, pink and blue hues, prized by elite collectors.
+        Naturally colored diamonds are among the rarest gemstones and offer strong investment potential.
       </p>
 
       <div class="gem-grid">
 
-        <article class="gem-card" id="diamond-yellow-fancy-1">
-          <img src="../assets/collection/diamonds/diamond-fancy-yellow-1.jpg" alt="Fancy Yellow Diamond" />
+        <article class="gem-card" id="diamond-fancy-yellow-1">
+          <img src="../assets/collection/diamonds/diamond-fancy-yellow-cushion-1.jpg" alt="Fancy Yellow Natural Diamond">
           <div class="gem-info">
             <h3>Fancy Yellow Diamond</h3>
             <p class="gem-meta">Cut: Cushion</p>
             <p class="gem-meta">Color: Fancy Yellow</p>
-            <p class="gem-desc">Rich saturation with excellent brilliance.</p>
-            <button class="btn-view" data-modal="modal-diamond-yellow-1">View Details</button>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ================= INVESTMENT GRADE ================= -->
-  <section class="collection-section fade-up" id="investment-grade">
-    <div class="container">
-      <h2>Investment Grade Diamonds</h2>
-      <p class="section-intro">
-        High-carat, top color and clarity diamonds suitable for long-term wealth preservation.
-      </p>
-
-      <div class="gem-grid">
-
-        <article class="gem-card" id="diamond-investment-1">
-          <img src="../assets/collection/diamonds/diamond-investment-grade-1.jpg" alt="Investment Grade Diamond" />
-          <div class="gem-info">
-            <h3>Investment Grade Diamond</h3>
-            <p class="gem-meta">Cut: Round</p>
-            <p class="gem-meta">Grade: D / IF</p>
-            <p class="gem-desc">Museum-grade clarity and light performance.</p>
-            <button class="btn-view" data-modal="modal-diamond-invest-1">View Details</button>
+            <p class="gem-desc">High saturation natural fancy color diamond.</p>
+            <button class="btn-view" data-modal="modal-yellow-1">View Details</button>
           </div>
         </article>
 
@@ -155,105 +212,31 @@
 
 </main>
 
+<!-- ======== PASTE YOUR MAIN FOOTER HERE ======== -->
 
 
-<!-- ================= MODALS ================= -->
+<!-- ================= MODAL (ONE EXAMPLE — DUPLICATE FOR OTHERS) ================= -->
 
-<!-- ROUND BRILLIANT MODAL -->
-<div class="gem-modal" id="modal-diamond-round-1">
+<div class="gem-modal" id="modal-round-1">
   <div class="modal-content">
     <button class="modal-close">&times;</button>
     <img src="../assets/collection/diamonds/diamond-round-brilliant-1.jpg" alt="">
     <h3>Round Brilliant Diamond</h3>
-    <p>Natural diamond with excellent cut proportions ensuring maximum brilliance.</p>
+    <p>Natural diamond with ideal proportions, excellent polish and symmetry.</p>
     <ul>
-      <li>Origin: Multiple ethical sources</li>
+      <li>Origin: Ethical natural sources</li>
       <li>Treatment: None</li>
       <li>Certification: GIA / IGI available</li>
     </ul>
 
     <a class="btn-whatsapp"
-       href="https://wa.me/91XXXXXXXXXX?text=Hello%20FACETRA,%20I’m%20interested%20in%20the%20Round%20Brilliant%20Diamond.%0APlease%20share%20details,%20certification%20and%20pricing.%0A%0AProduct%20link:%0Ahttps://facetra.in/collection/diamonds.html#diamond-round-brilliant-1"
-       target="_blank">
-       Enquire on WhatsApp
-    </a>
+       href="https://wa.me/918055113448?text=Hello%20FACETRA,%20I’m%20interested%20in%20the%20Round%20Brilliant%20Diamond.%0APlease%20share%20details,%20certification%20and%20pricing.%0A%0AProduct%20link:%0Ahttps://facetra.in/collection/diamonds.html#diamond-round-brilliant-1"
+       target="_blank">Enquire on WhatsApp</a>
   </div>
 </div>
-
-
-<!-- PEAR CUT MODAL -->
-<div class="gem-modal" id="modal-diamond-pear-1">
-  <div class="modal-content">
-    <button class="modal-close">&times;</button>
-    <img src="../assets/collection/diamonds/diamond-pear-cut-1.jpg" alt="">
-    <h3>Pear Cut Diamond</h3>
-    <p>Elegant elongated cut offering brilliance and flattering proportions.</p>
-    <ul>
-      <li>Origin: Ethical sourcing</li>
-      <li>Treatment: None</li>
-      <li>Certification: GIA / IGI available</li>
-    </ul>
-
-    <a class="btn-whatsapp"
-       href="https://wa.me/91XXXXXXXXXX?text=Hello%20FACETRA,%20I’m%20interested%20in%20the%20Pear%20Cut%20Diamond.%0APlease%20share%20details,%20certification%20and%20pricing.%0A%0AProduct%20link:%0Ahttps://facetra.in/collection/diamonds.html#diamond-pear-1"
-       target="_blank">
-       Enquire on WhatsApp
-    </a>
-  </div>
-</div>
-
-
-<!-- YELLOW MODAL -->
-<div class="gem-modal" id="modal-diamond-yellow-1">
-  <div class="modal-content">
-    <button class="modal-close">&times;</button>
-    <img src="../assets/collection/diamonds/diamond-fancy-yellow-1.jpg" alt="">
-    <h3>Fancy Yellow Diamond</h3>
-    <p>Natural fancy color diamond with rich saturation.</p>
-    <ul>
-      <li>Origin: Natural</li>
-      <li>Treatment: None</li>
-      <li>Certification: GIA Fancy Color Report</li>
-    </ul>
-
-    <a class="btn-whatsapp"
-       href="https://wa.me/91XXXXXXXXXX?text=Hello%20FACETRA,%20I’m%20interested%20in%20the%20Fancy%20Yellow%20Diamond.%0APlease%20share%20details,%20certification%20and%20pricing.%0A%0AProduct%20link:%0Ahttps://facetra.in/collection/diamonds.html#diamond-yellow-fancy-1"
-       target="_blank">
-       Enquire on WhatsApp
-    </a>
-  </div>
-</div>
-
-
-<!-- INVESTMENT MODAL -->
-<div class="gem-modal" id="modal-diamond-invest-1">
-  <div class="modal-content">
-    <button class="modal-close">&times;</button>
-    <img src="../assets/collection/diamonds/diamond-investment-grade-1.jpg" alt="">
-    <h3>Investment Grade Diamond</h3>
-    <p>High rarity diamond suitable for portfolio diversification.</p>
-    <ul>
-      <li>Origin: Natural</li>
-      <li>Treatment: None</li>
-      <li>Certification: GIA Investment Grade</li>
-    </ul>
-
-    <a class="btn-whatsapp"
-       href="https://wa.me/91XXXXXXXXXX?text=Hello%20FACETRA,%20I’m%20interested%20in%20the%20Investment%20Grade%20Diamond.%0APlease%20share%20details,%20certification%20and%20pricing.%0A%0AProduct%20link:%0Ahttps://facetra.in/collection/diamonds.html#diamond-investment-1"
-       target="_blank">
-       Enquire on WhatsApp
-    </a>
-  </div>
-</div>
-
-
-<!-- ================= FOOTER ================= -->
-<!-- PASTE YOUR MAIN FOOTER CODE HERE -->
-<!-- ================================================= -->
 
 
 <script>
-  // Modal Logic
   document.querySelectorAll('.btn-view').forEach(btn => {
     btn.addEventListener('click', () => {
       document.getElementById(btn.dataset.modal).classList.add('open');
