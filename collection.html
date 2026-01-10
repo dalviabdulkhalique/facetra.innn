@@ -49,9 +49,7 @@
     </nav>
 
     <div class="nav-toggle" id="navToggle">
-      <span></span><span></span><span></span>
-    </div>
-
+  <span></span><span></span><span></span>
   </div>
 </header>
 
@@ -223,14 +221,14 @@ reveals.forEach(el=>io.observe(el));
 </script>
 <script>
 /* ===== MOBILE NAV ===== */
+
 const toggle = document.getElementById("navToggle");
 const nav = document.querySelector(".main-nav");
 
-if(toggle){
-  toggle.addEventListener("click",()=>{
-    nav.classList.toggle("open");
-  });
-}
+toggle.addEventListener("click",()=>{
+  nav.classList.toggle("open");
+});
+</script>
 
 /* ===== SCROLL REVEAL ===== */
 const reveals = document.querySelectorAll(".reveal");
