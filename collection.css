@@ -3,6 +3,19 @@
    No carousel | Auto grid | Premium reveal
    ===================================================== */
 
+.collection-hero{
+  min-height: 45vh;   /* reduced */
+  padding: 120px 20px 80px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: radial-gradient(circle at top, #0f1a16, #050505 70%);
+}
+
+.hero-title{
+  font-family: "Playfair Display", serif; /* matches luxury heading */
+  font-size: clamp(2.2rem,4vw,3rem);
+}
 
 /* ================= BASE ================= */
 
