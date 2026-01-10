@@ -1,15 +1,107 @@
 {
   "diamonds": [
-    "diamond-round-brilliant-1.jpg",
-    "diamond-oval-cut-1.jpg",
-    "diamond-pear-cut-1.jpg",
-    "diamond-princess-cut-1.jpg",
-    "diamond-emerald-cut-1.jpg",
-    "diamond-cushion-cut-1.jpg",
-    "diamond-fancy-yellow-cushion-1.jpg"
+    {
+      "img": "assets/collection/diamonds/diamond-round-brilliant-1.jpg",
+      "title": "Round Brilliant",
+      "desc": "Maximum brilliance and timeless elegance."
+    },
+    {
+      "img": "assets/collection/diamonds/diamond-oval-cut-1.jpg",
+      "title": "Oval Cut",
+      "desc": "Elegant symmetry with extended sparkle."
+    },
+    {
+      "img": "assets/collection/diamonds/diamond-pear-cut-1.jpg",
+      "title": "Pear Cut",
+      "desc": "Unique teardrop brilliance for luxury designs."
+    },
+    {
+      "img": "assets/collection/diamonds/diamond-princess-cut-1.jpg",
+      "title": "Princess Cut",
+      "desc": "Modern sharp brilliance with bold geometry."
+    }
   ],
-  "sapphires": [],
-  "rubies": [],
-  "emeralds": [],
-  "others": []
+
+  "sapphires": [
+    {
+      "img": "assets/collection/sapphires/sapphire-cornflower-blue-1.jpg",
+      "title": "Cornflower Blue Sapphire",
+      "desc": "Soft royal blue hue from Sri Lanka."
+    },
+    {
+      "img": "assets/collection/sapphires/sapphire-deep-blue-1.jpg",
+      "title": "Deep Blue Sapphire",
+      "desc": "Rich saturated blue sapphire from Madagascar."
+    },
+    {
+      "img": "assets/collection/sapphires/sapphire-kashmir-cushion-cut-1.jpg",
+      "title": "Kashmir Type Sapphire",
+      "desc": "Velvety blue cushion cut legendary rarity."
+    },
+    {
+      "img": "assets/collection/sapphires/sapphire-hot-pink-oval-1.jpg",
+      "title": "Pink Sapphire",
+      "desc": "Vibrant hot pink oval sapphire from Africa."
+    },
+    {
+      "img": "assets/collection/sapphires/sapphire-padparadscha-oval-1.jpg",
+      "title": "Padparadscha Sapphire",
+      "desc": "Rare pink-orange lotus sapphire from Sri Lanka."
+    },
+    {
+      "img": "assets/collection/sapphires/sapphire-parti-blue-green-oval-1.jpg",
+      "title": "Parti Color Sapphire",
+      "desc": "Natural bi-color sapphire from Australia."
+    },
+    {
+      "img": "assets/collection/sapphires/sapphire-orange-round-1.jpg",
+      "title": "Orange Sapphire",
+      "desc": "Bright orange sapphire from Africa."
+    },
+    {
+      "img": "assets/collection/sapphires/sapphire-yellow-radiant-1.jpg",
+      "title": "Yellow Sapphire (Pukhraj)",
+      "desc": "Radiant cut yellow sapphire from Sri Lanka."
+    },
+    {
+      "img": "assets/collection/sapphires/sapphire-green-cushion-1.jpg",
+      "title": "Green Sapphire",
+      "desc": "Forest green sapphire from Africa."
+    },
+    {
+      "img": "assets/collection/sapphires/sapphire-green-emerald-cut-2.jpg",
+      "title": "Emerald Cut Green Sapphire",
+      "desc": "Step cut green sapphire from Zambia."
+    },
+    {
+      "img": "assets/collection/sapphires/sapphire-teal-oval-1.jpg",
+      "title": "Teal Sapphire",
+      "desc": "Blue-green teal sapphire from Madagascar."
+    },
+    {
+      "img": "assets/collection/sapphires/sapphire-teal-radiant-cut-1.jpg",
+      "title": "Teal Radiant Sapphire",
+      "desc": "Radiant cut teal sapphire brilliance."
+    },
+    {
+      "img": "assets/collection/sapphires/sapphire-white-round-1.jpg",
+      "title": "White Sapphire",
+      "desc": "Colorless sapphire alternative to diamond."
+    },
+    {
+      "img": "assets/collection/sapphires/sapphire-star-cabochon-blue-2.jpg",
+      "title": "Star Sapphire",
+      "desc": "Natural star phenomenon cabochon sapphire."
+    },
+    {
+      "img": "assets/collection/sapphires/sapphire-cabochon-blue-1.jpg",
+      "title": "Cabochon Sapphire",
+      "desc": "Smooth domed blue sapphire cabochon."
+    },
+    {
+      "img": "assets/collection/sapphires/sapphire-deep-navy-emerald-cut-1.jpg",
+      "title": "Navy Blue Emerald Cut Sapphire",
+      "desc": "Deep navy step cut sapphire from Madagascar."
+    }
+  ]
 }
