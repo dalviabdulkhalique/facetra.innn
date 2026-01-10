@@ -25,13 +25,68 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="collection.css">
 
+<style>
+/* ===== SHOWCASE FIX ===== */
+
+.showcase-wrap{
+  max-width:620px;
+  margin:50px auto 25px;
+  text-align:center;
+}
+
+.showcase-box{
+  width:100%;
+  height:360px;
+  background:#000;
+  border:1px solid rgba(212,175,55,.35);
+  box-shadow:0 25px 70px rgba(0,0,0,.75);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.showcase-box img{
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+  transition:opacity 1.2s ease, transform 1.8s ease;
+}
+
+.showcase-box.fade img{
+  opacity:0;
+  transform:scale(1.06);
+}
+
+.showcase-text{
+  margin-top:18px;
+  text-align:center;
+}
+
+.showcase-text h3{
+  color:#d4af37;
+  font-size:1.15rem;
+}
+
+.showcase-text p{
+  color:#bbb;
+  font-size:.9rem;
+  margin-top:6px;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+  .showcase-box{height:260px;}
+}
+</style>
+
 </head>
 
 <body class="page collection-landing">
 
 <!-- ================= HEADER ================= -->
-  
-  <header class="site-header">
+
+<header class="site-header">
   <div class="header-inner">
 
     <div class="brand">
@@ -42,7 +97,7 @@
       </div>
     </div>
 
-    <nav class="main-nav">
+    <nav class="main-nav" id="mainNav">
       <a href="index.html">Home</a>
       <a href="collection.html" class="active">Collection</a>
       <a href="certification.html">Certification</a>
@@ -56,16 +111,6 @@
     </div>
 
   </div>
-</header>
-
-<div class="mobile-nav" id="mobileNav">
-  <a href="index.html">Home</a>
-  <a href="collection.html">Collection</a>
-  <a href="certification.html">Certification</a>
-  <a href="why-facetra.html">Why FACETRA</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-</div>
 </header>
 
 <!-- ================= HERO ================= -->
@@ -91,9 +136,9 @@
       FACETRA supplies certified natural diamonds including fancy shapes and rare fancy colors.
     </p>
 
-    <div class="diamond-showcase">
+    <div class="showcase-wrap">
 
-      <div class="showcase-image diamond-box">
+      <div class="showcase-box" id="diamondBox">
         <img id="diamondImage" src="assets/collection/diamonds/diamond-round-brilliant-1.jpg" alt="Diamond">
       </div>
 
@@ -122,9 +167,9 @@
       FACETRA sources cornflower blue, Kashmir type, padparadscha and rare fancy sapphires.
     </p>
 
-    <div class="sapphire-showcase">
+    <div class="showcase-wrap">
 
-      <div class="showcase-image sapphire-box">
+      <div class="showcase-box" id="sapphireBox">
         <img id="sapphireImage" src="assets/collection/sapphires/sapphire-cornflower-blue-1.jpg" alt="Sapphire">
       </div>
 
@@ -161,20 +206,16 @@
 </section>
 
 <!-- ================= FOOTER ================= -->
-<!-- ================= FOOTER ================= -->
 
 <footer class="lux-footer">
 
   <div class="footer-inner">
 
     <div class="footer-brand">
-      <div class="footer-">
-        <img src="logo.png" alt="FACETRA">
-        <span>FACETRA</span>
-      </div>
+      <img src="logo.png" alt="FACETRA">
       <p>
         Premium gemstone trading house specializing in certified natural gemstones
-        curated for collectors, jewelers and long-term investors.
+        curated for collectors, jewellers and long-term investors.
       </p>
     </div>
 
@@ -190,9 +231,9 @@
 
     <div class="footer-contact">
       <h4>Contact</h4>
-      <div class="contact-item"><span>Mumbai, Maharashtra, India</span></div>
-      <div class="contact-item"><span>Email: info@facetra.in</span></div>
-      <div class="contact-item"><span>Mon–Sat | 10:00 AM – 7:00 PM</span></div>
+      <p>Mumbai, Maharashtra, India</p>
+      <p>Email: info@facetra.in</p>
+      <p>Mon–Sat | 10:00 AM – 7:00 PM</p>
     </div>
 
   </div>
@@ -202,7 +243,6 @@
   </div>
 
 </footer>
-
 
 <!-- ================= SCRIPTS ================= -->
 
@@ -226,20 +266,18 @@ let d=0;
 const dImg=document.getElementById("diamondImage");
 const dTitle=document.getElementById("diamondTitle");
 const dDesc=document.getElementById("diamondDesc");
-const dBox=document.querySelector(".diamond-box");
+const dBox=document.getElementById("diamondBox");
 
-if(dImg){
- setInterval(()=>{
-  dBox.classList.add("fade");
-  setTimeout(()=>{
-   d=(d+1)%diamondData.length;
-   dImg.src=diamondData[d].img;
-   dTitle.textContent=diamondData[d].title;
-   dDesc.textContent=diamondData[d].desc;
-   dBox.classList.remove("fade");
-  },900);
- },5000);
-}
+setInterval(()=>{
+ dBox.classList.add("fade");
+ setTimeout(()=>{
+  d=(d+1)%diamondData.length;
+  dImg.src=diamondData[d].img;
+  dTitle.textContent=diamondData[d].title;
+  dDesc.textContent=diamondData[d].desc;
+  dBox.classList.remove("fade");
+ },900);
+},5000);
 
 /* ===== SAPPHIRE ROTATION ===== */
 const sapphireData=[
@@ -254,20 +292,18 @@ let s=0;
 const sImg=document.getElementById("sapphireImage");
 const sTitle=document.getElementById("sapphireTitle");
 const sDesc=document.getElementById("sapphireDesc");
-const sBox=document.querySelector(".sapphire-box");
+const sBox=document.getElementById("sapphireBox");
 
-if(sImg){
- setInterval(()=>{
-  sBox.classList.add("fade");
-  setTimeout(()=>{
-   s=(s+1)%sapphireData.length;
-   sImg.src=sapphireData[s].img;
-   sTitle.textContent=sapphireData[s].title;
-   sDesc.textContent=sapphireData[s].desc;
-   sBox.classList.remove("fade");
-  },900);
- },5200);
-}
+setInterval(()=>{
+ sBox.classList.add("fade");
+ setTimeout(()=>{
+  s=(s+1)%sapphireData.length;
+  sImg.src=sapphireData[s].img;
+  sTitle.textContent=sapphireData[s].title;
+  sDesc.textContent=sapphireData[s].desc;
+  sBox.classList.remove("fade");
+ },900);
+},5200);
 
 /* ===== SCROLL REVEAL ===== */
 const reveals=document.querySelectorAll(".reveal");
@@ -275,7 +311,6 @@ const io=new IntersectionObserver(e=>{
  e.forEach(x=>{if(x.isIntersecting)x.target.classList.add("show")});
 },{threshold:0.12});
 reveals.forEach(r=>io.observe(r));
-
 </script>
 
 </body>
