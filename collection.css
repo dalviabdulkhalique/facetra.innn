@@ -207,4 +207,9 @@
   }
 
 }
+@media(max-width:768px){
+  .showcase-image{
+    aspect-ratio: 1 / 1;
+  }
+}
 
