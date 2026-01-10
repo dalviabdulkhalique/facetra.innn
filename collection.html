@@ -49,7 +49,9 @@
     </nav>
 
     <div class="nav-toggle" id="navToggle">
-  <span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+    </div>
+
   </div>
 </header>
 
@@ -132,13 +134,10 @@
   <div class="footer-inner">
 
     <div class="footer-brand">
-      <div class="footer-">
-        <img src="logo.png" alt="FACETRA">
-        <span>FACETRA</span>
-      </div>
+      <img src="logo.png" alt="FACETRA">
       <p>
-       Premium gemstone trading house specializing in certified natural gemstones
-        curated for collectors, jewelers and long-term investors.
+        Premium gemstone trading house specializing in certified natural gemstones
+        curated for collectors, jewellers and long-term investors.
       </p>
     </div>
 
@@ -154,9 +153,9 @@
 
     <div class="footer-contact">
       <h4>Contact</h4>
-      <div class="contact-item"><span>Mumbai, Maharashtra, India</span></div>
-      <div class="contact-item"><span>Email: info@facetra.in</span></div>
-      <div class="contact-item"><span>Mon–Sat | 10:00 AM – 7:00 PM</span></div>
+      <p>Mumbai, Maharashtra, India</p>
+      <p>Email: info@facetra.in</p>
+      <p>Mon–Sat | 10:00 AM – 7:00 PM</p>
     </div>
 
   </div>
@@ -171,7 +170,9 @@
 <script>
 const navToggle = document.getElementById("navToggle");
 const mainNav = document.getElementById("mainNav");
-navToggle.addEventListener("click",()=> mainNav.classList.toggle("open"));
+navToggle.addEventListener("click",()=>{
+  mainNav.classList.toggle("open");
+});
 </script>
 
 <!-- ================= AUTO IMAGE CHANGE ================= -->
@@ -197,51 +198,27 @@ setInterval(()=>{
     title.textContent=diamondData[i].title;
     desc.textContent=diamondData[i].desc;
     box.classList.remove("fade");
-  },700);
-},4500);
+  },900);
+},4800);
 </script>
 
 <!-- ================= SCROLL REVEAL ================= -->
 <script>
 const reveals = document.querySelectorAll(".reveal");
 
-const io = new IntersectionObserver(entries=>{
+const observer = new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting){
       entry.target.classList.add("show");
     }
   });
-},{
-  threshold:0.05,
-  rootMargin:"0px 0px -50px 0px"
-});
+},{ threshold:0.12 });
 
-reveals.forEach(el=>io.observe(el));
-
+reveals.forEach(el=>observer.observe(el));
 </script>
+
 <script>
-/* ===== MOBILE NAV ===== */
-
-const toggle = document.getElementById("navToggle");
-const nav = document.querySelector(".main-nav");
-
-toggle.addEventListener("click",()=>{
-  nav.classList.toggle("open");
-});
-</script>
-
-/* ===== SCROLL REVEAL ===== */
-const reveals = document.querySelectorAll(".reveal");
-
-const revealObserver = new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-    }
-  });
-},{threshold:0.15});
-
-reveals.forEach(r=>revealObserver.observe(r));
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
