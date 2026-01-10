@@ -58,41 +58,65 @@
 }
 
 
-/* =====================================================
-   AUTO DIAMOND SHOWCASE (NO SLIDER – AUTO CHANGE)
-   ===================================================== */
+/* ================= LUXURY DIAMOND SHOWCASE ================= */
 
 .diamond-showcase{
-  max-width:640px;
-  margin:0 auto;
+  max-width:620px;
+  margin:60px auto 35px;
   text-align:center;
+  position:relative;
 }
 
 .showcase-image{
   width:100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio:1/1;
   display:flex;
   align-items:center;
   justify-content:center;
-  border:1px solid rgba(212,175,55,.35);
-  box-shadow:0 22px 65px rgba(0,0,0,.8);
   background:#000;
+  border:1px solid rgba(212,175,55,.35);
+  box-shadow:
+    0 25px 80px rgba(0,0,0,.9),
+    0 0 35px rgba(212,175,55,.12);
   overflow:hidden;
+  position:relative;
+}
+
+/* soft gold glow */
+.showcase-image::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at center, rgba(212,175,55,.15), transparent 60%);
+  opacity:.6;
+  pointer-events:none;
+  animation: glowPulse 6s ease-in-out infinite;
+}
+
+@keyframes glowPulse{
+  0%,100%{opacity:.4}
+  50%{opacity:.8}
 }
 
 .showcase-image img{
   width:100%;
   height:100%;
   object-fit:contain;
-  padding:18px;
-  transition:opacity 1.4s ease, transform 1.8s ease;
+  padding:20px;
+  opacity:1;
+  transform:scale(1);
+  transition:
+    opacity 1.4s ease,
+    transform 2.2s cubic-bezier(.22,1,.36,1);
 }
 
-
+/* fade state */
 .showcase-image.fade img{
   opacity:0;
-  transform:scale(1.06);
+  transform:scale(1.12);
 }
+
+/* ===== TEXT ===== */
 
 .showcase-text{
   margin-top:18px;
@@ -101,12 +125,27 @@
 .showcase-text h3{
   color:var(--gold2);
   font-size:1.15rem;
+  opacity:1;
+  transition:opacity 1s ease;
 }
 
 .showcase-text p{
   color:var(--muted);
   font-size:.9rem;
   margin-top:6px;
+  opacity:1;
+  transition:opacity 1s ease;
+}
+
+.showcase-text.fade h3,
+.showcase-text.fade p{
+  opacity:0;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+  .diamond-showcase{max-width:92%}
 }
 
 
