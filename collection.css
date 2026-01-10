@@ -278,3 +278,32 @@
 
 }
 
+/* ===== CINEMATIC GEM TRANSITION ===== */
+
+.showcase-image{
+  position: relative;
+}
+
+.showcase-image::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border:1px solid rgba(212,175,55,0.45);
+  opacity:0;
+  transition:opacity 1.2s ease;
+  pointer-events:none;
+}
+
+.showcase-image.glow::after{
+  opacity:1;
+}
+
+.showcase-image img{
+  animation: slowFloat 6s ease-in-out infinite;
+}
+
+@keyframes slowFloat{
+  0%{ transform:scale(1) translateY(0); }
+  50%{ transform:scale(1.03) translateY(-4px); }
+  100%{ transform:scale(1) translateY(0); }
+}
