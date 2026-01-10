@@ -269,6 +269,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const items = document.querySelectorAll(".carousel-item, .gem-card");
+
+  items.forEach((el, i) => {
+    setTimeout(() => {
+      el.classList.add("show");
+    }, i * 120);   // stagger delay
+  });
+
+});
+</script>
 
 </body>
 </html>
