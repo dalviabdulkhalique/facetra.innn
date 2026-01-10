@@ -1,42 +1,55 @@
 /* =====================================================
-   FACETRA COLLECTION SYSTEM CSS
-   Works with:
+   FACETRA COLLECTION SYSTEM CSS — FINAL
+   Used by:
    - /collection.html (Category Hub)
-   - /collection/diamonds.html (Portfolio)
+   - /collection/diamonds.html (Portfolio Pages)
    ===================================================== */
+
+
+/* ================= BASE FIX ================= */
+
+.page.collection-landing,
+.page.collection-landing * {
+  box-sizing: border-box;
+}
 
 
 /* ================= HERO ================= */
 
 .collection-hero {
+  min-height: 70vh;
   background: radial-gradient(circle at top, #0f1a16, #050505 70%);
-  padding: 130px 0 100px;
+  padding: 140px 20px 110px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-inner {
-  max-width: 900px;
+  max-width: 960px;
   margin: auto;
 }
 
 .hero-title {
   color: #d4af37;
-  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
   letter-spacing: 1px;
+  line-height: 1.2;
 }
 
 .hero-description {
-  margin-top: 18px;
-  color: #cfcfcf;
-  line-height: 1.8;
-  font-size: 0.95rem;
+  margin-top: 20px;
+  color: #d0d0d0;
+  line-height: 1.9;
+  font-size: 1rem;
 }
 
 
 /* ================= CATEGORY BLOCKS ================= */
 
 .category-block {
-  padding: 90px 0;
+  padding: 110px 0;
   background: #050505;
 }
 
@@ -44,26 +57,35 @@
   background: #0b0b0b;
 }
 
+.category-block .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
 .category-block h2 {
   color: #d4af37;
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 2.1rem;
+  margin-bottom: 12px;
 }
 
 .section-intro {
-  max-width: 820px;
+  max-width: 860px;
   color: #bfbfbf;
-  line-height: 1.7;
-  margin-bottom: 35px;
+  line-height: 1.8;
+  margin-bottom: 45px;
+  font-size: 0.95rem;
 }
 
 
 /* ================= CAROUSEL ================= */
 
 .carousel {
+  position: relative;
   overflow-x: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #d4af37 #050505;
+  overflow-y: hidden;
+  padding-bottom: 18px;
+  scroll-behavior: smooth;
 }
 
 .carousel::-webkit-scrollbar {
@@ -76,28 +98,31 @@
 
 .carousel::-webkit-scrollbar-thumb {
   background: #d4af37;
+  border-radius: 4px;
 }
 
 .carousel-track {
   display: flex;
-  gap: 18px;
-  padding-bottom: 10px;
+  gap: 22px;
 }
 
 .carousel-item {
-  min-width: 230px;
+  flex: 0 0 260px;
   background: #0e0e0e;
   border: 1px solid rgba(212,175,55,0.25);
-  transition: all 0.35s ease;
+  transition: transform 0.45s ease, border-color 0.45s ease, box-shadow 0.45s ease;
 }
 
 .carousel-item:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px);
   border-color: #d4af37;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
 }
 
 .carousel-item img {
   width: 100%;
+  height: 230px;
+  object-fit: cover;
   display: block;
 }
 
@@ -106,13 +131,13 @@
 
 .btn-category {
   display: inline-block;
-  margin-top: 28px;
-  padding: 10px 26px;
+  margin-top: 40px;
+  padding: 12px 30px;
   border: 1px solid #d4af37;
   color: #d4af37;
   text-decoration: none;
-  letter-spacing: 0.5px;
-  transition: 0.3s ease;
+  letter-spacing: 0.6px;
+  transition: all 0.35s ease;
 }
 
 .btn-category:hover {
@@ -135,7 +160,7 @@
 }
 
 .collection-section {
-  padding: 90px 0;
+  padding: 110px 0;
   background: #060606;
 }
 
@@ -143,9 +168,16 @@
   background: #0b0b0b;
 }
 
+.collection-section .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
 .collection-section h2 {
   color: #d4af37;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  font-size: 2rem;
 }
 
 
@@ -154,7 +186,7 @@
 .gem-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
+  gap: 30px;
 }
 
 
@@ -163,27 +195,30 @@
 .gem-card {
   background: #0e0e0e;
   border: 1px solid rgba(212,175,55,0.25);
-  transition: all 0.4s ease;
+  transition: all 0.45s ease;
 }
 
 .gem-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-12px);
   border-color: #d4af37;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.7);
 }
 
 .gem-card img {
   width: 100%;
+  height: 240px;
+  object-fit: cover;
   display: block;
 }
 
 .gem-info {
-  padding: 18px;
+  padding: 20px;
 }
 
 .gem-info h3 {
   color: #d4af37;
   font-size: 1.05rem;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .gem-meta {
@@ -192,7 +227,7 @@
 }
 
 .gem-desc {
-  margin: 10px 0 14px;
+  margin: 12px 0 16px;
   font-size: 0.85rem;
   color: #bbb;
   line-height: 1.6;
@@ -205,9 +240,9 @@
   background: transparent;
   border: 1px solid #d4af37;
   color: #d4af37;
-  padding: 8px 14px;
+  padding: 9px 16px;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: all 0.35s ease;
 }
 
 .btn-view:hover {
@@ -221,7 +256,7 @@
 .gem-modal {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.88);
+  background: rgba(0,0,0,0.9);
   display: none;
   align-items: center;
   justify-content: center;
@@ -234,8 +269,8 @@
 
 .modal-content {
   background: #0d0d0d;
-  padding: 30px;
-  max-width: 540px;
+  padding: 32px;
+  max-width: 560px;
   width: 92%;
   position: relative;
   border: 1px solid rgba(212,175,55,0.4);
@@ -243,19 +278,19 @@
 
 .modal-content img {
   width: 100%;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .modal-content h3 {
   color: #d4af37;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .modal-content p,
 .modal-content ul {
   color: #bbb;
   font-size: 0.9rem;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .modal-content ul {
@@ -279,8 +314,8 @@
 
 .btn-whatsapp {
   display: inline-block;
-  margin-top: 16px;
-  padding: 10px 22px;
+  margin-top: 18px;
+  padding: 12px 26px;
   background: #d4af37;
   color: #000;
   text-decoration: none;
@@ -289,16 +324,43 @@
 
 
 /* =====================================================
-   SCROLL REVEAL ANIMATION (MATCHES YOUR JS)
+   SCROLL REVEAL ANIMATION (WORKING)
    ===================================================== */
 
-.fade-up, .reveal {
+.fade-up,
+.reveal {
   opacity: 0;
-  transform: translateY(40px);
-  transition: 1s ease;
+  transform: translateY(50px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
 }
 
-.fade-up.show, .reveal.show {
+.fade-up.show,
+.reveal.show {
   opacity: 1;
-  transform: none;
+  transform: translateY(0);
+}
+
+
+/* =====================================================
+   MOBILE REFINEMENTS
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+  .collection-hero {
+    padding: 120px 20px 80px;
+  }
+
+  .category-block,
+  .collection-section {
+    padding: 80px 0;
+  }
+
+  .carousel-item {
+    flex: 0 0 75%;
+  }
+
+  .gem-card img {
+    height: 210px;
+  }
 }
