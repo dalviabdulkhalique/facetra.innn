@@ -1354,3 +1354,53 @@ body.page{
   stroke:#d4af37;
   stroke-width:1.6;
 }
+
+
+/* ================= FOOTER ICON FIX ================= */
+
+.footer-contact .contact-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:#cfcfcf;
+  text-decoration:none;
+  margin-bottom:14px;
+  font-size:.95rem;
+  transition:color .3s ease;
+}
+
+.footer-contact .contact-item:hover{
+  color:var(--gold2);
+}
+
+.footer-contact .contact-item svg{
+  width:18px;
+  height:18px;
+  min-width:18px;
+  stroke:var(--gold2);
+  fill:none;
+  stroke-width:1.8;
+}
+
+.footer-contact .contact-item:hover svg{
+  stroke:var(--gold2);
+}
+
+.footer-logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:10px;
+}
+
+.footer-logo img{
+  width:34px;
+  height:auto;
+}
+
+.footer-logo span{
+  font-family:"Cinzel", serif;
+  color:var(--gold2);
+  font-size:1.2rem;
+  letter-spacing:.5px;
+}
