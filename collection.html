@@ -118,44 +118,24 @@
       FACETRA supplies certified natural diamonds including fancy shapes and rare fancy color stones.
     </p>
 
-    <!-- AUTO SLIDER -->
-    <div class="auto-gem-slider reveal">
+    <div class="diamond-showcase">
 
-      <div class="gem-slide active">
-        <img src="assets/collection/diamonds/diamond-round-brilliant-1.jpg" alt="Round Brilliant Diamond">
-        <div class="gem-text">
-          <h3>Round Brilliant</h3>
-          <p>Maximum brilliance and classic elegance.</p>
-        </div>
-      </div>
+  <div class="showcase-image">
+    <img id="diamondImage" src="assets/collection/diamonds/diamond-round-brilliant-1.jpg" alt="Diamond">
+  </div>
 
-      <div class="gem-slide">
-        <img src="assets/collection/diamonds/diamond-oval-cut-1.jpg" alt="Oval Cut Diamond">
-        <div class="gem-text">
-          <h3>Oval Cut</h3>
-          <p>Elongated brilliance with refined symmetry.</p>
-        </div>
-      </div>
+  <div class="showcase-text">
+    <h3 id="diamondTitle">Round Brilliant</h3>
+    <p id="diamondDesc">Maximum brilliance and timeless elegance.</p>
+  </div>
 
-      <div class="gem-slide">
-        <img src="assets/collection/diamonds/diamond-pear-cut-1.jpg" alt="Pear Cut Diamond">
-        <div class="gem-text">
-          <h3>Pear Cut</h3>
-          <p>Unique teardrop brilliance for luxury designs.</p>
-        </div>
-      </div>
+</div>
 
-      <div class="gem-slide">
-        <img src="assets/collection/diamonds/diamond-princess-cut-1.jpg" alt="Princess Cut Diamond">
-        <div class="gem-text">
-          <h3>Princess Cut</h3>
-          <p>Sharp modern brilliance with square symmetry.</p>
-        </div>
-      </div>
-
-    </div>
-
-    <a href="#" class="btn-category">Explore Diamond Collection</a>
+<div class="center-btn">
+  <a href="collection/diamonds.html" class="btn-category">
+    Explore Diamond Collection
+  </a>
+</div>
 
   </div>
 </section>
@@ -257,30 +237,50 @@
 </footer>
 
 
-<!-- ================= SCROLL REVEAL ================= -->
+<!-- ================= auto change java ================= -->
 <script>
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-      observer.unobserve(entry.target);
-    }
-  });
-},{ threshold: 0.15 });
+const diamondData = [
+  {
+    img: "assets/collection/diamonds/diamond-round-brilliant-1.jpg",
+    title: "Round Brilliant",
+    desc: "Maximum brilliance and timeless elegance."
+  },
+  {
+    img: "assets/collection/diamonds/diamond-oval-cut-1.jpg",
+    title: "Oval Cut",
+    desc: "Refined symmetry with elongated sparkle."
+  },
+  {
+    img: "assets/collection/diamonds/diamond-pear-cut-1.jpg",
+    title: "Pear Cut",
+    desc: "Unique teardrop brilliance for luxury designs."
+  },
+  {
+    img: "assets/collection/diamonds/diamond-princess-cut-1.jpg",
+    title: "Princess Cut",
+    desc: "Modern sharp brilliance with bold geometry."
+  }
+];
 
-document.querySelectorAll(".reveal, .gem-card")
-  .forEach(el => observer.observe(el));
-</script>
+let i = 0;
 
-<script>
-const slides = document.querySelectorAll(".auto-slider .slide");
-let index = 0;
+const imgEl = document.getElementById("diamondImage");
+const titleEl = document.getElementById("diamondTitle");
+const descEl = document.getElementById("diamondDesc");
+const box = document.querySelector(".showcase-image");
 
 setInterval(() => {
-  slides[index].classList.remove("active");
-  index = (index + 1) % slides.length;
-  slides[index].classList.add("active");
-}, 4000);
+  box.classList.add("fade");
+
+  setTimeout(() => {
+    i = (i + 1) % diamondData.length;
+    imgEl.src = diamondData[i].img;
+    titleEl.textContent = diamondData[i].title;
+    descEl.textContent = diamondData[i].desc;
+    box.classList.remove("fade");
+  }, 700);
+
+}, 4500);
 </script>
 
 </body>
