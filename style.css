@@ -1404,3 +1404,27 @@ body.page{
   font-size:1.2rem;
   letter-spacing:.5px;
 }
+.footer-contact .contact-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:14px;
+  color:#d4af37;
+}
+
+.footer-contact .contact-item span,
+.footer-contact .contact-item a{
+  color:#cfcfcf;
+  text-decoration:none;
+}
+
+.footer-contact .contact-item a:hover{
+  color:#d4af37;
+}
+
+.contact-icon{
+  width:18px;
+  height:18px;
+  color:#d4af37;   /* SVG uses currentColor */
+  flex-shrink:0;
+}
