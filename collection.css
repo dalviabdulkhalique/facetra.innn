@@ -1,294 +1,196 @@
 /* =====================================================
-   FACETRA COLLECTION SYSTEM — FINAL LUXURY BUILD
-   Inherits fonts + header/footer from style.css
+   FACETRA COLLECTION — MATCHED WITH HOMEPAGE THEME
+   No carousel | Auto grid | Premium reveal
    ===================================================== */
 
 
-/* ================= BASE FIX ================= */
+/* ================= BASE ================= */
 
-.page.collection-landing,
-.page.collection-landing * {
-  box-sizing: border-box;
+.page.collection-landing {
+  background: transparent;
 }
 
-
-/* ================= HERO ================= */
-
-.collection-hero {
-  min-height: 70vh;
-  background: radial-gradient(circle at top, #0f1a16, #050505 70%);
-  padding: 140px 20px 110px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-inner {
-  max-width: 960px;
-  margin: auto;
-}
-
-.hero-title {
-  color: #d4af37;
-  letter-spacing: 2px;
-  line-height: 1.2;
-}
-
-.hero-description {
-  margin-top: 22px;
-  color: #d0d0d0;
-  line-height: 1.9;
-  font-size: 0.95rem;
-}
-
-
-/* ================= CATEGORY BLOCKS ================= */
-
+.collection-section,
 .category-block {
   padding: 110px 0;
-  background: #050505;
 }
 
-.category-block:nth-of-type(even) {
-  background: #0b0b0b;
-}
-
+.collection-section .container,
 .category-block .container {
   max-width: 1200px;
   margin: auto;
   padding: 0 20px;
 }
 
-.category-block h2 {
-  color: #d4af37;
+
+/* ================= TITLES ================= */
+
+.category-block h2,
+.collection-section h2 {
+  color: var(--gold2);
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
   margin-bottom: 12px;
+  letter-spacing: 0.6px;
 }
 
 .section-intro {
-  max-width: 860px;
-  color: #bfbfbf;
+  max-width: 900px;
+  color: var(--muted);
   line-height: 1.8;
-  margin-bottom: 45px;
-  font-size: 0.9rem;
-}
-
-
-/* ================= CAROUSEL ================= */
-
-.carousel {
-  position: relative;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding-bottom: 18px;
-  scroll-behavior: smooth;
-}
-
-.carousel::-webkit-scrollbar {
-  height: 6px;
-}
-
-.carousel::-webkit-scrollbar-track {
-  background: #050505;
-}
-
-.carousel::-webkit-scrollbar-thumb {
-  background: #d4af37;
-  border-radius: 4px;
-}
-
-.carousel-track {
-  display: flex;
-  gap: 22px;
-}
-
-
-/* ================= CAROUSEL ITEM ================= */
-
-.carousel-item {
-  flex: 0 0 260px;
-  background: #0e0e0e;
-  border: 1px solid rgba(212,175,55,0.25);
-  overflow: hidden;
-
-  opacity: 0;
-  transform: translateY(30px) scale(0.97);
-  transition:
-    opacity 0.7s ease,
-    transform 0.7s ease,
-    border-color 0.4s ease,
-    box-shadow 0.4s ease;
-}
-
-.carousel-item.show {
-  opacity: 1;
-  transform: none;
-}
-
-.carousel-item:hover {
-  transform: translateY(-10px) scale(1.01);
-  border-color: #d4af37;
-  box-shadow: 0 18px 45px rgba(0,0,0,0.7);
-}
-
-.carousel-item img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  display: block;
-}
-
-
-/* ================= CATEGORY CTA ================= */
-
-.btn-category {
-  display: inline-block;
-  margin-top: 40px;
-  padding: 12px 32px;
-  border: 1px solid #d4af37;
-  color: #d4af37;
-  text-decoration: none;
-  letter-spacing: 1px;
-  transition: all 0.35s ease;
-}
-
-.btn-category:hover {
-  background: #d4af37;
-  color: #000;
-}
-
-.coming-soon {
-  color: #888;
-  font-style: italic;
+  margin-bottom: 50px;
+  font-size: 0.95rem;
 }
 
 
 /* =====================================================
-   PORTFOLIO PAGES
+   IMAGE GRID (REPLACES CAROUSEL)
    ===================================================== */
 
-.collection-wrapper {
-  background: #050505;
-}
-
-.collection-section {
-  padding: 110px 0;
-  background: #060606;
-}
-
-.collection-section:nth-child(even) {
-  background: #0b0b0b;
-}
-
-.collection-section .container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
-}
-
-.collection-section h2 {
-  color: #d4af37;
-  margin-bottom: 10px;
-}
-
-
-/* ================= GRID ================= */
-
-.gem-grid {
+.gem-grid,
+.category-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 32px;
+  gap: 34px;
 }
 
 
-/* ================= GEM CARD ================= */
+/* ================= IMAGE CARD ================= */
 
-.gem-card {
-  background: #0e0e0e;
+.gem-card,
+.category-card {
+  background: linear-gradient(180deg, #0c0c0c, #050505);
   border: 1px solid rgba(212,175,55,0.25);
-
+  overflow: hidden;
+  transition: all 0.45s ease;
   opacity: 0;
-  transform: translateY(35px);
-  transition:
-    opacity 0.7s ease,
-    transform 0.7s ease,
-    border-color 0.4s ease,
-    box-shadow 0.4s ease;
+  transform: translateY(40px);
 }
 
-.gem-card.show {
+.gem-card.show,
+.category-card.show {
   opacity: 1;
-  transform: none;
+  transform: translateY(0);
 }
 
-.gem-card:hover {
-  transform: translateY(-12px);
-  border-color: #d4af37;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+.gem-card:hover,
+.category-card:hover {
+  border-color: var(--gold2);
+  transform: translateY(-10px);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.7);
 }
 
-.gem-card img {
+.gem-card img,
+.category-card img {
   width: 100%;
   height: 240px;
   object-fit: cover;
   display: block;
 }
 
-.gem-info {
+
+/* ================= CARD INFO ================= */
+
+.gem-info,
+.category-info {
   padding: 20px;
 }
 
-.gem-info h3 {
-  color: #d4af37;
-  font-size: 1rem;
+.gem-info h3,
+.category-info h3 {
+  color: var(--gold2);
+  font-size: 1.05rem;
   margin-bottom: 6px;
 }
 
 .gem-meta {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: #aaa;
 }
 
-.gem-desc {
-  margin: 12px 0 16px;
+.gem-desc,
+.category-info p {
+  margin-top: 10px;
   font-size: 0.85rem;
-  color: #bbb;
+  color: var(--muted);
   line-height: 1.6;
 }
 
 
-/* ================= BUTTON ================= */
+/* ================= CTA BUTTON ================= */
 
+.btn-category,
 .btn-view {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 22px;
+  border: 1px solid var(--gold2);
+  color: var(--gold2);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease;
   background: transparent;
-  border: 1px solid #d4af37;
-  color: #d4af37;
-  padding: 9px 18px;
-  cursor: pointer;
-  transition: all 0.35s ease;
 }
 
+.btn-category:hover,
 .btn-view:hover {
-  background: #d4af37;
+  background: var(--gold2);
   color: #000;
 }
 
 
 /* =====================================================
-   SCROLL REVEAL SUPPORT
+   MODAL (UNCHANGED)
    ===================================================== */
 
-.fade-up,
-.reveal {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.9s ease, transform 0.9s ease;
+.gem-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
 }
 
-.fade-up.show,
-.reveal.show {
-  opacity: 1;
-  transform: translateY(0);
+.gem-modal.open {
+  display: flex;
+}
+
+.modal-content {
+  background: #0d0d0d;
+  padding: 32px;
+  max-width: 560px;
+  width: 92%;
+  position: relative;
+  border: 1px solid rgba(212,175,55,0.4);
+}
+
+.modal-content img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.modal-content h3 {
+  color: var(--gold2);
+  margin-bottom: 10px;
+}
+
+.modal-content p,
+.modal-content ul {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.modal-close {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  background: none;
+  color: var(--gold2);
+  font-size: 26px;
+  border: none;
+  cursor: pointer;
 }
 
 
@@ -298,21 +200,13 @@
 
 @media (max-width: 768px) {
 
-  .collection-hero {
-    padding: 120px 20px 80px;
-  }
-
-  .category-block,
-  .collection-section {
+  .collection-section,
+  .category-block {
     padding: 80px 0;
   }
 
-  .carousel-item {
-    flex: 0 0 75%;
+  .gem-card img,
+  .category-card img {
+    height: 200px;
   }
-
-  .gem-card img {
-    height: 210px;
-  }
-
 }
