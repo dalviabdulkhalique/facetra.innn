@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <title>Gemstone & Diamond Collection | FACETRA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore FACETRA’s curated collection of certified diamonds and premium natural sapphires selected for rarity, brilliance and long-term investment value.">
+  <link rel="canonical" href="https://facetra.in/collection.html">
+  <meta name="robots" content="index, follow">
 
-<title>Gemstone & Diamond Collection | FACETRA</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="collection.css">
 
-<meta name="description" content="Explore FACETRA’s curated collection of certified diamonds and premium natural gemstones selected for collectors, jewelers and long-term investors.">
-
-<link rel="canonical" href="https://facetra.in/collection.html">
-<meta name="robots" content="index, follow">
-
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="collection.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
 <body class="page">
@@ -75,85 +71,76 @@
 
 <!-- ================= AUTO COLLECTIONS ================= -->
 
-<section class="gem-section">
+<section class="collection-auto-section">
 
-  <div class="section-header fade-up">
-    <h2>Signature Gemstone Categories</h2>
-    <p>
-      Each category features hand-selected natural gemstones evaluated for
-      authenticity, certification and market desirability.
+  <div class="container">
+
+    <h2 class="section-title">Signature Gemstone Categories</h2>
+    <p class="section-subtitle">
+      Each category features hand-selected natural gemstones evaluated for authenticity,
+      certification and long-term market desirability.
     </p>
-  </div>
 
-  <div class="dual-collections container">
+    <div class="dual-collections">
 
-    <!-- ===== DIAMONDS ===== -->
-    <div class="auto-collection fade-up">
+      <!-- ===== DIAMONDS ===== -->
+      <div class="auto-collection fade-up">
 
-      <p class="collection-intro">
-        Investment-grade certified diamonds in classic and modern cuts.
-      </p>
+        <p class="collection-intro">
+          Investment-grade certified diamonds in classic and modern cuts.
+        </p>
 
-      <div class="auto-image-box">
-        <img id="diamondImg" src="" alt="FACETRA Diamond Collection">
+        <div class="auto-image-box">
+          <img id="diamondImg" src="" alt="FACETRA Diamond Collection">
+        </div>
+
+        <h3 id="diamondTitle"></h3>
+        <p id="diamondDesc" class="stone-desc"></p>
+
+        <a href="collection/diamonds.html" class="btn-outline-gold">
+          View Diamond Collection
+        </a>
+
       </div>
 
-      <h3 id="diamondName">Certified Diamonds</h3>
-      <p id="diamondDesc" class="stone-desc"></p>
+      <!-- ===== SAPPHIRES ===== -->
+      <div class="auto-collection fade-up">
 
-      <a href="collection/diamonds.html" class="btn-outline-gold">
-        View Diamond Collection
-      </a>
+        <p class="collection-intro">
+          Rare natural sapphires from Kashmir, Sri Lanka and premium deposits.
+        </p>
 
-    </div>
+        <div class="auto-image-box">
+          <img id="sapphireImg" src="" alt="FACETRA Sapphire Collection">
+        </div>
 
-    <!-- ===== SAPPHIRES ===== -->
-    <div class="auto-collection fade-up">
+        <h3 id="sapphireTitle"></h3>
+        <p id="sapphireDesc" class="stone-desc"></p>
 
-      <p class="collection-intro">
-        Rare natural sapphires from Kashmir, Sri Lanka and premium deposits.
-      </p>
+        <a href="collection/sapphires.html" class="btn-outline-gold">
+          View Sapphire Collection
+        </a>
 
-      <div class="auto-image-box">
-        <img id="sapphireImg" src="" alt="FACETRA Sapphire Collection">
       </div>
 
-      <h3 id="sapphireName">Natural Sapphires</h3>
-      <p id="sapphireDesc" class="stone-desc"></p>
-
-      <a href="collection/sapphires.html" class="btn-outline-gold">
-        View Sapphire Collection
-      </a>
-
     </div>
 
-  </div>
+    <!-- ===== COMING SOON ===== -->
 
-</section>
+    <div class="coming-grid fade-up">
 
-<div class="lux-divider"></div>
+      <div class="coming-card">
+        <h3>Natural Rubies</h3>
+        <p>Premium Burma and Mozambique ruby collections launching soon.</p>
+        <span class="coming-label">Launching Soon</span>
+      </div>
 
-<!-- ================= COMING SOON ================= -->
+      <div class="coming-card">
+        <h3>Emeralds</h3>
+        <p>Colombian and Zambian emerald collections launching soon.</p>
+        <span class="coming-label">Launching Soon</span>
+      </div>
 
-<section class="gem-section">
-
-  <div class="section-header fade-up">
-    <h2>Upcoming Collections</h2>
-    <p>Additional premium gemstone portfolios launching soon.</p>
-  </div>
-
-  <div class="coming-grid container">
-
-    <div class="coming-card fade-up">
-      <h3>Natural Rubies</h3>
-      <p>Premium Burmese and Mozambique rubies selected for vivid saturation.</p>
-      <span class="coming-label">Launching Soon</span>
-    </div>
-
-    <div class="coming-card fade-up">
-      <h3>Emeralds</h3>
-      <p>Colombian and Zambian emeralds with strong color and natural character.</p>
-      <span class="coming-label">Launching Soon</span>
     </div>
 
   </div>
@@ -175,53 +162,54 @@ const toggle = document.getElementById("navToggle");
 const mobileNav = document.getElementById("mobileNav");
 toggle.onclick = () => mobileNav.classList.toggle("open");
 
-/* FADE UP */
+/* SCROLL ANIMATION */
 const observer = new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting) e.target.classList.add("show");
   });
-},{threshold:0.12});
+},{threshold:0.15});
 document.querySelectorAll(".fade-up").forEach(el=>observer.observe(el));
 
-/* ================= AUTO IMAGE SLIDERS ================= */
+/* ================= AUTO IMAGE ROTATION ================= */
 
-window.addEventListener("DOMContentLoaded",()=>{
+fetch("assets/collection/manifest.json")
+  .then(res => res.json())
+  .then(data => {
 
-  fetch("assets/collection/manifest.json")
-    .then(r=>r.json())
-    .then(data=>{
+    runSlider(
+      data.diamonds,
+      document.getElementById("diamondImg"),
+      document.getElementById("diamondTitle"),
+      document.getElementById("diamondDesc")
+    );
 
-      startSlider(
-        data.diamonds.map(f=>"assets/collection/diamonds/"+f),
-        document.getElementById("diamondImg"),
-        document.getElementById("diamondDesc"),
-        "Certified investment-grade natural diamonds."
-      );
+    runSlider(
+      data.sapphires,
+      document.getElementById("sapphireImg"),
+      document.getElementById("sapphireTitle"),
+      document.getElementById("sapphireDesc")
+    );
 
-      startSlider(
-        data.sapphires.map(f=>"assets/collection/sapphires/"+f),
-        document.getElementById("sapphireImg"),
-        document.getElementById("sapphireDesc"),
-        "Royal blue, Kashmir tone and rare fancy sapphires."
-      );
+  });
 
-    });
+function runSlider(list, imgEl, titleEl, descEl){
+  let i = 0;
 
-});
-
-function startSlider(images,imgEl,descEl,descText){
-  let i=0;
   function show(){
     imgEl.classList.add("fade");
+
     setTimeout(()=>{
-      imgEl.src = images[i];
-      descEl.textContent = descText;
+      imgEl.src = list[i].img;
+      titleEl.textContent = list[i].title;
+      descEl.textContent = list[i].desc;
+
       imgEl.classList.remove("fade");
-      i = (i+1) % images.length;
-    },400);
+      i = (i + 1) % list.length;
+    }, 400);
   }
+
   show();
-  setInterval(show,5000);
+  setInterval(show, 5000);
 }
 </script>
 
