@@ -83,13 +83,14 @@
 <!-- ================= HERO ================= -->
 <section class="collection-hero reveal">
   <div class="hero-inner">
-    <h1>Certified Diamond Collection</h1>
-    <p>
-      Natural diamonds selected for brilliance, rarity and long-term investment value.
-      All stones are sourced responsibly and available with independent certification.
+    <h1 class="hero-title">Certified Diamond Collection</h1>
+    <p class="hero-description">
+      Natural diamonds selected for brilliance, rarity and
+      investment-grade quality with independent certification.
     </p>
   </div>
 </section>
+
 
 <!-- ================= DIAMOND GRID ================= -->
 <section class="collection-section reveal" id="diamonds">
@@ -180,74 +181,68 @@
 
 <!-- ================= SCRIPTS ================= -->
 <script>
-
 /* ===== MOBILE MENU ===== */
 const toggle = document.getElementById("navToggle");
 const mobileNav = document.getElementById("mobileNav");
 
-toggle.onclick = () => {
-  mobileNav.classList.toggle("open");
-  document.body.classList.toggle("no-scroll");
-};
+if(toggle){
+  toggle.onclick = () => {
+    mobileNav.classList.toggle("open");
+    document.body.classList.toggle("no-scroll");
+  };
+}
 
 document.querySelectorAll("#mobileNav a").forEach(a=>{
   a.onclick = ()=>{
     mobileNav.classList.remove("open");
     document.body.classList.remove("no-scroll");
-  }
+  };
 });
 
-/* ===== LOAD DIAMONDS ===== */
-async function loadDiamonds(){
+/* ===== LOAD MANIFEST ===== */
+async function initDiamonds(){
   try{
     const res = await fetch("../assets/collection/manifest.json");
     const data = await res.json();
-    const grid = document.getElementById("diamondGrid");
 
-    data.diamonds.forEach(d=>{
-      const msg = encodeURIComponent(
-        `Hello FACETRA, I’m interested in the ${d.title}. Please share details, certification and pricing. Product link: https://facetra.in/collection/diamonds.html#${d.slug}`
-      );
-
-      const card = document.createElement("div");
-      card.className = "product-card reveal";
-      card.id = d.slug;
-
-      card.innerHTML = `
-        <img src="../${d.img}" alt="${d.title}">
-        <h3>${d.title}</h3>
-        <p>${d.desc}</p>
-        <a class="btn-gold-glow"
-           target="_blank"
-           href="https://wa.me/918055113448?text=${msg}">
-           Enquire on WhatsApp
-        </a>
-
-        <script type="application/ld+json">
-        {
-          "@context":"https://schema.org",
-          "@type":"Product",
-          "name":"${d.title}",
-          "image":"https://facetra.in/${d.img}",
-          "description":"${d.desc}",
-          "brand":{"@type":"Brand","name":"FACETRA"},
-          "offers":{
-            "@type":"Offer",
-            "priceCurrency":"INR",
-            "availability":"https://schema.org/InStock",
-            "url":"https://facetra.in/collection/diamonds.html#${d.slug}"
-          }
-        }
-        <\/script>
-      `;
-      grid.appendChild(card);
-    });
-
+    renderDiamonds(data.diamonds);
   }catch(e){
-    console.error("Diamond load failed:", e);
+    console.error("Manifest load failed:", e);
   }
 }
-loadDiamonds();
+
+function renderDiamonds(list){
+  const grid = document.getElementById("diamondGrid");
+  if(!grid || !list) return;
+
+  grid.innerHTML = "";
+
+  list.forEach(item=>{
+    const slug = item.slug;
+
+    const msg =
+`Hello FACETRA, I’m interested in the ${item.title}. 
+Please share details, certification and pricing. 
+Product link: https://facetra.in/collection/diamonds.html#${slug}`;
+
+    const link =
+`https://wa.me/918055113448?text=${encodeURIComponent(msg)}`;
+
+    grid.innerHTML += `
+      <div class="gem-card" id="${slug}">
+        <img src="../${item.img}" alt="${item.title}">
+        <h3>${item.title}</h3>
+        <p>${item.desc}</p>
+        <a href="${link}" target="_blank"
+           class="btn-gold-glow whatsapp-btn">
+           Enquire on WhatsApp
+        </a>
+      </div>
+    `;
+  });
+}
+
+initDiamonds();
 
 /* ===== SCROLL REVEAL ===== */
 const reveals=document.querySelectorAll(".reveal");
@@ -255,8 +250,4 @@ const io=new IntersectionObserver(e=>{
  e.forEach(x=>{ if(x.isIntersecting) x.target.classList.add("show"); });
 },{threshold:0.15});
 reveals.forEach(r=>io.observe(r));
-
 </script>
-
-</body>
-</html>
