@@ -5,27 +5,44 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Gemstone & Diamond Collection | FACETRA</title>
-<meta name="description" content="Explore FACETRA’s luxury collection of certified diamonds and premium natural gemstones curated for collectors and jewelers. Enquire via WhatsApp.">
+<title>FACETRA — Luxury Gemstone & Diamond Collection</title>
+<meta name="description" content="FACETRA curates investment-grade certified diamonds, premium natural sapphires, rubies and emeralds. Each gem is sourced ethically, independently certified and selected for rarity and long-term value. Explore cut, origin and certification details for collectors and jewelers.">
 <link rel="canonical" href="https://facetra.in/collection.html">
 <meta name="robots" content="index, follow">
 
 <!-- OpenGraph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Gemstone & Diamond Collection – FACETRA">
-<meta property="og:description" content="Certified diamonds and premium natural sapphires curated for rarity, brilliance and long-term value.">
+<meta property="og:title" content="FACETRA — Gemstone & Diamond Collection">
+<meta property="og:description" content="Investment-grade certified diamonds and premium natural gemstones curated for rarity, brilliance and long-term value.">
 <meta property="og:url" content="https://facetra.in/collection.html">
-<meta property="og:image" content="https://facetra.in/assets/collection/diamonds/diamond-round-brilliant-1.jpg">
+<meta property="og:image" content="assets/collection/diamonds/diamond-round-brilliant-1.jpg">
 
-<!-- fonts and styles -->
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "FACETRA Collection",
+  "url": "https://facetra.in/collection.html",
+  "description": "Investment-grade certified diamonds and premium natural gemstones curated by FACETRA for collectors, jewelers and investors.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "FACETRA",
+    "url": "https://facetra.in",
+    "logo": "https://facetra.in/logo.png"
+  }
+}
+</script>
+
+<!-- Fonts + styles -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">    <!-- your site-wide CSS -->
 <link rel="stylesheet" href="collection.css">
 
 </head>
 <body class="page collection-page">
 
-<!-- HEADER -->
+<!-- HEADER (kept consistent with homepage) -->
 <header class="site-header">
   <div class="header-inner">
     <div class="brand">
@@ -61,11 +78,13 @@
   <a href="contact.html">Contact</a>
 </nav>
 
-<!-- HERO -->
+<!-- HERO (matches homepage) -->
 <section class="collection-hero reveal">
   <div class="hero-inner">
-    <h1 class="hero-title">Our Curated Collections</h1>
-    <p class="hero-description">Certified diamonds and premium natural gemstones selected for rarity, brilliance and long-term investment value.</p>
+    <h1 class="hero-title">Signature Gemstone Collections</h1>
+    <p class="hero-description">
+      FACETRA sources, certifies and curates investment-grade natural gemstones — from GIA-aligned certified diamonds to rare sapphire tones and collector-grade rubies and emeralds. Each stone is selected for provenance, cut quality and long-term market appeal.
+    </p>
   </div>
 </section>
 
@@ -77,189 +96,241 @@
 
     <div class="dual-collections">
 
-      <!-- DIAMONDS AUTO-COLLECTION -->
+      <!-- DIAMONDS -->
       <div class="auto-collection" id="diamondBox">
-        <p class="collection-intro" id="diamondIntro">Investment-grade certified diamonds in classic and modern cuts.</p>
+        <p class="collection-intro" id="diamondIntro">
+          FACETRA's diamond assortment emphasises cut precision, clarity and certification. We source classic round brilliants, modern princess and radiant cuts, as well as vintage cushion and step-cut emerald diamonds — each independently certified with full treatment disclosure and origin reporting where available.
+        </p>
 
-        <!-- description above image is the collection-intro -->
         <div class="auto-image-box">
-          <img id="diamondImg" src="assets/collection/diamonds/diamond-round-brilliant-1.jpg" alt="Diamond">
+          <img id="diamondImg" src="assets/collection/diamonds/diamond-round-brilliant-1.jpg" alt="Diamond — FACETRA">
         </div>
 
         <h3 id="diamondName">Round Brilliant Diamond</h3>
-        <p id="diamondDesc" class="stone-desc">Maximum brilliance and perfect symmetry for timeless value.</p>
+        <p id="diamondDesc" class="stone-desc">
+          Maximum brilliance and symmetry — investment-quality round brilliants selected for collectors and bespoke jewelry projects.
+        </p>
 
         <a id="diamondCTA" href="collection/diamonds.html" class="btn-category">View Diamond Collection</a>
       </div>
 
-      <!-- SAPPHIRES AUTO-COLLECTION -->
+      <!-- SAPPHIRES -->
       <div class="auto-collection" id="sapphireBox">
-        <p class="collection-intro" id="sapphireIntro">Rare natural sapphires sourced from premium historic deposits.</p>
+        <p class="collection-intro" id="sapphireIntro">
+          Our sapphire collection spans Kashmir-tone velvety blues to royal and padparadscha hues. We prioritise natural color, clarity and traceable origin for each lot — ideal for connoisseurs and bespoke design projects.
+        </p>
 
         <div class="auto-image-box">
-          <img id="sapphireImg" src="assets/collection/sapphires/sapphire-royal-blue-1.jpg" alt="Sapphire">
+          <img id="sapphireImg" src="assets/collection/sapphires/sapphire-royal-blue-1.jpg" alt="Sapphire — FACETRA">
         </div>
 
         <h3 id="sapphireName">Royal Blue Sapphire</h3>
-        <p id="sapphireDesc" class="stone-desc">Deep saturated blue with exceptional brilliance.</p>
+        <p id="sapphireDesc" class="stone-desc">
+          Deep saturated royal blue tones with excellent polish and clarity — sourced from Sri Lanka and select historic deposits.
+        </p>
 
         <a id="sapphireCTA" href="collection/sapphires.html" class="btn-category">View Sapphire Collection</a>
       </div>
 
     </div>
 
-    <!-- COMING SOON -->
+    <!-- COMING SOON (rubies/emeralds) -->
     <div class="coming-grid">
       <div class="coming-card">
         <h3>Natural Rubies</h3>
-        <p>Premium Burma and Mozambique rubies coming soon.</p>
+        <p>Premium Burmese and Mozambique rubies selected for vivid red saturation, origin documentation and investment potential.</p>
         <span class="coming-label">Launching Soon</span>
       </div>
       <div class="coming-card">
         <h3>Emeralds</h3>
-        <p>Colombian and Zambian emerald collection coming soon.</p>
+        <p>Colombian and Zambian emeralds chosen for natural color, crystal clarity and documented origin.</p>
         <span class="coming-label">Launching Soon</span>
       </div>
     </div>
 
+    <!-- LONG SEO+SALES SECTION (expanded, premium, keyword-rich) -->
+    <article class="collection-long" style="margin-top:36px;color:var(--muted);line-height:1.9;">
+      <h2 style="font-family:Cinzel,serif;color:var(--gold);text-align:center;margin-bottom:12px;">Why Collect with FACETRA</h2>
+
+      <p style="max-width:900px;margin:0 auto 12px;text-align:center;">
+        FACETRA is built for collectors, jewelers and investors seeking verified, high-quality gemstones. We combine rigorous gemological assessment, ethical procurement and independent certification to ensure transparency and value preservation.
+      </p>
+
+      <p style="max-width:920px;margin:14px auto;">
+        Our process begins at source — we maintain long-term relationships with verified miners and traders across Asia and Africa. Each lot is evaluated for natural color, cutting precision and treatment history. High-priority lots are submitted to independent laboratories (GIA, IGI and other reputable labs) for grading and treatment disclosure. For premium lots, we capture origin reports and chain-of-custody documentation to support provenance and long-term resale value.
+      </p>
+
+      <p style="max-width:920px;margin:14px auto;">
+        Whether you are a private collector aiming to build a portfolio of investment-grade stones, a jeweler seeking exceptional centerpieces, or a family office exploring alternative assets, FACETRA provides tailored sourcing, verification and secure trade facilitation. Our team can arrange private viewings, detailed lab reports and bespoke procurement on request.
+      </p>
+    </article>
+
   </div>
 </section>
 
-<!-- FOOTER (minimal here — keep common footer in site-wide file) -->
+<!-- FOOTER (same style & structure as homepage) -->
 <footer class="lux-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="logo.png" alt="FACETRA Logo">
+        <span>FACETRA</span>
+      </div>
+      <p>Premium gemstone trading house specializing in certified natural gemstones curated for collectors, jewelers and long-term investors.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="collection.html">Collection</a>
+      <a href="certification.html">Certification</a>
+      <a href="why-facetra.html">Why FACETRA</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <a class="contact-item" href="mailto:info@facetra.in">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        <span>info@facetra.in</span>
+      </a>
+      <a class="contact-item" href="tel:+918055113448">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7 A2 2 0 0 1 4.1 2h3 a2 2 0 0 1 2 1.7 c.1 1 .3 2 .6 3 a2 2 0 0 1-.4 2.1L8.1 10 a16 16 0 0 0 6 6l1.2-1.2 a2 2 0 0 1 2.1-.4 c1 .3 2 .5 3 .6 a2 2 0 0 1 1.6 1.9z"/></svg>
+        <span>+91 80551 13448</span>
+      </a>
+      <a class="contact-item" href="https://wa.me/918055113448" target="_blank">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20.6 18.7c-.3-.1-1.9-.9-2.2-1 -.3-.1-.5-.1-.7.1l-.9 1.1 c-.1.2-.3.2-.6.1 -.3-.1-1.2-.4-2.2-1.4 -.8-.7-1.4-1.6-1.5-1.9 -.1-.3 0-.4.1-.5l.4-.5 .3-.4c.1-.2.1-.3 0-.5 -.1-.1-.7-1.7-1-2.3 -.3-.6-.5-.5-.7-.5h-.6 c-.2 0-.5.1-.7.3 -.2.2-.9.9-.9 2.1 0 1.2.9 2.4 1 2.6 .1.2 1.8 2.8 4.3 3.9 .6.3 1.1.5 1.5.6 .6.2 1.1.2 1.5.1 .5-.1 1.9-.8 2.2-1.6 .3-.8.3-1.5.2-1.6 -.1-.1-.3-.2-.6-.3z" fill="currentColor"/></svg>
+        <span>WhatsApp Chat</span>
+      </a>
+      <a class="contact-item" href="https://instagram.com/facetra.in" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2"/></svg><span>@facetra.in — DM us</span></a>
+      <div class="contact-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8 2 5 5 5 9 c0 5.3 7 13 7 13 s7-7.7 7-13 c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg><span>Mumbai, Maharashtra, India</span></div>
+    </div>
+
+  </div>
+
   <div class="footer-bottom">© 2026 FACETRA. All rights reserved.</div>
 </footer>
 
 <!-- SCRIPTS -->
 <script>
-/* ======= Mobile nav (hamburger) ======= */
+/* ---------- Mobile nav ---------- */
 const navToggle = document.getElementById('navToggle');
 const mobileNav = document.getElementById('mobileNav');
-navToggle.addEventListener('click', () => {
-  const open = mobileNav.classList.toggle('open');
-  document.body.classList.toggle('nav-open', open);
-  mobileNav.setAttribute('aria-hidden', !open);
-});
-document.querySelectorAll('#mobileNav a').forEach(a => a.addEventListener('click', () => {
-  mobileNav.classList.remove('open');
-  document.body.classList.remove('nav-open');
-  mobileNav.setAttribute('aria-hidden','true');
-}));
+if(navToggle){
+  navToggle.addEventListener('click', ()=>{
+    const open = mobileNav.classList.toggle('open');
+    document.body.classList.toggle('nav-open', open);
+    mobileNav.setAttribute('aria-hidden', !open);
+  });
+  document.querySelectorAll('#mobileNav a').forEach(a => a.addEventListener('click', ()=>{
+    mobileNav.classList.remove('open');
+    document.body.classList.remove('nav-open');
+    mobileNav.setAttribute('aria-hidden','true');
+  }));
+}
 
-/* ======= Reveal on scroll (once) ======= */
+/* ---------- Scroll reveal (one-time) ---------- */
 const reveals = document.querySelectorAll('.reveal');
 const io = new IntersectionObserver(entries => {
   entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('show');
-      io.unobserve(e.target);
-    }
+    if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); }
   });
-}, { threshold: 0.12 });
+},{ threshold: 0.12 });
 reveals.forEach(r => io.observe(r));
 
-/* ======= Load manifest and initialize sliders ======= */
-const MANIFEST_PATH = '/assets/collection/manifest.json';
-
-async function fetchManifest(){
-  try {
-    const res = await fetch(MANIFEST_PATH, {cache: "no-cache"});
-    if(!res.ok) throw new Error('Manifest load error '+res.status);
-    const manifest = await res.json();
-    return manifest;
-  } catch(e){
-    console.error('Cannot load manifest:', e);
+/* ---------- Manifest-based auto sliders ---------- */
+const MANIFEST = 'assets/collection/manifest.json'; // relative path
+async function loadManifest(){
+  try{
+    const res = await fetch(MANIFEST, {cache:'no-cache'});
+    if(!res.ok) throw new Error('Manifest fetch failed: '+res.status);
+    const json = await res.json();
+    return json;
+  }catch(err){
+    console.error(err);
     return null;
   }
 }
 
-function preloadImages(list){
-  if(!Array.isArray(list)) return;
-  list.forEach(it => {
-    const p = new Image();
-    p.src = it.img;
+/* Normalize a manifest item to a usable image URL (relative) */
+function imagePath(itemImg){
+  if(!itemImg) return '';
+  // remove leading slash if present so path is relative to current site path
+  return itemImg.startsWith('/') ? itemImg.slice(1) : itemImg;
+}
+
+/* Preload images */
+function preload(list){
+  (list||[]).forEach(it=>{
+    const img = new Image();
+    img.src = imagePath(it.img);
   });
 }
 
-function runAutoSlider(list, els, intervalMs = 5000){
-  if(!Array.isArray(list) || list.length===0) return;
-  preloadImages(list);
-  let i = 0;
-  const imgEl = els.img;
-  const nameEl = els.name;
-  const descEl = els.desc;
-  const ctaEl = els.cta;
+/* Slider runner: list = manifest array; els = {img, name, desc, cta} */
+function runSlider(list, els, ms=5000){
+  if(!Array.isArray(list) || list.length===0) return null;
+  preload(list);
+  let idx = 0;
+  const { img, name, desc, cta } = els;
 
-  // show initial
-  function show(){
-    const item = list[i];
-    // fade
-    imgEl.classList.add('fade');
-    setTimeout(()=> {
-      imgEl.src = item.img;
-      imgEl.alt = item.title;
-      nameEl.textContent = item.title;
-      descEl.textContent = item.desc || '';
-      // if slug exists, set CTA link to collection subpage + anchor
-      if(item.slug){
-        // choose base page based on first segment of img path
-        const seg = item.img.split('/')[2] || '';
-        let base = '/collection/';
-        if(seg.includes('diamonds')) base += 'diamonds.html';
-        else if(seg.includes('sapphires')) base += 'sapphires.html';
-        else if(seg.includes('rubies')) base += 'rubies.html';
-        else if(seg.includes('emeralds')) base += 'emeralds.html';
-        else base += 'index.html';
-        ctaEl.href = base + '#' + item.slug;
+  function showNext(){
+    const item = list[idx];
+    const path = imagePath(item.img);
+    // fade out -> set -> fade in
+    img.classList.add('fade');
+    setTimeout(()=>{
+      img.src = path || 'logo.png';
+      img.alt = item.title || '';
+      if(name) name.textContent = item.title || '';
+      if(desc) desc.textContent = item.desc || '';
+      // set CTA anchor to collection page + anchor slug if available
+      if(cta){
+        let base = 'collection/diamonds.html';
+        // choose base by folder in image path
+        if(path.includes('/sapphires/')) base = 'collection/sapphires.html';
+        if(path.includes('/rubies/')) base = 'collection/rubies.html';
+        if(path.includes('/emeralds/')) base = 'collection/emeralds.html';
+        const slug = item.slug ? '#' + item.slug : '';
+        cta.href = base + slug;
       }
-      // remove fade
-      setTimeout(()=> imgEl.classList.remove('fade'), 60);
-      i = (i + 1) % list.length;
+      setTimeout(()=> img.classList.remove('fade'), 70);
+      idx = (idx + 1) % list.length;
     }, 420);
   }
 
-  show();
-  return setInterval(show, intervalMs);
+  // initial show (immediately)
+  showNext();
+  return setInterval(showNext, ms);
 }
 
-/* ======= Initialize page ======= */
+/* ---------- Init ---------- */
 (async function init(){
-  const manifest = await fetchManifest();
+  const manifest = await loadManifest();
   if(!manifest){
-    document.getElementById('diamondBox').querySelector('.auto-image-box img').src = 'logo.png';
-    document.getElementById('sapphireBox').querySelector('.auto-image-box img').src = 'logo.png';
+    console.warn('Manifest not found — ensure assets/collection/manifest.json exists.');
     return;
   }
 
-  // diamonds and sapphires arrays (fallback to empty)
+  // arrays
   const diamonds = manifest.diamonds || [];
   const sapphires = manifest.sapphires || [];
 
-  // ensure we use full path starting with / if manifest entries missing leading /
-  function normalize(list){
-    return list.map(it => {
-      const img = it.img && it.img.startsWith('/') ? it.img.slice(1) : it.img;
-      return Object.assign({}, it, { img: '/' + img });
-    });
-  }
+  // DOM references
+  const diamondImg = document.getElementById('diamondImg');
+  const diamondName = document.getElementById('diamondName');
+  const diamondDesc = document.getElementById('diamondDesc');
+  const diamondCTA = document.getElementById('diamondCTA');
 
-  const dList = normalize(diamonds);
-  const sList = normalize(sapphires);
+  const sapphireImg = document.getElementById('sapphireImg');
+  const sapphireName = document.getElementById('sapphireName');
+  const sapphireDesc = document.getElementById('sapphireDesc');
+  const sapphireCTA = document.getElementById('sapphireCTA');
 
-  // init sliders
-  runAutoSlider(dList, {
-    img: document.getElementById('diamondImg'),
-    name: document.getElementById('diamondName'),
-    desc: document.getElementById('diamondDesc'),
-    cta: document.getElementById('diamondCTA')
-  }, 5000);
-
-  runAutoSlider(sList, {
-    img: document.getElementById('sapphireImg'),
-    name: document.getElementById('sapphireName'),
-    desc: document.getElementById('sapphireDesc'),
-    cta: document.getElementById('sapphireCTA')
-  }, 5000);
+  // Run sliders if arrays present
+  runSlider(diamonds, { img: diamondImg, name: diamondName, desc: diamondDesc, cta: diamondCTA }, 5000);
+  runSlider(sapphires, { img: sapphireImg, name: sapphireName, desc: sapphireDesc, cta: sapphireCTA }, 5000);
 
 })();
 </script>
