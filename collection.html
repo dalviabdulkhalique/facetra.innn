@@ -55,7 +55,7 @@
   <a href="contact.html">Contact</a>
 </div>
 
-<!-- ================= HERO (SAME AS HOME STYLE) ================= -->
+<!-- ================= HERO ================= -->
 
 <section class="hero-section">
   <div class="hero-inner fade-up">
@@ -69,10 +69,9 @@
 
 <div class="lux-divider"></div>
 
-<!-- ================= AUTO COLLECTIONS ================= -->
+<!-- ================= COLLECTIONS ================= -->
 
 <section class="collection-auto-section">
-
   <div class="container">
 
     <h2 class="section-title">Signature Gemstone Categories</h2>
@@ -83,7 +82,7 @@
 
     <div class="dual-collections">
 
-      <!-- ===== DIAMONDS ===== -->
+      <!-- DIAMONDS -->
       <div class="auto-collection fade-up">
 
         <p class="collection-intro">
@@ -103,7 +102,7 @@
 
       </div>
 
-      <!-- ===== SAPPHIRES ===== -->
+      <!-- SAPPHIRES -->
       <div class="auto-collection fade-up">
 
         <p class="collection-intro">
@@ -125,8 +124,7 @@
 
     </div>
 
-    <!-- ===== COMING SOON ===== -->
-
+    <!-- COMING SOON -->
     <div class="coming-grid fade-up">
 
       <div class="coming-card">
@@ -144,7 +142,6 @@
     </div>
 
   </div>
-
 </section>
 
 <!-- ================= FOOTER ================= -->
@@ -162,7 +159,7 @@ const toggle = document.getElementById("navToggle");
 const mobileNav = document.getElementById("mobileNav");
 toggle.onclick = () => mobileNav.classList.toggle("open");
 
-/* SCROLL ANIMATION */
+/* SCROLL ANIMATIONS */
 const observer = new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting) e.target.classList.add("show");
@@ -170,27 +167,20 @@ const observer = new IntersectionObserver(entries=>{
 },{threshold:0.15});
 document.querySelectorAll(".fade-up").forEach(el=>observer.observe(el));
 
-/* ================= AUTO IMAGE ROTATION ================= */
+/* AUTO IMAGE ROTATION FROM MANIFEST */
 
 fetch("assets/collection/manifest.json")
-  .then(res => res.json())
+  .then(r => r.json())
   .then(data => {
 
-    runSlider(
-      data.diamonds,
-      document.getElementById("diamondImg"),
-      document.getElementById("diamondTitle"),
-      document.getElementById("diamondDesc")
-    );
+    runSlider(data.diamonds,
+      diamondImg, diamondTitle, diamondDesc);
 
-    runSlider(
-      data.sapphires,
-      document.getElementById("sapphireImg"),
-      document.getElementById("sapphireTitle"),
-      document.getElementById("sapphireDesc")
-    );
+    runSlider(data.sapphires,
+      sapphireImg, sapphireTitle, sapphireDesc);
 
-  });
+  })
+  .catch(err => console.error("Manifest load error:", err));
 
 function runSlider(list, imgEl, titleEl, descEl){
   let i = 0;
