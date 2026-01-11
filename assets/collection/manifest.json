@@ -3,41 +3,49 @@
     {
       "img": "assets/collection/diamonds/diamond-round-brilliant-1.jpg",
       "title": "Round Brilliant Diamond",
+      "slug": "diamond-round-brilliant-1",
       "desc": "Certified natural round brilliant diamond with exceptional fire and symmetry."
     },
     {
       "img": "assets/collection/diamonds/diamond-oval-1.jpg",
       "title": "Oval Cut Diamond",
+      "slug": "diamond-oval-1",
       "desc": "Elegant oval diamond offering elongated brilliance and premium clarity."
     },
     {
       "img": "assets/collection/diamonds/diamond-emerald-1.jpg",
       "title": "Emerald Cut Diamond",
+      "slug": "diamond-emerald-1",
       "desc": "Step-cut emerald diamond with hall-of-mirrors brilliance and clean facets."
     },
     {
       "img": "assets/collection/diamonds/diamond-pear-1.jpg",
       "title": "Pear Shape Diamond",
+      "slug": "diamond-pear-1",
       "desc": "Tear-drop shaped diamond combining round and marquise brilliance."
     },
     {
       "img": "assets/collection/diamonds/diamond-marquise-1.jpg",
       "title": "Marquise Cut Diamond",
+      "slug": "diamond-marquise-1",
       "desc": "High surface-area diamond shape ideal for statement jewelry designs."
     },
     {
       "img": "assets/collection/diamonds/diamond-princess-1.jpg",
       "title": "Princess Cut Diamond",
+      "slug": "diamond-princess-1",
       "desc": "Modern square brilliant diamond with sharp corners and high sparkle."
     },
     {
       "img": "assets/collection/diamonds/diamond-radiant-1.jpg",
       "title": "Radiant Cut Diamond",
+      "slug": "diamond-radiant-1",
       "desc": "Brilliant-cut diamond combining emerald shape with strong fire."
     },
     {
       "img": "assets/collection/diamonds/diamond-cushion-1.jpg",
       "title": "Cushion Cut Diamond",
+      "slug": "diamond-cushion-1",
       "desc": "Soft rounded corners with classic vintage brilliance."
     }
   ],
@@ -46,101 +54,121 @@
     {
       "img": "assets/collection/sapphires/sapphire-cornflower-blue-1.jpg",
       "title": "Cornflower Blue Sapphire",
+      "slug": "sapphire-cornflower-blue-1",
       "desc": "Cushion cut cornflower blue sapphire from Sri Lanka with fine saturation."
     },
     {
       "img": "assets/collection/sapphires/sapphire-royal-blue-1.jpg",
       "title": "Royal Blue Sapphire",
+      "slug": "sapphire-royal-blue-1",
       "desc": "Oval cut royal blue sapphire from Sri Lanka with strong brilliance."
     },
     {
       "img": "assets/collection/sapphires/sapphire-deep-blue-1.jpg",
       "title": "Deep Blue Sapphire",
+      "slug": "sapphire-deep-blue-1",
       "desc": "Madagascar origin deep blue sapphire with excellent clarity."
     },
     {
       "img": "assets/collection/sapphires/sapphire-kashmir-cushion-cut-1.jpg",
       "title": "Kashmir Type Blue Sapphire",
+      "slug": "sapphire-kashmir-cushion-cut-1",
       "desc": "Velvety blue cushion cut sapphire in classic Kashmir color tone."
     },
     {
       "img": "assets/collection/sapphires/sapphire-pear-blue-1.jpg",
       "title": "Pear Cut Blue Sapphire",
+      "slug": "sapphire-pear-blue-1",
       "desc": "Pear shaped blue sapphire from Sri Lanka with bright brilliance."
     },
     {
       "img": "assets/collection/sapphires/sapphire-hot-pink-oval-1.jpg",
       "title": "Pink Sapphire",
+      "slug": "sapphire-hot-pink-oval-1",
       "desc": "Hot pink oval sapphire from Africa with observed vivid color saturation."
     },
     {
       "img": "assets/collection/sapphires/sapphire-purple-oval-1.jpg",
       "title": "Purple Sapphire",
+      "slug": "sapphire-purple-oval-1",
       "desc": "Oval cut violet sapphire from Madagascar with balanced hue."
     },
     {
       "img": "assets/collection/sapphires/sapphire-lavender-cushion-cut-1.jpg",
       "title": "Lavender Sapphire",
+      "slug": "sapphire-lavender-cushion-cut-1",
       "desc": "Soft lavender cushion cut sapphire from African deposits."
     },
     {
       "img": "assets/collection/sapphires/sapphire-padparadscha-oval-1.jpg",
       "title": "Padparadscha Sapphire",
+      "slug": "sapphire-padparadscha-oval-1",
       "desc": "Rare pink-orange padparadscha sapphire from Sri Lanka."
     },
     {
       "img": "assets/collection/sapphires/sapphire-parti-blue-green-oval-1.jpg",
       "title": "Parti Color Sapphire",
+      "slug": "sapphire-parti-blue-green-oval-1",
       "desc": "Australian parti sapphire showing blue and green zoning."
     },
     {
       "img": "assets/collection/sapphires/sapphire-orange-round-1.jpg",
       "title": "Orange Sapphire",
+      "slug": "sapphire-orange-round-1",
       "desc": "Round cut orange sapphire with bright fire from Africa."
     },
     {
       "img": "assets/collection/sapphires/sapphire-yellow-radiant-1.jpg",
       "title": "Yellow Sapphire (Pukhraj)",
+      "slug": "sapphire-yellow-radiant-1",
       "desc": "Radiant cut yellow sapphire from Sri Lanka used in fine jewelry."
     },
     {
       "img": "assets/collection/sapphires/sapphire-green-cushion-1.jpg",
       "title": "Green Sapphire",
+      "slug": "sapphire-green-cushion-1",
       "desc": "Forest green cushion sapphire sourced from Africa."
     },
     {
       "img": "assets/collection/sapphires/sapphire-green-emerald-cut-2.jpg",
       "title": "Emerald Cut Green Sapphire",
+      "slug": "sapphire-green-emerald-cut-2",
       "desc": "Step cut green sapphire with elegant clarity from Zambia."
     },
     {
       "img": "assets/collection/sapphires/sapphire-teal-oval-1.jpg",
       "title": "Teal Sapphire",
+      "slug": "sapphire-teal-oval-1",
       "desc": "Oval cut teal sapphire from Madagascar showing blue-green tone."
     },
     {
       "img": "assets/collection/sapphires/sapphire-teal-radiant-cut-1.jpg",
       "title": "Teal Sapphire Radiant Cut",
+      "slug": "sapphire-teal-radiant-cut-1",
       "desc": "Radiant cut teal sapphire with strong brilliance and saturation."
     },
     {
       "img": "assets/collection/sapphires/sapphire-white-round-1.jpg",
       "title": "White Sapphire",
+      "slug": "sapphire-white-round-1",
       "desc": "Colorless round sapphire from Sri Lanka used as diamond alternative."
     },
     {
       "img": "assets/collection/sapphires/sapphire-star-cabochon-blue-2.jpg",
       "title": "Star Blue Sapphire",
+      "slug": "sapphire-star-cabochon-blue-2",
       "desc": "Cabochon cut star sapphire showing distinct asterism effect."
     },
     {
       "img": "assets/collection/sapphires/sapphire-cabochon-blue-1.jpg",
       "title": "Cabochon Blue Sapphire",
+      "slug": "sapphire-cabochon-blue-1",
       "desc": "Smooth cabochon blue sapphire with natural translucency."
     },
     {
       "img": "assets/collection/sapphires/sapphire-deep-navy-emerald-cut-1.jpg",
       "title": "Emerald Cut Navy Blue Sapphire",
+      "slug": "sapphire-deep-navy-emerald-cut-1",
       "desc": "Deep navy sapphire with step cut facets from Madagascar."
     }
   ]
