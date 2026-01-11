@@ -1,70 +1,26 @@
 /* =====================================================
-   FACETRA — COLLECTION PAGE (FINAL PRODUCTION)
+   FACETRA — COLLECTION PAGE (MATCH HOME THEME)
    ===================================================== */
-
-.collection-hero{
-  min-height:45vh;
-  padding:140px 20px 90px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  background:radial-gradient(circle at top,#1b1406,#000 70%);
-}
-
-.hero-inner{max-width:820px}
-
-.hero-title{
-  color:#d4af37;
-  font-size:clamp(2rem,4vw,3rem);
-  letter-spacing:.6px;
-  font-family:Cinzel,serif;
-}
-
-.hero-description{
-  color:#cfcfcf;
-  margin-top:14px;
-  line-height:1.8;
-  font-size:.95rem;
-  max-width:620px;
-  margin-inline:auto;
-}
-
-/* ================= SECTION ================= */
-
-.collection-section{
-  padding:90px 0;
-  background:#050505;
-}
-
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:0 20px;
-}
-
-/* ================= DUAL COLLECTION ================= */
 
 .dual-collections{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:60px;
-  margin-top:40px;
+  margin-top:60px;
 }
 
 .auto-collection{
   border:1px solid rgba(212,175,55,.35);
-  background:linear-gradient(180deg,#070807,#000);
-  padding:28px;
+  background:linear-gradient(180deg,#0b0f0e,#000);
+  padding:32px;
   text-align:center;
-  box-shadow:0 15px 50px rgba(0,0,0,.7);
+  box-shadow:0 30px 80px rgba(0,0,0,.7);
 }
 
 .collection-intro{
-  color:#aaa;
-  margin-bottom:16px;
+  color:#cfcfcf;
+  margin-bottom:18px;
   font-size:.9rem;
-  line-height:1.6;
 }
 
 .auto-image-box{
@@ -73,13 +29,14 @@
   align-items:center;
   justify-content:center;
   overflow:hidden;
-  margin-bottom:14px;
+  background:radial-gradient(circle at center,#111 0%, #000 70%);
+  border:1px solid rgba(212,175,55,.25);
 }
 
 .auto-image-box img{
-  max-width:100%;
-  max-height:100%;
-  transition:opacity .6s ease, transform 1.6s ease;
+  max-width:95%;
+  max-height:95%;
+  transition:opacity .6s ease, transform 1.4s ease;
 }
 
 .auto-image-box img.fade{
@@ -90,44 +47,20 @@
 .auto-collection h3{
   color:#d4af37;
   font-family:Cinzel,serif;
-  margin-top:10px;
-  font-size:1.1rem;
+  margin-top:20px;
 }
 
 .stone-desc{
   font-size:.88rem;
-  opacity:.85;
-  margin:8px 0 18px;
-  line-height:1.6;
+  color:#cfcfcf;
+  margin:8px 0 22px;
 }
-
-/* ================= BUTTON ================= */
-
-.btn-category{
-  display:inline-block;
-  width:100%;
-  padding:12px 18px;
-  border:1px solid #d4af37;
-  color:#d4af37;
-  text-decoration:none;
-  letter-spacing:.14em;
-  font-size:.8rem;
-  transition:.3s ease;
-  text-align:center;
-}
-
-.btn-category:hover{
-  background:#d4af37;
-  color:#000;
-}
-
-/* ================= COMING SOON ================= */
 
 .coming-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:40px;
-  margin-top:90px;
+  margin-top:60px;
 }
 
 .coming-card{
@@ -141,31 +74,15 @@
   font-family:Cinzel,serif;
 }
 
-.coming-card p{
-  color:#aaa;
-  font-size:.9rem;
-  margin-top:6px;
-}
-
 .coming-label{
   display:inline-block;
   margin-top:12px;
   color:#d4af37;
   font-size:.85rem;
-  letter-spacing:.08em;
 }
-
-/* ================= MOBILE ================= */
 
 @media(max-width:900px){
   .dual-collections{grid-template-columns:1fr;}
   .coming-grid{grid-template-columns:1fr;}
-  .auto-image-box{height:280px;}
-}
-
-@media(max-width:768px){
-  .collection-hero{padding:110px 16px 70px;}
-  .hero-title{font-size:1.9rem;}
-  .hero-description{font-size:.9rem;}
-  .collection-section{padding:70px 0;}
+  .auto-image-box{height:260px;}
 }
