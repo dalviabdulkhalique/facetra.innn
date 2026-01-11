@@ -199,22 +199,28 @@
 
 <script>
 /* ===== MOBILE MENU ===== */
+
 const toggle = document.getElementById("navToggle");
 const mobileNav = document.getElementById("mobileNav");
 
-toggle.onclick = () => {
-  mobileNav.classList.toggle("open");
-  document.body.classList.toggle("no-scroll");
-};
+if(toggle && mobileNav){
+  toggle.onclick = () => {
+    mobileNav.classList.toggle("open");
+    document.body.classList.toggle("no-scroll");
+  };
 
-document.querySelectorAll("#mobileNav a").forEach(a=>{
-  a.onclick = ()=>{
-    mobileNav.classList.remove("open");
-    document.body.classList.remove("no-scroll");
-  }
-});
+  document.querySelectorAll("#mobileNav a").forEach(a=>{
+    a.onclick = ()=>{
+      mobileNav.classList.remove("open");
+      document.body.classList.remove("no-scroll");
+    };
+  });
+}
+  </script>
+
 
 /* ===== LOAD MANIFEST & PRODUCTS ===== */
+  <script>
 async function initDiamonds(){
   try{
     const res = await fetch("../assets/collection/manifest.json");
