@@ -347,3 +347,14 @@
   margin:auto;
   color:#ccc;
 }
+
+.gem-card{
+  position: relative;
+  overflow: visible;
+}
+
+.whatsapp-btn{
+  position: relative;
+  z-index: 10;
+}
+
