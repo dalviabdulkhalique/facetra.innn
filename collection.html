@@ -12,12 +12,6 @@
 <link rel="canonical" href="https://facetra.in/collection.html">
 <meta name="robots" content="index, follow">
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="FACETRA Collection – Certified Diamonds & Gemstones">
-<meta property="og:description" content="Luxury gemstone and diamond collection by FACETRA.">
-<meta property="og:url" content="https://facetra.in/collection.html">
-<meta property="og:image" content="https://facetra.in/assets/collection/diamonds/diamond-round-brilliant-1.jpg">
-
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="collection.css">
 
@@ -71,58 +65,74 @@
   <div class="hero-inner">
     <h1 class="hero-title">Our Curated Collections</h1>
     <p class="hero-description">
-      Explore certified diamonds and premium natural gemstones selected for
-      rarity, brilliance and long-term investment value.
+      Certified diamonds and premium natural gemstones selected for rarity,
+      brilliance and long-term investment value.
     </p>
   </div>
 </section>
 
 <div class="lux-divider"></div>
 
-<!-- ================= COLLECTION CARDS ================= -->
+<!-- ================= COLLECTION SLIDERS ================= -->
 
 <section class="collection-section reveal">
   <div class="container">
 
-    <h2>Explore Our Categories</h2>
+    <div class="dual-collections">
 
-    <div class="collection-cards">
+      <!-- ================= DIAMONDS ================= -->
+      <div class="auto-collection" id="diamondBox">
 
-      <!-- DIAMONDS -->
-      <a href="collection/diamonds.html" class="collection-card reveal">
+        <p class="collection-intro">
+          Investment-grade certified diamonds in classic and modern cuts.
+        </p>
 
-        <div class="card-image">
-          <img src="assets/collection/diamonds/diamond-round-brilliant-1.jpg" alt="Certified Diamond Collection">
+        <div class="auto-image-box">
+          <img id="diamondImg" src="" alt="">
         </div>
 
-        <div class="card-content">
-          <h3>Certified Diamonds</h3>
-          <p>
-            Round, Oval, Emerald, Princess, Radiant & Cushion cut
-            investment-grade diamonds with independent certification.
-          </p>
-          <span class="btn-category">View Collection</span>
+        <h3 id="diamondName"></h3>
+        <p id="diamondDesc" class="stone-desc"></p>
+
+        <a href="collection/diamonds.html" class="btn-category">View Diamond Collection</a>
+
+      </div>
+
+      <!-- ================= SAPPHIRES ================= -->
+      <div class="auto-collection" id="sapphireBox">
+
+        <p class="collection-intro">
+          Rare natural sapphires sourced from premium historic deposits.
+        </p>
+
+        <div class="auto-image-box">
+          <img id="sapphireImg" src="" alt="">
         </div>
 
-      </a>
+        <h3 id="sapphireName"></h3>
+        <p id="sapphireDesc" class="stone-desc"></p>
 
-      <!-- SAPPHIRES -->
-      <a href="collection/sapphires.html" class="collection-card reveal">
+        <a href="collection/sapphires.html" class="btn-category">View Sapphire Collection</a>
 
-        <div class="card-image">
-          <img src="assets/collection/sapphires/sapphire-cornflower-blue-1.jpg" alt="Natural Sapphire Collection">
-        </div>
+      </div>
 
-        <div class="card-content">
-          <h3>Natural Sapphires</h3>
-          <p>
-            Kashmir tone, Royal Blue, Padparadscha, Star and fancy color
-            sapphires sourced from premium deposits.
-          </p>
-          <span class="btn-category">View Collection</span>
-        </div>
+    </div>
 
-      </a>
+    <!-- ================= COMING SOON ================= -->
+
+    <div class="coming-grid">
+
+      <div class="coming-card">
+        <h3>Natural Rubies</h3>
+        <p>Premium Burma and Mozambique rubies coming soon.</p>
+        <span class="coming-label">Launching Soon</span>
+      </div>
+
+      <div class="coming-card">
+        <h3>Emeralds</h3>
+        <p>Colombian and Zambian emerald collection coming soon.</p>
+        <span class="coming-label">Launching Soon</span>
+      </div>
 
     </div>
 
@@ -130,7 +140,6 @@
 </section>
 
 <!-- ================= FOOTER ================= -->
-
 <footer class="lux-footer">
   <div class="footer-bottom">
     © 2026 FACETRA. All rights reserved.
@@ -141,35 +150,60 @@
 
 <script>
 /* MOBILE NAV */
-const toggle = document.getElementById("navToggle");
-const mobileNav = document.getElementById("mobileNav");
-
-if(toggle && mobileNav){
-  toggle.onclick = () => {
-    mobileNav.classList.toggle("open");
-    document.body.classList.toggle("nav-open");
-  };
-
-  document.querySelectorAll("#mobileNav a").forEach(a=>{
-    a.onclick = ()=>{
-      mobileNav.classList.remove("open");
-      document.body.classList.remove("nav-open");
-    };
-  });
+const toggle=document.getElementById("navToggle");
+const mobileNav=document.getElementById("mobileNav");
+if(toggle){
+  toggle.onclick=()=>{mobileNav.classList.toggle("open");document.body.classList.toggle("nav-open");};
 }
 
-/* SCROLL REVEAL */
-const reveals = document.querySelectorAll(".reveal");
-const io = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      e.target.classList.add("show");
-      io.unobserve(e.target);
-    }
-  });
-},{threshold:0.15});
+/* ================= AUTO COLLECTION DATA ================= */
 
-reveals.forEach(r=>io.observe(r));
+const diamonds=[
+  {img:"assets/collection/diamonds/diamond-round-brilliant-1.jpg",name:"Round Brilliant Diamond",desc:"Maximum brilliance and perfect symmetry for timeless value."},
+  {img:"assets/collection/diamonds/diamond-oval-cut-1.jpg",name:"Oval Cut Diamond",desc:"Elegant elongated shape with excellent sparkle and presence."},
+  {img:"assets/collection/diamonds/diamond-emerald-cut-1.jpg",name:"Emerald Cut Diamond",desc:"Step-cut facets with mirror-like reflections and clarity."},
+  {img:"assets/collection/diamonds/diamond-princess-cut-1.jpg",name:"Princess Cut Diamond",desc:"Modern square brilliant cut with sharp fire and brilliance."},
+  {img:"assets/collection/diamonds/diamond-radiant-cut-1.jpg",name:"Radiant Cut Diamond",desc:"Combination of emerald shape and brilliant sparkle."},
+  {img:"assets/collection/diamonds/diamond-cushion-cut-1.jpg",name:"Cushion Cut Diamond",desc:"Vintage style with soft corners and romantic brilliance."}
+];
+
+const sapphires=[
+  {img:"assets/collection/sapphires/sapphire-royal-blue-1.jpg",name:"Royal Blue Sapphire",desc:"Deep saturated blue with exceptional brilliance."},
+  {img:"assets/collection/sapphires/sapphire-kashmir-1.jpg",name:"Kashmir Tone Sapphire",desc:"Velvety cornflower blue from historic origins."},
+  {img:"assets/collection/sapphires/sapphire-padparadscha-1.jpg",name:"Padparadscha Sapphire",desc:"Rare pink-orange hue highly valued by collectors."},
+  {img:"assets/collection/sapphires/sapphire-star-1.jpg",name:"Star Sapphire",desc:"Natural six-rayed star under direct light."}
+];
+
+/* ================= SLIDER FUNCTION ================= */
+
+function runSlider(list,imgEl,nameEl,descEl){
+  let i=0;
+  function show(){
+    imgEl.classList.add("fade");
+    setTimeout(()=>{
+      imgEl.src=list[i].img;
+      nameEl.textContent=list[i].name;
+      descEl.textContent=list[i].desc;
+      imgEl.classList.remove("fade");
+      i=(i+1)%list.length;
+    },400);
+  }
+  show();
+  setInterval(show,5000);
+}
+
+/* INIT */
+runSlider(diamonds,
+  document.getElementById("diamondImg"),
+  document.getElementById("diamondName"),
+  document.getElementById("diamondDesc")
+);
+
+runSlider(sapphires,
+  document.getElementById("sapphireImg"),
+  document.getElementById("sapphireName"),
+  document.getElementById("sapphireDesc")
+);
 </script>
 
 </body>
