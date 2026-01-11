@@ -7,7 +7,7 @@
 
 <title>Gemstone & Diamond Collection | FACETRA</title>
 
-<meta name="description" content="Explore FACETRA’s luxury collection of certified diamonds and premium natural gemstones. Direct WhatsApp enquiry available.">
+<meta name="description" content="Explore FACETRA’s luxury collection of certified diamonds and premium natural gemstones curated for collectors and jewelers.">
 
 <link rel="canonical" href="https://facetra.in/collection.html">
 <meta name="robots" content="index, follow">
@@ -18,25 +18,10 @@
 <meta property="og:url" content="https://facetra.in/collection.html">
 <meta property="og:image" content="https://facetra.in/assets/collection/diamonds/diamond-round-brilliant-1.jpg">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "FACETRA Gemstone & Diamond Collection",
-  "url": "https://facetra.in/collection.html",
-  "publisher": {
-    "@type": "Organization",
-    "name": "FACETRA",
-    "url": "https://facetra.in"
-  }
-}
-</script>
-
-<!-- MAIN SITE STYLES -->
 <link rel="stylesheet" href="style.css">
-
-<!-- COLLECTION PAGE STYLES -->
 <link rel="stylesheet" href="collection.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 </head>
 
@@ -84,40 +69,63 @@
 
 <section class="collection-hero reveal">
   <div class="hero-inner">
-    <h1 class="hero-title">Our Luxury Collection</h1>
+    <h1 class="hero-title">Our Curated Collections</h1>
     <p class="hero-description">
-      Explore certified natural diamonds and premium gemstones curated for collectors,
-      jewelers and long-term investors.
+      Explore certified diamonds and premium natural gemstones selected for
+      rarity, brilliance and long-term investment value.
     </p>
   </div>
 </section>
 
-<!-- ================= COLLECTION CATEGORIES ================= -->
+<div class="lux-divider"></div>
+
+<!-- ================= COLLECTION CARDS ================= -->
 
 <section class="collection-section reveal">
   <div class="container">
 
-    <h2>Explore Categories</h2>
+    <h2>Explore Our Categories</h2>
 
-    <div class="gem-grid">
+    <div class="collection-cards">
 
       <!-- DIAMONDS -->
-      <a href="collection/diamonds.html" class="gem-card category-card">
-        <img src="assets/collection/diamonds/diamond-round-brilliant-1.jpg" alt="Certified Diamonds Collection">
-        <h3>Certified Diamonds</h3>
-        <p>Round, Oval, Emerald, Princess, Radiant & Cushion cut investment-grade diamonds.</p>
-        <span class="btn-category">View Collection</span>
+      <a href="collection/diamonds.html" class="collection-card reveal">
+
+        <div class="card-image">
+          <img src="assets/collection/diamonds/diamond-round-brilliant-1.jpg" alt="Certified Diamond Collection">
+        </div>
+
+        <div class="card-content">
+          <h3>Certified Diamonds</h3>
+          <p>
+            Round, Oval, Emerald, Princess, Radiant & Cushion cut
+            investment-grade diamonds with independent certification.
+          </p>
+          <span class="btn-category">View Collection</span>
+        </div>
+
       </a>
 
       <!-- SAPPHIRES -->
-      <a href="collection/sapphires.html" class="gem-card category-card">
-        <img src="assets/collection/sapphires/sapphire-cornflower-blue-1.jpg" alt="Natural Sapphire Collection">
-        <h3>Natural Sapphires</h3>
-        <p>Kashmir tone, Royal Blue, Padparadscha, Star & Fancy color sapphires.</p>
-        <span class="btn-category">View Collection</span>
+      <a href="collection/sapphires.html" class="collection-card reveal">
+
+        <div class="card-image">
+          <img src="assets/collection/sapphires/sapphire-cornflower-blue-1.jpg" alt="Natural Sapphire Collection">
+        </div>
+
+        <div class="card-content">
+          <h3>Natural Sapphires</h3>
+          <p>
+            Kashmir tone, Royal Blue, Padparadscha, Star and fancy color
+            sapphires sourced from premium deposits.
+          </p>
+          <span class="btn-category">View Collection</span>
+        </div>
+
       </a>
 
     </div>
+
   </div>
 </section>
 
@@ -152,18 +160,16 @@ if(toggle && mobileNav){
 
 /* SCROLL REVEAL */
 const reveals = document.querySelectorAll(".reveal");
-
-const revealOnScroll = () => {
-  reveals.forEach(el=>{
-    const top = el.getBoundingClientRect().top;
-    if(top < window.innerHeight - 80){
-      el.classList.add("show");
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add("show");
+      io.unobserve(e.target);
     }
   });
-};
+},{threshold:0.15});
 
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll);
+reveals.forEach(r=>io.observe(r));
 </script>
 
 </body>
