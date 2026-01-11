@@ -7,23 +7,22 @@
 
 <title>Gemstone & Diamond Collection | FACETRA</title>
 
-<meta name="description" content="Explore FACETRA’s premium collection of certified diamonds and natural sapphires curated for collectors, jewelers and investors.">
+<meta name="description" content="Explore FACETRA’s luxury collection of certified diamonds and premium natural gemstones. Direct WhatsApp enquiry available.">
 
 <link rel="canonical" href="https://facetra.in/collection.html">
 <meta name="robots" content="index, follow">
 
-<!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="FACETRA Gemstone Collection">
-<meta property="og:description" content="Certified diamonds and natural sapphires sourced responsibly by FACETRA.">
+<meta property="og:title" content="FACETRA Collection – Certified Diamonds & Gemstones">
+<meta property="og:description" content="Luxury gemstone and diamond collection by FACETRA.">
 <meta property="og:url" content="https://facetra.in/collection.html">
+<meta property="og:image" content="https://facetra.in/assets/collection/diamonds/diamond-round-brilliant-1.jpg">
 
-<!-- Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "FACETRA Gemstone Collection",
+  "name": "FACETRA Gemstone & Diamond Collection",
   "url": "https://facetra.in/collection.html",
   "publisher": {
     "@type": "Organization",
@@ -33,6 +32,10 @@
 }
 </script>
 
+<!-- MAIN SITE STYLES -->
+<link rel="stylesheet" href="style.css">
+
+<!-- COLLECTION PAGE STYLES -->
 <link rel="stylesheet" href="collection.css">
 
 </head>
@@ -68,28 +71,53 @@
   </div>
 </header>
 
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="collection.html">Collection</a>
+  <a href="certification.html">Certification</a>
+  <a href="why-facetra.html">Why FACETRA</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
 <!-- ================= HERO ================= -->
 
-<section class="collection-hero">
+<section class="collection-hero reveal">
   <div class="hero-inner">
-    <h1 class="hero-title">Our Curated Collections</h1>
+    <h1 class="hero-title">Our Luxury Collection</h1>
     <p class="hero-description">
-      Certified diamonds and natural gemstones selected for brilliance, rarity and long-term value.
+      Explore certified natural diamonds and premium gemstones curated for collectors,
+      jewelers and long-term investors.
     </p>
   </div>
 </section>
 
-<!-- ================= COLLECTION GRID ================= -->
+<!-- ================= COLLECTION CATEGORIES ================= -->
 
-<section class="collection-section">
+<section class="collection-section reveal">
   <div class="container">
 
     <h2>Explore Categories</h2>
 
-    <div class="gem-grid" id="collectionGrid">
-      <!-- Auto injected -->
-    </div>
+    <div class="gem-grid">
 
+      <!-- DIAMONDS -->
+      <a href="collection/diamonds.html" class="gem-card category-card">
+        <img src="assets/collection/diamonds/diamond-round-brilliant-1.jpg" alt="Certified Diamonds Collection">
+        <h3>Certified Diamonds</h3>
+        <p>Round, Oval, Emerald, Princess, Radiant & Cushion cut investment-grade diamonds.</p>
+        <span class="btn-category">View Collection</span>
+      </a>
+
+      <!-- SAPPHIRES -->
+      <a href="collection/sapphires.html" class="gem-card category-card">
+        <img src="assets/collection/sapphires/sapphire-cornflower-blue-1.jpg" alt="Natural Sapphire Collection">
+        <h3>Natural Sapphires</h3>
+        <p>Kashmir tone, Royal Blue, Padparadscha, Star & Fancy color sapphires.</p>
+        <span class="btn-category">View Collection</span>
+      </a>
+
+    </div>
   </div>
 </section>
 
@@ -104,58 +132,38 @@
 <!-- ================= SCRIPTS ================= -->
 
 <script>
-/* ===== HAMBURGER MENU ===== */
+/* MOBILE NAV */
 const toggle = document.getElementById("navToggle");
-const nav = document.getElementById("mainNav");
+const mobileNav = document.getElementById("mobileNav");
 
-toggle.onclick = () => {
-  nav.classList.toggle("open");
-  document.body.classList.toggle("nav-open");
+if(toggle && mobileNav){
+  toggle.onclick = () => {
+    mobileNav.classList.toggle("open");
+    document.body.classList.toggle("nav-open");
+  };
+
+  document.querySelectorAll("#mobileNav a").forEach(a=>{
+    a.onclick = ()=>{
+      mobileNav.classList.remove("open");
+      document.body.classList.remove("nav-open");
+    };
+  });
+}
+
+/* SCROLL REVEAL */
+const reveals = document.querySelectorAll(".reveal");
+
+const revealOnScroll = () => {
+  reveals.forEach(el=>{
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 80){
+      el.classList.add("show");
+    }
+  });
 };
 
-
-/* ===== AUTO LOAD COLLECTIONS ===== */
-
-fetch("assets/collection/manifest.json")
-  .then(res => res.json())
-  .then(data => buildCollections(data))
-  .catch(err => console.error("Manifest error:", err));
-
-
-function buildCollections(data){
-
-  const grid = document.getElementById("collectionGrid");
-
-  const items = [
-    {
-      name: "Certified Diamonds",
-      desc: "Round, Oval, Emerald, Pear, Princess, Radiant and Cushion cut diamonds.",
-      img: data.diamonds[0].img,
-      link: "collection/diamonds.html"
-    },
-    {
-      name: "Natural Sapphires",
-      desc: "Blue, Pink, Yellow, Padparadscha, Teal and Rare color sapphires.",
-      img: data.sapphires[0].img,
-      link: "collection/sapphires.html"
-    }
-  ];
-
-  items.forEach(item=>{
-    const card = document.createElement("div");
-    card.className = "gem-card";
-
-    card.innerHTML = `
-      <img src="${item.img}" alt="${item.name}">
-      <h3>${item.name}</h3>
-      <p>${item.desc}</p>
-      <a class="btn-category" href="${item.link}">View Collection</a>
-    `;
-
-    grid.appendChild(card);
-  });
-
-}
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
 </script>
 
 </body>
