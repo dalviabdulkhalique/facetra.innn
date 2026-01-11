@@ -5,53 +5,92 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Natural Diamond Collection | Certified Investment Grade Diamonds – FACETRA</title>
+<title>Diamond Collection | Certified Natural Diamonds – FACETRA</title>
 
-<meta name="description" content="Explore FACETRA’s certified natural diamond collection including round, oval, emerald and fancy cut diamonds. Sourced ethically for jewelers and investors in Mumbai and worldwide.">
+<meta name="description" content="Explore FACETRA’s certified natural diamond collection including round brilliant, emerald, oval, cushion and fancy color diamonds. Trusted gemstone trading house in Mumbai.">
 
 <link rel="canonical" href="https://facetra.in/collection/diamonds.html">
 
 <!-- OPEN GRAPH -->
-<meta property="og:title" content="FACETRA Natural Diamond Collection">
-<meta property="og:description" content="Certified investment grade natural diamonds curated by FACETRA gemstone trading house.">
+<meta property="og:title" content="FACETRA Diamond Collection">
+<meta property="og:description" content="Certified natural diamonds curated for collectors and jewelers.">
 <meta property="og:image" content="https://facetra.in/assets/collection/diamonds/diamond-round-brilliant-1.jpg">
 <meta property="og:url" content="https://facetra.in/collection/diamonds.html">
+<meta property="og:type" content="website">
 
-<!-- PRODUCT SCHEMA -->
+<!-- SCHEMA: COLLECTION PAGE -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "FACETRA Natural Diamond Collection",
+  "@type": "CollectionPage",
+  "name": "FACETRA Diamond Collection",
   "url": "https://facetra.in/collection/diamonds.html",
-  "itemListElement": [
-    {
-      "@type": "Product",
-      "name": "Certified Natural Diamond",
-      "brand": { "@type": "Brand", "name": "FACETRA" },
-      "category": "Natural Diamond",
-      "offers": {
-        "@type": "Offer",
-        "availability": "https://schema.org/InStock",
-        "priceCurrency": "INR",
-        "url": "https://facetra.in/contact.html"
-      }
-    }
-  ]
+  "publisher": {
+    "@type": "Organization",
+    "name": "FACETRA",
+    "url": "https://facetra.in"
+  }
 }
 </script>
 
 <link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../collection.css">
+
+<style>
+/* ===== DIAMOND GRID ===== */
+
+.diamond-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+  margin-top:50px;
+}
+
+.diamond-card{
+  background:linear-gradient(180deg,#050505,#0b0b0b);
+  border:1px solid rgba(212,175,55,.35);
+  padding:22px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.diamond-card img{
+  width:100%;
+  height:220px;
+  object-fit:contain;
+  margin-bottom:15px;
+}
+
+.diamond-card h3{
+  color:#d4af37;
+  margin:10px 0 6px;
+}
+
+.diamond-card p{
+  font-size:.9rem;
+  color:#bbb;
+}
+
+.whatsapp-btn{
+  margin-top:18px;
+  display:inline-block;
+  padding:12px 22px;
+  background:linear-gradient(135deg,#e8c56a,#b18b3a);
+  color:#000;
+  font-weight:600;
+  text-decoration:none;
+}
+</style>
 
 </head>
 
 <body class="page">
 
-<!-- HEADER (same as other pages) -->
-
+<!-- HEADER (same as all pages) -->
 <header class="site-header">
   <div class="header-inner">
-
     <div class="brand">
       <img src="../logo.png" alt="FACETRA Logo">
       <div>
@@ -69,60 +108,89 @@
       <a href="../contact.html">Contact</a>
     </nav>
 
-    <div class="nav-toggle" id="navToggle">
-      <span></span><span></span><span></span>
-    </div>
-
+    <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
   </div>
 </header>
 
-<!-- HERO -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="../index.html">Home</a>
+  <a href="../collection.html">Collection</a>
+  <a href="../certification.html">Certification</a>
+  <a href="../why-facetra.html">Why FACETRA</a>
+  <a href="../about.html">About</a>
+  <a href="../contact.html">Contact</a>
+</div>
 
+<!-- HERO -->
 <section class="collection-hero">
   <div class="hero-inner">
-    <h1 class="hero-title">Natural Diamond Collection</h1>
-    <p class="hero-description">
-      Certified natural diamonds curated for brilliance, liquidity and long-term
-      investment value. Available for jewelers and private collectors.
-    </p>
+    <h1>Certified Diamond Collection</h1>
+    <p>Natural diamonds selected for brilliance, rarity and investment-grade quality.</p>
   </div>
 </section>
 
 <!-- GRID -->
-
 <section class="collection-section">
   <div class="container">
 
     <h2>Available Diamond Categories</h2>
 
-    <div class="gem-grid">
+    <div class="diamond-grid">
 
-      <div class="gem-card">
-        <img src="../assets/collection/diamonds/diamond-round-brilliant-1.jpg" alt="Round Brilliant Diamond">
-        <h3>Round Brilliant</h3>
-        <p>Maximum fire and universal market demand.</p>
-        <a class="btn-gold-glow" href="https://wa.me/918055113448" target="_blank">Enquire on WhatsApp</a>
+      <!-- ROUND -->
+      <div class="diamond-card" itemscope itemtype="https://schema.org/Product">
+        <img src="../assets/collection/diamonds/diamond-round-brilliant-1.jpg" alt="Round Brilliant Diamond" itemprop="image">
+        <h3 itemprop="name">Round Brilliant Diamond</h3>
+        <p itemprop="description">Maximum fire and universal market demand.</p>
+        <a class="whatsapp-btn" href="https://wa.me/918055113448" target="_blank">Enquire on WhatsApp</a>
       </div>
 
-      <div class="gem-card">
-        <img src="../assets/collection/diamonds/diamond-emerald-1.jpg" alt="Emerald Cut Diamond">
-        <h3>Emerald Cut</h3>
-        <p>Step-cut elegance with clarity focused brilliance.</p>
-        <a class="btn-gold-glow" href="https://wa.me/918055113448" target="_blank">Enquire on WhatsApp</a>
+      <!-- EMERALD -->
+      <div class="diamond-card" itemscope itemtype="https://schema.org/Product">
+        <img src="../assets/collection/diamonds/diamond-emerald-cut-1.jpg" alt="Emerald Cut Diamond">
+        <h3>Emerald Cut Diamond</h3>
+        <p>Step-cut elegance with clean hall-of-mirrors brilliance.</p>
+        <a class="whatsapp-btn" href="https://wa.me/918055113448" target="_blank">Enquire on WhatsApp</a>
       </div>
 
-      <div class="gem-card">
-        <img src="../assets/collection/diamonds/diamond-oval-1.jpg" alt="Oval Diamond">
-        <h3>Oval Cut</h3>
-        <p>Elongated brilliance for premium jewelry designs.</p>
-        <a class="btn-gold-glow" href="https://wa.me/918055113448" target="_blank">Enquire on WhatsApp</a>
+      <!-- OVAL -->
+      <div class="diamond-card">
+        <img src="../assets/collection/diamonds/diamond-oval-cut-1.jpg" alt="Oval Cut Diamond">
+        <h3>Oval Cut Diamond</h3>
+        <p>Elongated brilliance ideal for premium jewelry.</p>
+        <a class="whatsapp-btn" href="https://wa.me/918055113448" target="_blank">Enquire on WhatsApp</a>
       </div>
 
-      <div class="gem-card">
-        <img src="../assets/collection/diamonds/diamond-cushion-1.jpg" alt="Cushion Diamond">
-        <h3>Cushion Cut</h3>
+      <!-- CUSHION -->
+      <div class="diamond-card">
+        <img src="../assets/collection/diamonds/diamond-cushion-cut-1.jpg" alt="Cushion Cut Diamond">
+        <h3>Cushion Cut Diamond</h3>
         <p>Vintage charm with modern sparkle.</p>
-        <a class="btn-gold-glow" href="https://wa.me/918055113448" target="_blank">Enquire on WhatsApp</a>
+        <a class="whatsapp-btn" href="https://wa.me/918055113448" target="_blank">Enquire on WhatsApp</a>
+      </div>
+
+      <!-- PEAR -->
+      <div class="diamond-card">
+        <img src="../assets/collection/diamonds/diamond-pear-cut-1.jpg" alt="Pear Shape Diamond">
+        <h3>Pear Shape Diamond</h3>
+        <p>Elegant teardrop silhouette with strong brilliance.</p>
+        <a class="whatsapp-btn" href="https://wa.me/918055113448" target="_blank">Enquire on WhatsApp</a>
+      </div>
+
+      <!-- PRINCESS -->
+      <div class="diamond-card">
+        <img src="../assets/collection/diamonds/diamond-princess-cut-1.jpg" alt="Princess Cut Diamond">
+        <h3>Princess Cut Diamond</h3>
+        <p>Modern square brilliance with sharp edges.</p>
+        <a class="whatsapp-btn" href="https://wa.me/918055113448" target="_blank">Enquire on WhatsApp</a>
+      </div>
+
+      <!-- FANCY YELLOW -->
+      <div class="diamond-card">
+        <img src="../assets/collection/diamonds/diamond-fancy-yellow-cushion-1.jpg" alt="Fancy Yellow Diamond">
+        <h3>Fancy Yellow Diamond</h3>
+        <p>Natural fancy color with strong collector demand.</p>
+        <a class="whatsapp-btn" href="https://wa.me/918055113448" target="_blank">Enquire on WhatsApp</a>
       </div>
 
     </div>
@@ -130,26 +198,8 @@
   </div>
 </section>
 
-<!-- CTA -->
-
-<section class="cta-section">
-  <div class="cta-box">
-    <h2>Discuss Certified Diamonds with FACETRA</h2>
-    <p>
-      Connect directly with our gemstone specialists for current inventory,
-      certification details and investment-grade diamond sourcing.
-    </p>
-
-    <div class="cta-actions">
-      <a href="https://wa.me/918055113448" class="btn-gold-glow" target="_blank">
-        WhatsApp Consultation
-      </a>
-      <a href="../contact.html" class="btn-outline-gold">
-        Contact FACETRA
-      </a>
-    </div>
-  </div>
-</section>
+<!-- FOOTER (KEEP SAME ON ALL PAGES) -->
+<!-- paste your luxury footer exactly same as other pages -->
 
 <!-- ================= LUXURY FOOTER ================= -->
 <footer class="lux-footer">
@@ -278,12 +328,11 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
+
 <script>
 const toggle=document.getElementById("navToggle");
 const mobileNav=document.getElementById("mobileNav");
-if(toggle && mobileNav){
-  toggle.onclick=()=>mobileNav.classList.toggle("open");
-}
+toggle.onclick=()=>mobileNav.classList.toggle("open");
 </script>
 
 </body>
