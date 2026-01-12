@@ -145,3 +145,61 @@
     }
   ]
 }
+
+
+,
+"sapphires":[
+  {
+    "img":"assets/collection/sapphires/sapphire-cornflower-blue-1.jpg",
+    "title":"Cornflower Blue Sapphire (Neelam)",
+    "slug":"sapphire-cornflower-blue-1",
+    "short":"Cushion · Cornflower Blue · Sri Lanka",
+    "cut":"Cushion",
+    "color":"Cornflower Blue",
+    "clarity":"Eye Clean",
+    "origin":"Sri Lanka",
+    "treatment":"Heat (standard)",
+    "use":"Astrology & premium jewellery",
+    "note":"Cornflower blue sapphires are prized for soft velvety blue tone and high transparency. Preferred for high-end rings and astrological use."
+  },
+  {
+    "img":"assets/collection/sapphires/sapphire-royal-blue-1.jpg",
+    "title":"Royal Blue Sapphire (Neelam)",
+    "slug":"sapphire-royal-blue-1",
+    "short":"Oval · Royal Blue · Sri Lanka",
+    "cut":"Oval",
+    "color":"Royal Blue",
+    "clarity":"Eye Clean",
+    "origin":"Sri Lanka",
+    "treatment":"Heat (standard)",
+    "use":"Luxury jewellery & astrology",
+    "note":"Royal blue sapphires display deep saturated blue and strong brilliance, preferred in premium jewellery collections."
+  },
+  {
+    "img":"assets/collection/sapphires/sapphire-kashmir-cushion-cut-1.jpg",
+    "title":"Kashmir Type Blue Sapphire (Neelam)",
+    "slug":"sapphire-kashmir-cushion-cut-1",
+    "short":"Cushion · Velvety Blue · Kashmir Tone",
+    "cut":"Cushion",
+    "color":"Velvety Blue",
+    "clarity":"Eye Clean",
+    "origin":"Kashmir Type",
+    "treatment":"None",
+    "use":"Collector and investment gemstone",
+    "note":"Kashmir type sapphires are extremely rare and known for their velvety blue appearance and historic value."
+  },
+  {
+    "img":"assets/collection/sapphires/sapphire-padparadscha-oval-1.jpg",
+    "title":"Padparadscha Sapphire",
+    "slug":"sapphire-padparadscha-oval-1",
+    "short":"Oval · Pink-Orange · Sri Lanka",
+    "cut":"Oval",
+    "color":"Pink-Orange",
+    "clarity":"Eye Clean",
+    "origin":"Sri Lanka",
+    "treatment":"Heat (standard)",
+    "use":"High jewellery collector stones",
+    "note":"Padparadscha sapphires are among the rarest sapphires, valued for their unique sunset color blend."
+  }
+]
+
