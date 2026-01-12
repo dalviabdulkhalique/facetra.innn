@@ -1,3 +1,7 @@
+/* ===============================
+   COLLECTION GLOBAL STYLES
+================================ */
+
 .collection-hero{
   min-height:55vh;
   display:flex;
@@ -5,77 +9,111 @@
   justify-content:center;
   text-align:center;
   background:radial-gradient(circle at top,#1b1406,#000 70%);
+  padding:40px 20px;
 }
 
 .collection-hero h1{
   color:#d4af37;
   font-family:Cinzel,serif;
   font-size:2.4rem;
+  letter-spacing:.05em;
 }
 
 .collection-hero p{
   max-width:620px;
-  margin:auto;
+  margin:12px auto 0;
   opacity:.85;
+  font-family:Inter,sans-serif;
 }
 
+/* ===============================
+   COLLECTION MAIN PAGE
+================================ */
+
 .collection-wrapper{
-  max-width:1100px;
+  max-width:1200px;
   margin:auto;
-  padding:80px 20px;
+  padding:90px 20px;
   display:grid;
-  gap:110px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:80px 50px;
 }
 
 .collection-block{
   text-align:center;
+  padding:30px 22px 38px;
+  border:1px solid rgba(212,175,55,.25);
+  background:linear-gradient(to bottom,#060606,#000);
+  transition:.4s ease;
+}
+
+.collection-block:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 40px rgba(212,175,55,.08);
 }
 
 .collection-block h2{
   color:#d4af37;
   font-family:Cinzel,serif;
-  margin-bottom:20px;
+  margin-bottom:22px;
+  font-size:1.35rem;
 }
 
+/* IMAGE SLIDER BOX */
+
 .showcase-box{
-  height:300px;
+  width:100%;
+  aspect-ratio:1/1;
   border:1px solid rgba(212,175,55,.35);
   background:#050505;
   display:flex;
   align-items:center;
   justify-content:center;
-  margin-bottom:20px;
+  margin-bottom:22px;
   overflow:hidden;
 }
 
 .showcase-box img{
-  max-width:90%;
-  max-height:90%;
+  width:100%;
+  max-width:300px;
+  height:auto;
   opacity:0;
-  transition:opacity .8s ease;
+  transition:opacity .8s ease, transform .8s ease;
+  transform:scale(.96);
 }
 
 .showcase-box img.show{
   opacity:1;
+  transform:scale(1);
 }
+
+/* TEXT */
 
 .collection-block h3{
   color:#d4af37;
   margin:10px 0 6px;
+  font-family:Cinzel,serif;
+  font-size:1.05rem;
 }
 
 .collection-block p{
   opacity:.85;
   font-size:.9rem;
-  margin-bottom:18px;
+  margin-bottom:20px;
+  font-family:Inter,sans-serif;
 }
+
+/* BUTTON */
 
 .btn-outline-gold{
   border:1px solid #d4af37;
-  padding:10px 26px;
+  padding:11px 28px;
   color:#d4af37;
   text-decoration:none;
-  transition:.3s;
+  display:inline-block;
+  transition:.35s ease;
+  font-size:.85rem;
+  letter-spacing:.05em;
 }
 
 .btn-outline-gold:hover{
@@ -88,20 +126,108 @@
   pointer-events:none;
 }
 
-.fade-up{
-  opacity:0;
-  transform:translateY(30px);
-  transition:.8s ease;
+/* ===============================
+   PRODUCT GRID PAGES (DIAMONDS ETC)
+================================ */
+
+.product-grid{
+  max-width:1300px;
+  margin:auto;
+  padding:80px 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:40px;
 }
 
-.fade-up.show{
-  opacity:1;
-  transform:none;
+.product-card{
+  background:linear-gradient(to bottom,#070707,#000);
+  border:1px solid rgba(212,175,55,.25);
+  padding:18px;
+  text-align:center;
+  transition:.4s ease;
+  cursor:pointer;
 }
 
-@media(max-width:768px){
-  .showcase-box{height:220px;}
+.product-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 35px rgba(212,175,55,.08);
 }
+
+.product-card img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:contain;
+  margin-bottom:14px;
+}
+
+.product-card h4{
+  color:#d4af37;
+  font-family:Cinzel,serif;
+  font-size:.95rem;
+}
+
+.product-card p{
+  font-size:.8rem;
+  opacity:.8;
+  margin-top:4px;
+}
+
+/* ===============================
+   MODAL POPUP
+================================ */
+
+.product-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.85);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+}
+
+.product-modal.active{display:flex;}
+
+.modal-box{
+  background:#050505;
+  border:1px solid rgba(212,175,55,.4);
+  max-width:520px;
+  width:92%;
+  padding:28px;
+  text-align:center;
+  position:relative;
+}
+
+.modal-box img{
+  width:100%;
+  max-width:360px;
+  margin:0 auto 18px;
+}
+
+.modal-box h3{
+  color:#d4af37;
+  font-family:Cinzel,serif;
+  margin-bottom:6px;
+}
+
+.modal-box p{
+  font-size:.85rem;
+  opacity:.85;
+  margin-bottom:16px;
+}
+
+.modal-close{
+  position:absolute;
+  top:10px;
+  right:12px;
+  font-size:22px;
+  color:#d4af37;
+  cursor:pointer;
+}
+
+/* ===============================
+   SCROLL ANIMATIONS
+================================ */
 
 .fade-up{
   opacity:0;
@@ -114,10 +240,24 @@
   transform:translateY(0);
 }
 
-.showcase-box img{
-  width:100%;
-  max-width:320px;
-  margin:0 auto;
-  display:block;
-  transition:opacity .6s ease;
+/* ===============================
+   MOBILE
+================================ */
+
+@media(max-width:768px){
+
+  .collection-wrapper{
+    gap:60px;
+    padding:60px 18px;
+  }
+
+  .collection-block h2{
+    font-size:1.2rem;
+  }
+
+  .product-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+  }
+
 }
