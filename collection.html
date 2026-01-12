@@ -9,19 +9,18 @@
 
 <link rel="canonical" href="https://facetra.in/collection.html">
 
-<!-- FAVICONS -->
+<!-- ================= FAVICONS ================= -->
 <link rel="icon" href="assets/favicon/favicon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="assets/favicon/favicon-48x48.png" sizes="48x48" type="image/png">
 <link rel="icon" href="assets/favicon/favicon-96x96.png" sizes="96x96" type="image/png">
 <link rel="icon" href="assets/favicon/favicon-192x192.png" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
-
 <meta name="theme-color" content="#000000">
 
 <!-- FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-<!-- MAIN CSS -->
+<!-- MAIN SITE CSS -->
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="collection.css">
 
@@ -68,10 +67,12 @@
 </div>
 
 <!-- ================= HERO ================= -->
-<section class="collection-hero fade-up">
-  <div>
-    <h1>FACETRA Collection</h1>
-    <p>Certified natural gemstones curated for brilliance, rarity and long-term value.</p>
+<section class="hero-section">
+  <div class="hero-inner fade-up">
+    <h1 class="hero-title">FACETRA Collection</h1>
+    <p class="hero-description">
+      Certified natural gemstones curated for brilliance, rarity and long-term value.
+    </p>
   </div>
 </section>
 
@@ -79,65 +80,65 @@
 
 <!-- ================= COLLECTION ================= -->
 
-<div class="collection-wrapper">
+<section class="collection-wrapper">
 
   <!-- DIAMONDS -->
-  <section class="collection-block fade-up">
+  <div class="collection-block fade-up" data-category="diamonds">
     <h2>Natural Diamonds</h2>
 
     <div class="showcase-box">
-      <img id="diamonds-img" loading="lazy" alt="Diamond">
+      <img id="diamonds-img" loading="lazy" alt="Diamond Image">
     </div>
 
     <h3 id="diamonds-title"></h3>
     <p id="diamonds-desc"></p>
 
     <a href="collection/diamonds.html" class="btn-outline-gold">View Diamond Collection</a>
-  </section>
+  </div>
 
   <!-- SAPPHIRES -->
-  <section class="collection-block fade-up">
+  <div class="collection-block fade-up" data-category="sapphires">
     <h2>Sapphires</h2>
 
     <div class="showcase-box">
-      <img id="sapphires-img" loading="lazy" alt="Sapphire">
+      <img id="sapphires-img" loading="lazy" alt="Sapphire Image">
     </div>
 
     <h3 id="sapphires-title"></h3>
     <p id="sapphires-desc"></p>
 
     <a href="collection/sapphires.html" class="btn-outline-gold">View Sapphire Collection</a>
-  </section>
+  </div>
 
   <!-- RUBIES -->
-  <section class="collection-block fade-up">
+  <div class="collection-block fade-up" data-category="rubies">
     <h2>Rubies</h2>
 
     <div class="showcase-box">
-      <img id="rubies-img" loading="lazy" alt="Ruby">
+      <img id="rubies-img" loading="lazy" alt="Ruby Image">
     </div>
 
     <h3 id="rubies-title"></h3>
     <p id="rubies-desc"></p>
 
     <a href="collection/rubies.html" class="btn-outline-gold">View Ruby Collection</a>
-  </section>
+  </div>
 
   <!-- EMERALDS -->
-  <section class="collection-block fade-up">
+  <div class="collection-block fade-up" data-category="emeralds">
     <h2>Emeralds</h2>
 
     <div class="showcase-box">
-      <img id="emeralds-img" loading="lazy" alt="Emerald">
+      <img id="emeralds-img" loading="lazy" alt="Emerald Image">
     </div>
 
     <h3 id="emeralds-title"></h3>
     <p id="emeralds-desc"></p>
 
     <a href="collection/emeralds.html" class="btn-outline-gold">View Emerald Collection</a>
-  </section>
+  </div>
 
-</div>
+</section>
 
 <!-- ================= FOOTER ================= -->
 <footer class="lux-footer">
@@ -176,60 +177,50 @@ const toggle = document.getElementById("navToggle");
 const mobileNav = document.getElementById("mobileNav");
 toggle.onclick = () => mobileNav.classList.toggle("open");
 
-
 /* LOAD MANIFEST */
 fetch("assets/collection/manifest.json")
-  .then(r => r.json())
-  .then(data => initSlides(data))
-  .catch(err => console.error("Manifest error:", err));
+  .then(res => res.json())
+  .then(data => startSlides(data))
+  .catch(err => console.error("Manifest load error:", err));
 
+function startSlides(data){
 
-function initSlides(data){
-
-  const categories = ["diamonds","sapphires","rubies","emeralds"];
-
-  categories.forEach(category => {
-
-    if(!data[category]) return;
+  Object.keys(data).forEach(category => {
 
     const items = data[category];
-    let i = 0;
+    if(!items || !items.length) return;
+
+    let index = 0;
 
     const img  = document.getElementById(category + "-img");
     const ttl  = document.getElementById(category + "-title");
     const desc = document.getElementById(category + "-desc");
 
-    if(!img || !ttl || !desc) return;
-
     function show(){
-      const item = items[i];
-
+      const item = items[index];
       img.style.opacity = 0;
 
       setTimeout(() => {
         img.src = item.img;
-        img.alt = item.title;
         ttl.textContent = item.title;
         desc.textContent = item.desc;
         img.style.opacity = 1;
       }, 300);
 
-      i = (i + 1) % items.length;
+      index = (index + 1) % items.length;
     }
 
     show();
-    setInterval(show, 5000);
-
+    setInterval(show, 4500);
   });
 }
 
-
-/* SCROLL REVEAL */
+/* SCROLL ANIMATION */
 const observer = new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting) e.target.classList.add("show");
   });
-},{threshold:.15});
+},{threshold:0.15});
 
 document.querySelectorAll(".fade-up").forEach(el=>observer.observe(el));
 
