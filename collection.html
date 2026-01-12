@@ -9,31 +9,27 @@
 
 <link rel="canonical" href="https://facetra.in/collection.html">
 
-
-
-  <!-- FAVICONS -->
+<!-- FAVICONS -->
 <link rel="icon" href="assets/favicon/favicon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="assets/favicon/favicon-48x48.png" sizes="48x48" type="image/png">
 <link rel="icon" href="assets/favicon/favicon-96x96.png" sizes="96x96" type="image/png">
 <link rel="icon" href="assets/favicon/favicon-192x192.png" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
 
-  <meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#000000">
 
 <!-- FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-<!-- MAIN SITE CSS -->
+<!-- MAIN CSS -->
 <link rel="stylesheet" href="style.css">
-
-<!-- COLLECTION CSS -->
 <link rel="stylesheet" href="collection.css">
 
 </head>
 
 <body class="page">
 
-<!-- ================= HEADER (SAME AS HOME) ================= -->
+<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="header-inner">
 
@@ -81,12 +77,12 @@
 
 <div class="lux-divider"></div>
 
-<!-- ================= COLLECTION SECTIONS ================= -->
+<!-- ================= COLLECTION ================= -->
 
 <div class="collection-wrapper">
 
   <!-- DIAMONDS -->
-  <section class="collection-block fade-up" data-category="diamonds">
+  <section class="collection-block fade-up">
     <h2>Natural Diamonds</h2>
 
     <div class="showcase-box">
@@ -100,7 +96,7 @@
   </section>
 
   <!-- SAPPHIRES -->
-  <section class="collection-block fade-up" data-category="sapphires">
+  <section class="collection-block fade-up">
     <h2>Sapphires</h2>
 
     <div class="showcase-box">
@@ -114,7 +110,7 @@
   </section>
 
   <!-- RUBIES -->
-  <section class="collection-block fade-up" data-category="rubies">
+  <section class="collection-block fade-up">
     <h2>Rubies</h2>
 
     <div class="showcase-box">
@@ -124,11 +120,11 @@
     <h3 id="rubies-title"></h3>
     <p id="rubies-desc"></p>
 
-    <span class="btn-outline-gold disabled">Launching Soon</span>
+    <a href="collection/rubies.html" class="btn-outline-gold">View Ruby Collection</a>
   </section>
 
   <!-- EMERALDS -->
-  <section class="collection-block fade-up" data-category="emeralds">
+  <section class="collection-block fade-up">
     <h2>Emeralds</h2>
 
     <div class="showcase-box">
@@ -138,12 +134,12 @@
     <h3 id="emeralds-title"></h3>
     <p id="emeralds-desc"></p>
 
-    <span class="btn-outline-gold disabled">Launching Soon</span>
+    <a href="collection/emeralds.html" class="btn-outline-gold">View Emerald Collection</a>
   </section>
 
 </div>
 
-<!-- ================= FOOTER (SAME AS HOME) ================= -->
+<!-- ================= FOOTER ================= -->
 <footer class="lux-footer">
   <div class="footer-inner">
 
@@ -174,36 +170,50 @@
 
 <!-- ================= JS ================= -->
 <script>
+
 /* MOBILE NAV */
 const toggle = document.getElementById("navToggle");
 const mobileNav = document.getElementById("mobileNav");
 toggle.onclick = () => mobileNav.classList.toggle("open");
 
+
 /* LOAD MANIFEST */
 fetch("assets/collection/manifest.json")
   .then(r => r.json())
-  .then(data => initSlides(data));
+  .then(data => initSlides(data))
+  .catch(err => console.error("Manifest error:", err));
+
 
 function initSlides(data){
 
-  Object.keys(data).forEach(category => {
+  const categories = ["diamonds","sapphires","rubies","emeralds"];
 
-    let i = 0;
+  categories.forEach(category => {
+
+    if(!data[category]) return;
+
     const items = data[category];
+    let i = 0;
 
     const img  = document.getElementById(category + "-img");
     const ttl  = document.getElementById(category + "-title");
     const desc = document.getElementById(category + "-desc");
 
+    if(!img || !ttl || !desc) return;
+
     function show(){
       const item = items[i];
-      img.classList.remove("show");
+
+      img.style.opacity = 0;
+
       setTimeout(() => {
         img.src = item.img;
+        img.alt = item.title;
         ttl.textContent = item.title;
         desc.textContent = item.desc;
-        img.classList.add("show");
+        img.style.opacity = 1;
       }, 300);
+
       i = (i + 1) % items.length;
     }
 
@@ -213,13 +223,16 @@ function initSlides(data){
   });
 }
 
+
 /* SCROLL REVEAL */
 const observer = new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting) e.target.classList.add("show");
   });
 },{threshold:.15});
+
 document.querySelectorAll(".fade-up").forEach(el=>observer.observe(el));
+
 </script>
 
 </body>
