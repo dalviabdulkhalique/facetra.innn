@@ -3,202 +3,126 @@
 <head>
 <meta charset="UTF-8">
 <title>Natural Diamonds Collection | FACETRA</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Explore FACETRA’s premium collection of natural certified diamonds including round, oval, cushion, emerald, princess and fancy color diamonds curated for collectors and investors.">
+<meta name="description" content="Explore FACETRA’s certified natural diamonds including round, oval, emerald and fancy cuts curated for collectors and investors.">
 
 <link rel="canonical" href="https://dalviabdulkhalique.github.io/facetra.in/collection/diamonds.html">
 
 <link rel="stylesheet" href="../style.css">
 <link rel="stylesheet" href="../collection.css">
 
-<!-- FAVICONS -->
 <link rel="icon" href="../assets/favicon/favicon-32x32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
 <meta name="theme-color" content="#050806">
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
-<!-- BREADCRUMB SCHEMA -->
-<script type="application/ld+json">
-{
- "@context":"https://schema.org",
- "@type":"BreadcrumbList",
- "itemListElement":[
-  {"@type":"ListItem","position":1,"name":"Home","item":"https://dalviabdulkhalique.github.io/facetra.in/"},
-  {"@type":"ListItem","position":2,"name":"Collection","item":"https://dalviabdulkhalique.github.io/facetra.in/collection.html"},
-  {"@type":"ListItem","position":3,"name":"Diamonds"}
- ]
-}
-</script>
-
 </head>
 
 <body class="page">
 
-<!-- ===== HEADER (SAME AS OTHER PAGES) ===== -->
+<!-- header -->
 <header class="site-header">
   <div class="header-inner">
-
     <div class="brand">
-      <img src="../logo.png" alt="FACETRA Logo">
+      <img src="../logo.png">
       <div>
         <div class="brand-name">FACETRA</div>
         <div class="brand-tag">Gems • Diamonds • Stones</div>
       </div>
     </div>
-
     <nav class="main-nav">
       <a href="../index.html">Home</a>
       <a href="../collection.html" class="active">Collection</a>
-      <a href="../certification.html">Certification</a>
-      <a href="../why-facetra.html">Why FACETRA</a>
-      <a href="../about.html">About</a>
       <a href="../contact.html">Contact</a>
     </nav>
-
-    <div class="nav-toggle" id="navToggle">
-      <span></span><span></span><span></span>
-    </div>
-
+    <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
   </div>
 </header>
 
 <div class="mobile-nav" id="mobileNav">
   <a href="../index.html">Home</a>
   <a href="../collection.html">Collection</a>
-  <a href="../certification.html">Certification</a>
-  <a href="../why-facetra.html">Why FACETRA</a>
-  <a href="../about.html">About</a>
   <a href="../contact.html">Contact</a>
 </div>
 
-<!-- ===== CATEGORY HEADER ===== -->
 <section class="category-page">
 
-  <div class="category-header">
-    <h2>Natural Diamond Collection</h2>
-    <p>
-      FACETRA offers ethically sourced natural diamonds selected for brilliance, clarity and
-      long-term investment value, including classic and fancy cuts.
-    </p>
-  </div>
+<div class="category-header">
+  <h2>Natural Diamonds</h2>
+  <p>Certified diamonds curated for brilliance, rarity and long-term value.</p>
+</div>
 
-  <div class="items-grid" id="itemsGrid"></div>
+<div class="items-grid" id="itemsGrid"></div>
 
 </section>
 
-<!-- ===== MODAL ===== -->
-<div class="modal-overlay" id="gemModal">
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
   <div class="modal-box">
-
-    <button class="modal-close" id="closeModal">×</button>
-
-    <div class="modal-left">
-      <img id="modalImg">
-    </div>
-
+    <span class="modal-close" id="closeModal">×</span>
+    <div class="modal-left"><img id="modalImg"></div>
     <div class="modal-right">
-      <h3 class="modal-title" id="modalTitle"></h3>
-      <div class="modal-meta" id="modalMeta"></div>
-      <div class="modal-desc" id="modalDesc"></div>
-
+      <div class="modal-title" id="modalTitle"></div>
+      <div class="modal-meta" id="modalShort"></div>
+      <div class="modal-specs" id="modalSpecs"></div>
+      <div class="modal-desc" id="modalNote"></div>
       <div class="modal-actions">
-        <a id="whatsappBtn" class="btn-primary" target="_blank">WhatsApp Enquiry</a>
+        <a id="waBtn" class="btn-primary" target="_blank">WhatsApp Enquiry</a>
         <a href="../contact.html" class="btn-ghost">Contact FACETRA</a>
       </div>
     </div>
-
   </div>
 </div>
 
-<!-- ===== JS ===== -->
-<script>
-/* MOBILE NAV */
-const toggle = document.getElementById("navToggle");
-const mobileNav = document.getElementById("mobileNav");
-toggle.onclick = () => mobileNav.classList.toggle("open");
+<footer class="lux-footer">
+  <div class="footer-bottom">© 2026 FACETRA</div>
+</footer>
 
-/* LOAD DIAMONDS */
-const grid = document.getElementById("itemsGrid");
+<script>
+/* mobile nav */
+const toggle=document.getElementById("navToggle");
+const mobileNav=document.getElementById("mobileNav");
+if(toggle) toggle.onclick=()=>mobileNav.classList.toggle("open");
+
+const grid=document.getElementById("itemsGrid");
+const modal=document.getElementById("modal");
 
 fetch("../assets/collection/manifest.json",{cache:"no-cache"})
-.then(r=>r.json())
-.then(data=>{
-
-  const list = data.diamonds;
-
-  list.forEach((g,i)=>{
-
-    const card = document.createElement("div");
-    card.className = "item-card";
-    card.innerHTML = `
-      <div class="item-thumb"><img src="../${g.img}" loading="lazy"></div>
-      <div class="item-title">${g.title}</div>
-      <div class="item-desc">${g.short}</div>
+.then(r=>r.json()).then(data=>{
+  data.diamonds.forEach(item=>{
+    const card=document.createElement("div");
+    card.className="item-card";
+    card.innerHTML=`
+      <div class="item-thumb"><img loading="lazy" src="../${item.img}"></div>
+      <div class="item-title">${item.title}</div>
+      <div class="item-desc">${item.short}</div>
     `;
+    card.onclick=()=>openModal(item);
     grid.appendChild(card);
-
-    card.onclick = ()=>openModal(g);
   });
-
 });
 
-/* MODAL */
-const modal = document.getElementById("gemModal");
-const modalImg = document.getElementById("modalImg");
-const modalTitle = document.getElementById("modalTitle");
-const modalMeta = document.getElementById("modalMeta");
-const modalDesc = document.getElementById("modalDesc");
-const whatsappBtn = document.getElementById("whatsappBtn");
+function openModal(item){
+  document.getElementById("modalImg").src="../"+item.img;
+  document.getElementById("modalTitle").textContent=item.title;
+  document.getElementById("modalShort").textContent=item.short;
+  document.getElementById("modalSpecs").innerHTML=
+    `<b>Cut:</b> ${item.cut}<br>
+     <b>Color:</b> ${item.color}<br>
+     <b>Clarity:</b> ${item.clarity}<br>
+     <b>Origin:</b> ${item.origin}<br>
+     <b>Treatment:</b> ${item.treatment}`;
+  document.getElementById("modalNote").textContent=item.note;
 
-function openModal(g){
-
-  modalImg.src = "../" + g.img;
-  modalTitle.textContent = g.title;
-
-  modalMeta.innerHTML = `
-    <strong>Cut:</strong> ${g.cut}<br>
-    <strong>Color:</strong> ${g.color}<br>
-    <strong>Clarity:</strong> ${g.clarity}<br>
-    <strong>Origin:</strong> ${g.origin}<br>
-    <strong>Treatment:</strong> ${g.treatment}<br>
-    <strong>Usage:</strong> ${g.use}
-  `;
-
-  modalDesc.textContent = g.note;
-
-  const link = window.location.href + "#" + g.slug;
-  const msg = `Hello FACETRA,%0AI am interested in ${g.title}.%0ALink: ${link}`;
-
-  whatsappBtn.href = `https://wa.me/918055113448?text=${msg}`;
-
-  /* PRODUCT SCHEMA */
-  const schema = {
-    "@context":"https://schema.org",
-    "@type":"Product",
-    "name":g.title,
-    "image":window.location.origin + "/" + g.img,
-    "description":g.note,
-    "brand":{"@type":"Brand","name":"FACETRA"}
-  };
-  let s=document.getElementById("productSchema");
-  if(!s){
-    s=document.createElement("script");
-    s.type="application/ld+json";
-    s.id="productSchema";
-    document.head.appendChild(s);
-  }
-  s.textContent=JSON.stringify(schema);
+  const link=location.href+"#"+item.slug;
+  const msg=`Hello FACETRA,%0AI'm interested in ${item.title}%0ALink: ${link}`;
+  document.getElementById("waBtn").href=`https://wa.me/918055113448?text=${msg}`;
 
   modal.classList.add("open");
-  document.body.style.overflow="hidden";
 }
 
-document.getElementById("closeModal").onclick=()=>{
-  modal.classList.remove("open");
-  document.body.style.overflow="";
-};
+document.getElementById("closeModal").onclick=()=>modal.classList.remove("open");
+modal.onclick=e=>{if(e.target===modal)modal.classList.remove("open")}
 </script>
 
 </body>
