@@ -47,9 +47,9 @@
       "title": "Cushion Cut Diamond",
       "slug": "diamond-cushion-cut-1",
       "desc": "Cushion · Soft Corners · Vintage Brilliance"
-    },
-
+    }
   ],
+
   "sapphires": [
     {
       "img": "assets/collection/sapphires/sapphire-cornflower-blue-1.jpg",
@@ -96,7 +96,7 @@
     {
       "img": "assets/collection/sapphires/sapphire-lavender-cushion-cut-1.jpg",
       "title": "Lavender Sapphire",
-      "slug": "sapphire-lavender-cushion-cut-1.png",
+      "slug": "sapphire-lavender-cushion-cut-1",
       "desc": "Cushion · Lavender · Africa"
     },
     {
@@ -172,6 +172,7 @@
       "desc": "Emerald Cut · Navy Blue · Madagascar"
     }
   ],
+
   "rubies": [
     {
       "img": "assets/collection/rubies/ruby-burma-1.jpg",
@@ -204,6 +205,7 @@
       "desc": "Round · Bright Red · Gem Quality"
     }
   ],
+
   "emeralds": [
     {
       "img": "assets/collection/emeralds/emerald-colombian-1.jpg",
