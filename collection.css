@@ -117,3 +117,23 @@ body.collection-page{
 @media(max-width:700px){
   .collection-grid{gap:30px}
 }
+
+.auto-image-box{
+  width:100%;
+  aspect-ratio:1/1;
+  overflow:hidden;
+  background:#000;
+  border:1px solid rgba(212,175,55,.18);
+}
+
+.auto-image-box img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:opacity .6s ease, transform 1.2s ease;
+}
+
+.auto-image-box img.fade{
+  opacity:0;
+  transform:scale(1.05);
+}
