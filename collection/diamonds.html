@@ -2,156 +2,129 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Natural Diamond Collection | FACETRA</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Explore FACETRA’s certified natural diamond collection including round brilliant, oval, emerald, cushion and radiant cut diamonds curated for collectors and investors.">
+<title>Natural Diamond Collection | FACETRA Mumbai</title>
+
+<meta name="description" content="Explore FACETRA’s natural diamond collection featuring certified round, oval, emerald, cushion, radiant and fancy cut diamonds curated for collectors and investors.">
+
 <link rel="canonical" href="https://facetra.in/collection/diamonds.html">
-<meta name="robots" content="index, follow">
 
 <!-- FAVICONS -->
-<link rel="icon" href="../assets/favicon/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="../assets/favicon/favicon-48x48.png" sizes="48x48" type="image/png">
-<link rel="icon" href="../assets/favicon/favicon-96x96.png" sizes="96x96" type="image/png">
-<link rel="icon" href="../assets/favicon/favicon-192x192.png" sizes="192x192" type="image/png">
+<link rel="icon" href="../assets/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" href="../assets/favicon/favicon-48x48.png" sizes="48x48">
+<link rel="icon" href="../assets/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" href="../assets/favicon/favicon-192x192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
 
 <meta name="theme-color" content="#000000">
 
 <link rel="stylesheet" href="../style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<!-- COLLECTION SCHEMA -->
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"CollectionPage",
+ "name":"FACETRA Natural Diamond Collection",
+ "url":"https://facetra.in/collection/diamonds.html",
+ "mainEntity":{
+   "@type":"ItemList",
+   "name":"Certified Natural Diamonds",
+   "itemListOrder":"http://schema.org/ItemListOrderAscending"
+ }
+}
+</script>
+
+<!-- BREADCRUMB SCHEMA -->
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"BreadcrumbList",
+ "itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://facetra.in/"},
+  {"@type":"ListItem","position":2,"name":"Collection","item":"https://facetra.in/collection.html"},
+  {"@type":"ListItem","position":3,"name":"Diamonds","item":"https://facetra.in/collection/diamonds.html"}
+ ]
+}
+</script>
 
 <style>
-/* ===== DIAMOND GRID ===== */
+.page{background:#050707;color:#fff}
 
-.collection-wrapper{
-  max-width:1200px;
-  margin:auto;
-  padding:90px 20px;
-}
-
-.collection-title{
-  text-align:center;
-  color:#d4af37;
-  font-family:Cinzel,serif;
-  margin-bottom:50px;
-}
-
-.diamond-grid{
+.grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:28px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:26px;
+  padding:60px 5%;
 }
 
-.diamond-card{
-  border:1px solid rgba(212,175,55,.35);
-  background:linear-gradient(180deg,#070807,#000);
+.card{
+  border:1px solid #b08a2e;
   padding:18px;
   text-align:center;
   cursor:pointer;
-  transition:.4s ease;
+  transition:.3s;
 }
+.card:hover{box-shadow:0 0 25px rgba(176,138,46,.4)}
 
-.diamond-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 20px 60px rgba(0,0,0,.7);
-}
-
-.diamond-card img{
+.card img{
   width:100%;
   aspect-ratio:1/1;
   object-fit:contain;
 }
 
-.diamond-card h3{
-  color:#d4af37;
-  font-family:Cinzel,serif;
-  font-size:1rem;
-  margin-top:14px;
-}
+.card h3{color:#d4af37;font-family:Cinzel;margin:10px 0}
+.card p{font-size:.9rem;color:#ccc}
 
-.diamond-card p{
-  font-size:.85rem;
-  opacity:.85;
-  margin-top:6px;
-}
+/* FADE */
+.fade-up{opacity:0;transform:translateY(30px);transition:.8s}
+.fade-up.show{opacity:1;transform:none}
 
-/* ===== MODAL ===== */
-
+/* MODAL */
 .modal{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.9);
+  position:fixed;inset:0;
+  background:rgba(0,0,0,.85);
   display:none;
-  align-items:center;
-  justify-content:center;
-  z-index:5000;
+  align-items:center;justify-content:center;
+  z-index:9999;
 }
-
-.modal.show{display:flex;}
+.modal.show{display:flex}
 
 .modal-box{
-  background:#050505;
-  border:1px solid rgba(212,175,55,.4);
-  max-width:520px;
-  width:90%;
-  padding:26px;
-  text-align:center;
+  max-width:420px;width:90%;
+  background:#050707;
+  border:1px solid #d4af37;
+  padding:22px;text-align:center;
   position:relative;
 }
 
-.modal-box img{
-  width:100%;
-  aspect-ratio:1/1;
-  object-fit:contain;
+.modal-box img{width:100%;aspect-ratio:1/1;object-fit:contain}
+
+.modal-box h2{color:#d4af37;font-family:Cinzel;margin:10px 0}
+
+.modal-box p{font-size:.95rem;color:#ddd;line-height:1.6}
+
+.modal-close{
+  position:absolute;top:8px;right:12px;
+  color:#d4af37;font-size:22px;cursor:pointer;
 }
 
-.modal-box h3{
-  color:#d4af37;
-  font-family:Cinzel,serif;
-  margin-top:16px;
-}
-
-.modal-box p{
-  font-size:.9rem;
-  opacity:.85;
-  margin:10px 0 20px;
-}
-
-.whatsapp-btn{
-  display:block;
-  padding:12px;
-  border:1px solid #d4af37;
-  color:#d4af37;
-  text-decoration:none;
-  transition:.3s;
-}
-
-.whatsapp-btn:hover{
-  background:#d4af37;
-  color:#000;
-}
-
-.close-btn{
-  position:absolute;
-  top:10px;
-  right:14px;
-  font-size:22px;
-  color:#d4af37;
-  cursor:pointer;
+.btn{
+  display:inline-block;margin-top:15px;
+  padding:10px 22px;border:1px solid #d4af37;
+  color:#d4af37;text-decoration:none;
 }
 </style>
-
 </head>
 
 <body class="page">
 
+<!-- HEADER -->
 <header class="site-header">
   <div class="header-inner">
-
     <div class="brand">
-      <img src="../logo.png" alt="FACETRA Logo">
+      <img src="../logo.png">
       <div>
         <div class="brand-name">FACETRA</div>
         <div class="brand-tag">Gems • Diamonds • Stones</div>
@@ -166,89 +139,95 @@
       <a href="../about.html">About</a>
       <a href="../contact.html">Contact</a>
     </nav>
-
-    <div class="nav-toggle" id="navToggle">
-      <span></span><span></span><span></span>
-    </div>
-
   </div>
 </header>
 
-<div class="mobile-nav" id="mobileNav">
-  <a href="../index.html">Home</a>
-  <a href="../collection.html">Collection</a>
-  <a href="../certification.html">Certification</a>
-  <a href="../why-facetra.html">Why FACETRA</a>
-  <a href="../about.html">About</a>
-  <a href="../contact.html">Contact</a>
-</div>
+<h1 style="text-align:center;margin-top:60px;color:#d4af37;font-family:Cinzel">
+Natural Diamond Collection
+</h1>
 
-<!-- ===== CONTENT ===== -->
+<section class="grid" id="grid"></section>
 
-<section class="collection-wrapper">
-  <h1 class="collection-title">Natural Diamond Collection</h1>
-  <div class="diamond-grid" id="diamondGrid"></div>
-</section>
-
-<!-- ===== MODAL ===== -->
-
-<div class="modal" id="diamondModal">
+<!-- MODAL -->
+<div class="modal" id="modal">
   <div class="modal-box">
-    <span class="close-btn" id="closeModal">×</span>
-    <img id="modalImg" src="" alt="">
-    <h3 id="modalTitle"></h3>
-    <p id="modalDesc"></p>
-    <a id="whatsappBtn" target="_blank" class="whatsapp-btn">Enquire on WhatsApp</a>
+    <div class="modal-close" onclick="closeModal()">×</div>
+    <img id="mImg">
+    <h2 id="mTitle"></h2>
+    <p id="mDesc"></p>
+    <a id="mWA" class="btn" target="_blank">Enquire on WhatsApp</a>
   </div>
 </div>
 
-<!-- ===== JS ===== -->
+<!-- PRODUCT SCHEMA (DYNAMIC) -->
+<script id="productSchema" type="application/ld+json"></script>
 
 <script>
-/* MOBILE NAV */
-document.getElementById("navToggle").onclick=()=>document.getElementById("mobileNav").classList.toggle("open");
+const grid=document.getElementById("grid");
+const modal=document.getElementById("modal");
+const mImg=document.getElementById("mImg");
+const mTitle=document.getElementById("mTitle");
+const mDesc=document.getElementById("mDesc");
+const mWA=document.getElementById("mWA");
 
-/* LOAD MANIFEST */
 fetch("../assets/collection/manifest.json")
-  .then(res=>res.json())
-  .then(data=>{
-    const diamonds=data.diamonds;
-    const grid=document.getElementById("diamondGrid");
-
-    diamonds.forEach(item=>{
-      const card=document.createElement("div");
-      card.className="diamond-card";
-      card.innerHTML=`
-        <img loading="lazy" src="../${item.img}" alt="${item.title}">
-        <h3>${item.title}</h3>
-        <p>${item.desc}</p>
-      `;
-      card.onclick=()=>openModal(item);
-      grid.appendChild(card);
-    });
+.then(r=>r.json())
+.then(data=>{
+  data.diamonds.forEach((d,i)=>{
+    const c=document.createElement("div");
+    c.className="card fade-up";
+    c.innerHTML=`
+      <img loading="lazy" src="../${d.img}" alt="${d.title}">
+      <h3>${d.title}</h3>
+      <p>${d.desc}</p>
+    `;
+    c.onclick=()=>openModal(d);
+    grid.appendChild(c);
   });
 
+  setTimeout(()=>{
+    document.querySelectorAll(".fade-up").forEach(el=>{
+      observer.observe(el);
+    });
+  },400);
+});
+
+/* SCROLL */
+const observer=new IntersectionObserver(e=>{
+  e.forEach(x=>{if(x.isIntersecting)x.target.classList.add("show")});
+},{threshold:.2});
+
 /* MODAL */
-const modal=document.getElementById("diamondModal");
-const modalImg=document.getElementById("modalImg");
-const modalTitle=document.getElementById("modalTitle");
-const modalDesc=document.getElementById("modalDesc");
-const whatsappBtn=document.getElementById("whatsappBtn");
-
-function openModal(item){
-  modalImg.src="../"+item.img;
-  modalTitle.textContent=item.title;
-  modalDesc.textContent=item.desc;
-
-  const pageLink=window.location.origin+"/collection/diamonds.html#"+item.slug;
-  const msg=`Hello FACETRA, I am interested in ${item.title}.%0ALink: ${pageLink}`;
-  whatsappBtn.href=`https://wa.me/918055113448?text=${msg}`;
-
+function openModal(d){
   modal.classList.add("show");
+  mImg.src="../"+d.img;
+  mTitle.textContent=d.title;
+
+  mDesc.innerHTML=`
+    <b>${d.category||"Natural Diamond"}</b><br>
+    ${d.desc}<br><br>
+    <b>Cut:</b> ${d.cut||""}<br>
+    <b>Origin:</b> ${d.origin||""}<br>
+    ${d.hindi?`<b>Hindi:</b> ${d.hindi}<br>`:""}
+    <br>${d.details||""}
+  `;
+
+  const link=location.href.split("#")[0]+"#"+d.slug;
+  mWA.href=`https://wa.me/918055113448?text=Hello FACETRA, I am interested in ${d.title}.%0A${link}`;
+
+  document.getElementById("productSchema").textContent=
+JSON.stringify({
+ "@context":"https://schema.org",
+ "@type":"Product",
+ "name":d.title,
+ "image":"https://facetra.in/"+d.img,
+ "description":d.details||d.desc,
+ "brand":{"@type":"Brand","name":"FACETRA"},
+ "url":link
+});
 }
 
-document.getElementById("closeModal").onclick=()=>modal.classList.remove("show");
-modal.onclick=e=>{if(e.target===modal)modal.classList.remove("show");};
+function closeModal(){modal.classList.remove("show");}
 </script>
 
 </body>
