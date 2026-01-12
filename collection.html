@@ -194,11 +194,12 @@
 <!-- ================= JS ================= -->
 <script>
 
+/* MOBILE NAV */
 const toggle=document.getElementById("navToggle");
 const mobileNav=document.getElementById("mobileNav");
 if(toggle) toggle.onclick=()=>mobileNav.classList.toggle("open");
 
-/* AUTO IMAGE PREVIEW FROM MANIFEST */
+/* AUTO PREVIEW FROM MANIFEST */
 fetch("assets/collection/manifest.json",{cache:"no-cache"})
 .then(r=>r.json())
 .then(data=>{
@@ -216,23 +217,24 @@ fetch("assets/collection/manifest.json",{cache:"no-cache"})
     let i = 0;
 
     function show(){
-      card.classList.add("fade");
+      img.classList.add("fade");
       setTimeout(()=>{
         img.src = list[i].img;
+        img.alt = list[i].title;
         title.textContent = list[i].title;
-        desc.textContent = list[i].short;
-        card.classList.remove("fade");
+        desc.textContent = list[i].short || list[i].desc;
+        img.classList.remove("fade");
         i = (i+1) % list.length;
       },300);
     }
 
     show();
-    setInterval(show,4200);
+    setInterval(show,4000);
 
   });
 
 })
-.catch(err=>console.error("Manifest error",err));
+.catch(err=>console.error("Manifest load error",err));
 
 </script>
 
