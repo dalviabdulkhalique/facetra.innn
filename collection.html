@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <title>FACETRA | Premium Gemstone Collection</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Discover FACETRA’s luxury collection of certified diamonds, sapphires, rubies and emeralds curated for collectors and investors.">
 
@@ -11,20 +13,22 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="collection.css">
 
-<!-- FAVICONS -->
+<!-- Favicons -->
 <link rel="icon" href="assets/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" href="assets/favicon/favicon-192x192.png">
 <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
 <meta name="theme-color" content="#020805">
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-<!-- COLLECTION SCHEMA -->
+<!-- Collection Schema -->
 <script type="application/ld+json">
 {
  "@context":"https://schema.org",
  "@type":"CollectionPage",
  "name":"FACETRA Gemstone Collection",
- "description":"Luxury natural gemstones including diamonds, sapphires, rubies and emeralds."
+ "description":"Luxury natural gemstones including diamonds, sapphires, rubies and emeralds curated for collectors and investors.",
+ "url":"https://dalviabdulkhalique.github.io/facetra.in/collection.html"
 }
 </script>
 
@@ -32,7 +36,7 @@
 
 <body class="page collection-page">
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 <header class="site-header">
   <div class="header-inner">
 
@@ -69,66 +73,46 @@
   <a href="contact.html">Contact</a>
 </div>
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 <section class="collection-hero">
   <h1>FACETRA Collection</h1>
   <p>Certified natural gemstones curated for collectors, jewelers and long-term investors.</p>
 </section>
 
-<!-- ================= COLLECTION GRID ================= -->
+<!-- GRID -->
 <section class="container">
 
   <div class="collection-grid">
 
     <div class="lux-card" data-cat="diamonds">
       <h3>Diamonds Collection</h3>
-
-      <div class="lux-image">
-        <img>
-      </div>
-
+      <div class="lux-image"><img></div>
       <div class="lux-title"></div>
       <div class="lux-desc"></div>
-
       <a href="collection/diamonds.html" class="lux-btn">View Diamond Collection</a>
     </div>
 
     <div class="lux-card" data-cat="sapphires">
       <h3>Sapphires Collection</h3>
-
-      <div class="lux-image">
-        <img>
-      </div>
-
+      <div class="lux-image"><img></div>
       <div class="lux-title"></div>
       <div class="lux-desc"></div>
-
       <a href="collection/sapphires.html" class="lux-btn">View Sapphire Collection</a>
     </div>
 
     <div class="lux-card" data-cat="rubies">
       <h3>Rubies Collection</h3>
-
-      <div class="lux-image">
-        <img>
-      </div>
-
+      <div class="lux-image"><img></div>
       <div class="lux-title"></div>
       <div class="lux-desc"></div>
-
       <a href="collection/rubies.html" class="lux-btn">View Ruby Collection</a>
     </div>
 
     <div class="lux-card" data-cat="emeralds">
       <h3>Emeralds Collection</h3>
-
-      <div class="lux-image">
-        <img>
-      </div>
-
+      <div class="lux-image"><img></div>
       <div class="lux-title"></div>
       <div class="lux-desc"></div>
-
       <a href="collection/emeralds.html" class="lux-btn">View Emerald Collection</a>
     </div>
 
@@ -136,20 +120,24 @@
 
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 <footer class="lux-footer">
   <div class="footer-inner">
+
     <div class="footer-brand">
       <div class="footer-logo">
         <img src="logo.png"><span>FACETRA</span>
       </div>
-      <p>Premium gemstone trading house specializing in certified natural gemstones.</p>
+      <p>Premium gemstone trading house specializing in certified natural gemstones curated for collectors and long-term investors.</p>
     </div>
 
     <div class="footer-links">
       <h4>Quick Links</h4>
       <a href="index.html">Home</a>
       <a href="collection.html">Collection</a>
+      <a href="certification.html">Certification</a>
+      <a href="why-facetra.html">Why FACETRA</a>
+      <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
 
@@ -157,12 +145,16 @@
       <h4>Contact</h4>
       <a href="mailto:info@facetra.in">info@facetra.in</a>
       <a href="tel:+918055113448">+91 80551 13448</a>
+      <a href="https://wa.me/918055113448" target="_blank">WhatsApp Chat</a>
+      <div>Mumbai, Maharashtra, India</div>
     </div>
+
   </div>
+
   <div class="footer-bottom">© 2026 FACETRA. All rights reserved.</div>
 </footer>
 
-<!-- ================= JS ================= -->
+<!-- JS -->
 <script>
 
 /* MOBILE NAV */
@@ -170,8 +162,8 @@ const toggle=document.getElementById("navToggle");
 const mobileNav=document.getElementById("mobileNav");
 if(toggle) toggle.onclick=()=>mobileNav.classList.toggle("open");
 
-/* LUXURY SLIDER — SYNCED */
-fetch("./assets/collection/manifest.json",{cache:"no-cache"})
+/* AUTO ROTATING LUXURY CARDS */
+fetch("assets/collection/manifest.json",{cache:"no-cache"})
 .then(r=>r.json())
 .then(data=>{
 
@@ -188,19 +180,26 @@ fetch("./assets/collection/manifest.json",{cache:"no-cache"})
     let i = 0;
 
     function show(){
-      card.classList.add("fade");
+
+      img.classList.add("fade");
 
       setTimeout(()=>{
-        img.src = list[i].img;
-        title.textContent = list[i].title;
-        desc.textContent = list[i].desc;
-        card.classList.remove("fade");
-        i = (i+1) % list.length;
-      },350);
+
+        const item = list[i];
+
+        img.src = item.img;
+        title.textContent = item.title;
+        desc.textContent = item.desc;
+
+        img.classList.remove("fade");
+
+        i = (i + 1) % list.length;
+
+      }, 450);
     }
 
     show();
-    setInterval(show,4200);
+    setInterval(show, 4200);
 
   });
 
