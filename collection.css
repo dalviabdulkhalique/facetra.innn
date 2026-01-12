@@ -102,3 +102,15 @@
 @media(max-width:768px){
   .showcase-box{height:220px;}
 }
+
+.fade-up{
+  opacity:0;
+  transform:translateY(30px);
+  transition:.8s ease;
+}
+
+.fade-up.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
