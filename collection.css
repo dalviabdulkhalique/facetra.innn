@@ -3,135 +3,117 @@
   --muted:#cfcfcf;
 }
 
-/* PAGE */
-body.page.collection-page{
+body.collection-page{
   background:linear-gradient(180deg,#0b140e,#000);
   color:var(--muted);
 }
 
 /* HERO */
 .collection-hero{
-  min-height:40vh;
-  padding:120px 20px 70px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  padding:120px 20px 80px;
   text-align:center;
-  background:radial-gradient(circle at top,#101914 0%,#000 70%);
+  background:radial-gradient(circle at top,#122018 0%,#000 70%);
 }
 
-.hero-title{
+.collection-hero h1{
   font-family:Cinzel,serif;
   color:var(--gold);
-  font-size:clamp(2rem,4vw,3rem);
+  font-size:clamp(2.2rem,4vw,3.2rem);
+  letter-spacing:3px;
 }
 
-.hero-description{
+.collection-hero p{
   max-width:760px;
-  margin:12px auto 0;
-  line-height:1.8;
+  margin:14px auto 0;
 }
-
-/* CONTAINER */
-.container{max-width:1200px;margin:auto;padding:0 20px}
 
 /* GRID */
-.dual-collections{
+.collection-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-  margin:60px 0 40px;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:48px;
+  margin:70px 0 40px;
 }
 
 /* CARD */
-.auto-collection{
+.lux-card{
   border:1px solid rgba(212,175,55,.25);
-  background:linear-gradient(180deg,#070707,#000);
-  padding:30px 24px 38px;
+  background:linear-gradient(180deg,#060807,#000);
+  padding:26px 26px 34px;
   text-align:center;
   display:flex;
   flex-direction:column;
-  align-items:center;
-  min-height:580px;
   transition:.4s ease;
 }
 
-.auto-collection:hover{
+.lux-card:hover{
   box-shadow:
-    0 0 0 1px rgba(212,175,55,.25),
-    0 30px 80px rgba(0,0,0,.9);
+    0 0 0 1px rgba(212,175,55,.35),
+    0 35px 90px rgba(0,0,0,.95);
 }
 
-/* TITLE */
-.collection-title{
+.lux-card h3{
   font-family:Cinzel,serif;
   color:var(--gold);
-  font-size:1.4rem;
-  margin-bottom:16px;
-}
-
-/* IMAGE BOX — PERFECT SQUARE */
-.auto-image-box{
-  width:100%;
-  aspect-ratio:1/1;
-  overflow:hidden;
-  border:1px solid rgba(212,175,55,.15);
-  background:#000;
+  margin-bottom:18px;
 }
 
 /* IMAGE */
-.auto-image-box img{
+.lux-image{
+  width:100%;
+  aspect-ratio:1/1;
+  overflow:hidden;
+  background:#000;
+}
+
+.lux-image img{
   width:100%;
   height:100%;
   object-fit:cover;
-  transition:opacity .6s ease, transform 1s ease;
+  transition:opacity .5s ease, transform 1s ease;
 }
 
-.auto-image-box img.fade{
+.lux-card.fade img{
   opacity:0;
   transform:scale(1.05);
 }
 
-.auto-collection:hover img{
+.lux-card:hover img{
   transform:scale(1.06);
 }
 
 /* TEXT */
-.stone-name{
+.lux-title{
   margin-top:18px;
   font-family:Cinzel,serif;
   color:var(--gold);
-  font-size:1.1rem;
+  font-size:1.05rem;
 }
 
-.stone-desc{
+.lux-desc{
   margin:8px auto 18px;
-  max-width:420px;
-  line-height:1.7;
   font-size:.95rem;
+  line-height:1.6;
+  max-width:420px;
 }
 
 /* BUTTON */
-.btn-category{
+.lux-btn{
   margin-top:auto;
-  padding:12px 28px;
+  padding:12px 30px;
   border:1px solid var(--gold);
   color:var(--gold);
   text-decoration:none;
-  letter-spacing:.12em;
+  letter-spacing:.14em;
   transition:.3s ease;
 }
 
-.btn-category:hover{
+.lux-btn:hover{
   background:var(--gold);
   color:#000;
 }
 
 /* MOBILE */
-@media(max-width:900px){
-  .dual-collections{grid-template-columns:1fr}
-}
-
-@media(max-width:600px){
-  .btn-category{width:100%}
+@media(max-width:700px){
+  .collection-grid{gap:30px}
 }
