@@ -1,311 +1,334 @@
-/* =====================================================
-   FACETRA — COLLECTION & CATEGORY PAGES (LUXURY THEME)
-   Matches main style.css color system
-===================================================== */
+/* =========================================================
+   FACETRA — COLLECTION & CATEGORY PAGES (LUXURY SYSTEM)
+   Black • Gold • Investor Grade Presentation
+   ========================================================= */
 
+/* ---------- COLOR PALETTE ---------- */
 :root{
   --gold1:#f1d27a;
   --gold2:#c9a24d;
   --gold3:#8f6b2a;
   --dark:#050806;
   --dark2:#0b120f;
-  --card:#0f1612;
+  --panel:#0c1310;
   --text:#d7dbd8;
   --muted:#9ea4a0;
 }
 
-/* ================= COLLECTION HERO ================= */
-
-.collection-hero,
-.page-hero{
-  padding:140px 20px 90px;
-  text-align:center;
-  background:
-    radial-gradient(circle at top,#14261b 0%,#050806 70%);
-}
-
-.collection-hero h1,
-.page-hero h1{
-  font-family:Cinzel,serif;
-  font-size:clamp(2.2rem,4vw,3.2rem);
-  letter-spacing:4px;
-  color:var(--gold2);
-}
-
-.collection-hero p,
-.page-hero p{
-  max-width:780px;
-  margin:16px auto 0;
-  font-size:1rem;
-  color:#cfd4d1;
-  line-height:1.8;
-}
-
-/* ================= COLLECTION GRID ================= */
-
-.collection-grid{
-  max-width:1200px;
+/* ---------- SHARED CONTAINERS ---------- */
+.collection-wrap{width:100%;overflow:hidden}
+.collection-container{
+  max-width:1300px;
   margin:0 auto;
-  padding:0 24px 80px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:48px;
+  padding:0 24px;
 }
 
-/* ================= CATEGORY CARD ================= */
-
-.lux-card{
-  background:linear-gradient(180deg,#0c1310,#070b09);
-  border:1px solid rgba(201,162,77,.35);
-  padding:30px 28px 38px;
+/* =========================================================
+   COLLECTION HERO
+   ========================================================= */
+.collection-hero{
+  min-height:42vh;
   display:flex;
-  flex-direction:column;
-  text-align:center;
-  transition:.45s ease;
-}
-
-.lux-card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 0 26px rgba(201,162,77,.35);
-}
-
-.lux-card h3{
-  font-family:Cinzel,serif;
-  color:var(--gold2);
-  margin-bottom:20px;
-  letter-spacing:2px;
-}
-
-/* ===== IMAGE FRAME (1:1 RATIO) ===== */
-
-.lux-image{
-  width:100%;
-  aspect-ratio:1/1;
-  background:#000;
-  overflow:hidden;
-  border:1px solid rgba(201,162,77,.25);
-}
-
-.lux-image img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:opacity .6s ease, transform 1.3s ease;
-}
-
-.lux-image img.fade{
-  opacity:0;
-  transform:scale(1.06);
-}
-
-.lux-card:hover .lux-image img{
-  transform:scale(1.08);
-}
-
-/* ===== TEXT ===== */
-
-.lux-title{
-  margin-top:18px;
-  font-family:Cinzel,serif;
-  color:var(--gold2);
-  font-size:1.05rem;
-  letter-spacing:1px;
-}
-
-.lux-desc{
-  margin:10px auto 22px;
-  font-size:.95rem;
-  line-height:1.6;
-  color:#cfd4d1;
-  max-width:420px;
-}
-
-/* ===== BUTTON ===== */
-
-.lux-btn{
-  margin-top:auto;
-  padding:13px 36px;
-  border:1px solid var(--gold2);
-  color:var(--gold2);
-  text-decoration:none;
-  letter-spacing:.18em;
-  font-size:.85rem;
-  text-transform:uppercase;
-  transition:.35s ease;
-}
-
-.lux-btn:hover{
-  background:linear-gradient(135deg,var(--gold1),var(--gold2),var(--gold3));
-  color:#111;
-  box-shadow:0 0 18px rgba(201,162,77,.45);
-}
-
-/* ================= CATEGORY GRID PAGES ================= */
-
-.container{
-  max-width:1200px;
-  margin:0 auto;
-  padding:0 24px 80px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:36px;
-}
-
-/* ===== PRODUCT CARD ===== */
-
-.card{
-  background:linear-gradient(180deg,#0c1310,#070b09);
-  border:1px solid rgba(201,162,77,.35);
-  padding:18px;
-  cursor:pointer;
-  transition:.4s ease;
-}
-
-.card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 0 24px rgba(201,162,77,.35);
-}
-
-.card-img{
-  width:100%;
-  aspect-ratio:1/1;
-  overflow:hidden;
-  background:#000;
-}
-
-.card-img img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:1.2s ease;
-}
-
-.card:hover img{transform:scale(1.08)}
-
-.card h4{
-  margin-top:14px;
-  font-family:Cinzel,serif;
-  color:var(--gold2);
-  font-size:.95rem;
-}
-
-.card span{
-  font-size:.85rem;
-  color:#cfd4d1;
-}
-
-/* ================= MODAL POPUP ================= */
-
-.modal{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.88);
-  display:none;
   align-items:center;
   justify-content:center;
-  z-index:999;
+  padding:120px 20px 70px;
+  text-align:center;
+  background:
+    radial-gradient(circle at top,rgba(201,162,77,.12),transparent 55%),
+    linear-gradient(to bottom,#050806,#07110f);
+}
+.collection-hero h1{
+  font-family:Cinzel,serif;
+  color:var(--gold2);
+  font-size:clamp(2.3rem,4vw,3.6rem);
+  letter-spacing:2.4px;
+}
+.collection-hero p{
+  max-width:860px;
+  margin:14px auto 0;
+  color:var(--muted);
+  line-height:1.9;
+  font-size:15px;
 }
 
-.modal.show{display:flex}
-
-.modal-box{
-  background:linear-gradient(180deg,#0c1310,#050806);
-  border:1px solid rgba(201,162,77,.45);
-  max-width:920px;
-  width:94%;
+/* =========================================================
+   COLLECTION GRID (CATEGORY CARDS)
+   ========================================================= */
+.collection-section{
+  padding:60px 0 110px;
+  background:linear-gradient(to bottom,#050806,#0b120f);
+}
+.collection-grid{
+  max-width:1300px;
+  margin:0 auto;
   display:grid;
-  grid-template-columns:1fr 1fr;
-  position:relative;
+  grid-template-columns:repeat(auto-fit,minmax(320px,380px));
+  gap:48px;
+  justify-content:center;
 }
 
-@media(max-width:850px){
-  .modal-box{grid-template-columns:1fr}
+/* CATEGORY CARD */
+.collection-card{
+  width:100%;
+  background:linear-gradient(180deg,#0c1310,#060a08);
+  border:1px solid rgba(201,162,77,.28);
+  padding:34px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  transition:.45s ease;
+}
+.collection-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 30px 90px rgba(0,0,0,.85);
+}
+
+/* IMAGE BOX */
+.auto-image-box{
+  width:100%;
+  aspect-ratio:1/1;
+  overflow:hidden;
+  background:#000;
+  border:1px solid rgba(201,162,77,.12);
+}
+.auto-image-box img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:opacity .5s ease, transform 1s ease;
+}
+.collection-card:hover img{transform:scale(1.05)}
+
+.collection-card h2{
+  font-family:Cinzel,serif;
+  color:var(--gold2);
+  margin:16px 0 6px;
+  letter-spacing:1px;
+}
+.collection-card p{
+  color:var(--muted);
+  text-align:center;
+  font-size:14px;
+  line-height:1.8;
+  margin-bottom:18px;
+}
+
+.btn-category{
+  margin-top:auto;
+  padding:12px 28px;
+  border:1px solid var(--gold2);
+  color:var(--gold2);
+  letter-spacing:.12em;
+  transition:.3s;
+}
+.btn-category:hover{
+  background:linear-gradient(90deg,var(--gold1),var(--gold2));
+  color:#111;
+  transform:translateY(-3px);
+}
+
+/* =========================================================
+   CATEGORY PAGES (DIAMONDS / SAPPHIRES / RUBIES / EMERALDS)
+   ========================================================= */
+.category-page{
+  padding:100px 0 140px;
+  background:linear-gradient(to bottom,#050806,#07110f);
+}
+
+/* HEADER */
+.category-header{
+  max-width:1000px;
+  margin:0 auto 40px;
+  text-align:center;
+  padding:0 24px;
+}
+.category-header h2{
+  font-family:Cinzel,serif;
+  color:var(--gold2);
+  font-size:36px;
+  letter-spacing:1.4px;
+}
+.category-header p{
+  margin-top:12px;
+  color:var(--muted);
+  line-height:1.9;
+  font-size:15px;
+}
+
+/* ITEM GRID */
+.items-grid{
+  max-width:1300px;
+  margin:0 auto;
+  padding:0 24px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+
+/* PRODUCT CARD */
+.item-card{
+  background:linear-gradient(180deg,#080d0b,#020403);
+  border:1px solid rgba(201,162,77,.22);
+  padding:16px;
+  text-align:center;
+  cursor:pointer;
+  transition:.35s ease;
+}
+.item-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 24px 60px rgba(0,0,0,.7);
 }
 
 /* IMAGE */
-
-.modal-img{
+.item-thumb{
   aspect-ratio:1/1;
+  overflow:hidden;
   background:#000;
+  border:1px solid rgba(201,162,77,.08);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:10px;
 }
-
-.modal-img img{
+.item-thumb img{
   width:100%;
   height:100%;
   object-fit:cover;
+  transition:transform .9s ease;
 }
+.item-card:hover img{transform:scale(1.06)}
 
-/* INFO */
-
-.modal-info{
-  padding:34px 32px;
-}
-
-.modal-info h3{
+.item-title{
   font-family:Cinzel,serif;
   color:var(--gold2);
-  letter-spacing:1.5px;
+  font-size:1rem;
+  margin:6px 0;
 }
-
-.modal-info .meta{
-  margin-top:10px;
+.item-desc{
+  color:var(--muted);
   font-size:.9rem;
-  color:#d6d0b0;
 }
 
-.modal-info p{
-  margin-top:18px;
-  line-height:1.8;
+/* =========================================================
+   MODAL / PRODUCT POPUP
+   ========================================================= */
+.modal-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(2,3,2,.88);
+  backdrop-filter:blur(4px);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+  padding:24px;
+}
+.modal-overlay.open{display:flex}
+
+.modal-box{
+  width:min(1100px,96%);
+  max-height:92vh;
+  overflow:auto;
+  background:linear-gradient(180deg,#06100d,#050806);
+  border:2px solid rgba(201,162,77,.25);
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  box-shadow:0 60px 160px rgba(0,0,0,.95);
+  position:relative;
+  animation:modalIn .45s ease;
+}
+
+@keyframes modalIn{
+  from{opacity:0;transform:scale(.96)}
+  to{opacity:1;transform:scale(1)}
+}
+
+/* CLOSE */
+.modal-close{
+  position:absolute;
+  top:10px;
+  right:14px;
+  background:none;
+  border:none;
+  color:var(--gold2);
+  font-size:30px;
+  cursor:pointer;
+}
+
+/* LEFT */
+.modal-left{
+  padding:26px;
+  background:#020403;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.modal-left img{
+  width:100%;
+  max-height:78vh;
+  object-fit:contain;
+}
+
+/* RIGHT */
+.modal-right{
+  padding:36px 34px;
+  color:var(--muted);
+}
+.modal-title{
+  font-family:Cinzel,serif;
+  color:var(--gold2);
+  font-size:1.4rem;
+  margin-bottom:12px;
+}
+.modal-meta{
   font-size:.95rem;
-  color:#cfd4d1;
+  line-height:1.8;
+  margin-bottom:16px;
+}
+.modal-desc{
+  font-size:.95rem;
+  line-height:1.9;
+  margin-bottom:24px;
 }
 
 /* ACTIONS */
-
 .modal-actions{
-  margin-top:26px;
   display:flex;
   gap:12px;
   flex-wrap:wrap;
 }
-
-.modal-actions a{
-  padding:12px 26px;
+.btn-primary{
+  padding:11px 22px;
+  background:linear-gradient(90deg,var(--gold1),var(--gold2));
+  color:#111;
   border:1px solid var(--gold2);
+  text-decoration:none;
+}
+.btn-ghost{
+  padding:11px 22px;
+  border:1px solid rgba(201,162,77,.45);
   color:var(--gold2);
   text-decoration:none;
-  font-size:.85rem;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  transition:.35s ease;
 }
 
-.modal-actions a:hover{
-  background:linear-gradient(135deg,var(--gold1),var(--gold2),var(--gold3));
-  color:#111;
-}
+/* =========================================================
+   MOBILE OPTIMIZATION
+   ========================================================= */
+@media(max-width:900px){
 
-/* CLOSE */
+  .collection-hero{padding:80px 18px 50px}
 
-.close{
-  position:absolute;
-  top:14px;
-  right:18px;
-  font-size:22px;
-  cursor:pointer;
-  color:#fff;
-}
+  .collection-grid{gap:28px}
 
-/* ================= MOBILE ================= */
+  .collection-card{padding:22px}
 
-@media(max-width:700px){
+  .category-header h2{font-size:28px}
 
-  .collection-grid{gap:32px}
-  .grid{gap:28px}
-
-  .modal-info{padding:26px 22px}
+  .modal-box{
+    grid-template-columns:1fr;
+    max-height:94vh;
+  }
+  .modal-left{padding:16px}
+  .modal-right{padding:22px}
 
 }
