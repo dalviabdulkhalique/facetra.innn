@@ -1,329 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<title>FACETRA Diamonds Collection | Certified Natural Diamonds</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Explore FACETRA certified natural diamonds including round, oval, emerald and fancy cuts curated for collectors and investors.">
-
-<link rel="canonical" href="https://dalviabdulkhalique.github.io/facetra.in/collection/diamonds.html">
-
-<!-- Favicons -->
-<link rel="icon" href="../assets/favicon/favicon-32x32.png" sizes="32x32">
-<link rel="icon" href="../assets/favicon/favicon-192x192.png">
-<link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
-<meta name="theme-color" content="#020805">
-
-<link rel="stylesheet" href="../style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
-<!-- Breadcrumb Schema -->
-<script type="application/ld+json">
-{
- "@context":"https://schema.org",
- "@type":"BreadcrumbList",
- "itemListElement":[
-  {"@type":"ListItem","position":1,"name":"Home","item":"https://dalviabdulkhalique.github.io/facetra.in/"},
-  {"@type":"ListItem","position":2,"name":"Collection","item":"https://dalviabdulkhalique.github.io/facetra.in/collection.html"},
-  {"@type":"ListItem","position":3,"name":"Diamonds"}
- ]
-}
-</script>
-
-<style>
-:root{--gold:#d4af37;--muted:#cfcfcf}
-
-body{background:linear-gradient(180deg,#0b140e,#000);color:var(--muted)}
-
-.page-hero{
-  padding:120px 20px 70px;
-  text-align:center;
-  background:radial-gradient(circle at top,#122018 0%,#000 70%);
-}
-.page-hero h1{
-  font-family:Cinzel,serif;
-  color:var(--gold);
-  letter-spacing:3px;
-}
-.page-hero p{max-width:760px;margin:14px auto 0}
-
-.container{max-width:1200px;margin:auto;padding:0 20px}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:34px;
-  margin:70px 0;
-}
-
-.card{
-  border:1px solid rgba(212,175,55,.25);
-  background:linear-gradient(180deg,#060807,#000);
-  padding:16px;
-  cursor:pointer;
-  transition:.35s ease;
-}
-.card:hover{
-  box-shadow:0 0 0 1px rgba(212,175,55,.35),0 30px 80px rgba(0,0,0,.9);
-  transform:translateY(-6px);
-}
-
-.card-img{
-  aspect-ratio:1/1;
-  overflow:hidden;
-  background:#000;
-}
-.card-img img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:1s ease;
-}
-.card:hover img{transform:scale(1.07)}
-
-.card h4{
-  margin:14px 0 4px;
-  font-family:Cinzel,serif;
-  color:var(--gold);
-  font-size:.95rem;
-}
-.card span{font-size:.85rem;color:#bdbdbd}
-
-/* MODAL */
-.modal{
-  position:fixed;inset:0;background:rgba(0,0,0,.85);
-  display:none;align-items:center;justify-content:center;z-index:999;
-}
-.modal.show{display:flex}
-
-.modal-box{
-  background:linear-gradient(180deg,#070a09,#000);
-  border:1px solid rgba(212,175,55,.4);
-  max-width:920px;width:94%;
-  display:grid;grid-template-columns:1fr 1fr;
-}
-@media(max-width:800px){.modal-box{grid-template-columns:1fr}}
-
-.modal-img{aspect-ratio:1/1;background:#000}
-.modal-img img{width:100%;height:100%;object-fit:cover}
-
-.modal-info{padding:30px}
-.modal-info h3{
-  font-family:Cinzel,serif;
-  color:var(--gold);
-  letter-spacing:1.5px;
-}
-.modal-info .meta{
-  margin-top:8px;
-  font-size:.9rem;
-  color:#cfcfcf;
-}
-.modal-info p{
-  margin-top:16px;
-  line-height:1.7;
-  font-size:.95rem;
-}
-
-.modal-actions{margin-top:22px}
-.modal-actions a{
-  display:inline-block;margin-right:10px;padding:10px 22px;
-  border:1px solid var(--gold);color:var(--gold);text-decoration:none;
-}
-.modal-actions a:hover{background:var(--gold);color:#000}
-
-.close{
-  position:absolute;top:20px;right:22px;color:#fff;font-size:22px;cursor:pointer
-}
-</style>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FACETRA | Diamonds Collection</title>
+  <meta name="description" content="Certified investment-grade diamonds curated for brilliance, clarity and market liquidity." />
+  <link rel="canonical" href="https://dalviabdulkhalique.github.io/facetra.in/collection/diamonds.html" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../collection.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- favicons -->
+  <link rel="icon" href="../assets/favicon/favicon-32x32.png" sizes="32x32" />
 </head>
+<body class="page category-page">
 
-<body>
-
-<!-- HEADER -->
-<header class="site-header">
-  <div class="header-inner">
-    <div class="brand">
-      <img src="../logo.png" alt="FACETRA Logo">
-      <div>
-        <div class="brand-name">FACETRA</div>
-        <div class="brand-tag">Gems • Diamonds • Stones</div>
-      </div>
-    </div>
-
-    <nav class="main-nav">
-      <a href="../index.html">Home</a>
-      <a href="../collection.html" class="active">Collection</a>
-      <a href="../certification.html">Certification</a>
-      <a href="../why-facetra.html">Why FACETRA</a>
-      <a href="../about.html">About</a>
-      <a href="../contact.html">Contact</a>
-    </nav>
-
-    <div class="nav-toggle" id="navToggle">
-      <span></span><span></span><span></span>
-    </div>
-  </div>
-</header>
-
-<div class="mobile-nav" id="mobileNav">
-  <a href="../index.html">Home</a>
-  <a href="../collection.html">Collection</a>
-  <a href="../certification.html">Certification</a>
-  <a href="../why-facetra.html">Why FACETRA</a>
-  <a href="../about.html">About</a>
-  <a href="../contact.html">Contact</a>
-</div>
-
-<section class="page-hero">
-  <h1>Natural Diamonds</h1>
-  <p>Certified investment-grade diamonds curated for brilliance, rarity and long-term market liquidity.</p>
-</section>
-
-<section class="container">
-  <div class="grid" id="diamondGrid"></div>
-</section>
-
-<!-- MODAL -->
-<div class="modal" id="modal">
-  <div class="close" onclick="closeModal()">✕</div>
-  <div class="modal-box">
-    <div class="modal-img"><img id="mImg"></div>
-    <div class="modal-info">
-      <h3 id="mTitle"></h3>
-      <div class="meta">Cut: <span id="mCut"></span></div>
-      <div class="meta">Color: <span id="mColor"></span></div>
-      <div class="meta">Origin: <span id="mOrigin"></span></div>
-      <p id="mDesc"></p>
-
-      <div class="modal-actions">
-        <a id="waBtn" target="_blank">WhatsApp Enquiry</a>
-        <a href="../contact.html">Contact FACETRA</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- FOOTER (same as other pages) -->
-<footer class="lux-footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <div class="footer-logo">
+  <!-- header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
         <img src="../logo.png" alt="FACETRA Logo">
-        <span>FACETRA</span>
+        <div><div class="brand-name">FACETRA</div><div class="brand-tag">Gems • Diamonds • Stones</div></div>
       </div>
-      <p>Premium gemstone trading house specializing in certified natural gemstones curated for collectors, jewelers and long-term investors.</p>
-    </div>
 
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <a href="../index.html">Home</a>
-      <a href="../collection.html">Collection</a>
-      <a href="../certification.html">Certification</a>
-      <a href="../why-facetra.html">Why FACETRA</a>
-      <a href="../about.html">About</a>
-      <a href="../contact.html">Contact</a>
-    </div>
+      <nav class="main-nav">
+        <a href="../index.html">Home</a>
+        <a href="../collection.html" class="active">Collection</a>
+        <a href="../certification.html">Certification</a>
+        <a href="../why-facetra.html">Why FACETRA</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
 
-    <div class="footer-contact">
-      <h4>Contact</h4>
-      <a class="contact-item" href="mailto:info@facetra.in"><span>info@facetra.in</span></a>
-      <a class="contact-item" href="tel:+918055113448"><span>+91 80551 13448</span></a>
-      <a class="contact-item" href="https://wa.me/918055113448" target="_blank"><span>WhatsApp Chat</span></a>
-      <div class="contact-item"><span>Mumbai, Maharashtra, India</span></div>
+      <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="../index.html">Home</a>
+    <a href="../collection.html">Collection</a>
+    <a href="../contact.html">Contact</a>
+  </div>
+
+  <main class="category-page">
+    <div class="container">
+      <header class="category-header">
+        <h2>Diamonds Collection</h2>
+        <p>Certified investment-grade diamonds curated for brilliance, rarity and market liquidity.</p>
+      </header>
+
+      <section id="items" class="items-grid" aria-live="polite"></section>
+    </div>
+  </main>
+
+  <!-- Modal overlay -->
+  <div id="modal" class="modal-overlay" role="dialog" aria-hidden="true">
+    <div class="modal-box" role="document" aria-modal="true">
+      <div class="modal-left">
+        <img id="modalImg" src="" alt="">
+      </div>
+      <div class="modal-right">
+        <div class="modal-title" id="modalTitle"></div>
+        <div class="modal-meta" id="modalMeta"></div>
+        <div class="modal-desc" id="modalLongDesc"></div>
+        <div class="modal-actions">
+          <a id="whatsappBtn" class="btn-primary" href="#" target="_blank" rel="noopener">WhatsApp Enquiry</a>
+          <a id="contactBtn" class="btn-ghost" href="../contact.html">Contact FACETRA</a>
+          <a id="closeBtn" class="btn-ghost" href="#" title="Close">Close</a>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="footer-bottom">© 2026 FACETRA. All rights reserved.</div>
-</footer>
+  <!-- footer -->
+  <footer class="lux-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="../logo.png"><span>FACETRA</span></div>
+        <p>Premium gemstone trading house specializing in certified natural gemstones curated for collectors, jewellers and long-term investors.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="../index.html">Home</a>
+        <a href="../collection.html">Collection</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <a class="contact-item" href="mailto:info@facetra.in">info@facetra.in</a>
+        <a class="contact-item" href="tel:+918055113448">+91 80551 13448</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 FACETRA. All rights reserved.</div>
+  </footer>
 
-<script>
-/* MOBILE NAV */
-const toggle=document.getElementById("navToggle");
-const mobileNav=document.getElementById("mobileNav");
-toggle.onclick=()=>mobileNav.classList.toggle("open");
+  <!-- SCRIPT: manifest load, build grid, modal, whatsapp, schema -->
+  <script>
+  // mobile nav
+  (function(){ const toggle = document.getElementById('navToggle'), mobileNav = document.getElementById('mobileNav'); if(toggle) toggle.addEventListener('click', ()=> mobileNav.classList.toggle('open')); })();
 
-/* LOAD DIAMONDS */
-fetch("../assets/collection/manifest.json",{cache:"no-cache"})
-.then(r=>r.json())
-.then(data=>{
-  const list=data.diamonds;
-  const grid=document.getElementById("diamondGrid");
+  // manifest path candidates for pages under /collection/
+  const MANIFEST_PATHS = [
+    '../assets/collection/manifest.json',
+    '/assets/collection/manifest.json',
+    '/facetra.in/assets/collection/manifest.json'
+  ];
 
-  list.forEach(item=>{
-    const card=document.createElement("div");
-    card.className="card";
-    card.id=item.slug;
-
-    card.innerHTML=`
-      <div class="card-img"><img src="../${item.img}" loading="lazy"></div>
-      <h4>${item.title}</h4>
-      <span>${item.desc}</span>
-    `;
-
-    card.onclick=()=>openModal(item);
-    grid.appendChild(card);
-
-    if(location.hash === "#"+item.slug){
-      setTimeout(()=>openModal(item),300);
+  async function getManifest(){
+    for(const p of MANIFEST_PATHS){
+      try{
+        const r = await fetch(p, {cache:'no-cache'});
+        if(!r.ok) continue;
+        const j = await r.json();
+        return {data:j, basePath: p.replace(/manifest\.json$/,'')};
+      }catch(e){/* try next */ }
     }
-  });
-});
+    throw new Error('manifest not found');
+  }
 
-/* MODAL */
-function openModal(item){
+  // create product card markup
+  function mkCard(item, basePath){
+    const a = document.createElement('div');
+    a.className='item-card';
+    a.tabIndex = 0;
+    a.dataset.slug = item.slug || '';
+    a.dataset.cat = 'diamonds';
+    a.innerHTML = `
+      <div class="item-thumb"><img loading="lazy" src="${item.img}" alt="${item.title}"></div>
+      <div class="item-title">${item.title}</div>
+      <div class="item-desc">${item.desc || ''}</div>
+    `;
+    // event to open modal
+    a.addEventListener('click', ()=> openModal(item));
+    a.addEventListener('keypress', (e)=>{ if(e.key === 'Enter') openModal(item);});
+    return a;
+  }
 
-  const hash="#"+item.slug;
-  history.replaceState(null,"",hash);
+  // modal handling
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modalImg');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalMeta = document.getElementById('modalMeta');
+  const modalLongDesc = document.getElementById('modalLongDesc');
+  const whatsappBtn = document.getElementById('whatsappBtn');
+  const closeBtn = document.getElementById('closeBtn');
 
-  document.getElementById("modal").classList.add("show");
-  document.getElementById("mImg").src="../"+item.img;
-  document.getElementById("mTitle").textContent=item.title;
-  document.getElementById("mCut").textContent=item.cut || "—";
-  document.getElementById("mColor").textContent=item.color || "—";
-  document.getElementById("mOrigin").textContent=item.origin || "Global";
-  document.getElementById("mDesc").textContent=item.longDesc || item.desc;
+  function buildPageLinkForItem(slug){
+    // current page base (absolute)
+    const base = window.location.href.split('#')[0];
+    return base.replace(/\/$/, '') + '#' + slug;
+  }
 
-  const pageLink=location.origin+location.pathname+hash;
+  function openModal(item){
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    modalImg.src = item.img;
+    modalImg.alt = item.title;
+    modalTitle.textContent = item.title;
+    // assemble extra meta (we support fields if present)
+    let metaHtml = '';
+    if(item.cut) metaHtml += `<div><strong>Cut:</strong> ${item.cut}</div>`;
+    if(item.color) metaHtml += `<div><strong>Color:</strong> ${item.color}</div>`;
+    if(item.origin) metaHtml += `<div><strong>Origin:</strong> ${item.origin}</div>`;
+    modalMeta.innerHTML = metaHtml || (item.desc || '');
+    // long description fallback: prefer longDesc, else build extra paragraph
+    const longDesc = item.longDesc || item.desc || ('A premium natural gemstone selected for quality and certification.');
+    modalLongDesc.textContent = longDesc;
 
-  const msg=`Hello FACETRA,%0A
-I am interested in ${item.title}%0A
-Link: ${pageLink}`;
+    // create WhatsApp link
+    const productLink = buildPageLinkForItem(item.slug || '');
+    const text = `Hello FACETRA,%0AI am interested in ${encodeURIComponent(item.title)}%0ALink: ${encodeURIComponent(productLink)}`;
+    whatsappBtn.href = `https://wa.me/918055113448?text=${text}`;
 
-  document.getElementById("waBtn").href=`https://wa.me/918055113448?text=${msg}`;
+    // add Product schema for this item dynamically
+    injectProductSchema(item, productLink);
+    // update URL hash
+    history.replaceState(null, '', '#' + (item.slug || ''));
 
-  injectSchema(item,pageLink);
-}
+    // focus for accessibility
+    closeBtn.focus();
+  }
 
-function closeModal(){
-  document.getElementById("modal").classList.remove("show");
-  history.replaceState(null,"",location.pathname);
-}
+  function closeModal(){
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+    modalImg.src = '';
+    modalTitle.textContent = '';
+    modalMeta.innerHTML = '';
+    modalLongDesc.textContent = '';
+    whatsappBtn.href = 'https://wa.me/918055113448';
+    removeProductSchema();
+    // remove hash
+    history.replaceState(null,'', window.location.pathname + window.location.search);
+  }
 
-/* PRODUCT SCHEMA */
-function injectSchema(item,link){
-  const old=document.getElementById("prodSchema");
-  if(old) old.remove();
+  closeBtn.addEventListener('click', (e)=>{ e.preventDefault(); closeModal();});
+  modal.addEventListener('click', (e)=>{ if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeModal(); });
 
-  const s=document.createElement("script");
-  s.type="application/ld+json";
-  s.id="prodSchema";
-  s.textContent=JSON.stringify({
-    "@context":"https://schema.org",
-    "@type":"Product",
-    "name":item.title,
-    "image":link.replace(location.pathname,"/")+item.img,
-    "description":item.longDesc || item.desc,
-    "brand":{"@type":"Brand","name":"FACETRA"},
-    "category":"Natural Diamond",
-    "url":link
-  });
-  document.head.appendChild(s);
-}
-</script>
+  // dynamic Product schema injection
+  let injectedSchemaEl = null;
+  function injectProductSchema(item, productLink){
+    removeProductSchema();
+    const schema = {
+      "@context":"https://schema.org",
+      "@type":"Product",
+      "name": item.title,
+      "image": [ item.img ],
+      "description": item.longDesc || item.desc || '',
+      "sku": item.slug || '',
+      "url": productLink
+    };
+    injectedSchemaEl = document.createElement('script');
+    injectedSchemaEl.type = 'application/ld+json';
+    injectedSchemaEl.text = JSON.stringify(schema);
+    document.head.appendChild(injectedSchemaEl);
+  }
+  function removeProductSchema(){
+    if(injectedSchemaEl && injectedSchemaEl.parentNode) {
+      injectedSchemaEl.parentNode.removeChild(injectedSchemaEl);
+      injectedSchemaEl = null;
+    }
+  }
 
+  // build grid from manifest
+  (async function(){
+    try {
+      const {data, basePath} = await getManifest();
+      const list = data.diamonds || [];
+      const itemsRoot = document.getElementById('items');
+      list.forEach(item=>{
+        // ensure img paths are correct — manifest already provides correct paths; if not, adjust below
+        const card = mkCard(item, basePath);
+        itemsRoot.appendChild(card);
+      });
+
+      // If there is a hash on load, open the modal for that slug
+      const slugFromHash = location.hash.replace('#','');
+      if(slugFromHash){
+        const match = list.find(it => it.slug === slugFromHash);
+        if(match) openModal(match);
+      }
+
+    } catch(e){
+      console.error('Could not load manifest:', e);
+      document.getElementById('items').innerHTML = '<p style="color:var(--muted)">Collection data unavailable.</p>';
+    }
+  })();
+
+  </script>
 </body>
 </html>
