@@ -13,59 +13,42 @@
       "desc": "Oval Brilliant · Oval · Colorless"
     },
     {
-      "img": "assets/collection/diamonds/diamond-emerald-1.jpg",
+      "img": "assets/collection/diamonds/diamond-emerald-cut-1.jpg",
       "title": "Emerald Cut Diamond",
-      "slug": "diamond-emerald-1",
+      "slug": "diamond-emerald-cut-1",
       "desc": "Step Cut · Emerald · Colorless"
     },
     {
-      "img": "assets/collection/diamonds/diamond-pear-1.jpg",
+      "img": "assets/collection/diamonds/diamond-pear-cut-1.jpg",
       "title": "Pear Shape Diamond",
-      "slug": "diamond-pear-1",
+      "slug": "diamond-pear-cut-1",
       "desc": "Pear · Tear-drop · Colorless"
     },
     {
-      "img": "assets/collection/diamonds/diamond-marquise-1.jpg",
+      "img": "assets/collection/diamonds/diamond-marquise-cut-1.jpg",
       "title": "Marquise Cut Diamond",
-      "slug": "diamond-marquise-1",
+      "slug": "diamond-marquise-cut-1",
       "desc": "Marquise · Long · Colorless"
     },
     {
-      "img": "assets/collection/diamonds/diamond-princess-1.jpg",
+      "img": "assets/collection/diamonds/diamond-princess-cut-1.jpg",
       "title": "Princess Cut Diamond",
-      "slug": "diamond-princess-1",
+      "slug": "diamond-princess-cut-1",
       "desc": "Princess · Square Brilliant · Colorless"
     },
     {
-      "img": "assets/collection/diamonds/diamond-radiant-1.jpg",
+      "img": "assets/collection/diamonds/diamond-radiant-cut-1.jpg",
       "title": "Radiant Cut Diamond",
-      "slug": "diamond-radiant-1",
+      "slug": "diamond-radiant-cut-1",
       "desc": "Radiant · Brilliant + Step Mix · Colorless"
     },
     {
-      "img": "assets/collection/diamonds/diamond-cushion-1.jpg",
+      "img": "assets/collection/diamonds/diamond-cushion-cut-1.jpg",
       "title": "Cushion Cut Diamond",
-      "slug": "diamond-cushion-1",
+      "slug": "diamond-cushion-cut-1",
       "desc": "Cushion · Soft Corners · Vintage Brilliance"
     },
-    {
-      "img": "assets/collection/diamonds/diamond-round-2.jpg",
-      "title": "Round Brilliant — Premium",
-      "slug": "diamond-round-2",
-      "desc": "Round · Premium cut · Excellent symmetry"
-    },
-    {
-      "img": "assets/collection/diamonds/diamond-oval-2.jpg",
-      "title": "Oval Cut — Premium",
-      "slug": "diamond-oval-2",
-      "desc": "Oval · Premium proportion · High brilliance"
-    },
-    {
-      "img": "assets/collection/diamonds/diamond-cushion-2.jpg",
-      "title": "Cushion Cut — Classic",
-      "slug": "diamond-cushion-2",
-      "desc": "Cushion · Classic appeal · Soft brilliance"
-    }
+
   ],
   "sapphires": [
     {
@@ -111,9 +94,9 @@
       "desc": "Oval · Violet · Madagascar"
     },
     {
-      "img": "assets/collection/sapphires/sapphire-lavender-cushion-cut-1.jpg",
+      "img": "assets/collection/sapphires/sapphire-lavender-cushion-cut-1.png",
       "title": "Lavender Sapphire",
-      "slug": "sapphire-lavender-cushion-cut-1",
+      "slug": "sapphire-lavender-cushion-cut-1.png",
       "desc": "Cushion · Lavender · Africa"
     },
     {
