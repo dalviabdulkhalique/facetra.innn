@@ -1,44 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
+<title>Natural Diamond Collection | FACETRA</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Certified Diamond Collection | FACETRA</title>
-<meta name="description" content="Certified natural diamonds by FACETRA including Round, Oval, Emerald, Pear, Princess, Radiant and Cushion cuts.">
-
+<meta name="description" content="Explore FACETRA’s certified natural diamond collection including round brilliant, oval, emerald, cushion and radiant cut diamonds curated for collectors and investors.">
 <link rel="canonical" href="https://facetra.in/collection/diamonds.html">
 <meta name="robots" content="index, follow">
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Certified Diamond Collection – FACETRA">
-<meta property="og:description" content="Explore investment-grade certified diamonds at FACETRA.">
-<meta property="og:url" content="https://facetra.in/collection/diamonds.html">
-<meta property="og:image" content="https://facetra.in/assets/collection/diamonds/diamond-round-brilliant-1.jpg">
+<!-- FAVICONS -->
+<link rel="icon" href="../assets/favicon/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../assets/favicon/favicon-48x48.png" sizes="48x48" type="image/png">
+<link rel="icon" href="../assets/favicon/favicon-96x96.png" sizes="96x96" type="image/png">
+<link rel="icon" href="../assets/favicon/favicon-192x192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Certified Diamond Collection",
-  "url": "https://facetra.in/collection/diamonds.html",
-  "publisher": {
-    "@type": "Organization",
-    "name": "FACETRA",
-    "url": "https://facetra.in"
-  }
+<meta name="theme-color" content="#000000">
+
+<link rel="stylesheet" href="../style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ===== DIAMOND GRID ===== */
+
+.collection-wrapper{
+  max-width:1200px;
+  margin:auto;
+  padding:90px 20px;
 }
-</script>
 
-<!-- ✅ ROOT CSS -->
-<link rel="stylesheet" href="../collection.css">
+.collection-title{
+  text-align:center;
+  color:#d4af37;
+  font-family:Cinzel,serif;
+  margin-bottom:50px;
+}
+
+.diamond-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:28px;
+}
+
+.diamond-card{
+  border:1px solid rgba(212,175,55,.35);
+  background:linear-gradient(180deg,#070807,#000);
+  padding:18px;
+  text-align:center;
+  cursor:pointer;
+  transition:.4s ease;
+}
+
+.diamond-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 60px rgba(0,0,0,.7);
+}
+
+.diamond-card img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:contain;
+}
+
+.diamond-card h3{
+  color:#d4af37;
+  font-family:Cinzel,serif;
+  font-size:1rem;
+  margin-top:14px;
+}
+
+.diamond-card p{
+  font-size:.85rem;
+  opacity:.85;
+  margin-top:6px;
+}
+
+/* ===== MODAL ===== */
+
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.9);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:5000;
+}
+
+.modal.show{display:flex;}
+
+.modal-box{
+  background:#050505;
+  border:1px solid rgba(212,175,55,.4);
+  max-width:520px;
+  width:90%;
+  padding:26px;
+  text-align:center;
+  position:relative;
+}
+
+.modal-box img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:contain;
+}
+
+.modal-box h3{
+  color:#d4af37;
+  font-family:Cinzel,serif;
+  margin-top:16px;
+}
+
+.modal-box p{
+  font-size:.9rem;
+  opacity:.85;
+  margin:10px 0 20px;
+}
+
+.whatsapp-btn{
+  display:block;
+  padding:12px;
+  border:1px solid #d4af37;
+  color:#d4af37;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.whatsapp-btn:hover{
+  background:#d4af37;
+  color:#000;
+}
+
+.close-btn{
+  position:absolute;
+  top:10px;
+  right:14px;
+  font-size:22px;
+  color:#d4af37;
+  cursor:pointer;
+}
+</style>
 
 </head>
 
-<body>
-
-<!-- ================= HEADER ================= -->
+<body class="page">
 
 <header class="site-header">
   <div class="header-inner">
@@ -51,7 +158,7 @@
       </div>
     </div>
 
-    <nav class="main-nav" id="mainNav">
+    <nav class="main-nav">
       <a href="../index.html">Home</a>
       <a href="../collection.html" class="active">Collection</a>
       <a href="../certification.html">Certification</a>
@@ -67,119 +174,81 @@
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="../index.html">Home</a>
+  <a href="../collection.html">Collection</a>
+  <a href="../certification.html">Certification</a>
+  <a href="../why-facetra.html">Why FACETRA</a>
+  <a href="../about.html">About</a>
+  <a href="../contact.html">Contact</a>
+</div>
 
-<section class="collection-hero">
-  <div class="hero-inner">
-    <h1 class="hero-title">Certified Diamond Collection</h1>
-    <p class="hero-description">
-      Natural diamonds selected for brilliance, rarity and long-term investment value.
-    </p>
-  </div>
+<!-- ===== CONTENT ===== -->
+
+<section class="collection-wrapper">
+  <h1 class="collection-title">Natural Diamond Collection</h1>
+  <div class="diamond-grid" id="diamondGrid"></div>
 </section>
 
-<!-- ================= GRID ================= -->
+<!-- ===== MODAL ===== -->
 
-<section class="collection-section">
-  <div class="container">
-
-    <h2>Available Diamond Categories</h2>
-
-    <div class="gem-grid">
-
-      <!-- ROUND -->
-      <div class="gem-card" id="round">
-        <img src="../assets/collection/diamonds/diamond-round-brilliant-1.jpg" alt="Round Brilliant Diamond">
-        <h3>Round Brilliant Diamond</h3>
-        <p>Exceptional fire and symmetry.</p>
-        <a class="btn-category" target="_blank"
-           href="https://wa.me/918055113448?text=Hello%20FACETRA,%20I%20am%20interested%20in%20Round%20Brilliant%20Diamond.%20Link:%20https://facetra.in/collection/diamonds.html#round">
-           Enquire on WhatsApp
-        </a>
-      </div>
-
-      <!-- OVAL -->
-      <div class="gem-card" id="oval">
-        <img src="../assets/collection/diamonds/diamond-oval-cut-1.jpg" alt="Oval Cut Diamond">
-        <h3>Oval Cut Diamond</h3>
-        <p>Elongated brilliance and premium clarity.</p>
-        <a class="btn-category" target="_blank"
-           href="https://wa.me/918055113448?text=Hello%20FACETRA,%20I%20am%20interested%20in%20Oval%20Cut%20Diamond.%20Link:%20https://facetra.in/collection/diamonds.html#oval">
-           Enquire on WhatsApp
-        </a>
-      </div>
-
-      <!-- EMERALD -->
-      <div class="gem-card" id="emerald">
-        <img src="../assets/collection/diamonds/diamond-emerald-cut-1.jpg" alt="Emerald Cut Diamond">
-        <h3>Emerald Cut Diamond</h3>
-        <p>Hall-of-mirrors step cut brilliance.</p>
-        <a class="btn-category" target="_blank"
-           href="https://wa.me/918055113448?text=Hello%20FACETRA,%20I%20am%20interested%20in%20Emerald%20Cut%20Diamond.%20Link:%20https://facetra.in/collection/diamonds.html#emerald">
-           Enquire on WhatsApp
-        </a>
-      </div>
-
-      <!-- PEAR -->
-      <div class="gem-card" id="pear">
-        <img src="../assets/collection/diamonds/diamond-pear-cut-1.jpg" alt="Pear Shape Diamond">
-        <h3>Pear Shape Diamond</h3>
-        <p>Elegant tear-drop brilliance.</p>
-        <a class="btn-category" target="_blank"
-           href="https://wa.me/918055113448?text=Hello%20FACETRA,%20I%20am%20interested%20in%20Pear%20Shape%20Diamond.%20Link:%20https://facetra.in/collection/diamonds.html#pear">
-           Enquire on WhatsApp
-        </a>
-      </div>
-
-      <!-- PRINCESS -->
-      <div class="gem-card" id="princess">
-        <img src="../assets/collection/diamonds/diamond-princess-cut-1.jpg" alt="Princess Cut Diamond">
-        <h3>Princess Cut Diamond</h3>
-        <p>Modern square brilliance.</p>
-        <a class="btn-category" target="_blank"
-           href="https://wa.me/918055113448?text=Hello%20FACETRA,%20I%20am%20interested%20in%20Princess%20Cut%20Diamond.%20Link:%20https://facetra.in/collection/diamonds.html#princess">
-           Enquire on WhatsApp
-        </a>
-      </div>
-
-      <!-- RADIANT -->
-      <div class="gem-card" id="radiant">
-        <img src="../assets/collection/diamonds/diamond-radiant-cut-1.jpg" alt="Radiant Cut Diamond">
-        <h3>Radiant Cut Diamond</h3>
-        <p>Strong fire with clean edges.</p>
-        <a class="btn-category" target="_blank"
-           href="https://wa.me/918055113448?text=Hello%20FACETRA,%20I%20am%20interested%20in%20Radiant%20Cut%20Diamond.%20Link:%20https://facetra.in/collection/diamonds.html#radiant">
-           Enquire on WhatsApp
-        </a>
-      </div>
-
-      <!-- CUSHION -->
-      <div class="gem-card" id="cushion">
-        <img src="../assets/collection/diamonds/diamond-cushion-cut-1.jpg" alt="Cushion Cut Diamond">
-        <h3>Cushion Cut Diamond</h3>
-        <p>Classic vintage brilliance.</p>
-        <a class="btn-category" target="_blank"
-           href="https://wa.me/918055113448?text=Hello%20FACETRA,%20I%20am%20interested%20in%20Cushion%20Cut%20Diamond.%20Link:%20https://facetra.in/collection/diamonds.html#cushion">
-           Enquire on WhatsApp
-        </a>
-      </div>
-
-    </div>
+<div class="modal" id="diamondModal">
+  <div class="modal-box">
+    <span class="close-btn" id="closeModal">×</span>
+    <img id="modalImg" src="" alt="">
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+    <a id="whatsappBtn" target="_blank" class="whatsapp-btn">Enquire on WhatsApp</a>
   </div>
-</section>
+</div>
 
-<footer class="lux-footer">
-  <div class="footer-bottom">© 2026 FACETRA</div>
-</footer>
+<!-- ===== JS ===== -->
 
 <script>
-const toggle = document.getElementById("navToggle");
-const nav = document.getElementById("mainNav");
+/* MOBILE NAV */
+document.getElementById("navToggle").onclick=()=>document.getElementById("mobileNav").classList.toggle("open");
 
-toggle.onclick = () => {
-  nav.classList.toggle("open");
-  document.body.classList.toggle("nav-open");
-};
+/* LOAD MANIFEST */
+fetch("../assets/collection/manifest.json")
+  .then(res=>res.json())
+  .then(data=>{
+    const diamonds=data.diamonds;
+    const grid=document.getElementById("diamondGrid");
+
+    diamonds.forEach(item=>{
+      const card=document.createElement("div");
+      card.className="diamond-card";
+      card.innerHTML=`
+        <img loading="lazy" src="../${item.img}" alt="${item.title}">
+        <h3>${item.title}</h3>
+        <p>${item.desc}</p>
+      `;
+      card.onclick=()=>openModal(item);
+      grid.appendChild(card);
+    });
+  });
+
+/* MODAL */
+const modal=document.getElementById("diamondModal");
+const modalImg=document.getElementById("modalImg");
+const modalTitle=document.getElementById("modalTitle");
+const modalDesc=document.getElementById("modalDesc");
+const whatsappBtn=document.getElementById("whatsappBtn");
+
+function openModal(item){
+  modalImg.src="../"+item.img;
+  modalTitle.textContent=item.title;
+  modalDesc.textContent=item.desc;
+
+  const pageLink=window.location.origin+"/collection/diamonds.html#"+item.slug;
+  const msg=`Hello FACETRA, I am interested in ${item.title}.%0ALink: ${pageLink}`;
+  whatsappBtn.href=`https://wa.me/918055113448?text=${msg}`;
+
+  modal.classList.add("show");
+}
+
+document.getElementById("closeModal").onclick=()=>modal.classList.remove("show");
+modal.onclick=e=>{if(e.target===modal)modal.classList.remove("show");};
 </script>
 
 </body>
