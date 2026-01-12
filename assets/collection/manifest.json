@@ -1,247 +1,66 @@
 {
   "diamonds": [
-    {
-      "img": "assets/collection/diamonds/diamond-round-brilliant-1.jpg",
-      "title": "Round Brilliant Diamond",
-      "slug": "diamond-round-brilliant-1",
-      "desc": "Brilliant · Round · Colorless"
-    },
-    {
-      "img": "assets/collection/diamonds/diamond-oval-cut-1.jpg",
-      "title": "Oval Cut Diamond",
-      "slug": "diamond-oval-cut-1",
-      "desc": "Oval Brilliant · Oval · Colorless"
-    },
-    {
-      "img": "assets/collection/diamonds/diamond-emerald-cut-1.jpg",
-      "title": "Emerald Cut Diamond",
-      "slug": "diamond-emerald-cut-1",
-      "desc": "Step Cut · Emerald · Colorless"
-    },
-    {
-      "img": "assets/collection/diamonds/diamond-pear-cut-1.jpg",
-      "title": "Pear Shape Diamond",
-      "slug": "diamond-pear-cut-1",
-      "desc": "Pear · Tear-drop · Colorless"
-    },
-    {
-      "img": "assets/collection/diamonds/diamond-marquise-cut-1.jpg",
-      "title": "Marquise Cut Diamond",
-      "slug": "diamond-marquise-cut-1",
-      "desc": "Marquise · Long · Colorless"
-    },
-    {
-      "img": "assets/collection/diamonds/diamond-princess-cut-1.jpg",
-      "title": "Princess Cut Diamond",
-      "slug": "diamond-princess-cut-1",
-      "desc": "Princess · Square Brilliant · Colorless"
-    },
-    {
-      "img": "assets/collection/diamonds/diamond-radiant-cut-1.jpg",
-      "title": "Radiant Cut Diamond",
-      "slug": "diamond-radiant-cut-1",
-      "desc": "Radiant · Brilliant + Step Mix · Colorless"
-    },
-    {
-      "img": "assets/collection/diamonds/diamond-cushion-cut-1.jpg",
-      "title": "Cushion Cut Diamond",
-      "slug": "diamond-cushion-cut-1",
-      "desc": "Cushion · Soft Corners · Vintage Brilliance"
-    }
+    {"img":"assets/collection/diamonds/diamond-round-brilliant-1.jpg","title":"Round Brilliant Diamond","slug":"diamond-round-brilliant-1","desc":"Round · Colorless"},
+    {"img":"assets/collection/diamonds/diamond-oval-cut-1.jpg","title":"Oval Cut Diamond","slug":"diamond-oval-cut-1","desc":"Oval · Colorless"},
+    {"img":"assets/collection/diamonds/diamond-cushion-cut-1.jpg","title":"Cushion Cut Diamond","slug":"diamond-cushion-cut-1","desc":"Cushion · Colorless"},
+    {"img":"assets/collection/diamonds/diamond-emerald-cut-1.jpg","title":"Emerald Cut Diamond","slug":"diamond-emerald-cut-1","desc":"Emerald · Colorless"},
+    {"img":"assets/collection/diamonds/diamond-pear-cut-1.jpg","title":"Pear Shape Diamond","slug":"diamond-pear-cut-1","desc":"Pear · Colorless"},
+    {"img":"assets/collection/diamonds/diamond-marquise-cut-1.jpg","title":"Marquise Cut Diamond","slug":"diamond-marquise-cut-1","desc":"Marquise · Colorless"},
+    {"img":"assets/collection/diamonds/diamond-princess-cut-1.jpg","title":"Princess Cut Diamond","slug":"diamond-princess-cut-1","desc":"Princess · Colorless"},
+    {"img":"assets/collection/diamonds/diamond-radiant-cut-1.jpg","title":"Radiant Cut Diamond","slug":"diamond-radiant-cut-1","desc":"Radiant · Colorless"},
+    {"img":"assets/collection/diamonds/diamond-asscher-cut-1.jpg","title":"Asscher Cut Diamond","slug":"diamond-asscher-cut-1","desc":"Asscher · Colorless"},
+    {"img":"assets/collection/diamonds/diamond-heart-cut-1.jpg","title":"Heart Shape Diamond","slug":"diamond-heart-cut-1","desc":"Heart · Colorless"},
+    {"img":"assets/collection/diamonds/diamond-baguette-cut-1.jpg","title":"Baguette Cut Diamond","slug":"diamond-baguette-cut-1","desc":"Baguette · Colorless"}
   ],
 
   "sapphires": [
-    {
-      "img": "assets/collection/sapphires/sapphire-cornflower-blue-1.jpg",
-      "title": "Cornflower Blue Sapphire",
-      "slug": "sapphire-cornflower-blue-1",
-      "desc": "Cushion · Cornflower Blue · Sri Lanka"
-    },
-    {
-      "img": "assets/collection/sapphires/sapphire-royal-blue-1.jpg",
-      "title": "Royal Blue Sapphire",
-      "slug": "sapphire-royal-blue-1",
-      "desc": "Oval · Royal Blue · Sri Lanka"
-    },
-    {
-      "img": "assets/collection/sapphires/sapphire-deep-blue-1.jpg",
-      "title": "Deep Blue Sapphire",
-      "slug": "sapphire-deep-blue-1",
-      "desc": "Oval · Deep Blue · Madagascar"
-    },
-    {
-      "img": "assets/collection/sapphires/sapphire-kashmir-cushion-cut-1.jpg",
-      "title": "Kashmir Type Blue Sapphire",
-      "slug": "sapphire-kashmir-cushion-cut-1",
-      "desc": "Cushion · Velvety Blue · Kashmir Tone"
-    },
-    {
-      "img": "assets/collection/sapphires/sapphire-pear-blue-1.jpg",
-      "title": "Pear Cut Blue Sapphire",
-      "slug": "sapphire-pear-blue-1",
-      "desc": "Pear · Blue · Sri Lanka"
-    },
-    {
-      "img": "assets/collection/sapphires/sapphire-hot-pink-oval-1.jpg",
-      "title": "Pink Sapphire",
-      "slug": "sapphire-hot-pink-oval-1",
-      "desc": "Oval · Hot Pink · Africa"
-    },
-    {
-      "img": "assets/collection/sapphires/sapphire-purple-oval-1.jpg",
-      "title": "Purple Sapphire",
-      "slug": "sapphire-purple-oval-1",
-      "desc": "Oval · Violet · Madagascar"
-    },
-    {
-      "img": "assets/collection/sapphires/sapphire-lavender-cushion-cut-1.jpg",
-      "title": "Lavender Sapphire",
-      "slug": "sapphire-lavender-cushion-cut-1",
-      "desc": "Cushion · Lavender · Africa"
-    },
-    {
-      "img": "assets/collection/sapphires/sapphire-padparadscha-oval-1.jpg",
-      "title": "Padparadscha Sapphire",
-      "slug": "sapphire-padparadscha-oval-1",
-      "desc": "Oval · Pink-Orange · Sri Lanka"
-    },
-    {
-      "img": "assets/collection/sapphires/sapphire-parti-blue-green-oval-1.jpg",
-      "title": "Parti Color Sapphire",
-      "slug": "sapphire-parti-blue-green-oval-1",
-      "desc": "Oval · Blue-Green Parti · Australia"
-    },
-    {
-      "img": "assets/collection/sapphires/sapphire-orange-round-1.jpg",
-      "title": "Orange Sapphire",
-      "slug": "sapphire-orange-round-1",
-      "desc": "Round · Orange · Africa"
-    },
-    {
-      "img": "assets/collection/sapphires/sapphire-yellow-radiant-1.jpg",
-      "title": "Yellow Sapphire (Pukhraj)",
-      "slug": "sapphire-yellow-radiant-1",
-      "desc": "Radiant · Yellow · Sri Lanka"
-    },
-    {
-      "img": "assets/collection/sapphires/sapphire-green-cushion-1.jpg",
-      "title": "Green Sapphire",
-      "slug": "sapphire-green-cushion-1",
-      "desc": "Cushion · Forest Green · Africa"
-    },
-    {
-      "img": "assets/collection/sapphires/sapphire-green-emerald-cut-2.jpg",
-      "title": "Emerald Cut Green Sapphire",
-      "slug": "sapphire-green-emerald-cut-2",
-      "desc": "Emerald Cut · Green · Zambia"
-    },
-    {
-      "img": "assets/collection/sapphires/sapphire-teal-oval-1.jpg",
-      "title": "Teal Sapphire",
-      "slug": "sapphire-teal-oval-1",
-      "desc": "Oval · Teal · Madagascar"
-    },
-    {
-      "img": "assets/collection/sapphires/sapphire-teal-radiant-cut-1.jpg",
-      "title": "Teal Sapphire Radiant Cut",
-      "slug": "sapphire-teal-radiant-cut-1",
-      "desc": "Radiant · Teal · Madagascar"
-    },
-    {
-      "img": "assets/collection/sapphires/sapphire-white-round-1.jpg",
-      "title": "White Sapphire",
-      "slug": "sapphire-white-round-1",
-      "desc": "Round · Colorless · Sri Lanka"
-    },
-    {
-      "img": "assets/collection/sapphires/sapphire-star-cabochon-blue-2.jpg",
-      "title": "Star Blue Sapphire",
-      "slug": "sapphire-star-cabochon-blue-2",
-      "desc": "Cabochon · Star Asterism · Sri Lanka"
-    },
-    {
-      "img": "assets/collection/sapphires/sapphire-cabochon-blue-1.jpg",
-      "title": "Cabochon Blue Sapphire",
-      "slug": "sapphire-cabochon-blue-1",
-      "desc": "Cabochon · Blue · Natural translucency"
-    },
-    {
-      "img": "assets/collection/sapphires/sapphire-deep-navy-emerald-cut-1.jpg",
-      "title": "Emerald Cut Navy Blue Sapphire",
-      "slug": "sapphire-deep-navy-emerald-cut-1",
-      "desc": "Emerald Cut · Navy Blue · Madagascar"
-    }
+    {"img":"assets/collection/sapphires/sapphire-cornflower-blue-1.jpg","title":"Cornflower Blue Sapphire","slug":"sapphire-cornflower-blue-1","desc":"Cushion · Cornflower Blue · Sri Lanka"},
+    {"img":"assets/collection/sapphires/sapphire-royal-blue-1.jpg","title":"Royal Blue Sapphire","slug":"sapphire-royal-blue-1","desc":"Oval · Royal Blue · Sri Lanka"},
+    {"img":"assets/collection/sapphires/sapphire-deep-blue-1.jpg","title":"Deep Blue Sapphire","slug":"sapphire-deep-blue-1","desc":"Oval · Deep Blue · Madagascar"},
+    {"img":"assets/collection/sapphires/sapphire-kashmir-cushion-cut-1.jpg","title":"Kashmir Type Blue Sapphire","slug":"sapphire-kashmir-cushion-cut-1","desc":"Cushion · Velvety Blue"},
+    {"img":"assets/collection/sapphires/sapphire-pear-blue-1.jpg","title":"Pear Cut Blue Sapphire","slug":"sapphire-pear-blue-1","desc":"Pear · Blue · Sri Lanka"},
+    {"img":"assets/collection/sapphires/sapphire-hot-pink-oval-1.jpg","title":"Pink Sapphire","slug":"sapphire-hot-pink-oval-1","desc":"Oval · Hot Pink · Africa"},
+    {"img":"assets/collection/sapphires/sapphire-purple-oval-1.jpg","title":"Purple Sapphire","slug":"sapphire-purple-oval-1","desc":"Oval · Violet · Madagascar"},
+    {"img":"assets/collection/sapphires/sapphire-lavender-cushion-cut-1.jpg","title":"Lavender Sapphire","slug":"sapphire-lavender-cushion-cut-1","desc":"Cushion · Lavender · Africa"},
+    {"img":"assets/collection/sapphires/sapphire-padparadscha-oval-1.jpg","title":"Padparadscha Sapphire","slug":"sapphire-padparadscha-oval-1","desc":"Oval · Pink-Orange · Sri Lanka"},
+    {"img":"assets/collection/sapphires/sapphire-parti-blue-green-oval-1.jpg","title":"Parti Color Sapphire","slug":"sapphire-parti-blue-green-oval-1","desc":"Oval · Blue-Green · Australia"},
+    {"img":"assets/collection/sapphires/sapphire-orange-round-1.jpg","title":"Orange Sapphire","slug":"sapphire-orange-round-1","desc":"Round · Orange · Africa"},
+    {"img":"assets/collection/sapphires/sapphire-yellow-radiant-1.jpg","title":"Yellow Sapphire (Pukhraj)","slug":"sapphire-yellow-radiant-1","desc":"Radiant · Yellow · Sri Lanka"},
+    {"img":"assets/collection/sapphires/sapphire-green-cushion-1.jpg","title":"Green Sapphire","slug":"sapphire-green-cushion-1","desc":"Cushion · Green · Africa"},
+    {"img":"assets/collection/sapphires/sapphire-green-emerald-cut-2.jpg","title":"Emerald Cut Green Sapphire","slug":"sapphire-green-emerald-cut-2","desc":"Emerald Cut · Green · Zambia"},
+    {"img":"assets/collection/sapphires/sapphire-teal-oval-1.jpg","title":"Teal Sapphire","slug":"sapphire-teal-oval-1","desc":"Oval · Teal · Madagascar"},
+    {"img":"assets/collection/sapphires/sapphire-teal-radiant-cut-1.jpg","title":"Teal Sapphire Radiant Cut","slug":"sapphire-teal-radiant-cut-1","desc":"Radiant · Teal · Madagascar"},
+    {"img":"assets/collection/sapphires/sapphire-white-round-1.jpg","title":"White Sapphire","slug":"sapphire-white-round-1","desc":"Round · Colorless · Sri Lanka"},
+    {"img":"assets/collection/sapphires/sapphire-star-cabochon-blue-2.jpg","title":"Star Blue Sapphire","slug":"sapphire-star-cabochon-blue-2","desc":"Cabochon · Star · Sri Lanka"},
+    {"img":"assets/collection/sapphires/sapphire-cabochon-blue-1.jpg","title":"Cabochon Blue Sapphire","slug":"sapphire-cabochon-blue-1","desc":"Cabochon · Blue"},
+    {"img":"assets/collection/sapphires/sapphire-deep-navy-emerald-cut-1.jpg","title":"Emerald Cut Navy Blue Sapphire","slug":"sapphire-deep-navy-emerald-cut-1","desc":"Emerald Cut · Navy Blue · Madagascar"}
   ],
 
   "rubies": [
-    {
-      "img": "assets/collection/rubies/ruby-burma-1.jpg",
-      "title": "Burmese Ruby",
-      "slug": "ruby-burma-1",
-      "desc": "Ruby · Pigeon Blood · Myanmar"
-    },
-    {
-      "img": "assets/collection/rubies/ruby-mozambique-1.jpg",
-      "title": "Mozambique Ruby",
-      "slug": "ruby-mozambique-1",
-      "desc": "Ruby · Vivid Red · Mozambique"
-    },
-    {
-      "img": "assets/collection/rubies/ruby-oval-1.jpg",
-      "title": "Oval Ruby",
-      "slug": "ruby-oval-1",
-      "desc": "Oval · Strong Red · Fine Clarity"
-    },
-    {
-      "img": "assets/collection/rubies/ruby-cushion-1.jpg",
-      "title": "Cushion Ruby",
-      "slug": "ruby-cushion-1",
-      "desc": "Cushion · Rich Red · Collector Grade"
-    },
-    {
-      "img": "assets/collection/rubies/ruby-round-1.jpg",
-      "title": "Round Ruby",
-      "slug": "ruby-round-1",
-      "desc": "Round · Bright Red · Gem Quality"
-    }
+    {"img":"assets/collection/rubies/ruby-burma-1.jpg","title":"Burmese Ruby","slug":"ruby-burma-1","desc":"Pigeon Blood · Myanmar"},
+    {"img":"assets/collection/rubies/ruby-mozambique-1.jpg","title":"Mozambique Ruby","slug":"ruby-mozambique-1","desc":"Vivid Red · Mozambique"},
+    {"img":"assets/collection/rubies/ruby-oval-1.jpg","title":"Oval Ruby","slug":"ruby-oval-1","desc":"Oval · Strong Red"},
+    {"img":"assets/collection/rubies/ruby-cushion-1.jpg","title":"Cushion Ruby","slug":"ruby-cushion-1","desc":"Cushion · Rich Red"},
+    {"img":"assets/collection/rubies/ruby-round-1.jpg","title":"Round Ruby","slug":"ruby-round-1","desc":"Round · Bright Red"},
+    {"img":"assets/collection/rubies/ruby-heart-1.jpg","title":"Heart Shape Ruby","slug":"ruby-heart-1","desc":"Heart · Vivid Red"},
+    {"img":"assets/collection/rubies/ruby-pear-1.jpg","title":"Pear Ruby","slug":"ruby-pear-1","desc":"Pear · Deep Red"},
+    {"img":"assets/collection/rubies/ruby-star-cabochon-1.jpg","title":"Star Ruby","slug":"ruby-star-cabochon-1","desc":"Cabochon · Star"},
+    {"img":"assets/collection/rubies/ruby-emerald-cut-1.jpg","title":"Emerald Cut Ruby","slug":"ruby-emerald-cut-1","desc":"Emerald Cut · Red"},
+    {"img":"assets/collection/rubies/ruby-radiant-cut-1.jpg","title":"Radiant Cut Ruby","slug":"ruby-radiant-cut-1","desc":"Radiant · Red"},
+    {"img":"assets/collection/rubies/ruby-marquise-1.jpg","title":"Marquise Ruby","slug":"ruby-marquise-1","desc":"Marquise · Red"},
+    {"img":"assets/collection/rubies/ruby-trillion-1.jpg","title":"Trillion Ruby","slug":"ruby-trillion-1","desc":"Trillion · Bright Red"}
   ],
 
   "emeralds": [
-    {
-      "img": "assets/collection/emeralds/emerald-colombian-1.jpg",
-      "title": "Colombian Emerald",
-      "slug": "emerald-colombian-1",
-      "desc": "Emerald · Vivid Green · Colombia"
-    },
-    {
-      "img": "assets/collection/emeralds/emerald-zambia-1.jpg",
-      "title": "Zambian Emerald",
-      "slug": "emerald-zambia-1",
-      "desc": "Emerald · Deep Green · Zambia"
-    },
-    {
-      "img": "assets/collection/emeralds/emerald-cushion-1.jpg",
-      "title": "Cushion Emerald",
-      "slug": "emerald-cushion-1",
-      "desc": "Cushion · Bright Green · Fine Clarity"
-    },
-    {
-      "img": "assets/collection/emeralds/emerald-oval-1.jpg",
-      "title": "Oval Emerald",
-      "slug": "emerald-oval-1",
-      "desc": "Oval · Rich Green · Premium Origin"
-    },
-    {
-      "img": "assets/collection/emeralds/emerald-deep-green-cushion-1.jpg",
-      "title": "Deep Green Emerald",
-      "slug": "emerald-deep-green-cushion-1",
-      "desc": "Forest Green · Cushion · Dark Green · Zambia"
-    },
-    {
-      "img": "assets/collection/emeralds/emerald-investment-grade-emerald-cut-1.jpg",
-      "title": "Investment Grade Emerald",
-      "slug": "emerald-investment-grade-emerald-cut-1",
-      "desc": "Top Grade · Emerald · Premium · Colombia"
-    }
+    {"img":"assets/collection/emeralds/emerald-colombian-1.jpg","title":"Colombian Emerald","slug":"emerald-colombian-1","desc":"Vivid Green · Colombia"},
+    {"img":"assets/collection/emeralds/emerald-zambia-1.jpg","title":"Zambian Emerald","slug":"emerald-zambia-1","desc":"Deep Green · Zambia"},
+    {"img":"assets/collection/emeralds/emerald-cushion-1.jpg","title":"Cushion Emerald","slug":"emerald-cushion-1","desc":"Cushion · Bright Green"},
+    {"img":"assets/collection/emeralds/emerald-oval-1.jpg","title":"Oval Emerald","slug":"emerald-oval-1","desc":"Oval · Rich Green"},
+    {"img":"assets/collection/emeralds/emerald-deep-green-cushion-1.jpg","title":"Deep Green Emerald","slug":"emerald-deep-green-cushion-1","desc":"Cushion · Dark Green · Zambia"},
+    {"img":"assets/collection/emeralds/emerald-investment-grade-emerald-cut-1.jpg","title":"Investment Grade Emerald","slug":"emerald-investment-grade-emerald-cut-1","desc":"Emerald · Premium · Colombia"},
+    {"img":"assets/collection/emeralds/emerald-pear-1.jpg","title":"Pear Emerald","slug":"emerald-pear-1","desc":"Pear · Bright Green"},
+    {"img":"assets/collection/emeralds/emerald-heart-1.jpg","title":"Heart Emerald","slug":"emerald-heart-1","desc":"Heart · Vivid Green"},
+    {"img":"assets/collection/emeralds/emerald-marquise-1.jpg","title":"Marquise Emerald","slug":"emerald-marquise-1","desc":"Marquise · Green"},
+    {"img":"assets/collection/emeralds/emerald-round-1.jpg","title":"Round Emerald","slug":"emerald-round-1","desc":"Round · Bright Green"}
   ]
 }
