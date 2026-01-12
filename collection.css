@@ -1,3 +1,8 @@
+/* =====================================================
+   FACETRA — COLLECTION & CATEGORY PAGES (LUXURY THEME)
+   Matches main style.css color system
+===================================================== */
+
 :root{
   --gold1:#f1d27a;
   --gold2:#c9a24d;
@@ -8,81 +13,77 @@
   --text:#d7dbd8;
   --muted:#9ea4a0;
 }
-:root{
-  --gold:#d4af37;
-  --muted:#cfcfcf;
-  --bg1:#0b140e;
-  --bg2:#000;
-}
 
-/* PAGE */
-body.collection-page{
-  background:linear-gradient(180deg,var(--bg1),var(--bg2));
-  color:var(--muted);
-}
+/* ================= COLLECTION HERO ================= */
 
-/* HERO */
-.collection-hero{
-  padding:130px 20px 90px;
+.collection-hero,
+.page-hero{
+  padding:140px 20px 90px;
   text-align:center;
-  background:radial-gradient(circle at top,#14261b 0%,#000 70%);
+  background:
+    radial-gradient(circle at top,#14261b 0%,#050806 70%);
 }
 
-.collection-hero h1{
+.collection-hero h1,
+.page-hero h1{
   font-family:Cinzel,serif;
-  color:var(--gold);
   font-size:clamp(2.2rem,4vw,3.2rem);
   letter-spacing:4px;
+  color:var(--gold2);
 }
 
-.collection-hero p{
-  max-width:760px;
-  margin:14px auto 0;
+.collection-hero p,
+.page-hero p{
+  max-width:780px;
+  margin:16px auto 0;
   font-size:1rem;
-  opacity:.9;
+  color:#cfd4d1;
+  line-height:1.8;
 }
 
-/* GRID */
+/* ================= COLLECTION GRID ================= */
+
 .collection-grid{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 24px 80px;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:52px;
-  margin:80px 0 60px;
+  gap:48px;
 }
 
-/* CARD */
+/* ================= CATEGORY CARD ================= */
+
 .lux-card{
-  border:1px solid rgba(212,175,55,.22);
-  background:linear-gradient(180deg,#070a09,#000);
-  padding:28px 26px 36px;
-  text-align:center;
+  background:linear-gradient(180deg,#0c1310,#070b09);
+  border:1px solid rgba(201,162,77,.35);
+  padding:30px 28px 38px;
   display:flex;
   flex-direction:column;
+  text-align:center;
   transition:.45s ease;
-  position:relative;
 }
 
 .lux-card:hover{
-  box-shadow:
-    0 0 0 1px rgba(212,175,55,.35),
-    0 40px 100px rgba(0,0,0,.95);
-  transform:translateY(-6px);
+  transform:translateY(-10px);
+  box-shadow:0 0 26px rgba(201,162,77,.35);
 }
 
 .lux-card h3{
   font-family:Cinzel,serif;
-  color:var(--gold);
+  color:var(--gold2);
   margin-bottom:20px;
   letter-spacing:2px;
 }
 
-/* IMAGE FRAME — PERFECT SQUARE */
+/* ===== IMAGE FRAME (1:1 RATIO) ===== */
+
 .lux-image{
   width:100%;
   aspect-ratio:1/1;
-  overflow:hidden;
   background:#000;
-  border:1px solid rgba(212,175,55,.18);
+  overflow:hidden;
+  border:1px solid rgba(201,162,77,.25);
 }
 
 .lux-image img{
@@ -92,7 +93,6 @@ body.collection-page{
   transition:opacity .6s ease, transform 1.3s ease;
 }
 
-/* FADE ONLY IMAGE (NOT CARD) */
 .lux-image img.fade{
   opacity:0;
   transform:scale(1.06);
@@ -102,41 +102,210 @@ body.collection-page{
   transform:scale(1.08);
 }
 
-/* TEXT */
+/* ===== TEXT ===== */
+
 .lux-title{
   margin-top:18px;
   font-family:Cinzel,serif;
-  color:var(--gold);
+  color:var(--gold2);
   font-size:1.05rem;
   letter-spacing:1px;
 }
 
 .lux-desc{
-  margin:8px auto 22px;
+  margin:10px auto 22px;
   font-size:.95rem;
   line-height:1.6;
+  color:#cfd4d1;
   max-width:420px;
-  opacity:.9;
 }
 
-/* BUTTON */
+/* ===== BUTTON ===== */
+
 .lux-btn{
   margin-top:auto;
-  padding:13px 34px;
-  border:1px solid var(--gold);
-  color:var(--gold);
+  padding:13px 36px;
+  border:1px solid var(--gold2);
+  color:var(--gold2);
   text-decoration:none;
   letter-spacing:.18em;
   font-size:.85rem;
+  text-transform:uppercase;
   transition:.35s ease;
 }
 
 .lux-btn:hover{
-  background:var(--gold);
-  color:#000;
+  background:linear-gradient(135deg,var(--gold1),var(--gold2),var(--gold3));
+  color:#111;
+  box-shadow:0 0 18px rgba(201,162,77,.45);
 }
 
-/* MOBILE */
+/* ================= CATEGORY GRID PAGES ================= */
+
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 24px 80px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:36px;
+}
+
+/* ===== PRODUCT CARD ===== */
+
+.card{
+  background:linear-gradient(180deg,#0c1310,#070b09);
+  border:1px solid rgba(201,162,77,.35);
+  padding:18px;
+  cursor:pointer;
+  transition:.4s ease;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 24px rgba(201,162,77,.35);
+}
+
+.card-img{
+  width:100%;
+  aspect-ratio:1/1;
+  overflow:hidden;
+  background:#000;
+}
+
+.card-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:1.2s ease;
+}
+
+.card:hover img{transform:scale(1.08)}
+
+.card h4{
+  margin-top:14px;
+  font-family:Cinzel,serif;
+  color:var(--gold2);
+  font-size:.95rem;
+}
+
+.card span{
+  font-size:.85rem;
+  color:#cfd4d1;
+}
+
+/* ================= MODAL POPUP ================= */
+
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.88);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+}
+
+.modal.show{display:flex}
+
+.modal-box{
+  background:linear-gradient(180deg,#0c1310,#050806);
+  border:1px solid rgba(201,162,77,.45);
+  max-width:920px;
+  width:94%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  position:relative;
+}
+
+@media(max-width:850px){
+  .modal-box{grid-template-columns:1fr}
+}
+
+/* IMAGE */
+
+.modal-img{
+  aspect-ratio:1/1;
+  background:#000;
+}
+
+.modal-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* INFO */
+
+.modal-info{
+  padding:34px 32px;
+}
+
+.modal-info h3{
+  font-family:Cinzel,serif;
+  color:var(--gold2);
+  letter-spacing:1.5px;
+}
+
+.modal-info .meta{
+  margin-top:10px;
+  font-size:.9rem;
+  color:#d6d0b0;
+}
+
+.modal-info p{
+  margin-top:18px;
+  line-height:1.8;
+  font-size:.95rem;
+  color:#cfd4d1;
+}
+
+/* ACTIONS */
+
+.modal-actions{
+  margin-top:26px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.modal-actions a{
+  padding:12px 26px;
+  border:1px solid var(--gold2);
+  color:var(--gold2);
+  text-decoration:none;
+  font-size:.85rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  transition:.35s ease;
+}
+
+.modal-actions a:hover{
+  background:linear-gradient(135deg,var(--gold1),var(--gold2),var(--gold3));
+  color:#111;
+}
+
+/* CLOSE */
+
+.close{
+  position:absolute;
+  top:14px;
+  right:18px;
+  font-size:22px;
+  cursor:pointer;
+  color:#fff;
+}
+
+/* ================= MOBILE ================= */
+
 @media(max-width:700px){
-  .collection-grid{gap:34px}
+
+  .collection-grid{gap:32px}
+  .grid{gap:28px}
+
+  .modal-info{padding:26px 22px}
+
 }
