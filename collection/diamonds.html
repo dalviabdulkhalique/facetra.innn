@@ -246,6 +246,61 @@
   })();
 
   </script>
+
+  <script>
+const modal = document.getElementById("gemModal");
+const modalImg = document.getElementById("modalImg");
+const modalTitle = document.getElementById("modalTitle");
+const modalMeta = document.getElementById("modalMeta");
+const modalDesc = document.getElementById("modalDesc");
+const whatsappBtn = document.getElementById("whatsappBtn");
+const closeModal = document.getElementById("closeModal");
+
+fetch("../assets/collection/manifest.json",{cache:"no-cache"})
+.then(r=>r.json())
+.then(data=>{
+
+  const items = data.diamonds;
+
+  document.querySelectorAll(".item-card").forEach((card,i)=>{
+
+    card.onclick = ()=>{
+
+      const g = items[i];
+
+      modalImg.src = "../" + g.img;
+      modalTitle.textContent = g.title;
+
+      modalMeta.innerHTML = `
+        <strong>Cut:</strong> ${g.cut}<br>
+        <strong>Color:</strong> ${g.color}<br>
+        <strong>Clarity:</strong> ${g.clarity}<br>
+        <strong>Origin:</strong> ${g.origin}<br>
+        <strong>Treatment:</strong> ${g.treatment}<br>
+        <strong>Usage:</strong> ${g.use}
+      `;
+
+      modalDesc.textContent = g.note;
+
+      const pageLink = window.location.href.split("#")[0];
+      const msg = `Hello FACETRA,%0AI'm interested in ${g.title}.%0ALink: ${pageLink}#${g.slug}`;
+
+      whatsappBtn.href = `https://wa.me/918055113448?text=${msg}`;
+
+      modal.classList.add("open");
+      document.body.style.overflow="hidden";
+    };
+
+  });
+
+});
+
+closeModal.onclick = ()=>{
+  modal.classList.remove("open");
+  document.body.style.overflow="";
+};
+</script>
+
   <!-- ===== POPUP MODAL ===== -->
 <div class="modal-overlay" id="gemModal">
   <div class="modal-box fade">
