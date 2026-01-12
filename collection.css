@@ -114,3 +114,10 @@
   transform:translateY(0);
 }
 
+.showcase-box img{
+  width:100%;
+  max-width:320px;
+  margin:0 auto;
+  display:block;
+  transition:opacity .6s ease;
+}
