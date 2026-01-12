@@ -1,217 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>FACETRA | Collection — Premium Gemstones</title>
-  <meta name="description" content="Discover FACETRA’s luxury collection of certified diamonds, sapphires, rubies and emeralds curated for collectors and investors." />
-  <link rel="canonical" href="https://dalviabdulkhalique.github.io/facetra.in/collection.html" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="collection.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <!-- favicons -->
-  <link rel="icon" href="assets/favicon/favicon-32x32.png" sizes="32x32" />
-  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png" />
-  <meta name="theme-color" content="#020805" />
-  <!-- collection schema (basic) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"CollectionPage",
-    "name":"FACETRA Gemstone Collection",
-    "description":"Luxury natural gemstones including diamonds, sapphires, rubies and emeralds."
-  }
-  </script>
+<meta charset="UTF-8">
+<title>FACETRA Gemstone Collection | Diamonds, Sapphires, Rubies, Emeralds</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore FACETRA’s luxury collection of certified natural diamonds, sapphires, rubies and emeralds curated for collectors and investors.">
+
+<link rel="canonical" href="https://dalviabdulkhalique.github.io/facetra.in/collection.html">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="collection.css">
+
+<link rel="icon" href="assets/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+<meta name="theme-color" content="#050806">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-<body class="page collection-page">
 
-  <!-- header (same as other pages) -->
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="brand">
-        <img src="logo.png" alt="FACETRA Logo">
-        <div>
-          <div class="brand-name">FACETRA</div>
-          <div class="brand-tag">Gems • Diamonds • Stones</div>
-        </div>
+<body class="page">
+
+<!-- HEADER (same as other pages) -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <img src="logo.png">
+      <div>
+        <div class="brand-name">FACETRA</div>
+        <div class="brand-tag">Gems • Diamonds • Stones</div>
       </div>
-
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="collection.html" class="active">Collection</a>
-        <a href="certification.html">Certification</a>
-        <a href="why-facetra.html">Why FACETRA</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-
-      <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
     </div>
-  </header>
-
-  <div class="mobile-nav" id="mobileNav">
-    <a href="index.html">Home</a>
-    <a href="collection.html">Collection</a>
-    <a href="certification.html">Certification</a>
-    <a href="why-facetra.html">Why FACETRA</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="collection.html" class="active">Collection</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
   </div>
+</header>
 
-  <!-- HERO -->
-  <section class="collection-hero">
-    <div class="hero-inner">
-      <h1 class="hero-title">FACETRA Collection</h1>
-      <p class="hero-description">Certified natural gemstones curated for collectors, jewellers and long-term investors.</p>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="collection.html">Collection</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="collection-hero">
+  <div>
+    <h1>FACETRA Collection</h1>
+    <p>Certified natural gemstones curated for collectors, jewellers and long-term investors.</p>
+  </div>
+</section>
+
+<section class="collection-section container">
+  <div class="collection-grid">
+
+    <div class="collection-card" data-cat="diamonds">
+      <div class="auto-image-box"><img></div>
+      <div class="stone-name"></div>
+      <div class="stone-desc"></div>
+      <a href="collection/diamonds.html" class="btn-category">View Diamonds</a>
     </div>
-  </section>
 
-  <div class="lux-divider"></div>
-
-  <main class="collection-section">
-    <div class="container">
-
-      <!-- centered dual collection blocks -->
-      <div class="collection-grid centered-grid">
-
-        <!-- Diamonds -->
-        <article class="collection-card auto-collection" data-cat="diamonds">
-          <h2>Diamonds Collection</h2>
-          <div class="auto-image-box">
-            <img id="diamondImg" src="" alt="Diamonds preview" loading="lazy">
-          </div>
-          <div class="stone-meta">
-            <div class="stone-name" id="diamondName"></div>
-            <div class="stone-desc" id="diamondDesc"></div>
-          </div>
-          <a class="btn-category" href="collection/diamonds.html">View Diamond Collection</a>
-        </article>
-
-        <!-- Sapphires -->
-        <article class="collection-card auto-collection" data-cat="sapphires">
-          <h2>Sapphires Collection</h2>
-          <div class="auto-image-box">
-            <img id="sapphireImg" src="" alt="Sapphires preview" loading="lazy">
-          </div>
-          <div class="stone-meta">
-            <div class="stone-name" id="sapphireName"></div>
-            <div class="stone-desc" id="sapphireDesc"></div>
-          </div>
-          <a class="btn-category" href="collection/sapphires.html">View Sapphire Collection</a>
-        </article>
-
-        <!-- Rubies (coming soon) -->
-        <article class="collection-card coming-card">
-          <h2>Rubies Collection</h2>
-          <p>Burmese and Mozambique rubies with vivid red saturation and collector appeal.</p>
-          <span class="coming-label">Launching Soon</span>
-        </article>
-
-        <!-- Emeralds (coming soon) -->
-        <article class="collection-card coming-card">
-          <h2>Emeralds Collection</h2>
-          <p>Colombian and Zambian emeralds with strong crystal structure and deep green hue.</p>
-          <span class="coming-label">Launching Soon</span>
-        </article>
-
-      </div>
+    <div class="collection-card" data-cat="sapphires">
+      <div class="auto-image-box"><img></div>
+      <div class="stone-name"></div>
+      <div class="stone-desc"></div>
+      <a href="collection/sapphires.html" class="btn-category">View Sapphires</a>
     </div>
-  </main>
 
-  <div class="lux-divider"></div>
-
-  <!-- footer (same as other pages) -->
-  <footer class="lux-footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <div class="footer-logo"><img src="logo.png" alt=""><span>FACETRA</span></div>
-        <p>Premium gemstone trading house specializing in certified natural gemstones curated for collectors, jewellers and long-term investors.</p>
-      </div>
-
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <a href="index.html">Home</a>
-        <a href="collection.html">Collection</a>
-        <a href="contact.html">Contact</a>
-      </div>
-
-      <div class="footer-contact">
-        <h4>Contact</h4>
-        <a class="contact-item" href="mailto:info@facetra.in"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>info@facetra.in</span></a>
-        <a class="contact-item" href="tel:+918055113448"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2"/></svg><span>+91 80551 13448</span></a>
-        <a class="contact-item" href="https://wa.me/918055113448" target="_blank"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>WhatsApp Chat</span></a>
-      </div>
+    <div class="collection-card" data-cat="rubies">
+      <div class="auto-image-box"><img></div>
+      <div class="stone-name"></div>
+      <div class="stone-desc"></div>
+      <a href="collection/rubies.html" class="btn-category">View Rubies</a>
     </div>
-    <div class="footer-bottom">© 2026 FACETRA. All rights reserved.</div>
-  </footer>
 
-  <!-- JS: nav + manifest-driven preview sliders -->
-  <script>
-  // mobile nav
-  const toggle = document.getElementById('navToggle');
-  const mobileNav = document.getElementById('mobileNav');
-  if (toggle) toggle.addEventListener('click', ()=> mobileNav.classList.toggle('open'));
+    <div class="collection-card" data-cat="emeralds">
+      <div class="auto-image-box"><img></div>
+      <div class="stone-name"></div>
+      <div class="stone-desc"></div>
+      <a href="collection/emeralds.html" class="btn-category">View Emeralds</a>
+    </div>
 
-  // safe manifest fetch: try a list of candidate URLs so code works from root and /collection/ pages
-  const MANIFEST_CANDIDATES = [
-    './assets/collection/manifest.json',
-    '/assets/collection/manifest.json',
-    '../assets/collection/manifest.json',
-    '/facetra.in/assets/collection/manifest.json'
-  ];
+  </div>
+</section>
 
-  async function fetchManifest(){
-    for (const p of MANIFEST_CANDIDATES){
-      try {
-        const r = await fetch(p, {cache: 'no-cache'});
-        if (!r.ok) continue;
-        const j = await r.json();
-        return {data:j, pathBase: p.replace(/manifest\.json$/,'')};
-      } catch(e){
-        // ignore and try next
-      }
+<!-- FOOTER same as site -->
+<footer class="lux-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="logo.png"><span>FACETRA</span>
+      </div>
+      <p>Premium gemstone trading house specializing in certified natural gemstones.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="collection.html">Collection</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 FACETRA. All rights reserved.</div>
+</footer>
+
+<script>
+/* mobile nav */
+const toggle=document.getElementById("navToggle");
+const mobileNav=document.getElementById("mobileNav");
+if(toggle) toggle.onclick=()=>mobileNav.classList.toggle("open");
+
+/* auto preview from manifest */
+fetch("assets/collection/manifest.json",{cache:"no-cache"})
+.then(r=>r.json()).then(data=>{
+  document.querySelectorAll(".collection-card").forEach(card=>{
+    const list=data[card.dataset.cat];
+    if(!list) return;
+    const img=card.querySelector("img");
+    const name=card.querySelector(".stone-name");
+    const desc=card.querySelector(".stone-desc");
+    let i=0;
+    function show(){
+      card.classList.add("fade");
+      setTimeout(()=>{
+        img.src=list[i].img;
+        name.textContent=list[i].title;
+        desc.textContent=list[i].short;
+        card.classList.remove("fade");
+        i=(i+1)%list.length;
+      },300);
     }
-    throw new Error('manifest.json not found at expected locations.');
-  }
-
-  // run the preview sliders for the two visible cards
-  fetchManifest().then(({data, pathBase})=>{
-    // populate preview blocks
-    const cards = document.querySelectorAll('.auto-collection[data-cat]');
-    cards.forEach(card=>{
-      const cat = card.dataset.cat;
-      const list = (data[cat] || []);
-      if (!list.length) return;
-      const img = card.querySelector('img');
-      const nameEl = card.querySelector('.stone-name');
-      const descEl = card.querySelector('.stone-desc');
-
-      // preload first few images
-      list.slice(0,6).forEach(it=>{ const im = new Image(); im.src = it.img; });
-
-      let i = 0;
-      function show(){
-        card.classList.add('fade');
-        setTimeout(()=>{
-          const item = list[i];
-          img.src = item.img;
-          img.alt = item.title;
-          nameEl.textContent = item.title;
-          descEl.textContent = item.desc || '';
-          card.classList.remove('fade');
-          i = (i+1) % list.length;
-        }, 320);
-      }
-      show();
-      // stagger and rotate
-      setInterval(show, 4800);
-
-    });
-
-  }).catch(err=>{
-    console.error('Manifest load error', err);
+    show(); setInterval(show,4000);
   });
+});
+</script>
 
-  </script>
 </body>
 </html>
