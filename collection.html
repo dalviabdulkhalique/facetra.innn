@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>FACETRA | Gemstone & Diamond Collection</title>
-<meta name="description" content="Explore FACETRA’s investment-grade certified diamonds and premium natural sapphires curated for collectors, jewelers and gemstone investors.">
+<meta name="description" content="Explore FACETRA’s certified diamond and natural sapphire collections curated for brilliance, rarity and long-term investment value.">
 
 <link rel="canonical" href="https://facetra.in/collection.html">
 <meta name="robots" content="index, follow">
@@ -20,7 +20,7 @@
 
 <body class="page collection-page">
 
-<!-- ===== HEADER (same as home) ===== -->
+<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="header-inner">
 
@@ -32,7 +32,7 @@
       </div>
     </div>
 
-    <nav class="main-nav" id="mainNav">
+    <nav class="main-nav">
       <a href="index.html">Home</a>
       <a href="collection.html" class="active">Collection</a>
       <a href="certification.html">Certification</a>
@@ -57,7 +57,7 @@
   <a href="contact.html">Contact</a>
 </div>
 
-<!-- ===== HERO ===== -->
+<!-- ================= HERO ================= -->
 <section class="collection-hero">
   <div>
     <h1 class="hero-title">Signature Gemstone Collections</h1>
@@ -69,7 +69,7 @@
 
 <div class="lux-divider"></div>
 
-<!-- ===== COLLECTIONS ===== -->
+<!-- ================= COLLECTIONS ================= -->
 <section>
   <div class="container">
 
@@ -81,13 +81,13 @@
         <div class="collection-title">Diamonds Collection</div>
 
         <div class="auto-image-box">
-          <img id="diamondImg" src="" alt="">
+          <img id="diamondImg" alt="">
         </div>
 
         <div class="stone-name" id="diamondName"></div>
         <div class="stone-desc" id="diamondDesc"></div>
 
-        <a id="diamondBtn" href="collection/diamonds.html" class="btn-category">
+        <a href="collection/diamonds.html" class="btn-category">
           View Diamond Collection
         </a>
 
@@ -99,13 +99,13 @@
         <div class="collection-title">Sapphires Collection</div>
 
         <div class="auto-image-box">
-          <img id="sapphireImg" src="" alt="">
+          <img id="sapphireImg" alt="">
         </div>
 
         <div class="stone-name" id="sapphireName"></div>
         <div class="stone-desc" id="sapphireDesc"></div>
 
-        <a id="sapphireBtn" href="collection/sapphires.html" class="btn-category">
+        <a href="collection/sapphires.html" class="btn-category">
           View Sapphire Collection
         </a>
 
@@ -117,14 +117,14 @@
     <div class="coming-grid">
 
       <div class="coming-card">
-        <h3 style="color:#d4af37;font-family:Cinzel,serif;">Rubies</h3>
-        <p>Burma and Mozambique rubies with vivid red saturation.</p>
+        <h3>Rubies</h3>
+        <p>Burmese and Mozambique rubies with vivid red saturation and collector appeal.</p>
         <span class="coming-label">Launching Soon</span>
       </div>
 
       <div class="coming-card">
-        <h3 style="color:#d4af37;font-family:Cinzel,serif;">Emeralds</h3>
-        <p>Colombian and Zambian emeralds with natural crystal structure.</p>
+        <h3>Emeralds</h3>
+        <p>Colombian and Zambian emeralds with strong crystal structure and deep green hue.</p>
         <span class="coming-label">Launching Soon</span>
       </div>
 
@@ -133,12 +133,12 @@
   </div>
 </section>
 
-<!-- ===== FOOTER (same as home) ===== -->
+<!-- ================= FOOTER ================= -->
 <footer class="lux-footer">
   <div class="footer-bottom">© 2026 FACETRA. All rights reserved.</div>
 </footer>
 
-<!-- ===== SCRIPTS ===== -->
+<!-- ================= SCRIPTS ================= -->
 <script>
 
 /* MOBILE NAV */
@@ -146,29 +146,42 @@ const toggle=document.getElementById("navToggle");
 const mobileNav=document.getElementById("mobileNav");
 toggle.onclick=()=>mobileNav.classList.toggle("open");
 
-/* LOAD MANIFEST */
-fetch("assets/collection/manifest.json",{cache:"no-cache"})
-.then(r=>r.json())
+/* LOAD MANIFEST — IMPORTANT FIXED PATH */
+fetch("./assets/collection/manifest.json",{cache:"no-cache"})
+.then(res=>{
+  if(!res.ok) throw new Error("Manifest not found");
+  return res.json();
+})
 .then(data=>{
-  runSlider(data.diamonds,
+  runSlider(
+    data.diamonds,
     document.getElementById("diamondImg"),
     document.getElementById("diamondName"),
     document.getElementById("diamondDesc")
   );
 
-  runSlider(data.sapphires,
+  runSlider(
+    data.sapphires,
     document.getElementById("sapphireImg"),
     document.getElementById("sapphireName"),
     document.getElementById("sapphireDesc")
   );
+})
+.catch(err=>{
+  console.error("Manifest Load Error:",err);
 });
 
 /* SLIDER */
 function runSlider(list,imgEl,nameEl,descEl){
   if(!list || !list.length) return;
+
   let i=0;
 
-  list.forEach(x=>{const im=new Image();im.src=x.img;});
+  /* preload */
+  list.forEach(item=>{
+    const im=new Image();
+    im.src=item.img;
+  });
 
   function show(){
     imgEl.classList.add("fade");
@@ -180,8 +193,9 @@ function runSlider(list,imgEl,nameEl,descEl){
       descEl.textContent=item.desc;
       imgEl.classList.remove("fade");
       i=(i+1)%list.length;
-    },350);
+    },300);
   }
+
   show();
   setInterval(show,5000);
 }
