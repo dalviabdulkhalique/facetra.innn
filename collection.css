@@ -1,125 +1,93 @@
-/* ================= ROOT ================= */
-
-:root{
-  --gold1:#f1d27a;
-  --gold2:#c9a24d;
-  --gold3:#8f6b2a;
-  --dark:#050806;
-  --dark2:#0b120f;
-  --card:#0f1612;
-  --text:#d7dbd8;
-  --muted:#9ea4a0;
-}
-
-*{margin:0;padding:0;box-sizing:border-box}
-img{max-width:100%;display:block}
-a{text-decoration:none;color:inherit}
-
-body{
-  font-family:Inter,sans-serif;
-  background:
-    radial-gradient(circle at top,#141f1a,#050806),
-    repeating-linear-gradient(60deg,rgba(255,255,255,.015),rgba(255,255,255,.015) 1px,transparent 1px,transparent 12px);
-  color:var(--text);
-}
-
 /* ================= HERO ================= */
 
 .collection-hero{
-  min-height:60vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  padding:120px 20px 80px;
   text-align:center;
-  padding:90px 20px 50px;
+  background:radial-gradient(circle at top,#141f1a,#050806);
 }
 
-.hero-inner-wrap{
-  max-width:900px;
-}
-
-.hero-title{
+.collection-hero h1{
   font-family:Cinzel,serif;
-  font-size:56px;
-  letter-spacing:3px;
   color:var(--gold2);
+  font-size:42px;
+  margin-bottom:12px;
 }
 
-.hero-description{
-  margin-top:14px;
-  font-size:16px;
-  color:#d0d6d3;
+.collection-hero p{
+  max-width:720px;
+  margin:auto;
+  color:#d7dbd8;
+  line-height:1.8;
 }
 
 /* ================= GRID ================= */
 
-.collection-section{
-  padding:90px 40px 140px;
+.gem-list-section{
+  padding:100px 30px;
 }
 
-.collection-grid{
-  max-width:1300px;
-  margin:0 auto;
+.gem-grid{
+  max-width:1200px;
+  margin:auto;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:40px;
 }
-
-/* ================= CARD ================= */
 
 .gem-card{
   background:linear-gradient(180deg,#0c1310,#070b09);
   border:1px solid rgba(201,162,77,.35);
   padding:26px;
   text-align:center;
-  transition:.35s ease;
+  transition:.4s;
 }
 
 .gem-card:hover{
-  transform:translateY(-10px);
+  transform:translateY(-8px);
   box-shadow:0 0 26px rgba(201,162,77,.35);
 }
 
-.gem-card img{
-  width:100%;
+.gem-img{
   aspect-ratio:1/1;
-  object-fit:cover;
-  border:1px solid rgba(201,162,77,.25);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:18px;
+}
+
+.gem-img img{
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
 }
 
 .gem-card h3{
-  margin-top:14px;
   font-family:Cinzel,serif;
   color:var(--gold2);
   font-size:18px;
+  margin-bottom:6px;
 }
 
 .gem-card p{
   font-size:13px;
-  margin-top:6px;
   color:#cfd4d1;
+  line-height:1.6;
+  margin-bottom:14px;
 }
 
 /* ================= BUTTON ================= */
 
-.view-btn{
-  margin-top:14px;
-  padding:10px 26px;
-  background:transparent;
+.btn-view{
+  background:none;
   border:1px solid var(--gold2);
   color:var(--gold2);
-  font-size:12px;
-  letter-spacing:1.2px;
-  text-transform:uppercase;
+  padding:10px 22px;
   cursor:pointer;
-  transition:.35s ease;
+  transition:.3s;
 }
 
-.view-btn:hover{
-  background:linear-gradient(135deg,var(--gold1),var(--gold2));
-  color:#111;
-  box-shadow:0 0 18px rgba(201,162,77,.45);
-  transform:translateY(-2px);
+.btn-view:hover{
+  background:rgba(201,162,77,.15);
 }
 
 /* ================= MODAL ================= */
@@ -127,37 +95,37 @@ body{
 .modal-overlay{
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,.8);
+  background:rgba(0,0,0,.75);
   display:flex;
   align-items:center;
   justify-content:center;
-  z-index:9999;
   opacity:0;
   pointer-events:none;
-  transition:.35s ease;
+  transition:.3s;
+  z-index:9999;
 }
 
-.modal-overlay.active{
+.modal-overlay.show{
   opacity:1;
   pointer-events:auto;
 }
 
 .modal-box{
-  width:92%;
-  max-width:1000px;
   background:linear-gradient(180deg,#0c1310,#070b09);
-  border:1px solid rgba(201,162,77,.45);
-  padding:36px;
+  border:1px solid rgba(201,162,77,.4);
+  max-width:900px;
+  width:90%;
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:32px;
+  gap:30px;
+  padding:30px;
+  position:relative;
 }
 
-.modal-box img{
+.modal-img img{
   width:100%;
   aspect-ratio:1/1;
-  object-fit:cover;
-  border:1px solid rgba(201,162,77,.35);
+  object-fit:contain;
 }
 
 .modal-content h2{
@@ -167,45 +135,51 @@ body{
 }
 
 .modal-fields div{
-  font-size:14px;
+  font-size:13px;
+  color:#d7dbd8;
   margin-bottom:6px;
-  color:#d6dccf;
 }
 
-.modal-desc{
-  margin-top:14px;
+.modal-content p{
+  margin-top:12px;
   font-size:14px;
   line-height:1.8;
   color:#cfd4d1;
 }
 
-/* ================= MODAL BUTTONS ================= */
-
-.modal-actions{
-  margin-top:24px;
-  display:flex;
-  gap:12px;
-}
-
-.whatsapp-btn{
+.btn-wa{
+  display:inline-block;
+  margin-top:18px;
   background:linear-gradient(135deg,var(--gold1),var(--gold2));
-  border:none;
+  color:#111;
   padding:12px 26px;
-  cursor:pointer;
+  text-decoration:none;
 }
 
-.close-btn{
-  background:transparent;
-  border:1px solid var(--gold2);
+.modal-close{
+  position:absolute;
+  top:10px;
+  right:14px;
+  background:none;
+  border:none;
+  font-size:26px;
   color:var(--gold2);
-  padding:12px 22px;
   cursor:pointer;
 }
 
 /* ================= MOBILE ================= */
 
-@media(max-width:900px){
+@media(max-width:800px){
+
   .modal-box{
     grid-template-columns:1fr;
+  }
+
+  .collection-hero h1{
+    font-size:30px;
+  }
+
+  .gem-list-section{
+    padding:70px 20px;
   }
 }
