@@ -154,19 +154,27 @@ fetch("assets/collection/manifest.json", { cache: "no-store" })
 
     let i = 0;
 
-    function show(){
-      img.style.opacity = "0";
-      setTimeout(() => {
-        img.src = list[i].img;
-        title.textContent = list[i].title;
-        desc.textContent  = list[i].desc;
-        img.style.opacity = "1";
-        i = (i + 1) % list.length;
-      }, 300);
-    }
+   function show(){
+  img.style.opacity = "0";
+
+  setTimeout(() => {
+
+    img.src = list[i].img;
+    title.textContent = list[i].title;
+    desc.textContent  = list[i].desc;
+
+    img.onload = () => {
+      img.style.opacity = "1";
+    };
+
+    i = (i + 1) % list.length;
+
+  }, 400);
+}
+
 
     show();
-    setInterval(show, 4200);
+    setInterval(show, 4500);
 
   });
 
