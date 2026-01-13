@@ -10,34 +10,16 @@
 
 <link rel="canonical" href="https://dalviabdulkhalique.github.io/facetra.in/collection.html">
 
-<!-- OG -->
-<meta property="og:title" content="FACETRA Collection">
-<meta property="og:description" content="Certified natural gemstones curated for collectors and fine jewellery.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://dalviabdulkhalique.github.io/facetra.in/collection.html">
-
-<!-- FAVICONS (as per your project) -->
-<link rel="icon" href="assets/favicon/favicon-32x32.png" sizes="32x32">
+<!-- FAVICONS -->
+<link rel="icon" href="assets/favicon/favicon-32x32.png">
 <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
-<meta name="theme-color" content="#050806">
 
 <!-- FONTS -->
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <!-- CSS -->
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="collection.css">
-
-<!-- SCHEMA -->
-<script type="application/ld+json">
-{
- "@context":"https://schema.org",
- "@type":"CollectionPage",
- "name":"FACETRA Gemstone Collection",
- "description":"Luxury natural gemstones including diamonds, sapphires, rubies and emeralds.",
- "url":"https://dalviabdulkhalique.github.io/facetra.in/collection.html"
-}
-</script>
 </head>
 
 <body class="page collection-page">
@@ -81,12 +63,8 @@
 
 <!-- ================= HERO ================= -->
 <section class="collection-hero">
-  <div>
-    <h1 class="hero-title">FACETRA COLLECTION</h1>
-    <p class="hero-description">
-      Certified natural gemstones curated for collectors, jewellers and long-term investors.
-    </p>
-  </div>
+  <h1>FACETRA COLLECTION</h1>
+  <p>Certified natural gemstones curated for collectors, jewellers and long-term investors.</p>
 </section>
 
 <!-- ================= COLLECTION GRID ================= -->
@@ -97,7 +75,9 @@
     <!-- DIAMONDS -->
     <div class="collection-card" data-cat="diamonds">
       <h2>Diamonds Collection</h2>
-      <div class="auto-image-box"><img alt=""></div>
+      <div class="auto-image-box">
+        <img alt="">
+      </div>
       <div class="stone-name"></div>
       <div class="stone-desc"></div>
       <a href="collection/diamonds.html" class="btn-category">View Diamond Collection</a>
@@ -106,7 +86,9 @@
     <!-- SAPPHIRES -->
     <div class="collection-card" data-cat="sapphires">
       <h2>Sapphires Collection</h2>
-      <div class="auto-image-box"><img alt=""></div>
+      <div class="auto-image-box">
+        <img alt="">
+      </div>
       <div class="stone-name"></div>
       <div class="stone-desc"></div>
       <a href="collection/sapphires.html" class="btn-category">View Sapphire Collection</a>
@@ -115,7 +97,9 @@
     <!-- RUBIES -->
     <div class="collection-card" data-cat="rubies">
       <h2>Rubies Collection</h2>
-      <div class="auto-image-box"><img alt=""></div>
+      <div class="auto-image-box">
+        <img alt="">
+      </div>
       <div class="stone-name"></div>
       <div class="stone-desc"></div>
       <a href="collection/rubies.html" class="btn-category">View Ruby Collection</a>
@@ -124,7 +108,9 @@
     <!-- EMERALDS -->
     <div class="collection-card" data-cat="emeralds">
       <h2>Emeralds Collection</h2>
-      <div class="auto-image-box"><img alt=""></div>
+      <div class="auto-image-box">
+        <img alt="">
+      </div>
       <div class="stone-name"></div>
       <div class="stone-desc"></div>
       <a href="collection/emeralds.html" class="btn-category">View Emerald Collection</a>
@@ -136,58 +122,9 @@
 
 <!-- ================= FOOTER ================= -->
 <footer class="lux-footer">
-
-  <div class="footer-inner">
-
-    <div class="footer-brand">
-      <div class="footer-logo">
-        <img src="logo.png" alt="FACETRA Logo">
-        <span>FACETRA</span>
-      </div>
-      <p>
-        Premium gemstone trading house specializing in certified natural gemstones curated
-        for collectors, jewelers and long-term investors.
-      </p>
-    </div>
-
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <a href="index.html">Home</a>
-      <a href="collection.html">Collection</a>
-      <a href="certification.html">Certification</a>
-      <a href="why-facetra.html">Why FACETRA</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </div>
-
-    <div class="footer-contact">
-
-      <h4>Contact</h4>
-
-      <a class="contact-item" href="mailto:info@facetra.in">
-        <span>info@facetra.in</span>
-      </a>
-
-      <a class="contact-item" href="tel:+918055113448">
-        <span>+91 80551 13448</span>
-      </a>
-
-      <a class="contact-item" href="https://wa.me/918055113448" target="_blank">
-        <span>WhatsApp Chat</span>
-      </a>
-
-      <div class="contact-item">
-        <span>Mumbai, Maharashtra, India</span>
-      </div>
-
-    </div>
-
-  </div>
-
   <div class="footer-bottom">
     © 2026 FACETRA. All rights reserved.
   </div>
-
 </footer>
 
 <!-- ================= JS ================= -->
@@ -200,7 +137,7 @@ if(toggle){
   toggle.onclick = () => mobileNav.classList.toggle("open");
 }
 
-/* AUTO PREVIEW FROM YOUR MANIFEST */
+/* AUTO PREVIEW FROM MANIFEST */
 fetch("assets/collection/manifest.json", { cache: "no-store" })
 .then(r => r.json())
 .then(data => {
@@ -225,7 +162,7 @@ fetch("assets/collection/manifest.json", { cache: "no-store" })
         desc.textContent  = list[i].desc;
         img.style.opacity = "1";
         i = (i + 1) % list.length;
-      }, 350);
+      }, 300);
     }
 
     show();
@@ -233,8 +170,7 @@ fetch("assets/collection/manifest.json", { cache: "no-store" })
 
   });
 
-})
-.catch(err => console.error("Manifest load error:", err));
+});
 
 </script>
 
