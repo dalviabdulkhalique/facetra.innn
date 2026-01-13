@@ -3,70 +3,93 @@
     {
       "img": "assets/collection/diamonds/diamond-round-brilliant-1.jpg",
       "title": "Round Brilliant Diamond",
-      "slug": "diamond-round-brilliant-1",
-      "desc": "Brilliant · Round · Colorless"
+      "slug": "round-brilliant",
+      "cut": "Brilliant",
+      "shape": "Round",
+      "variety": "Colorless Diamond",
+      "origin": "Natural",
+      "desc": "Maximum fire and brilliance with ideal symmetry.",
+      "longDesc": "Round brilliant diamonds are the most popular and scientifically optimized cut for maximum sparkle. With perfect light return and balanced proportions, this stone is ideal for high-end jewellery and long-term gemstone investment."
     },
     {
       "img": "assets/collection/diamonds/diamond-oval-cut-1.jpg",
       "title": "Oval Cut Diamond",
-      "slug": "diamond-oval-cut-1",
-      "desc": "Oval Brilliant · Oval · Colorless"
-    },
-    {
-      "img": "assets/collection/diamonds/diamond-cushion-cut-1.jpg",
-      "title": "Cushion Cut Diamond",
-      "slug": "diamond-cushion-cut-1",
-      "desc": "Cushion Modified · Cushion · Colorless"
+      "slug": "oval-cut",
+      "cut": "Brilliant",
+      "shape": "Oval",
+      "variety": "Colorless Diamond",
+      "origin": "Natural",
+      "desc": "Elegant elongated brilliance with slimming appearance.",
+      "longDesc": "Oval cut diamonds combine the sparkle of round brilliant with an elongated silhouette that appears larger per carat. Preferred for elegant rings and modern luxury jewellery designs."
     },
     {
       "img": "assets/collection/diamonds/diamond-emerald-cut-1.jpg",
       "title": "Emerald Cut Diamond",
-      "slug": "diamond-emerald-cut-1",
-      "desc": "Step Cut · Emerald · Colorless"
-    },
-    {
-      "img": "assets/collection/diamonds/diamond-asscher-cut-1.jpg",
-      "title": "Asscher Cut Diamond",
-      "slug": "diamond-asscher-cut-1",
-      "desc": "Step Cut · Asscher · Colorless"
-    },
-    {
-      "img": "assets/collection/diamonds/diamond-princess-cut-1.jpg",
-      "title": "Princess Cut Diamond",
-      "slug": "diamond-princess-cut-1",
-      "desc": "Fancy Shape · Square · Colorless"
+      "slug": "emerald-cut",
+      "cut": "Step Cut",
+      "shape": "Emerald",
+      "variety": "Colorless Diamond",
+      "origin": "Natural",
+      "desc": "Clean step facets highlighting crystal clarity.",
+      "longDesc": "Emerald cut diamonds are prized for their elegant hall-of-mirrors effect, showcasing exceptional clarity and sophisticated geometry, favored by collectors of classic luxury."
     },
     {
       "img": "assets/collection/diamonds/diamond-pear-cut-1.jpg",
       "title": "Pear Cut Diamond",
-      "slug": "diamond-pear-cut-1",
-      "desc": "Fancy Shape · Pear · Colorless"
+      "slug": "pear-cut",
+      "cut": "Brilliant",
+      "shape": "Pear",
+      "variety": "Colorless Diamond",
+      "origin": "Natural",
+      "desc": "Tear-drop brilliance with graceful curves.",
+      "longDesc": "Pear shaped diamonds blend round and marquise styles, producing unique brilliance and flattering elongation, popular in statement pendants and designer rings."
     },
     {
       "img": "assets/collection/diamonds/diamond-marquise-cut-1.jpg",
       "title": "Marquise Cut Diamond",
-      "slug": "diamond-marquise-cut-1",
-      "desc": "Fancy Shape · Marquise · Colorless"
+      "slug": "marquise-cut",
+      "cut": "Brilliant",
+      "shape": "Marquise",
+      "variety": "Colorless Diamond",
+      "origin": "Natural",
+      "desc": "Long shape that maximizes visual size.",
+      "longDesc": "Marquise diamonds offer dramatic length and brilliance, giving excellent face-up size per carat. Often selected for bold luxury designs and collector jewellery."
+    },
+    {
+      "img": "assets/collection/diamonds/diamond-princess-cut-1.jpg",
+      "title": "Princess Cut Diamond",
+      "slug": "princess-cut",
+      "cut": "Brilliant",
+      "shape": "Square",
+      "variety": "Colorless Diamond",
+      "origin": "Natural",
+      "desc": "Sharp modern brilliance with square symmetry.",
+      "longDesc": "Princess cut diamonds are modern favourites delivering strong sparkle with sharp geometric appeal, widely used in contemporary engagement jewellery."
     },
     {
       "img": "assets/collection/diamonds/diamond-radiant-cut-1.jpg",
       "title": "Radiant Cut Diamond",
-      "slug": "diamond-radiant-cut-1",
-      "desc": "Fancy Shape · Radiant · Colorless"
+      "slug": "radiant-cut",
+      "cut": "Mixed",
+      "shape": "Radiant",
+      "variety": "Colorless Diamond",
+      "origin": "Natural",
+      "desc": "Brilliant sparkle with trimmed corners.",
+      "longDesc": "Radiant cut diamonds combine step and brilliant facets for intense fire while maintaining durable corners, ideal for luxury rings and bracelets."
     },
     {
-      "img": "assets/collection/diamonds/diamond-fancy-yellow-cushion-1.jpg",
-      "title": "Fancy Yellow Diamond",
-      "slug": "diamond-fancy-yellow-cushion-1",
-      "desc": "Fancy Color · Cushion · Yellow"
-    },
-    {
-      "img": "assets/collection/diamonds/diamond-brown-champagne-1.jpg",
-      "title": "Champagne Diamond",
-      "slug": "diamond-brown-champagne-1",
-      "desc": "Fancy Color · Round · Brown"
+      "img": "assets/collection/diamonds/diamond-cushion-cut-1.jpg",
+      "title": "Cushion Cut Diamond",
+      "slug": "cushion-cut",
+      "cut": "Brilliant",
+      "shape": "Cushion",
+      "variety": "Colorless Diamond",
+      "origin": "Natural",
+      "desc": "Soft vintage charm with modern sparkle.",
+      "longDesc": "Cushion cut diamonds offer romantic pillow-shaped brilliance, highly sought after for vintage-inspired luxury jewellery and premium engagement rings."
     }
   ],
+
 
   "sapphires": [
     {
