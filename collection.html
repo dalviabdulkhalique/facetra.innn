@@ -156,16 +156,17 @@
   <div class="footer-bottom">© 2026 FACETRA. All rights reserved.</div>
 </footer>
 
-<!-- ================= JS ================= -->
 <script>
 
+/*JS*/
+ 
 /* MOBILE NAV */
 const toggle=document.getElementById("navToggle");
 const mobileNav=document.getElementById("mobileNav");
 if(toggle) toggle.onclick=()=>mobileNav.classList.toggle("open");
 
-/* AUTO PREVIEW FROM MANIFEST */
-fetch("/facetra.in/assets/collection/manifest.json"),{cache:"no-cache"})
+/* AUTO PREVIEW FROM MANIFEST — GITHUB PAGES SAFE */
+fetch("/facetra.in/assets/collection/manifest.json",{cache:"no-cache"})
 .then(r=>r.json())
 .then(data=>{
 
@@ -184,10 +185,10 @@ fetch("/facetra.in/assets/collection/manifest.json"),{cache:"no-cache"})
     function show(){
       img.classList.add("fade");
       setTimeout(()=>{
-        img.src = list[i].img;
+        img.src = "/facetra.in/" + list[i].img;
         img.alt = list[i].title;
         title.textContent = list[i].title;
-        desc.textContent = list[i].short || list[i].desc;
+        desc.textContent = list[i].short;
         img.classList.remove("fade");
         i = (i+1) % list.length;
       },300);
@@ -200,8 +201,8 @@ fetch("/facetra.in/assets/collection/manifest.json"),{cache:"no-cache"})
 
 })
 .catch(err=>console.error("Manifest load error:",err));
-
 </script>
+
 
 </body>
 </html>
