@@ -2,16 +2,27 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>FACETRA Rubies Collection | Certified Natural Rubies</title>
+<title>Ruby Collection | FACETRA Certified Natural Rubies</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Explore FACETRA’s premium collection of certified natural Rubies including round, oval, Rubie, pear, marquise and fancy color Rubies.">
-<link rel="canonical" href="https://dalviabdulkhalique.github.io/facetra.in/collection/Rubies.html">
+<meta name="description" content="Explore FACETRA’s certified natural ruby collection including Burmese, Pigeon Blood, Mozambique and fancy cut rubies curated for fine jewellery and investment.">
+<link rel="canonical" href="https://dalviabdulkhalique.github.io/facetra.in/collection/rubies.html">
+
+<!-- OG -->
+<meta property="og:title" content="Ruby Collection | FACETRA">
+<meta property="og:description" content="Certified natural rubies curated for collectors and fine jewellery.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dalviabdulkhalique.github.io/facetra.in/collection/rubies.html">
+
+<!-- FAVICONS -->
+<link rel="icon" href="../assets/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
+<meta name="theme-color" content="#020805">
 
 <!-- FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-<!-- STYLES -->
+<!-- CSS -->
 <link rel="stylesheet" href="../style.css">
 <link rel="stylesheet" href="../collection.css">
 
@@ -20,9 +31,199 @@
 {
  "@context":"https://schema.org",
  "@type":"CollectionPage",
- "name":"FACETRA Diamonds Collection",
- "description":"Certified natural diamonds including round brilliant, oval, emerald, pear, marquise and fancy color diamonds.",
- "brand":{"@type":"Brand","name":"FACETRA"}
+ "name":"FACETRA Ruby Collection",
+ "description":"Certified natural rubies including Burmese, Mozambique and fancy cut varieties."
 }
 </script>
 </head>
+
+<body class="collection-page">
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <img src="../logo.png" alt="FACETRA Logo">
+      <div>
+        <div class="brand-name">FACETRA</div>
+        <div class="brand-tag">Gems • Diamonds • Stones</div>
+      </div>
+    </div>
+
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../collection.html" class="active">Collection</a>
+      <a href="../certification.html">Certification</a>
+      <a href="../why-facetra.html">Why FACETRA</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+
+    <div class="nav-toggle" id="navToggle">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="../index.html">Home</a>
+  <a href="../collection.html">Collection</a>
+  <a href="../certification.html">Certification</a>
+  <a href="../why-facetra.html">Why FACETRA</a>
+  <a href="../about.html">About</a>
+  <a href="../contact.html">Contact</a>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="collection-hero">
+  <div>
+    <h1 class="hero-title">RUBY COLLECTION</h1>
+    <p class="hero-description">
+      Vivid red natural rubies sourced from world-renowned origins, prized for rarity and value.
+    </p>
+  </div>
+</section>
+
+<!-- ================= GRID ================= -->
+<section class="collection-section">
+  <div class="collection-grid" id="grid"></div>
+</section>
+
+<!-- ================= MODAL ================= -->
+<div class="modal" id="modal">
+  <div class="modal-box">
+
+    <div class="modal-img">
+      <img id="mImg">
+    </div>
+
+    <div class="modal-info">
+      <h2 id="mTitle"></h2>
+
+      <p class="modal-meta" id="mMeta"></p>
+      <p class="modal-desc" id="mDesc"></p>
+
+      <div class="modal-actions">
+        <a id="waBtn" target="_blank" class="btn-gold-glow">WhatsApp Enquiry</a>
+        <button class="btn-outline-gold" id="closeBtn">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="lux-footer">
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="../logo.png" alt="FACETRA Logo">
+        <span>FACETRA</span>
+      </div>
+      <p>Premium gemstone trading house specializing in certified natural gemstones curated for collectors and investors.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="../index.html">Home</a>
+      <a href="../collection.html">Collection</a>
+      <a href="../certification.html">Certification</a>
+      <a href="../why-facetra.html">Why FACETRA</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <a class="contact-item" href="mailto:info@facetra.in">info@facetra.in</a>
+      <a class="contact-item" href="tel:+918055113448">+91 80551 13448</a>
+      <a class="contact-item" href="https://wa.me/918055113448" target="_blank">WhatsApp Chat</a>
+      <div class="contact-item">Mumbai, India</div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 FACETRA. All rights reserved.
+  </div>
+</footer>
+
+<!-- ================= JS ================= -->
+<script>
+const grid = document.getElementById("grid");
+const modal = document.getElementById("modal");
+const mImg = document.getElementById("mImg");
+const mTitle = document.getElementById("mTitle");
+const mMeta = document.getElementById("mMeta");
+const mDesc = document.getElementById("mDesc");
+const waBtn = document.getElementById("waBtn");
+
+document.getElementById("closeBtn").onclick = () => {
+  modal.classList.remove("open");
+  history.pushState("", document.title, window.location.pathname);
+};
+
+/* RUBY DETAILS */
+const extra = {
+ "ruby-pigeon-blood-oval-1":{cut:"Oval",shape:"Oval",variety:"Pigeon Blood Ruby",origin:"Myanmar",seo:"Pigeon Blood rubies from Myanmar display unmatched vivid red color with exceptional fluorescence, making them the most valuable ruby variety."},
+ "ruby-burmese-cushion-untreated-1":{cut:"Cushion",shape:"Cushion",variety:"Burmese Ruby",origin:"Myanmar",seo:"Burmese rubies are globally prized for saturated red hues and natural formation without heat treatment."},
+ "ruby-mozambique-cushion-1":{cut:"Cushion",shape:"Cushion",variety:"Mozambique Ruby",origin:"Mozambique",seo:"Mozambique rubies offer strong red tones and excellent clarity, making them ideal for fine jewellery."},
+ "ruby-madagascar-oval-1":{cut:"Oval",shape:"Oval",variety:"Madagascar Ruby",origin:"Madagascar",seo:"Madagascar rubies combine vivid red color with reliable availability, suitable for premium gemstone investment."},
+ "ruby-heart-cut-1":{cut:"Heart",shape:"Heart",variety:"Fancy Cut Ruby",origin:"Africa",seo:"Heart shaped rubies symbolize romance and rarity, specially cut for bespoke jewellery creations."},
+ "ruby-star-cabochon-1":{cut:"Cabochon",shape:"Cabochon",variety:"Star Ruby",origin:"Sri Lanka",seo:"Star rubies display rare six-ray asterism under light, highly sought after by collectors worldwide."}
+};
+
+/* LOAD */
+fetch("../assets/collection/manifest.json",{cache:"no-store"})
+.then(r=>r.json())
+.then(data=>{
+  data.rubies.forEach(item=>{
+    const c=document.createElement("div");
+    c.className="collection-card item-card";
+    c.innerHTML=`
+      <div class="auto-image-box"><img src="../${item.img}" alt="${item.title}"></div>
+      <h3>${item.title}</h3>
+      <p>${item.desc}</p>
+      <button class="btn-category">View Details</button>
+    `;
+    c.querySelector("button").onclick=()=>openModal(item, extra[item.slug]||{});
+    grid.appendChild(c);
+  });
+
+  const slug=location.hash.replace("#","");
+  if(slug){
+    const item=data.rubies.find(x=>x.slug===slug);
+    if(item) openModal(item, extra[item.slug]||{});
+  }
+});
+
+/* MODAL */
+function openModal(item,d){
+  location.hash=item.slug;
+  modal.classList.add("open");
+
+  mImg.src="../"+item.img;
+  mTitle.textContent=item.title;
+
+  mMeta.innerHTML=`
+    Cut: ${d.cut||"Natural"}<br>
+    Shape: ${d.shape||"Natural"}<br>
+    Variety: ${d.variety||"Ruby"}<br>
+    Origin: ${d.origin||"Natural"}
+  `;
+
+  mDesc.textContent=d.seo||item.desc;
+
+  const link="https://dalviabdulkhalique.github.io/facetra.in/collection/rubies.html#"+item.slug;
+
+  const msg=`Hi Facetra,
+Enquiry for ${item.title}
+${link}`;
+
+  waBtn.href="https://wa.me/918055113448?text="+encodeURIComponent(msg);
+}
+</script>
+
+</body>
+</html>
