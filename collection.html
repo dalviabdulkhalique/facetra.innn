@@ -79,7 +79,9 @@
 
 <!-- COLLECTION GRID -->
 <section class="collection-section">
-  <div class="collection-grid" id="collectionGrid">
+  <div class="collection-grid" id="collectionGrid"></div>
+</section>
+
 
     <!-- Cards injected by JS -->
 
@@ -114,63 +116,63 @@
   <div class="footer-bottom">© 2026 FACETRA. All rights reserved.</div>
 </footer>
 
+
+
+ 
 <script>
-/* MOBILE NAV */
-document.getElementById("navToggle").onclick=()=>{
-  document.getElementById("mobileNav").classList.toggle("open");
-};
+const grid = document.getElementById("collectionGrid");
 
-/* COLLECTION AUTO PREVIEW */
-fetch("assets/collection/manifest.json",{cache:"no-cache"})
-.then(r=>r.json())
-.then(data=>{
+fetch("assets/collection/manifest.json", { cache: "no-store" })
+  .then(res => {
+    if (!res.ok) throw new Error("Manifest not loaded");
+    return res.json();
+  })
+  .then(data => {
+    buildCategoryCard("Diamonds", "diamonds", "collection/diamonds.html");
+    buildCategoryCard("Sapphires", "sapphires", "collection/sapphires.html");
+    buildCategoryCard("Rubies", "rubies", "collection/rubies.html");
+    buildCategoryCard("Emeralds", "emeralds", "collection/emeralds.html");
 
-const categories=[
- {key:"diamonds",title:"Diamonds Collection",link:"collection/diamonds.html"},
- {key:"sapphires",title:"Sapphires Collection",link:"collection/sapphires.html"},
- {key:"rubies",title:"Rubies Collection",link:"collection/rubies.html"},
- {key:"emeralds",title:"Emeralds Collection",link:"collection/emeralds.html"}
-];
+    function buildCategoryCard(title, key, link) {
+      const list = data[key];
+      if (!list || !list.length) return;
 
-const grid=document.getElementById("collectionGrid");
+      const card = document.createElement("div");
+      card.className = "collection-card";
 
-categories.forEach(cat=>{
-  const list=data[cat.key];
-  if(!list||!list.length) return;
+      card.innerHTML = `
+        <h2>${title} Collection</h2>
+        <div class="auto-image-box">
+          <img src="${list[0].img}" alt="${list[0].title}">
+        </div>
+        <div class="stone-name">${list[0].title}</div>
+        <div class="stone-desc">${list[0].short}</div>
+        <a class="btn-category" href="${link}">View ${title} Collection</a>
+      `;
 
-  const card=document.createElement("div");
-  card.className="collection-card";
+      grid.appendChild(card);
 
-  card.innerHTML=`
-    <h2>${cat.title}</h2>
-    <div class="auto-image-box"><img></div>
-    <div class="stone-name"></div>
-    <div class="stone-desc"></div>
-    <a href="${cat.link}" class="btn-category">View Collection</a>
-  `;
+      let i = 1;
+      setInterval(() => {
+        const img = card.querySelector("img");
+        const name = card.querySelector(".stone-name");
+        const desc = card.querySelector(".stone-desc");
 
-  const img=card.querySelector("img");
-  const name=card.querySelector(".stone-name");
-  const desc=card.querySelector(".stone-desc");
+        img.classList.add("fade");
 
-  let i=0;
-  function rotate(){
-    img.classList.add("fade");
-    setTimeout(()=>{
-      img.src=list[i].img;
-      name.textContent=list[i].title;
-      desc.textContent=list[i].short || list[i].desc || "";
-      img.classList.remove("fade");
-      i=(i+1)%list.length;
-    },300);
-  }
-  rotate();
-  setInterval(rotate,4000);
-
-  grid.appendChild(card);
-});
-
-});
+        setTimeout(() => {
+          img.src = list[i].img;
+          name.textContent = list[i].title;
+          desc.textContent = list[i].short;
+          img.classList.remove("fade");
+          i = (i + 1) % list.length;
+        }, 350);
+      }, 3500);
+    }
+  })
+  .catch(err => {
+    console.error("COLLECTION LOAD ERROR:", err);
+  });
 </script>
 
 </body>
