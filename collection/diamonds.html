@@ -1,69 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
-<title>Natural Diamonds Collection | FACETRA Certified Diamonds</title>
-<meta name="description" content="Explore FACETRA's certified natural diamonds including round brilliant, oval, emerald cut, pear, marquise and radiant diamonds.">
+
+<title>Diamond Collection | FACETRA Certified Natural Diamonds</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore FACETRA’s premium collection of certified natural diamonds including Round Brilliant, Oval, Cushion, Emerald Cut and more.">
+
+<link rel="canonical" href="https://dalviabdulkhalique.github.io/facetra.in/collection/diamonds.html">
 
 <!-- OG -->
-<meta property="og:title" content="FACETRA Diamonds Collection">
-<meta property="og:description" content="Premium certified natural diamonds curated for collectors and investors.">
+<meta property="og:title" content="FACETRA Diamond Collection">
+<meta property="og:description" content="Certified natural diamonds curated for fine jewellery and collectors.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dalviabdulkhalique.github.io/facetra.in/collection/diamonds.html">
 
-<!-- Favicons -->
-<link rel="icon" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
-<link rel="icon" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+<!-- FAVICONS -->
+<link rel="icon" href="../assets/favicon/favicon-32x32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
+<meta name="theme-color" content="#050806">
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-<!-- Styles -->
+<!-- CSS -->
 <link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../collection.css">
 
-<!-- Schema -->
+<!-- SCHEMA -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "FACETRA Natural Diamonds Collection",
-  "description": "Certified natural diamonds curated for collectors and jewellers.",
-  "brand": {
-    "@type": "Organization",
-    "name": "FACETRA"
-  }
+ "@context":"https://schema.org",
+ "@type":"CollectionPage",
+ "name":"FACETRA Diamond Collection",
+ "description":"Certified natural diamonds including Round Brilliant, Oval, Cushion, Emerald Cut and fancy shapes.",
+ "url":"https://dalviabdulkhalique.github.io/facetra.in/collection/diamonds.html"
 }
 </script>
-
 </head>
 
-<body class="page">
+<body class="page category-page">
 
 <!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="header-inner">
 
-    <a class="brand" href="../index.html">
+    <div class="brand">
       <img src="../logo.png" alt="FACETRA Logo">
       <div>
         <div class="brand-name">FACETRA</div>
         <div class="brand-tag">Gems • Diamonds • Stones</div>
       </div>
-    </a>
+    </div>
 
     <nav class="main-nav">
       <a href="../index.html">Home</a>
       <a href="../collection.html" class="active">Collection</a>
       <a href="../certification.html">Certification</a>
-      <a href="../why-facetra.html">Why Facetra</a>
+      <a href="../why-facetra.html">Why FACETRA</a>
       <a href="../about.html">About</a>
       <a href="../contact.html">Contact</a>
     </nav>
 
-    <div class="nav-toggle" onclick="toggleMenu()">
+    <div class="nav-toggle" id="navToggle">
       <span></span><span></span><span></span>
     </div>
 
@@ -73,24 +73,27 @@
 <div class="mobile-nav" id="mobileNav">
   <a href="../index.html">Home</a>
   <a href="../collection.html">Collection</a>
+  <a href="../certification.html">Certification</a>
+  <a href="../why-facetra.html">Why FACETRA</a>
+  <a href="../about.html">About</a>
   <a href="../contact.html">Contact</a>
 </div>
 
 <!-- ================= HERO ================= -->
-<section class="hero-section">
-  <div class="hero-inner">
-    <h2 class="hero-title">Natural Diamonds</h2>
+<section class="collection-hero">
+  <div>
+    <h1 class="hero-title">DIAMOND COLLECTION</h1>
     <p class="hero-description">
-      Precision cut certified natural diamonds selected for brilliance, purity and long-term value.
+      Premium certified natural diamonds curated for fine jewellery and investment.
     </p>
   </div>
 </section>
 
-<div class="lux-divider"></div>
-
-<!-- ================= DIAMONDS GRID ================= -->
+<!-- ================= GRID ================= -->
 <section class="collection-section">
-  <div class="collection-grid" id="diamondGrid"></div>
+
+  <div class="collection-grid" id="itemsGrid"></div>
+
 </section>
 
 <!-- ================= MODAL ================= -->
@@ -98,17 +101,17 @@
   <div class="modal-box">
 
     <div class="modal-left">
-      <img id="modalImg" src="" alt="">
+      <img id="modalImg" alt="">
     </div>
 
     <div class="modal-right">
-      <h3 class="modal-title" id="modalTitle"></h3>
-      <p class="modal-meta" id="modalMeta"></p>
-      <p class="modal-desc" id="modalDesc"></p>
+      <div class="modal-title" id="modalTitle"></div>
+      <div class="modal-meta" id="modalMeta"></div>
+      <div class="modal-desc" id="modalDesc"></div>
 
       <div class="modal-actions">
         <a id="waBtn" class="btn-primary" target="_blank">WhatsApp Enquiry</a>
-        <a href="../contact.html" class="btn-ghost">Contact FACETRA</a>
+        <button class="btn-ghost" id="closeModal">Close</button>
       </div>
     </div>
 
@@ -117,14 +120,18 @@
 
 <!-- ================= FOOTER ================= -->
 <footer class="lux-footer">
+
   <div class="footer-inner">
 
     <div class="footer-brand">
       <div class="footer-logo">
-        <img src="../logo.png">
+        <img src="../logo.png" alt="FACETRA Logo">
         <span>FACETRA</span>
       </div>
-      <p>Premium gemstone trading house specializing in certified natural gemstones.</p>
+      <p>
+        Premium gemstone trading house specializing in certified natural gemstones curated
+        for collectors, jewelers and long-term investors.
+      </p>
     </div>
 
     <div class="footer-links">
@@ -136,83 +143,86 @@
 
     <div class="footer-contact">
       <h4>Contact</h4>
-      <div class="contact-item">info@facetra.in</div>
-      <div class="contact-item">+91 80551 13448</div>
-      <div class="contact-item">Mumbai, India</div>
+      <a class="contact-item" href="mailto:info@facetra.in"><span>info@facetra.in</span></a>
+      <a class="contact-item" href="tel:+918055113448"><span>+91 80551 13448</span></a>
+      <a class="contact-item" href="https://wa.me/918055113448" target="_blank"><span>WhatsApp Chat</span></a>
     </div>
 
   </div>
-  <div class="footer-bottom">© 2026 FACETRA</div>
+
+  <div class="footer-bottom">
+    © 2026 FACETRA. All rights reserved.
+  </div>
+
 </footer>
 
 <!-- ================= JS ================= -->
 <script>
 
-function toggleMenu(){
-  document.getElementById('mobileNav').classList.toggle('open');
-}
+/* MOBILE NAV */
+const toggle=document.getElementById("navToggle");
+const mobileNav=document.getElementById("mobileNav");
+if(toggle) toggle.onclick=()=>mobileNav.classList.toggle("open");
 
-const grid = document.getElementById("diamondGrid");
-const modal = document.getElementById("modal");
+/* LOAD DIAMONDS FROM MANIFEST */
+fetch("../assets/collection/manifest.json",{cache:"no-store"})
+.then(r=>r.json())
+.then(data=>{
 
-fetch("../assets/collection/manifest.json")
-.then(res => res.json())
-.then(data => {
+  const grid = document.getElementById("itemsGrid");
+  const list = data.diamonds;
 
-  data.diamonds.forEach(item => {
+  list.forEach(item=>{
 
     const card = document.createElement("div");
-    card.className = "collection-card item-card";
+    card.className = "item-card";
 
-    const thumb = document.createElement("div");
-    thumb.className = "item-thumb";
-    thumb.style.aspectRatio = "1/1";
-
-    const img = document.createElement("img");
-    img.src = "../" + item.img;
-    img.alt = item.title;
-    thumb.appendChild(img);
-
-    const title = document.createElement("div");
-    title.className = "item-title";
-    title.textContent = item.title;
-
-    const desc = document.createElement("div");
-    desc.className = "item-desc";
-    desc.textContent = item.desc;
-
-    card.appendChild(thumb);
-    card.appendChild(title);
-    card.appendChild(desc);
+    card.innerHTML = `
+      <div class="item-thumb">
+        <img src="../${item.img}" alt="${item.title}">
+      </div>
+      <div class="item-title">${item.title}</div>
+      <div class="item-desc">${item.desc}</div>
+    `;
 
     card.onclick = () => openModal(item);
 
     grid.appendChild(card);
-
   });
 
 });
 
+/* MODAL */
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modalImg");
+const modalTitle = document.getElementById("modalTitle");
+const modalMeta = document.getElementById("modalMeta");
+const modalDesc = document.getElementById("modalDesc");
+const waBtn = document.getElementById("waBtn");
+
 function openModal(item){
 
-  document.getElementById("modalImg").src = "../" + item.img;
-  document.getElementById("modalTitle").textContent = item.title;
-  document.getElementById("modalMeta").textContent = item.desc;
-  document.getElementById("modalDesc").textContent =
-    "Certified natural diamond curated by FACETRA for jewellery and long-term investment applications.";
+  modalImg.src = "../" + item.img;
+  modalTitle.textContent = item.title;
+  modalMeta.textContent = item.desc;
 
-  document.getElementById("waBtn").href =
-    "https://wa.me/918055113448?text=Hello%20FACETRA,%20I%20am%20interested%20in%20" +
-    encodeURIComponent(item.title);
+  modalDesc.textContent =
+    "This certified natural diamond is carefully selected for brilliance, symmetry and long-term value. Suitable for fine jewellery and private collectors.";
+
+  const pageUrl = window.location.href;
+  const msg =
+`Hello FACETRA,
+I am interested in ${item.title}.
+Link: ${pageUrl}`;
+
+  waBtn.href = "https://wa.me/918055113448?text=" + encodeURIComponent(msg);
 
   modal.classList.add("open");
 }
 
-modal.onclick = e => {
-  if(e.target === modal){
-    modal.classList.remove("open");
-  }
-}
+/* CLOSE */
+document.getElementById("closeModal").onclick = ()=>modal.classList.remove("open");
+modal.onclick = e=>{ if(e.target===modal) modal.classList.remove("open"); };
 
 </script>
 
