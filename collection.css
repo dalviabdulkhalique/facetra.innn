@@ -1,7 +1,7 @@
 /* ================= HERO ================= */
 
 .collection-hero{
-  padding:120px 20px 80px;
+  padding:110px 20px 90px;
   text-align:center;
   background:radial-gradient(circle at top,#141f1a,#050806);
 }
@@ -14,172 +14,118 @@
 }
 
 .collection-hero p{
-  max-width:720px;
-  margin:auto;
+  max-width:760px;
+  margin:0 auto;
   color:#d7dbd8;
   line-height:1.8;
+  font-size:15px;
 }
 
-/* ================= GRID ================= */
+/* ================= COLLECTION GRID ================= */
 
-.gem-list-section{
-  padding:100px 30px;
+.collection-section{
+  padding:100px 30px 120px;
 }
 
-.gem-grid{
+.collection-grid{
   max-width:1200px;
-  margin:auto;
+  margin:0 auto;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:40px;
 }
 
-.gem-card{
+/* ================= CATEGORY CARD ================= */
+
+.collection-card{
   background:linear-gradient(180deg,#0c1310,#070b09);
   border:1px solid rgba(201,162,77,.35);
-  padding:26px;
+  padding:26px 24px 32px;
   text-align:center;
   transition:.4s;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 
-.gem-card:hover{
+.collection-card:hover{
   transform:translateY(-8px);
-  box-shadow:0 0 26px rgba(201,162,77,.35);
+  box-shadow:0 0 28px rgba(201,162,77,.35);
 }
 
-.gem-img{
+.collection-card h2{
+  font-family:Cinzel,serif;
+  color:var(--gold2);
+  font-size:20px;
+  margin-bottom:14px;
+}
+
+/* ================= IMAGE ================= */
+
+.auto-image-box{
+  width:100%;
   aspect-ratio:1/1;
   display:flex;
   align-items:center;
   justify-content:center;
-  margin-bottom:18px;
+  margin-bottom:14px;
 }
 
-.gem-img img{
+.auto-image-box img{
   max-width:100%;
   max-height:100%;
   object-fit:contain;
+  transition:.4s;
 }
 
-.gem-card h3{
-  font-family:Cinzel,serif;
-  color:var(--gold2);
-  font-size:18px;
-  margin-bottom:6px;
+/* ================= TEXT ================= */
+
+.stone-name{
+  font-family:Inter,sans-serif;
+  font-size:14px;
+  color:#f1f1f1;
+  margin-bottom:4px;
 }
 
-.gem-card p{
+.stone-desc{
+  font-family:Inter,sans-serif;
   font-size:13px;
   color:#cfd4d1;
   line-height:1.6;
-  margin-bottom:14px;
+  margin-bottom:18px;
 }
 
 /* ================= BUTTON ================= */
 
-.btn-view{
-  background:none;
+.btn-category{
+  margin-top:auto;
+  text-decoration:none;
   border:1px solid var(--gold2);
   color:var(--gold2);
-  padding:10px 22px;
-  cursor:pointer;
+  padding:11px 24px;
   transition:.3s;
-}
-
-.btn-view:hover{
-  background:rgba(201,162,77,.15);
-}
-
-/* ================= MODAL ================= */
-
-.modal-overlay{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.75);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  opacity:0;
-  pointer-events:none;
-  transition:.3s;
-  z-index:9999;
-}
-
-.modal-overlay.show{
-  opacity:1;
-  pointer-events:auto;
-}
-
-.modal-box{
-  background:linear-gradient(180deg,#0c1310,#070b09);
-  border:1px solid rgba(201,162,77,.4);
-  max-width:900px;
-  width:90%;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
-  padding:30px;
-  position:relative;
-}
-
-.modal-img img{
-  width:100%;
-  aspect-ratio:1/1;
-  object-fit:contain;
-}
-
-.modal-content h2{
-  font-family:Cinzel,serif;
-  color:var(--gold2);
-  margin-bottom:12px;
-}
-
-.modal-fields div{
   font-size:13px;
-  color:#d7dbd8;
-  margin-bottom:6px;
+  letter-spacing:.6px;
 }
 
-.modal-content p{
-  margin-top:12px;
-  font-size:14px;
-  line-height:1.8;
-  color:#cfd4d1;
-}
-
-.btn-wa{
-  display:inline-block;
-  margin-top:18px;
-  background:linear-gradient(135deg,var(--gold1),var(--gold2));
-  color:#111;
-  padding:12px 26px;
-  text-decoration:none;
-}
-
-.modal-close{
-  position:absolute;
-  top:10px;
-  right:14px;
-  background:none;
-  border:none;
-  font-size:26px;
-  color:var(--gold2);
-  cursor:pointer;
+.btn-category:hover{
+  background:rgba(201,162,77,.15);
 }
 
 /* ================= MOBILE ================= */
 
-@media(max-width:800px){
-
-  .modal-box{
-    grid-template-columns:1fr;
-  }
+@media(max-width:768px){
 
   .collection-hero h1{
     font-size:30px;
   }
 
-  .gem-list-section{
-    padding:70px 20px;
+  .collection-section{
+    padding:70px 18px 90px;
   }
+
+  .collection-card{
+    padding:22px 18px 28px;
+  }
+
 }
