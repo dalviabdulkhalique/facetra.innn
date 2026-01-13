@@ -2,44 +2,29 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Diamond Collection | FACETRA Certified Natural Diamonds</title>
+<title>Diamond Collection | FACETRA</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Explore FACETRA’s certified natural diamond collection including Round Brilliant, Cushion, Radiant, Fancy Yellow and Champagne diamonds curated for fine jewellery and investment.">
+<meta name="description" content="Explore FACETRA’s certified natural diamond collection including round, oval, emerald, cushion and radiant cut diamonds curated for luxury jewellery and investment.">
+
 <link rel="canonical" href="https://dalviabdulkhalique.github.io/facetra.in/collection/diamonds.html">
 
-<!-- OG -->
-<meta property="og:title" content="Diamond Collection | FACETRA">
+<meta property="og:title" content="FACETRA Diamond Collection">
 <meta property="og:description" content="Certified natural diamonds curated for collectors and fine jewellery.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://dalviabdulkhalique.github.io/facetra.in/collection/diamonds.html">
 
-<!-- FAVICONS -->
-<link rel="icon" href="../assets/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" href="../assets/favicon/favicon-32x32.png">
 <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
-<meta name="theme-color" content="#020805">
 
-<!-- FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-<!-- CSS -->
 <link rel="stylesheet" href="../style.css">
 <link rel="stylesheet" href="../collection.css">
-
-<!-- SCHEMA -->
-<script type="application/ld+json">
-{
- "@context":"https://schema.org",
- "@type":"CollectionPage",
- "name":"FACETRA Diamond Collection",
- "description":"Certified natural diamonds including brilliant, cushion and fancy color varieties."
-}
-</script>
 </head>
 
-<body class="collection-page">
+<body class="page">
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER (same as site) -->
 <header class="site-header">
   <div class="header-inner">
     <div class="brand">
@@ -74,153 +59,115 @@
   <a href="../contact.html">Contact</a>
 </div>
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 <section class="collection-hero">
-  <div>
-    <h1 class="hero-title">DIAMOND COLLECTION</h1>
-    <p class="hero-description">
-      Precision cut natural diamonds selected for brilliance, symmetry and lasting value.
-    </p>
-  </div>
+  <h1 class="hero-title">DIAMOND COLLECTION</h1>
+  <p class="hero-description">Certified natural diamonds curated for collectors and fine jewellery.</p>
 </section>
 
-<!-- ================= GRID ================= -->
-<section class="collection-section">
-  <div class="collection-grid" id="grid"></div>
+<!-- GRID -->
+<section class="gem-section">
+  <div class="gem-grid" id="diamondGrid"></div>
 </section>
 
-<!-- ================= MODAL ================= -->
-<div class="modal" id="modal">
+<!-- MODAL -->
+<div id="gemModal" class="modal-overlay">
   <div class="modal-box">
 
-    <div class="modal-img">
-      <img id="mImg">
-    </div>
+    <button class="modal-close" id="modalClose">×</button>
 
-    <div class="modal-info">
-      <h2 id="mTitle"></h2>
+    <div class="modal-content">
+      <div class="modal-image">
+        <img id="modalImg">
+      </div>
 
-      <p class="modal-meta" id="mMeta"></p>
-      <p class="modal-desc" id="mDesc"></p>
+      <div class="modal-info">
+        <h2 id="modalTitle"></h2>
 
-      <div class="modal-actions">
-        <a id="waBtn" target="_blank" class="btn-gold-glow">WhatsApp Enquiry</a>
-        <button class="btn-outline-gold" id="closeBtn">Close</button>
+        <div class="modal-fields" id="modalFields"></div>
+
+        <p id="modalDesc" class="modal-desc"></p>
+
+        <div class="modal-actions">
+          <a id="whatsappBtn" target="_blank" class="btn-whatsapp">WhatsApp Enquiry</a>
+          <button class="btn-close" id="modalClose2">Close</button>
+        </div>
       </div>
     </div>
 
   </div>
 </div>
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 <footer class="lux-footer">
-  <div class="footer-inner">
-
-    <div class="footer-brand">
-      <div class="footer-logo">
-        <img src="../logo.png" alt="FACETRA Logo">
-        <span>FACETRA</span>
-      </div>
-      <p>Premium gemstone trading house specializing in certified natural gemstones curated for collectors and investors.</p>
-    </div>
-
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <a href="../index.html">Home</a>
-      <a href="../collection.html">Collection</a>
-      <a href="../certification.html">Certification</a>
-      <a href="../why-facetra.html">Why FACETRA</a>
-      <a href="../about.html">About</a>
-      <a href="../contact.html">Contact</a>
-    </div>
-
-    <div class="footer-contact">
-      <h4>Contact</h4>
-      <a class="contact-item" href="mailto:info@facetra.in">info@facetra.in</a>
-      <a class="contact-item" href="tel:+918055113448">+91 80551 13448</a>
-      <a class="contact-item" href="https://wa.me/918055113448" target="_blank">WhatsApp Chat</a>
-      <div class="contact-item">Mumbai, India</div>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    © 2026 FACETRA. All rights reserved.
-  </div>
+  <div class="footer-bottom">© 2026 FACETRA. All rights reserved.</div>
 </footer>
 
-<!-- ================= JS ================= -->
+<!-- JS -->
 <script>
-const grid = document.getElementById("grid");
-const modal = document.getElementById("modal");
-const mImg = document.getElementById("mImg");
-const mTitle = document.getElementById("mTitle");
-const mMeta = document.getElementById("mMeta");
-const mDesc = document.getElementById("mDesc");
-const waBtn = document.getElementById("waBtn");
+const toggle=document.getElementById("navToggle");
+const mobileNav=document.getElementById("mobileNav");
+if(toggle) toggle.onclick=()=>mobileNav.classList.toggle("open");
 
-document.getElementById("closeBtn").onclick = () => {
-  modal.classList.remove("open");
-  history.pushState("", document.title, window.location.pathname);
-};
+let manifestData=null;
 
-/* DIAMOND DETAILS */
-const extra = {
- "diamond-round-brilliant-1":{cut:"Brilliant",shape:"Round",variety:"Colorless Diamond",origin:"Natural",seo:"Round brilliant diamonds offer maximum sparkle with ideal light return, making them the most popular choice for engagement rings."},
- "diamond-cushion-cut-1":{cut:"Brilliant",shape:"Cushion",variety:"Colorless Diamond",origin:"Natural",seo:"Cushion cut diamonds combine soft curves with exceptional brilliance, delivering a classic yet romantic appearance."},
- "diamond-radiant-cut-1":{cut:"Mixed",shape:"Radiant",variety:"Colorless Diamond",origin:"Natural",seo:"Radiant diamonds blend brilliance and durability, ideal for long-term gemstone investment and statement jewellery."},
- "diamond-fancy-yellow-cushion-1":{cut:"Brilliant",shape:"Cushion",variety:"Fancy Yellow Diamond",origin:"Natural",seo:"Fancy yellow diamonds display vivid sunshine hues, highly valued for rare natural color saturation."},
- "diamond-brown-champagne-1":{cut:"Brilliant",shape:"Round",variety:"Champagne Diamond",origin:"Natural",seo:"Champagne diamonds feature warm golden-brown tones, perfect for luxury contemporary jewellery designs."}
-};
-
-/* LOAD */
 fetch("../assets/collection/manifest.json",{cache:"no-store"})
 .then(r=>r.json())
 .then(data=>{
-  data.diamonds.forEach(item=>{
-    const c=document.createElement("div");
-    c.className="collection-card item-card";
-    c.innerHTML=`
-      <div class="auto-image-box"><img src="../${item.img}" alt="${item.title}"></div>
+  manifestData=data;
+  buildGrid(data.diamonds);
+});
+
+function buildGrid(list){
+  const grid=document.getElementById("diamondGrid");
+  list.forEach(item=>{
+    const card=document.createElement("div");
+    card.className="gem-card";
+    card.innerHTML=`
+      <img src="../${item.img}" alt="${item.title}">
       <h3>${item.title}</h3>
       <p>${item.desc}</p>
-      <button class="btn-category">View Details</button>
+      <button class="view-btn" data-slug="${item.slug}">View Details</button>
     `;
-    c.querySelector("button").onclick=()=>openModal(item, extra[item.slug]||{});
-    grid.appendChild(c);
+    grid.appendChild(card);
   });
+}
 
-  const slug=location.hash.replace("#","");
-  if(slug){
-    const item=data.diamonds.find(x=>x.slug===slug);
-    if(item) openModal(item, extra[item.slug]||{});
+document.addEventListener("click",e=>{
+  if(e.target.classList.contains("view-btn")){
+    openModal(e.target.dataset.slug);
   }
 });
 
-/* MODAL */
-function openModal(item,d){
-  location.hash=item.slug;
-  modal.classList.add("open");
+function openModal(slug){
+  const item=manifestData.diamonds.find(d=>d.slug===slug);
+  if(!item) return;
 
-  mImg.src="../"+item.img;
-  mTitle.textContent=item.title;
+  modalImg.src="../"+item.img;
+  modalTitle.textContent=item.title;
 
-  mMeta.innerHTML=`
-    Cut: ${d.cut||"Natural"}<br>
-    Shape: ${d.shape||"Natural"}<br>
-    Variety: ${d.variety||"Diamond"}<br>
-    Origin: ${d.origin||"Natural"}
+  modalFields.innerHTML=`
+    <div>Cut: ${item.cut}</div>
+    <div>Shape: ${item.shape}</div>
+    <div>Variety: ${item.variety}</div>
+    <div>Origin: ${item.origin}</div>
   `;
 
-  mDesc.textContent=d.seo||item.desc;
+  modalDesc.textContent=item.longDesc;
 
-  const link="https://dalviabdulkhalique.github.io/facetra.in/collection/diamonds.html#"+item.slug;
+  const pageLink=location.origin+location.pathname+"#"+item.slug;
+  const msg=`Hi Facetra,%0AEnquiry for ${item.title}%0A${pageLink}`;
 
-  const msg=`Hi Facetra,
-Enquiry for ${item.title}
-${link}`;
+  whatsappBtn.href="https://wa.me/918055113448?text="+msg;
 
-  waBtn.href="https://wa.me/918055113448?text="+encodeURIComponent(msg);
+  gemModal.classList.add("active");
+}
+
+modalClose.onclick=closeModal;
+modalClose2.onclick=closeModal;
+
+function closeModal(){
+  gemModal.classList.remove("active");
 }
 </script>
 
