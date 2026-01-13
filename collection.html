@@ -165,7 +165,7 @@ const mobileNav=document.getElementById("mobileNav");
 if(toggle) toggle.onclick=()=>mobileNav.classList.toggle("open");
 
 /* AUTO PREVIEW FROM MANIFEST */
-fetch("assets/collection/manifest.json",{cache:"no-cache"})
+fetch("/facetra.in/assets/collection/manifest.json"),{cache:"no-cache"})
 .then(r=>r.json())
 .then(data=>{
 
