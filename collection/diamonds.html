@@ -5,7 +5,7 @@
 <title>Diamond Collection | FACETRA Certified Natural Diamonds</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Explore FACETRA’s certified natural diamond collection including round, oval, cushion, emerald, princess and radiant cuts curated for luxury jewellery and long-term investment.">
+<meta name="description" content="Explore FACETRA’s certified natural diamond collection including Round Brilliant, Cushion, Radiant, Fancy Yellow and Champagne diamonds curated for fine jewellery and investment.">
 <link rel="canonical" href="https://dalviabdulkhalique.github.io/facetra.in/collection/diamonds.html">
 
 <!-- OG -->
@@ -32,7 +32,7 @@
  "@context":"https://schema.org",
  "@type":"CollectionPage",
  "name":"FACETRA Diamond Collection",
- "description":"Certified natural diamonds including round, oval, emerald, cushion and fancy cuts."
+ "description":"Certified natural diamonds including brilliant, cushion and fancy color varieties."
 }
 </script>
 </head>
@@ -79,7 +79,7 @@
   <div>
     <h1 class="hero-title">DIAMOND COLLECTION</h1>
     <p class="hero-description">
-      Certified natural diamonds selected for brilliance, symmetry and long-term value.
+      Precision cut natural diamonds selected for brilliance, symmetry and lasting value.
     </p>
   </div>
 </section>
@@ -159,48 +159,21 @@ const mMeta = document.getElementById("mMeta");
 const mDesc = document.getElementById("mDesc");
 const waBtn = document.getElementById("waBtn");
 
-document.getElementById("closeBtn").onclick=()=>{
+document.getElementById("closeBtn").onclick = () => {
   modal.classList.remove("open");
-  history.pushState("",document.title,window.location.pathname);
+  history.pushState("", document.title, window.location.pathname);
 };
 
-/* extra SEO data */
+/* DIAMOND DETAILS */
 const extra = {
- "diamond-round-brilliant-1":{
-   cut:"Brilliant", shape:"Round", variety:"Colorless Diamond", origin:"Natural",
-   seo:"Round Brilliant diamonds are the most popular cut, offering maximum sparkle and fire. Ideal for engagement rings and premium jewellery."
- },
- "diamond-oval-cut-1":{
-   cut:"Brilliant", shape:"Oval", variety:"Colorless Diamond", origin:"Natural",
-   seo:"Oval diamonds provide elegant elongated brilliance, making them perfect for luxury rings and statement pendants."
- },
- "diamond-emerald-cut-1":{
-   cut:"Step Cut", shape:"Emerald", variety:"Colorless Diamond", origin:"Natural",
-   seo:"Emerald cut diamonds highlight clarity and symmetry with long clean facets, ideal for refined jewellery lovers."
- },
- "diamond-pear-cut-1":{
-   cut:"Brilliant", shape:"Pear", variety:"Colorless Diamond", origin:"Natural",
-   seo:"Pear shaped diamonds combine brilliance with graceful tear-drop elegance, perfect for modern luxury designs."
- },
- "diamond-marquise-cut-1":{
-   cut:"Brilliant", shape:"Marquise", variety:"Colorless Diamond", origin:"Natural",
-   seo:"Marquise diamonds maximize visual size and provide royal vintage charm with sharp brilliance."
- },
- "diamond-princess-cut-1":{
-   cut:"Brilliant", shape:"Square", variety:"Colorless Diamond", origin:"Natural",
-   seo:"Princess cut diamonds offer bold modern brilliance with sharp symmetry, perfect for contemporary jewellery."
- },
- "diamond-radiant-cut-1":{
-   cut:"Mixed", shape:"Radiant", variety:"Colorless Diamond", origin:"Natural",
-   seo:"Radiant diamonds combine sparkle and durability, making them ideal for long-term gemstone investment."
- },
- "diamond-cushion-cut-1":{
-   cut:"Brilliant", shape:"Cushion", variety:"Colorless Diamond", origin:"Natural",
-   seo:"Cushion cut diamonds deliver soft romantic glow with deep fire, blending vintage charm with modern sparkle."
- }
+ "diamond-round-brilliant-1":{cut:"Brilliant",shape:"Round",variety:"Colorless Diamond",origin:"Natural",seo:"Round brilliant diamonds offer maximum sparkle with ideal light return, making them the most popular choice for engagement rings."},
+ "diamond-cushion-cut-1":{cut:"Brilliant",shape:"Cushion",variety:"Colorless Diamond",origin:"Natural",seo:"Cushion cut diamonds combine soft curves with exceptional brilliance, delivering a classic yet romantic appearance."},
+ "diamond-radiant-cut-1":{cut:"Mixed",shape:"Radiant",variety:"Colorless Diamond",origin:"Natural",seo:"Radiant diamonds blend brilliance and durability, ideal for long-term gemstone investment and statement jewellery."},
+ "diamond-fancy-yellow-cushion-1":{cut:"Brilliant",shape:"Cushion",variety:"Fancy Yellow Diamond",origin:"Natural",seo:"Fancy yellow diamonds display vivid sunshine hues, highly valued for rare natural color saturation."},
+ "diamond-brown-champagne-1":{cut:"Brilliant",shape:"Round",variety:"Champagne Diamond",origin:"Natural",seo:"Champagne diamonds feature warm golden-brown tones, perfect for luxury contemporary jewellery designs."}
 };
 
-/* LOAD DATA */
+/* LOAD */
 fetch("../assets/collection/manifest.json",{cache:"no-store"})
 .then(r=>r.json())
 .then(data=>{
@@ -213,7 +186,7 @@ fetch("../assets/collection/manifest.json",{cache:"no-store"})
       <p>${item.desc}</p>
       <button class="btn-category">View Details</button>
     `;
-    c.onclick=()=>openModal(item, extra[item.slug]||{});
+    c.querySelector("button").onclick=()=>openModal(item, extra[item.slug]||{});
     grid.appendChild(c);
   });
 
@@ -233,10 +206,10 @@ function openModal(item,d){
   mTitle.textContent=item.title;
 
   mMeta.innerHTML=`
-    <strong>Cut:</strong> ${d.cut}<br>
-    <strong>Shape:</strong> ${d.shape}<br>
-    <strong>Variety:</strong> ${d.variety}<br>
-    <strong>Origin:</strong> ${d.origin}
+    Cut: ${d.cut||"Natural"}<br>
+    Shape: ${d.shape||"Natural"}<br>
+    Variety: ${d.variety||"Diamond"}<br>
+    Origin: ${d.origin||"Natural"}
   `;
 
   mDesc.textContent=d.seo||item.desc;
