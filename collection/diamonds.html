@@ -2,29 +2,50 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Diamond Collection | FACETRA</title>
+<title>FACETRA Diamonds Collection | Certified Natural Diamonds</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Explore certified natural diamonds including Round, Oval, Emerald, Pear and Fancy Color diamonds curated by FACETRA for fine jewellery and investment.">
+<meta name="description" content="Explore FACETRA’s certified natural diamond collection including round, oval, emerald, pear, marquise and fancy color diamonds.">
+
 <link rel="canonical" href="https://dalviabdulkhalique.github.io/facetra.in/collection/diamonds.html">
 
-<link rel="icon" href="../assets/favicon/favicon-32x32.png">
+<!-- OG -->
+<meta property="og:title" content="FACETRA Diamonds Collection">
+<meta property="og:description" content="Premium certified natural diamonds curated for collectors and fine jewellery.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dalviabdulkhalique.github.io/facetra.in/collection/diamonds.html">
+
+<!-- FAVICONS -->
+<link rel="icon" href="../assets/favicon/favicon-32x32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
+<meta name="theme-color" content="#020805">
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
+<!-- CSS -->
 <link rel="stylesheet" href="../style.css">
 <link rel="stylesheet" href="../collection.css">
 
+<!-- SCHEMA -->
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"CollectionPage",
+ "name":"FACETRA Diamonds Collection",
+ "description":"Certified natural diamonds including round brilliant, oval, emerald, pear, marquise and fancy color diamonds.",
+ "brand":{"@type":"Brand","name":"FACETRA"}
+}
+</script>
 </head>
 
-<body class="page">
+<body>
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 <header class="site-header">
   <div class="header-inner">
     <div class="brand">
-      <img src="../logo.png" alt="FACETRA">
+      <img src="../logo.png" alt="FACETRA Logo">
       <div>
         <div class="brand-name">FACETRA</div>
         <div class="brand-tag">Gems • Diamonds • Stones</div>
@@ -39,110 +60,129 @@
       <a href="../about.html">About</a>
       <a href="../contact.html">Contact</a>
     </nav>
+
+    <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="../index.html">Home</a>
+  <a href="../collection.html">Collection</a>
+  <a href="../contact.html">Contact</a>
+</div>
+
+<!-- HERO -->
 <section class="collection-hero">
-  <h1>Diamond Collection</h1>
-  <p>Certified natural diamonds curated for collectors and fine jewellery.</p>
+  <div>
+    <h1>DIAMOND COLLECTION</h1>
+    <p>Certified natural diamonds curated for collectors and fine jewellery.</p>
+  </div>
 </section>
 
-<!-- ================= GRID ================= -->
-<section class="gem-list-section">
-  <div class="gem-grid" id="diamondGrid"></div>
+<!-- GRID -->
+<section class="category-page">
+  <div class="items-grid" id="diamondGrid"></div>
 </section>
 
-<!-- ================= MODAL ================= -->
-<div class="modal-overlay" id="gemModal">
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
   <div class="modal-box">
-    <button class="modal-close" id="closeModal">×</button>
 
-    <div class="modal-img">
-      <img id="modalImg" src="" alt="">
+    <div class="modal-left">
+      <img id="modalImg" src="">
     </div>
 
-    <div class="modal-content">
-      <h2 id="modalTitle"></h2>
+    <div>
+      <div class="modal-title" id="modalTitle"></div>
 
-      <div class="modal-fields" id="modalFields"></div>
+      <div class="modal-meta" id="modalMeta"></div>
 
-      <p id="modalDesc"></p>
+      <div class="modal-desc" id="modalDesc"></div>
 
-      <a id="waBtn" class="btn-wa" target="_blank">WhatsApp Enquiry</a>
+      <div class="modal-actions">
+        <a id="waBtn" class="btn-primary" target="_blank">WhatsApp Enquiry</a>
+        <a href="../contact.html" class="btn-ghost">Contact FACETRA</a>
+      </div>
     </div>
+
+    <button class="modal-close" id="modalClose">✕</button>
   </div>
 </div>
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 <footer class="lux-footer">
   <div class="footer-bottom">© 2026 FACETRA. All rights reserved.</div>
 </footer>
 
-<!-- ================= JS ================= -->
+<!-- JS -->
 <script>
-const grid = document.getElementById("diamondGrid");
-const modal = document.getElementById("gemModal");
 
-const modalImg = document.getElementById("modalImg");
-const modalTitle = document.getElementById("modalTitle");
-const modalDesc = document.getElementById("modalDesc");
-const modalFields = document.getElementById("modalFields");
-const waBtn = document.getElementById("waBtn");
+/* MOBILE NAV */
+const toggle=document.getElementById("navToggle");
+const mobileNav=document.getElementById("mobileNav");
+if(toggle) toggle.onclick=()=>mobileNav.classList.toggle("open");
 
+/* LOAD DIAMONDS */
 fetch("../assets/collection/manifest.json",{cache:"no-store"})
 .then(r=>r.json())
 .then(data=>{
-  const diamonds = data.diamonds;
+  const grid=document.getElementById("diamondGrid");
 
-  diamonds.forEach(item=>{
-    const card = document.createElement("div");
-    card.className = "gem-card";
-
-    card.innerHTML = `
-      <div class="gem-img">
+  data.diamonds.forEach(item=>{
+    const card=document.createElement("div");
+    card.className="item-card";
+    card.innerHTML=`
+      <div class="item-thumb">
         <img src="../${item.img}" alt="${item.title}">
       </div>
-      <h3>${item.title}</h3>
-      <p>${item.desc}</p>
-      <button class="btn-view">View Details</button>
+      <div class="item-title">${item.title}</div>
+      <div class="item-desc">${item.desc}</div>
     `;
-
-    card.querySelector(".btn-view").onclick = ()=>{
-      openModal(item);
-    };
-
+    card.onclick=()=>openModal(item);
     grid.appendChild(card);
   });
 });
 
-function openModal(item){
-  modalImg.src = "../" + item.img;
-  modalTitle.textContent = item.title;
+/* MODAL */
+const modal=document.getElementById("modal");
+const modalImg=document.getElementById("modalImg");
+const modalTitle=document.getElementById("modalTitle");
+const modalMeta=document.getElementById("modalMeta");
+const modalDesc=document.getElementById("modalDesc");
+const waBtn=document.getElementById("waBtn");
 
-  modalFields.innerHTML = `
-    <div>Cut: ${item.desc.split("·")[0].trim()}</div>
-    <div>Shape: ${item.desc.split("·")[1]?.trim() || "—"}</div>
-    <div>Variety: Colorless Diamond</div>
+function openModal(item){
+
+  modal.classList.add("open");
+
+  modalImg.src="../"+item.img;
+  modalTitle.textContent=item.title;
+
+  modalMeta.innerHTML=`
+    <div>Cut: ${item.desc.split("·")[0]}</div>
+    <div>Shape: ${item.desc.split("·")[1]}</div>
+    <div>Variety: ${item.desc.split("·")[2]}</div>
     <div>Origin: Natural</div>
   `;
 
-  modalDesc.textContent =
-    item.title + " is a certified natural diamond selected for brilliance, symmetry and durability. Suitable for fine jewellery and long-term gemstone investment.";
+  modalDesc.textContent=
+   "This certified natural diamond is selected for brilliance, symmetry and long-term value. Ideal for fine jewellery and investment-grade collections.";
 
-  const link = location.origin + location.pathname + "#" + item.slug;
+  const page=window.location.href.split("#")[0];
+  const link=page+"#"+item.slug;
 
-  waBtn.href =
-    "https://wa.me/918055113448?text=" +
-    encodeURIComponent(
-      "Hi FACETRA,\nEnquiry for: " + item.title + "\n" + link
-    );
+  const msg=encodeURIComponent(
+`Hello FACETRA,
+Enquiry for ${item.title}
+${link}`
+  );
 
-  modal.classList.add("show");
+  waBtn.href=`https://wa.me/918055113448?text=${msg}`;
 }
 
-document.getElementById("closeModal").onclick = ()=> modal.classList.remove("show");
-modal.onclick = e=>{ if(e.target===modal) modal.classList.remove("show"); }
+document.getElementById("modalClose").onclick=()=>modal.classList.remove("open");
+modal.onclick=e=>{if(e.target===modal) modal.classList.remove("open")};
+
 </script>
 
 </body>
