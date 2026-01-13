@@ -1,17 +1,37 @@
-/* =====================================================
-   FACETRA — COLLECTION & CATEGORY PAGES
-   Uses colors from main style.css
-   ===================================================== */
+/* ================= ROOT ================= */
 
-/* ===== HERO FIX ===== */
+:root{
+  --gold1:#f1d27a;
+  --gold2:#c9a24d;
+  --gold3:#8f6b2a;
+  --dark:#050806;
+  --dark2:#0b120f;
+  --card:#0f1612;
+  --text:#d7dbd8;
+  --muted:#9ea4a0;
+}
 
-.collection-hero.diamond-hero{
-  min-height: 60vh;
+*{margin:0;padding:0;box-sizing:border-box}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+body{
+  font-family:Inter,sans-serif;
+  background:
+    radial-gradient(circle at top,#141f1a,#050806),
+    repeating-linear-gradient(60deg,rgba(255,255,255,.015),rgba(255,255,255,.015) 1px,transparent 1px,transparent 12px);
+  color:var(--text);
+}
+
+/* ================= HERO ================= */
+
+.collection-hero{
+  min-height:60vh;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
-  padding:80px 20px 40px;
+  padding:90px 20px 50px;
 }
 
 .hero-inner-wrap{
@@ -31,175 +51,83 @@
   color:#d0d6d3;
 }
 
-
-/* ================= COLLECTION GRID ================= */
+/* ================= GRID ================= */
 
 .collection-section{
-  padding:90px 40px 130px;
-  background:linear-gradient(to bottom,#050806,#0b120f);
+  padding:90px 40px 140px;
 }
 
 .collection-grid{
   max-width:1300px;
   margin:0 auto;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:42px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:40px;
 }
 
-/* ================= COLLECTION CARD ================= */
+/* ================= CARD ================= */
 
-.collection-card{
+.gem-card{
   background:linear-gradient(180deg,#0c1310,#070b09);
   border:1px solid rgba(201,162,77,.35);
-  padding:34px 30px 36px;
+  padding:26px;
   text-align:center;
-  transition:.45s cubic-bezier(.2,.8,.2,1);
-  position:relative;
-}
-
-.collection-card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 0 28px rgba(201,162,77,.35);
-}
-
-.collection-card h2{
-  font-family:Cinzel,serif;
-  color:var(--gold2);
-  font-size:22px;
-  margin-bottom:16px;
-  letter-spacing:1px;
-}
-
-/* ===== Image Box 1:1 ===== */
-
-.auto-image-box{
-  width:100%;
-  aspect-ratio:1/1;
-  overflow:hidden;
-  background:#000;
-  border:1px solid rgba(201,162,77,.2);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-bottom:14px;
-}
-
-.auto-image-box img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:transform 1.1s ease,opacity .6s ease;
-}
-
-.collection-card:hover img{
-  transform:scale(1.05);
-}
-
-/* ===== Preview Text ===== */
-
-.stone-name{
-  font-family:Cinzel,serif;
-  color:var(--gold1);
-  font-size:1rem;
-  margin-top:6px;
-}
-
-.stone-desc{
-  color:#cfd4d1;
-  font-size:.9rem;
-  margin:8px 0 18px;
-}
-
-/* ===== CTA BUTTON ===== */
-
-.btn-category{
-  display:inline-block;
-  padding:12px 26px;
-  border:1px solid var(--gold2);
-  color:var(--gold2);
-  text-decoration:none;
-  letter-spacing:.14em;
-  font-size:12px;
   transition:.35s ease;
 }
 
-.btn-category:hover{
+.gem-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 26px rgba(201,162,77,.35);
+}
+
+.gem-card img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border:1px solid rgba(201,162,77,.25);
+}
+
+.gem-card h3{
+  margin-top:14px;
+  font-family:Cinzel,serif;
+  color:var(--gold2);
+  font-size:18px;
+}
+
+.gem-card p{
+  font-size:13px;
+  margin-top:6px;
+  color:#cfd4d1;
+}
+
+/* ================= BUTTON ================= */
+
+.view-btn{
+  margin-top:14px;
+  padding:10px 26px;
+  background:transparent;
+  border:1px solid var(--gold2);
+  color:var(--gold2);
+  font-size:12px;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:.35s ease;
+}
+
+.view-btn:hover{
   background:linear-gradient(135deg,var(--gold1),var(--gold2));
   color:#111;
   box-shadow:0 0 18px rgba(201,162,77,.45);
   transform:translateY(-2px);
 }
 
-/* ================= CATEGORY GRID ================= */
-
-.category-page{
-  padding:90px 40px 140px;
-  background:linear-gradient(to bottom,#050806,#0b120f);
-}
-
-.items-grid{
-  max-width:1300px;
-  margin:0 auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:34px;
-}
-
-/* ===== ITEM CARD ===== */
-
-.item-card{
-  background:linear-gradient(180deg,#0c1310,#070b09);
-  border:1px solid rgba(201,162,77,.28);
-  padding:18px 18px 22px;
-  text-align:center;
-  transition:.4s cubic-bezier(.2,.8,.2,1);
-  cursor:pointer;
-}
-
-.item-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 0 26px rgba(201,162,77,.35);
-}
-
-.item-thumb{
-  aspect-ratio:1/1;
-  overflow:hidden;
-  background:#000;
-  border:1px solid rgba(201,162,77,.2);
-  margin-bottom:10px;
-}
-
-.item-thumb img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:transform 1s ease;
-}
-
-.item-card:hover img{transform:scale(1.06)}
-
-.item-title{
-  font-family:Cinzel,serif;
-  color:var(--gold2);
-  font-size:.95rem;
-  margin-top:6px;
-}
-
-.item-desc{
-  color:#cfd4d1;
-  font-size:.85rem;
-  margin-top:4px;
-}
-
 /* ================= MODAL ================= */
-
-/* ===== MODAL FIX ===== */
 
 .modal-overlay{
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,.75);
+  background:rgba(0,0,0,.8);
   display:flex;
   align-items:center;
   justify-content:center;
@@ -215,112 +143,69 @@
 }
 
 .modal-box{
-  max-width:1000px;
   width:92%;
+  max-width:1000px;
   background:linear-gradient(180deg,#0c1310,#070b09);
   border:1px solid rgba(201,162,77,.45);
-  padding:40px;
+  padding:36px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:32px;
 }
 
-
-.modal-left{
-  padding:26px;
-  background:#020403;
-}
-
-.modal-left img{
+.modal-box img{
   width:100%;
   aspect-ratio:1/1;
-  object-fit:contain;
+  object-fit:cover;
+  border:1px solid rgba(201,162,77,.35);
 }
 
-.modal-right{
-  padding:36px;
-}
-
-.modal-title{
+.modal-content h2{
   font-family:Cinzel,serif;
   color:var(--gold2);
-  font-size:1.4rem;
-  margin-bottom:10px;
+  margin-bottom:12px;
 }
 
-.modal-meta{
-  color:#d6d0b0;
-  font-size:.9rem;
-  margin-bottom:14px;
+.modal-fields div{
+  font-size:14px;
+  margin-bottom:6px;
+  color:#d6dccf;
 }
 
 .modal-desc{
+  margin-top:14px;
+  font-size:14px;
+  line-height:1.8;
   color:#cfd4d1;
-  font-size:.95rem;
-  line-height:1.9;
-  margin-bottom:22px;
 }
+
+/* ================= MODAL BUTTONS ================= */
 
 .modal-actions{
+  margin-top:24px;
   display:flex;
   gap:12px;
-  flex-wrap:wrap;
 }
 
-.btn-primary{
-  padding:12px 20px;
+.whatsapp-btn{
   background:linear-gradient(135deg,var(--gold1),var(--gold2));
-  border:1px solid var(--gold2);
-  color:#111;
-  text-decoration:none;
-  font-size:13px;
+  border:none;
+  padding:12px 26px;
+  cursor:pointer;
 }
 
-.btn-ghost{
-  padding:12px 20px;
-  border:1px solid rgba(201,162,77,.45);
-  color:var(--gold2);
+.close-btn{
   background:transparent;
-}
-
-/* ================= ANIMATIONS ================= */
-
-.fade{
-  opacity:.1;
-  transition:.4s ease;
+  border:1px solid var(--gold2);
+  color:var(--gold2);
+  padding:12px 22px;
+  cursor:pointer;
 }
 
 /* ================= MOBILE ================= */
 
 @media(max-width:900px){
-
-  .collection-section,
-  .category-page{
-    padding:70px 20px 110px;
-  }
-
   .modal-box{
     grid-template-columns:1fr;
   }
-
-  .modal-right{padding:24px}
-}
-
-/* ===== VIEW DETAILS BUTTON ===== */
-
-.view-btn{
-  margin-top:16px;
-  padding:10px 26px;
-  background:transparent;
-  border:1px solid var(--gold2);
-  color:var(--gold2);
-  font-size:13px;
-  letter-spacing:1.2px;
-  text-transform:uppercase;
-  cursor:pointer;
-  transition:.35s ease;
-}
-
-.view-btn:hover{
-  background:linear-gradient(135deg,var(--gold1),var(--gold2));
-  color:#111;
-  box-shadow:0 0 18px rgba(201,162,77,.45);
-  transform:translateY(-2px);
 }
