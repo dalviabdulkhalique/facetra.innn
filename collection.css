@@ -3,29 +3,34 @@
    Uses colors from main style.css
    ===================================================== */
 
-.collection-hero{
-  min-height:45vh;
+/* ===== HERO FIX ===== */
+
+.collection-hero.diamond-hero{
+  min-height: 60vh;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
-  padding:120px 20px 60px;
-  background:radial-gradient(circle at top,#14211b,#050806 70%);
+  padding:80px 20px 40px;
+}
+
+.hero-inner-wrap{
+  max-width:900px;
 }
 
 .hero-title{
   font-family:Cinzel,serif;
+  font-size:56px;
+  letter-spacing:3px;
   color:var(--gold2);
-  font-size:clamp(2.4rem,4vw,3.8rem);
-  letter-spacing:2px;
 }
 
 .hero-description{
-  max-width:820px;
-  margin:14px auto 0;
-  color:#d7dbd8;
-  line-height:1.9;
+  margin-top:14px;
+  font-size:16px;
+  color:#d0d6d3;
 }
+
 
 /* ================= COLLECTION GRID ================= */
 
@@ -189,28 +194,34 @@
 
 /* ================= MODAL ================= */
 
+/* ===== MODAL FIX ===== */
+
 .modal-overlay{
   position:fixed;
   inset:0;
-  background:rgba(2,4,3,.88);
-  backdrop-filter:blur(4px);
-  display:none;
+  background:rgba(0,0,0,.75);
+  display:flex;
   align-items:center;
   justify-content:center;
   z-index:9999;
-  padding:20px;
+  opacity:0;
+  pointer-events:none;
+  transition:.35s ease;
 }
 
-.modal-overlay.open{display:flex}
+.modal-overlay.active{
+  opacity:1;
+  pointer-events:auto;
+}
 
 .modal-box{
-  width:min(1100px,95%);
+  max-width:1000px;
+  width:92%;
   background:linear-gradient(180deg,#0c1310,#070b09);
-  border:2px solid rgba(201,162,77,.35);
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  box-shadow:0 60px 160px rgba(0,0,0,.9);
+  border:1px solid rgba(201,162,77,.45);
+  padding:40px;
 }
+
 
 .modal-left{
   padding:26px;
@@ -290,4 +301,26 @@
   }
 
   .modal-right{padding:24px}
+}
+
+/* ===== VIEW DETAILS BUTTON ===== */
+
+.view-btn{
+  margin-top:16px;
+  padding:10px 26px;
+  background:transparent;
+  border:1px solid var(--gold2);
+  color:var(--gold2);
+  font-size:13px;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:.35s ease;
+}
+
+.view-btn:hover{
+  background:linear-gradient(135deg,var(--gold1),var(--gold2));
+  color:#111;
+  box-shadow:0 0 18px rgba(201,162,77,.45);
+  transform:translateY(-2px);
 }
