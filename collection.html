@@ -1,52 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<!-- ================= BASIC SEO ================= -->
 <meta charset="UTF-8">
-<title>FACETRA Collection | Certified Natural Gemstones & Diamonds</title>
+<title>FACETRA Collection | Certified Natural Gemstones</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Explore FACETRA’s premium collection of certified natural diamonds, sapphires, rubies and emeralds curated for collectors and investors.">
+<meta name="description" content="Explore FACETRA’s premium collection of certified natural diamonds, sapphires, rubies and emeralds curated for collectors and fine jewellery.">
 <link rel="canonical" href="https://dalviabdulkhalique.github.io/facetra.in/collection.html">
 
-<!-- ================= OPEN GRAPH ================= -->
-<meta property="og:title" content="FACETRA Collection | Premium Natural Gemstones">
-<meta property="og:description" content="Luxury certified gemstones including diamonds, sapphires, rubies and emeralds.">
+<!-- OG -->
+<meta property="og:title" content="FACETRA Collection">
+<meta property="og:description" content="Certified natural gemstones curated for collectors and fine jewellery.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dalviabdulkhalique.github.io/facetra.in/collection.html">
-<meta property="og:image" content="https://dalviabdulkhalique.github.io/facetra.in/assets/collection/diamonds/diamond-round-brilliant-1.jpg">
 
-<!-- ================= FAVICONS ================= -->
+<!-- FAVICONS -->
 <link rel="icon" href="assets/favicon/favicon-32x32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
-<meta name="theme-color" content="#050806">
+<meta name="theme-color" content="#020805">
 
-<!-- ================= FONTS ================= -->
+<!-- FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-<!-- ================= STYLES ================= -->
+<!-- CSS -->
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="collection.css">
 
-<!-- ================= SCHEMA ================= -->
+<!-- SCHEMA -->
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"CollectionPage",
-  "name":"FACETRA Gemstone Collection",
-  "description":"Premium certified natural diamonds, sapphires, rubies and emeralds.",
-  "url":"https://dalviabdulkhalique.github.io/facetra.in/collection.html",
-  "publisher":{
-    "@type":"Organization",
-    "name":"FACETRA",
-    "url":"https://dalviabdulkhalique.github.io/facetra.in/"
-  }
+ "@context":"https://schema.org",
+ "@type":"CollectionPage",
+ "name":"FACETRA Gemstone Collection",
+ "description":"Luxury natural gemstones including diamonds, sapphires, rubies and emeralds."
 }
 </script>
-
 </head>
 
-<body class="page collection-page">
+<body class="collection-page">
 
 <!-- ================= HEADER ================= -->
 <header class="site-header">
@@ -93,21 +84,55 @@
   </div>
 </section>
 
-<!-- ================= GRID ================= -->
+<!-- ================= COLLECTION GRID ================= -->
 <section class="collection-section">
   <div class="collection-grid" id="collectionGrid">
-    <!-- JS injects cards here -->
+
+    <!-- DIAMONDS -->
+    <div class="collection-card" data-cat="diamonds">
+      <h2>Diamonds Collection</h2>
+      <div class="auto-image-box"><img></div>
+      <div class="stone-name"></div>
+      <div class="stone-desc"></div>
+      <a href="collection/diamonds.html" class="btn-category">View Diamond Collection</a>
+    </div>
+
+    <!-- SAPPHIRES -->
+    <div class="collection-card" data-cat="sapphires">
+      <h2>Sapphires Collection</h2>
+      <div class="auto-image-box"><img></div>
+      <div class="stone-name"></div>
+      <div class="stone-desc"></div>
+      <a href="collection/sapphires.html" class="btn-category">View Sapphire Collection</a>
+    </div>
+
+    <!-- RUBIES -->
+    <div class="collection-card" data-cat="rubies">
+      <h2>Rubies Collection</h2>
+      <div class="auto-image-box"><img></div>
+      <div class="stone-name"></div>
+      <div class="stone-desc"></div>
+      <a href="collection/rubies.html" class="btn-category">View Ruby Collection</a>
+    </div>
+
+    <!-- EMERALDS -->
+    <div class="collection-card" data-cat="emeralds">
+      <h2>Emeralds Collection</h2>
+      <div class="auto-image-box"><img></div>
+      <div class="stone-name"></div>
+      <div class="stone-desc"></div>
+      <a href="collection/emeralds.html" class="btn-category">View Emerald Collection</a>
+    </div>
+
   </div>
 </section>
 
 <!-- ================= FOOTER ================= -->
 <footer class="lux-footer">
   <div class="footer-inner">
-
     <div class="footer-brand">
       <div class="footer-logo">
-        <img src="logo.png" alt="FACETRA">
-        <span>FACETRA</span>
+        <img src="logo.png"><span>FACETRA</span>
       </div>
       <p>Premium gemstone trading house specializing in certified natural gemstones.</p>
     </div>
@@ -121,11 +146,10 @@
 
     <div class="footer-contact">
       <h4>Contact</h4>
-      <div class="contact-item">info@facetra.in</div>
-      <div class="contact-item">+91 80551 13448</div>
-      <div class="contact-item">Mumbai, India</div>
+      <a href="mailto:info@facetra.in">info@facetra.in</a>
+      <a href="tel:+918055113448">+91 80551 13448</a>
+      <div>Mumbai, India</div>
     </div>
-
   </div>
   <div class="footer-bottom">© 2026 FACETRA. All rights reserved.</div>
 </footer>
@@ -133,66 +157,43 @@
 <!-- ================= JS ================= -->
 <script>
 /* MOBILE NAV */
-const toggle = document.getElementById("navToggle");
-const mobileNav = document.getElementById("mobileNav");
-if(toggle) toggle.onclick = () => mobileNav.classList.toggle("open");
+const toggle=document.getElementById("navToggle");
+const mobileNav=document.getElementById("mobileNav");
+if(toggle) toggle.onclick=()=>mobileNav.classList.toggle("open");
 
-/* COLLECTION PREVIEW CARDS */
-const grid = document.getElementById("collectionGrid");
+/* AUTO PREVIEW FROM MANIFEST */
+fetch("assets/collection/manifest.json",{cache:"no-store"})
+.then(r=>r.json())
+.then(data=>{
 
-fetch("assets/collection/manifest.json", { cache: "no-store" })
-.then(res => {
-  if(!res.ok) throw new Error("Manifest not found");
-  return res.json();
-})
-.then(data => {
-
-  createCard("Diamonds", "diamonds", "collection/diamonds.html");
-  createCard("Sapphires", "sapphires", "collection/sapphires.html");
-  createCard("Rubies", "rubies", "collection/rubies.html");
-  createCard("Emeralds", "emeralds", "collection/emeralds.html");
-
-  function createCard(title, key, link){
-    const list = data[key];
+  document.querySelectorAll(".collection-card").forEach(card=>{
+    const cat = card.dataset.cat;
+    const list = data[cat];
     if(!list || !list.length) return;
 
-    const card = document.createElement("div");
-    card.className = "collection-card";
+    const img = card.querySelector("img");
+    const title = card.querySelector(".stone-name");
+    const desc = card.querySelector(".stone-desc");
 
-    card.innerHTML = `
-      <h2>${title} Collection</h2>
-      <div class="auto-image-box">
-        <img src="${list[0].img}" alt="${list[0].title}">
-      </div>
-      <div class="stone-name">${list[0].title}</div>
-      <div class="stone-desc">${list[0].short}</div>
-      <a class="btn-category" href="${link}">View ${title} Collection</a>
-    `;
+    let i = 0;
 
-    grid.appendChild(card);
-
-    let i = 1;
-    setInterval(()=>{
-      const img = card.querySelector("img");
-      const name = card.querySelector(".stone-name");
-      const desc = card.querySelector(".stone-desc");
-
-      img.classList.add("fade");
-
+    function show(){
+      card.classList.add("fade");
       setTimeout(()=>{
         img.src = list[i].img;
-        name.textContent = list[i].title;
-        desc.textContent = list[i].short;
-        img.classList.remove("fade");
+        title.textContent = list[i].title;
+        desc.textContent = list[i].short || "";
+        card.classList.remove("fade");
         i = (i + 1) % list.length;
       },300);
-    },3500);
-  }
+    }
+
+    show();
+    setInterval(show, 4200);
+  });
 
 })
-.catch(err=>{
-  console.error("COLLECTION ERROR:", err);
-});
+.catch(err=>console.error("Manifest load error:",err));
 </script>
 
 </body>
