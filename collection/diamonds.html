@@ -2,24 +2,22 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
 <title>Diamond Collection | FACETRA Certified Natural Diamonds</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Explore FACETRA’s premium collection of certified natural diamonds including Round Brilliant, Oval, Cushion, Emerald Cut and more.">
-
+<meta name="description" content="Explore FACETRA’s certified natural diamond collection including round, oval, emerald, pear, marquise, radiant and cushion cut diamonds for collectors and fine jewellery.">
 <link rel="canonical" href="https://dalviabdulkhalique.github.io/facetra.in/collection/diamonds.html">
 
 <!-- OG -->
 <meta property="og:title" content="FACETRA Diamond Collection">
-<meta property="og:description" content="Certified natural diamonds curated for fine jewellery and collectors.">
+<meta property="og:description" content="Certified natural diamonds curated for collectors and fine jewellery.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dalviabdulkhalique.github.io/facetra.in/collection/diamonds.html">
 
 <!-- FAVICONS -->
 <link rel="icon" href="../assets/favicon/favicon-32x32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
-<meta name="theme-color" content="#050806">
+<meta name="theme-color" content="#020805">
 
 <!-- FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -34,18 +32,17 @@
  "@context":"https://schema.org",
  "@type":"CollectionPage",
  "name":"FACETRA Diamond Collection",
- "description":"Certified natural diamonds including Round Brilliant, Oval, Cushion, Emerald Cut and fancy shapes.",
- "url":"https://dalviabdulkhalique.github.io/facetra.in/collection/diamonds.html"
+ "description":"Certified natural diamonds including round, oval, emerald, pear, marquise and radiant cuts.",
+ "brand":{"@type":"Brand","name":"FACETRA"}
 }
 </script>
 </head>
 
-<body class="page category-page">
+<body class="page">
 
 <!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="header-inner">
-
     <div class="brand">
       <img src="../logo.png" alt="FACETRA Logo">
       <div>
@@ -66,7 +63,6 @@
     <div class="nav-toggle" id="navToggle">
       <span></span><span></span><span></span>
     </div>
-
   </div>
 </header>
 
@@ -84,26 +80,22 @@
   <div>
     <h1 class="hero-title">DIAMOND COLLECTION</h1>
     <p class="hero-description">
-      Premium certified natural diamonds curated for fine jewellery and investment.
+      Certified natural diamonds selected for brilliance, symmetry and long-term value.
     </p>
   </div>
 </section>
 
 <!-- ================= GRID ================= -->
-<section class="collection-section">
-
-  <div class="collection-grid" id="itemsGrid"></div>
-
+<section class="category-page">
+  <div class="items-grid" id="itemsGrid"></div>
 </section>
 
 <!-- ================= MODAL ================= -->
 <div class="modal-overlay" id="modal">
   <div class="modal-box">
-
     <div class="modal-left">
-      <img id="modalImg" alt="">
+      <img id="modalImg">
     </div>
-
     <div class="modal-right">
       <div class="modal-title" id="modalTitle"></div>
       <div class="modal-meta" id="modalMeta"></div>
@@ -111,16 +103,14 @@
 
       <div class="modal-actions">
         <a id="waBtn" class="btn-primary" target="_blank">WhatsApp Enquiry</a>
-        <button class="btn-ghost" id="closeModal">Close</button>
+        <button class="btn-ghost" onclick="closeModal()">Close</button>
       </div>
     </div>
-
   </div>
 </div>
 
 <!-- ================= FOOTER ================= -->
 <footer class="lux-footer">
-
   <div class="footer-inner">
 
     <div class="footer-brand">
@@ -129,8 +119,7 @@
         <span>FACETRA</span>
       </div>
       <p>
-        Premium gemstone trading house specializing in certified natural gemstones curated
-        for collectors, jewelers and long-term investors.
+        Premium gemstone trading house specializing in certified natural gemstones curated for collectors and investors.
       </p>
     </div>
 
@@ -138,14 +127,30 @@
       <h4>Quick Links</h4>
       <a href="../index.html">Home</a>
       <a href="../collection.html">Collection</a>
+      <a href="../certification.html">Certification</a>
+      <a href="../why-facetra.html">Why FACETRA</a>
+      <a href="../about.html">About</a>
       <a href="../contact.html">Contact</a>
     </div>
 
     <div class="footer-contact">
       <h4>Contact</h4>
-      <a class="contact-item" href="mailto:info@facetra.in"><span>info@facetra.in</span></a>
-      <a class="contact-item" href="tel:+918055113448"><span>+91 80551 13448</span></a>
-      <a class="contact-item" href="https://wa.me/918055113448" target="_blank"><span>WhatsApp Chat</span></a>
+
+      <a class="contact-item" href="mailto:info@facetra.in">
+        <span>info@facetra.in</span>
+      </a>
+
+      <a class="contact-item" href="tel:+918055113448">
+        <span>+91 80551 13448</span>
+      </a>
+
+      <a class="contact-item" href="https://wa.me/918055113448" target="_blank">
+        <span>WhatsApp Chat</span>
+      </a>
+
+      <div class="contact-item">
+        <span>Mumbai, Maharashtra, India</span>
+      </div>
     </div>
 
   </div>
@@ -153,77 +158,94 @@
   <div class="footer-bottom">
     © 2026 FACETRA. All rights reserved.
   </div>
-
 </footer>
 
 <!-- ================= JS ================= -->
 <script>
-
 /* MOBILE NAV */
 const toggle=document.getElementById("navToggle");
 const mobileNav=document.getElementById("mobileNav");
 if(toggle) toggle.onclick=()=>mobileNav.classList.toggle("open");
 
-/* LOAD DIAMONDS FROM MANIFEST */
+/* EXTRA DETAILS BY SLUG */
+const extra = {
+ "diamond-round-brilliant-1":{cut:"Brilliant",shape:"Round",variety:"Colorless Diamond",origin:"Natural"},
+ "diamond-oval-cut-1":{cut:"Brilliant",shape:"Oval",variety:"Colorless Diamond",origin:"Natural"},
+ "diamond-emerald-cut-1":{cut:"Step Cut",shape:"Emerald",variety:"Colorless Diamond",origin:"Natural"},
+ "diamond-pear-cut-1":{cut:"Brilliant",shape:"Pear",variety:"Colorless Diamond",origin:"Natural"},
+ "diamond-marquise-cut-1":{cut:"Brilliant",shape:"Marquise",variety:"Colorless Diamond",origin:"Natural"},
+ "diamond-princess-cut-1":{cut:"Brilliant",shape:"Square",variety:"Colorless Diamond",origin:"Natural"},
+ "diamond-radiant-cut-1":{cut:"Mixed",shape:"Radiant",variety:"Colorless Diamond",origin:"Natural"},
+ "diamond-cushion-cut-1":{cut:"Brilliant",shape:"Cushion",variety:"Colorless Diamond",origin:"Natural"}
+};
+
+/* LOAD MANIFEST */
 fetch("../assets/collection/manifest.json",{cache:"no-store"})
 .then(r=>r.json())
 .then(data=>{
+  const grid=document.getElementById("itemsGrid");
 
-  const grid = document.getElementById("itemsGrid");
-  const list = data.diamonds;
-
-  list.forEach(item=>{
-
-    const card = document.createElement("div");
-    card.className = "item-card";
-
-    card.innerHTML = `
-      <div class="item-thumb">
-        <img src="../${item.img}" alt="${item.title}">
-      </div>
+  data.diamonds.forEach(item=>{
+    const d=extra[item.slug]||{};
+    const card=document.createElement("div");
+    card.className="item-card";
+    card.innerHTML=`
+      <div class="item-thumb"><img src="../${item.img}" alt="${item.title}"></div>
       <div class="item-title">${item.title}</div>
       <div class="item-desc">${item.desc}</div>
     `;
-
-    card.onclick = () => openModal(item);
-
+    card.onclick=()=>openModal(item,d);
     grid.appendChild(card);
   });
-
 });
 
 /* MODAL */
-const modal = document.getElementById("modal");
-const modalImg = document.getElementById("modalImg");
-const modalTitle = document.getElementById("modalTitle");
-const modalMeta = document.getElementById("modalMeta");
-const modalDesc = document.getElementById("modalDesc");
-const waBtn = document.getElementById("waBtn");
+const modal=document.getElementById("modal");
+const mImg=document.getElementById("modalImg");
+const mTitle=document.getElementById("modalTitle");
+const mMeta=document.getElementById("modalMeta");
+const mDesc=document.getElementById("modalDesc");
+const waBtn=document.getElementById("waBtn");
 
-function openModal(item){
-
-  modalImg.src = "../" + item.img;
-  modalTitle.textContent = item.title;
-  modalMeta.textContent = item.desc;
-
-  modalDesc.textContent =
-    "This certified natural diamond is carefully selected for brilliance, symmetry and long-term value. Suitable for fine jewellery and private collectors.";
-
-  const pageUrl = window.location.href;
-  const msg =
-`Hello FACETRA,
-I am interested in ${item.title}.
-Link: ${pageUrl}`;
-
-  waBtn.href = "https://wa.me/918055113448?text=" + encodeURIComponent(msg);
-
+function openModal(item,d){
+  location.hash=item.slug;
   modal.classList.add("open");
+  mImg.src="../"+item.img;
+  mTitle.textContent=item.title;
+
+  mMeta.innerHTML=`
+    Cut: ${d.cut||""} • Shape: ${d.shape||""}<br>
+    Variety: ${d.variety||""} • Origin: ${d.origin||"Natural"}
+  `;
+
+  mDesc.textContent=
+    `${item.title} is a certified natural diamond selected for brilliance, symmetry and durability. 
+     Suitable for fine jewellery and long-term gemstone investment, this stone represents premium quality and rarity.`;
+
+  const page=location.href;
+  const msg=`Enquiry for ${item.title}%0A${page}`;
+  waBtn.href=`https://wa.me/918055113448?text=${msg}`;
 }
 
-/* CLOSE */
-document.getElementById("closeModal").onclick = ()=>modal.classList.remove("open");
-modal.onclick = e=>{ if(e.target===modal) modal.classList.remove("open"); };
+function closeModal(){
+  modal.classList.remove("open");
+  history.replaceState(null,null,location.pathname);
+}
 
+/* CLOSE ON BACKDROP */
+modal.onclick=e=>{if(e.target===modal)closeModal()}
+
+/* AUTO OPEN FROM HASH */
+window.addEventListener("load",()=>{
+  const slug=location.hash.replace("#","");
+  if(!slug)return;
+  fetch("../assets/collection/manifest.json")
+  .then(r=>r.json())
+  .then(data=>{
+    const item=data.diamonds.find(x=>x.slug===slug);
+    if(item)openModal(item,extra[item.slug]||{});
+  });
+});
 </script>
 
 </body>
