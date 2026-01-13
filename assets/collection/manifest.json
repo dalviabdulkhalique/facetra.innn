@@ -4,244 +4,667 @@
       "img": "assets/collection/diamonds/diamond-round-brilliant-1.jpg",
       "title": "Round Brilliant Diamond",
       "slug": "diamond-round-brilliant-1",
-      "desc": "Brilliant · Round · Colorless"
+      "short": "Brilliant · Round · Colorless",
+      "cut": "Round Brilliant",
+      "color": "D–F (Colorless Range)",
+      "clarity": "VS to VVS",
+      "origin": "Global",
+      "treatment": "None",
+      "use": "Engagement rings & fine jewellery",
+      "note": "Round Brilliant diamonds are precision cut with 57–58 facets to maximize fire and brilliance. This is the most popular and investment-stable diamond cut worldwide, offering exceptional light performance and timeless appeal."
     },
     {
       "img": "assets/collection/diamonds/diamond-oval-cut-1.jpg",
       "title": "Oval Cut Diamond",
       "slug": "diamond-oval-cut-1",
-      "desc": "Oval Brilliant · Oval · Colorless"
+      "short": "Oval Brilliant · Oval · Colorless",
+      "cut": "Oval Brilliant",
+      "color": "D–F (Colorless Range)",
+      "clarity": "VS to VVS",
+      "origin": "Global",
+      "treatment": "None",
+      "use": "Luxury rings & pendants",
+      "note": "Oval diamonds combine round brilliance with elongated elegance, creating the illusion of greater size per carat while maintaining strong sparkle and graceful proportions."
     },
     {
       "img": "assets/collection/diamonds/diamond-emerald-cut-1.jpg",
       "title": "Emerald Cut Diamond",
       "slug": "diamond-emerald-cut-1",
-      "desc": "Step Cut · Emerald · Colorless"
+      "short": "Step Cut · Emerald · Colorless",
+      "cut": "Emerald Step Cut",
+      "color": "D–F (Colorless Range)",
+      "clarity": "VVS to IF preferred",
+      "origin": "Global",
+      "treatment": "None",
+      "use": "Collector jewellery & statement rings",
+      "note": "Emerald cut diamonds feature long step facets that emphasize clarity and symmetry, producing an elegant hall-of-mirrors effect preferred by collectors and connoisseurs."
     },
     {
       "img": "assets/collection/diamonds/diamond-pear-cut-1.jpg",
       "title": "Pear Shape Diamond",
       "slug": "diamond-pear-cut-1",
-      "desc": "Pear · Tear-drop · Colorless"
+      "short": "Pear · Tear-drop · Colorless",
+      "cut": "Pear",
+      "color": "D–F (Colorless Range)",
+      "clarity": "VS to VVS",
+      "origin": "Global",
+      "treatment": "None",
+      "use": "Pendant jewellery & designer rings",
+      "note": "Pear diamonds blend round brilliance with marquise elegance, forming graceful tear-drop silhouettes ideal for statement pendants and artistic ring designs."
     },
     {
       "img": "assets/collection/diamonds/diamond-marquise-cut-1.jpg",
       "title": "Marquise Cut Diamond",
       "slug": "diamond-marquise-cut-1",
-      "desc": "Marquise · Long · Colorless"
+      "short": "Marquise · Long · Colorless",
+      "cut": "Marquise",
+      "color": "D–F (Colorless Range)",
+      "clarity": "VS to VVS",
+      "origin": "Global",
+      "treatment": "None",
+      "use": "High fashion jewellery",
+      "note": "Marquise diamonds maximize surface area and visual size, delivering bold elongated brilliance that enhances finger length and dramatic luxury aesthetics."
     },
     {
       "img": "assets/collection/diamonds/diamond-princess-cut-1.jpg",
       "title": "Princess Cut Diamond",
       "slug": "diamond-princess-cut-1",
-      "desc": "Princess · Square Brilliant · Colorless"
+      "short": "Princess · Square Brilliant · Colorless",
+      "cut": "Princess",
+      "color": "D–F (Colorless Range)",
+      "clarity": "VS to VVS",
+      "origin": "Global",
+      "treatment": "None",
+      "use": "Modern engagement jewellery",
+      "note": "Princess cut diamonds offer intense brilliance with sharp square geometry, making them highly popular for contemporary engagement and bridal jewellery."
     },
     {
       "img": "assets/collection/diamonds/diamond-radiant-cut-1.jpg",
       "title": "Radiant Cut Diamond",
       "slug": "diamond-radiant-cut-1",
-      "desc": "Radiant · Brilliant + Step Mix · Colorless"
+      "short": "Radiant · Brilliant + Step Mix · Colorless",
+      "cut": "Radiant Hybrid",
+      "color": "D–F (Colorless Range)",
+      "clarity": "VS to VVS",
+      "origin": "Global",
+      "treatment": "None",
+      "use": "Luxury statement jewellery",
+      "note": "Radiant diamonds combine brilliant and step facets, offering exceptional sparkle while maintaining strong rectangular or square geometry."
     },
     {
       "img": "assets/collection/diamonds/diamond-cushion-cut-1.jpg",
       "title": "Cushion Cut Diamond",
       "slug": "diamond-cushion-cut-1",
-      "desc": "Cushion · Soft Corners · Vintage Brilliance"
+      "short": "Cushion · Soft Corners · Vintage Brilliance",
+      "cut": "Cushion Modified",
+      "color": "D–F (Colorless Range)",
+      "clarity": "VS to VVS",
+      "origin": "Global",
+      "treatment": "None",
+      "use": "Vintage inspired luxury jewellery",
+      "note": "Cushion cut diamonds feature rounded corners and large facets that produce soft romantic brilliance with timeless vintage charm."
     }
-  ],
+  ]
+}
 
+{
   "sapphires": [
     {
       "img": "assets/collection/sapphires/sapphire-cornflower-blue-1.jpg",
       "title": "Cornflower Blue Sapphire",
       "slug": "sapphire-cornflower-blue-1",
-      "desc": "Cushion · Cornflower Blue · Sri Lanka"
+      "short": "Cushion · Cornflower Blue · Sri Lanka",
+      "cut": "Cushion",
+      "color": "Cornflower Blue",
+      "clarity": "Eye-clean",
+      "origin": "Sri Lanka (Ceylon)",
+      "treatment": "Heat (standard trade practice)",
+      "use": "High-end jewellery & collectors",
+      "note": "Cornflower blue sapphires are prized for their soft, velvety blue tone with high transparency. Stones from Sri Lanka are considered among the most elegant and desirable in the sapphire market."
     },
     {
       "img": "assets/collection/sapphires/sapphire-royal-blue-1.jpg",
       "title": "Royal Blue Sapphire",
       "slug": "sapphire-royal-blue-1",
-      "desc": "Oval · Royal Blue · Sri Lanka"
+      "short": "Oval · Royal Blue · Sri Lanka",
+      "cut": "Oval",
+      "color": "Royal Blue",
+      "clarity": "Eye-clean",
+      "origin": "Sri Lanka (Ceylon)",
+      "treatment": "Heat",
+      "use": "Luxury rings and pendants",
+      "note": "Royal blue sapphires exhibit deep saturated blue with excellent brilliance, making them highly popular for premium jewellery collections."
     },
     {
       "img": "assets/collection/sapphires/sapphire-deep-blue-1.jpg",
       "title": "Deep Blue Sapphire",
       "slug": "sapphire-deep-blue-1",
-      "desc": "Oval · Deep Blue · Madagascar"
+      "short": "Oval · Deep Blue · Madagascar",
+      "cut": "Oval",
+      "color": "Deep Blue",
+      "clarity": "Eye-clean",
+      "origin": "Madagascar",
+      "treatment": "Heat",
+      "use": "Statement jewellery",
+      "note": "Madagascar sapphires are known for their strong saturation and excellent crystal clarity, offering deep luxurious blue tones at premium quality."
     },
     {
       "img": "assets/collection/sapphires/sapphire-kashmir-cushion-cut-1.jpg",
       "title": "Kashmir Type Blue Sapphire",
       "slug": "sapphire-kashmir-cushion-cut-1",
-      "desc": "Cushion · Velvety Blue · Kashmir Tone"
+      "short": "Cushion · Velvety Blue · Kashmir Tone",
+      "cut": "Cushion",
+      "color": "Velvety Blue",
+      "clarity": "Eye-clean",
+      "origin": "Kashmir Tone",
+      "treatment": "Heat or Unheated (varies)",
+      "use": "Collector grade jewellery",
+      "note": "Kashmir-type sapphires are valued for their soft velvety texture and rich blue hue, historically considered the finest sapphire color in the world."
     },
     {
       "img": "assets/collection/sapphires/sapphire-pear-blue-1.jpg",
       "title": "Pear Cut Blue Sapphire",
       "slug": "sapphire-pear-blue-1",
-      "desc": "Pear · Blue · Sri Lanka"
+      "short": "Pear · Blue · Sri Lanka",
+      "cut": "Pear",
+      "color": "Blue",
+      "clarity": "Eye-clean",
+      "origin": "Sri Lanka",
+      "treatment": "Heat",
+      "use": "Pendants and designer rings",
+      "note": "Pear-shaped sapphires offer graceful brilliance, combining round sparkle with elongated elegance ideal for luxury pendants."
     },
     {
       "img": "assets/collection/sapphires/sapphire-hot-pink-oval-1.jpg",
       "title": "Pink Sapphire",
       "slug": "sapphire-hot-pink-oval-1",
-      "desc": "Oval · Hot Pink · Africa"
+      "short": "Oval · Hot Pink · Africa",
+      "cut": "Oval",
+      "color": "Hot Pink",
+      "clarity": "Eye-clean",
+      "origin": "Africa",
+      "treatment": "Heat",
+      "use": "Fashion and bridal jewellery",
+      "note": "Pink sapphires display vibrant romantic hues and excellent durability, making them popular for engagement and contemporary designs."
     },
     {
       "img": "assets/collection/sapphires/sapphire-purple-oval-1.jpg",
       "title": "Purple Sapphire",
       "slug": "sapphire-purple-oval-1",
-      "desc": "Oval · Violet · Madagascar"
+      "short": "Oval · Violet · Madagascar",
+      "cut": "Oval",
+      "color": "Purple / Violet",
+      "clarity": "Eye-clean",
+      "origin": "Madagascar",
+      "treatment": "Heat",
+      "use": "Unique designer jewellery",
+      "note": "Purple sapphires offer rare hues ranging from lavender to royal violet, perfect for exclusive bespoke jewellery."
     },
     {
       "img": "assets/collection/sapphires/sapphire-lavender-cushion-cut-1.jpg",
       "title": "Lavender Sapphire",
       "slug": "sapphire-lavender-cushion-cut-1",
-      "desc": "Cushion · Lavender · Africa"
+      "short": "Cushion · Lavender · Africa",
+      "cut": "Cushion",
+      "color": "Lavender",
+      "clarity": "Eye-clean",
+      "origin": "Africa",
+      "treatment": "Heat",
+      "use": "Fashion jewellery",
+      "note": "Lavender sapphires are admired for their soft pastel tones that complement modern minimalist jewellery designs."
     },
     {
       "img": "assets/collection/sapphires/sapphire-padparadscha-oval-1.jpg",
       "title": "Padparadscha Sapphire",
       "slug": "sapphire-padparadscha-oval-1",
-      "desc": "Oval · Pink-Orange · Sri Lanka"
+      "short": "Oval · Pink-Orange · Sri Lanka",
+      "cut": "Oval",
+      "color": "Pink-Orange",
+      "clarity": "Eye-clean",
+      "origin": "Sri Lanka",
+      "treatment": "Usually heat",
+      "use": "Collector & luxury jewellery",
+      "note": "Padparadscha sapphires are extremely rare, displaying a delicate lotus-flower pink-orange hue, highly prized by collectors."
     },
     {
       "img": "assets/collection/sapphires/sapphire-parti-blue-green-oval-1.jpg",
       "title": "Parti Color Sapphire",
       "slug": "sapphire-parti-blue-green-oval-1",
-      "desc": "Oval · Blue-Green Parti · Australia"
+      "short": "Oval · Blue-Green Parti · Australia",
+      "cut": "Oval",
+      "color": "Blue-Green Parti",
+      "clarity": "Eye-clean",
+      "origin": "Australia",
+      "treatment": "Usually unheated",
+      "use": "Artistic bespoke jewellery",
+      "note": "Parti sapphires naturally show multiple colors within one stone, making each gem completely unique and highly artistic."
     },
     {
       "img": "assets/collection/sapphires/sapphire-orange-round-1.jpg",
       "title": "Orange Sapphire",
       "slug": "sapphire-orange-round-1",
-      "desc": "Round · Orange · Africa"
+      "short": "Round · Orange · Africa",
+      "cut": "Round",
+      "color": "Orange",
+      "clarity": "Eye-clean",
+      "origin": "Africa",
+      "treatment": "Heat",
+      "use": "Contemporary jewellery",
+      "note": "Orange sapphires provide warm vibrant color tones ideal for bold modern jewellery styles."
     },
     {
       "img": "assets/collection/sapphires/sapphire-yellow-radiant-1.jpg",
       "title": "Yellow Sapphire (Pukhraj)",
       "slug": "sapphire-yellow-radiant-1",
-      "desc": "Radiant · Yellow · Sri Lanka"
+      "short": "Radiant · Yellow · Sri Lanka",
+      "cut": "Radiant",
+      "color": "Yellow",
+      "clarity": "Eye-clean",
+      "origin": "Sri Lanka",
+      "treatment": "Heat",
+      "use": "Astrological and fine jewellery",
+      "note": "Yellow sapphires are widely used in astrology and premium jewellery, valued for their bright golden color and durability."
     },
     {
       "img": "assets/collection/sapphires/sapphire-green-cushion-1.jpg",
       "title": "Green Sapphire",
       "slug": "sapphire-green-cushion-1",
-      "desc": "Cushion · Forest Green · Africa"
+      "short": "Cushion · Forest Green · Africa",
+      "cut": "Cushion",
+      "color": "Green",
+      "clarity": "Eye-clean",
+      "origin": "Africa",
+      "treatment": "Heat",
+      "use": "Unique gemstone jewellery",
+      "note": "Green sapphires offer earthy luxury tones and exceptional hardness, making them excellent for everyday luxury jewellery."
     },
     {
       "img": "assets/collection/sapphires/sapphire-green-emerald-cut-2.jpg",
       "title": "Emerald Cut Green Sapphire",
       "slug": "sapphire-green-emerald-cut-2",
-      "desc": "Emerald Cut · Green · Zambia"
+      "short": "Emerald Cut · Green · Zambia",
+      "cut": "Emerald Step Cut",
+      "color": "Green",
+      "clarity": "Eye-clean",
+      "origin": "Zambia",
+      "treatment": "Heat",
+      "use": "Collector jewellery",
+      "note": "Emerald-cut green sapphires showcase crystal clarity and structured geometry ideal for premium statement jewellery."
     },
     {
       "img": "assets/collection/sapphires/sapphire-teal-oval-1.jpg",
       "title": "Teal Sapphire",
       "slug": "sapphire-teal-oval-1",
-      "desc": "Oval · Teal · Madagascar"
+      "short": "Oval · Teal · Madagascar",
+      "cut": "Oval",
+      "color": "Teal",
+      "clarity": "Eye-clean",
+      "origin": "Madagascar",
+      "treatment": "Heat",
+      "use": "Modern bespoke jewellery",
+      "note": "Teal sapphires blend blue and green hues, offering highly fashionable tones loved in custom engagement rings."
     },
     {
       "img": "assets/collection/sapphires/sapphire-teal-radiant-cut-1.jpg",
       "title": "Teal Sapphire Radiant Cut",
       "slug": "sapphire-teal-radiant-cut-1",
-      "desc": "Radiant · Teal · Madagascar"
+      "short": "Radiant · Teal · Madagascar",
+      "cut": "Radiant",
+      "color": "Teal",
+      "clarity": "Eye-clean",
+      "origin": "Madagascar",
+      "treatment": "Heat",
+      "use": "Designer jewellery",
+      "note": "Radiant cut teal sapphires offer intense brilliance combined with fashionable color blending."
     },
     {
       "img": "assets/collection/sapphires/sapphire-white-round-1.jpg",
       "title": "White Sapphire",
       "slug": "sapphire-white-round-1",
-      "desc": "Round · Colorless · Sri Lanka"
+      "short": "Round · Colorless · Sri Lanka",
+      "cut": "Round",
+      "color": "Colorless",
+      "clarity": "Eye-clean",
+      "origin": "Sri Lanka",
+      "treatment": "Heat",
+      "use": "Diamond alternative jewellery",
+      "note": "White sapphires provide diamond-like appearance with excellent durability at more accessible pricing."
     },
     {
       "img": "assets/collection/sapphires/sapphire-star-cabochon-blue-2.jpg",
       "title": "Star Blue Sapphire",
       "slug": "sapphire-star-cabochon-blue-2",
-      "desc": "Cabochon · Star Asterism · Sri Lanka"
+      "short": "Cabochon · Star Asterism · Sri Lanka",
+      "cut": "Cabochon",
+      "color": "Blue",
+      "clarity": "Translucent",
+      "origin": "Sri Lanka",
+      "treatment": "Unheated",
+      "use": "Astrological and collector stones",
+      "note": "Star sapphires display a rare six-rayed star due to rutile inclusions, making them prized collector and astrological stones."
     },
     {
       "img": "assets/collection/sapphires/sapphire-cabochon-blue-1.jpg",
       "title": "Cabochon Blue Sapphire",
       "slug": "sapphire-cabochon-blue-1",
-      "desc": "Cabochon · Blue · Natural translucency"
+      "short": "Cabochon · Blue · Natural translucency",
+      "cut": "Cabochon",
+      "color": "Blue",
+      "clarity": "Translucent",
+      "origin": "Various",
+      "treatment": "Usually unheated",
+      "use": "Traditional jewellery and astrology",
+      "note": "Cabochon sapphires are polished smooth to emphasize natural body color and are commonly used in traditional gemstone jewellery."
     },
     {
       "img": "assets/collection/sapphires/sapphire-deep-navy-emerald-cut-1.jpg",
       "title": "Emerald Cut Navy Blue Sapphire",
       "slug": "sapphire-deep-navy-emerald-cut-1",
-      "desc": "Emerald Cut · Navy Blue · Madagascar"
+      "short": "Emerald Cut · Navy Blue · Madagascar",
+      "cut": "Emerald Step Cut",
+      "color": "Navy Blue",
+      "clarity": "Eye-clean",
+      "origin": "Madagascar",
+      "treatment": "Heat",
+      "use": "Luxury statement rings",
+      "note": "Navy blue sapphires in emerald cuts deliver bold depth of color with elegant architectural facet patterns."
     }
-  ],
+  ]
+}
 
+{
   "rubies": [
     {
-      "img": "assets/collection/rubies/ruby-burma-1.jpg",
+      "img": "assets/collection/rubies/ruby-pigeon-blood-oval-1.jpg",
+      "title": "Pigeon Blood Ruby",
+      "slug": "ruby-pigeon-blood-oval-1",
+      "short": "Oval · Vivid Red · Myanmar",
+      "cut": "Oval",
+      "color": "Vivid Red",
+      "clarity": "Eye-clean to slightly included",
+      "origin": "Myanmar",
+      "treatment": "Heat (traditional)",
+      "use": "Investment & high jewellery",
+      "note": "Pigeon Blood rubies are the rarest and most valuable rubies in the world, prized for their intense red hue with slight blue undertone and exceptional brilliance."
+    },
+    {
+      "img": "assets/collection/rubies/ruby-burmese-cushion-untreated-1.jpg",
       "title": "Burmese Ruby",
-      "slug": "ruby-burma-1",
-      "desc": "Ruby · Pigeon Blood · Myanmar"
+      "slug": "ruby-burmese-cushion-untreated-1",
+      "short": "Cushion · Deep Red · Myanmar",
+      "cut": "Cushion",
+      "color": "Deep Red",
+      "clarity": "Natural inclusions",
+      "origin": "Myanmar",
+      "treatment": "Untreated",
+      "use": "Collector grade jewellery",
+      "note": "Untreated Burmese rubies are extremely rare and highly sought after for their natural crystal structure and historic prestige."
     },
     {
-      "img": "assets/collection/rubies/ruby-mozambique-1.jpg",
+      "img": "assets/collection/rubies/ruby-burmese-round-1.jpg",
+      "title": "Burmese Round Ruby",
+      "slug": "ruby-burmese-round-1",
+      "short": "Round · Red · Myanmar",
+      "cut": "Round",
+      "color": "Red",
+      "clarity": "Eye-clean",
+      "origin": "Myanmar",
+      "treatment": "Heat",
+      "use": "Classic fine jewellery",
+      "note": "Round Burmese rubies provide balanced brilliance and strong color saturation ideal for timeless jewellery settings."
+    },
+    {
+      "img": "assets/collection/rubies/ruby-mozambique-cushion-1.jpg",
       "title": "Mozambique Ruby",
-      "slug": "ruby-mozambique-1",
-      "desc": "Ruby · Vivid Red · Mozambique"
+      "slug": "ruby-mozambique-cushion-1",
+      "short": "Cushion · Bright Red · Mozambique",
+      "cut": "Cushion",
+      "color": "Bright Red",
+      "clarity": "Eye-clean",
+      "origin": "Mozambique",
+      "treatment": "Heat",
+      "use": "Luxury rings and pendants",
+      "note": "Mozambique rubies are known for their excellent clarity and vivid red tones, offering exceptional beauty and value."
     },
     {
-      "img": "assets/collection/rubies/ruby-oval-1.jpg",
-      "title": "Oval Ruby",
-      "slug": "ruby-oval-1",
-      "desc": "Oval · Strong Red · Fine Clarity"
+      "img": "assets/collection/rubies/ruby-madagascar-oval-1.jpg",
+      "title": "Madagascar Ruby",
+      "slug": "ruby-madagascar-oval-1",
+      "short": "Oval · Red · Madagascar",
+      "cut": "Oval",
+      "color": "Red",
+      "clarity": "Eye-clean",
+      "origin": "Madagascar",
+      "treatment": "Heat",
+      "use": "Designer jewellery",
+      "note": "Madagascar rubies offer strong color with excellent transparency, suitable for both collectors and fine jewellery."
     },
     {
-      "img": "assets/collection/rubies/ruby-cushion-1.jpg",
-      "title": "Cushion Ruby",
-      "slug": "ruby-cushion-1",
-      "desc": "Cushion · Rich Red · Collector Grade"
+      "img": "assets/collection/rubies/ruby-heated-oval-1.jpg",
+      "title": "Heated Ruby",
+      "slug": "ruby-heated-oval-1",
+      "short": "Oval · Red · Africa",
+      "cut": "Oval",
+      "color": "Red",
+      "clarity": "Eye-clean",
+      "origin": "Africa",
+      "treatment": "Heat enhanced",
+      "use": "Commercial fine jewellery",
+      "note": "Heat-treated rubies enhance clarity and color stability while maintaining natural gemstone composition."
     },
     {
-      "img": "assets/collection/rubies/ruby-round-1.jpg",
-      "title": "Round Ruby",
-      "slug": "ruby-round-1",
-      "desc": "Round · Bright Red · Gem Quality"
+      "img": "assets/collection/rubies/ruby-untreated-round-1.jpg",
+      "title": "Untreated Ruby",
+      "slug": "ruby-untreated-round-1",
+      "short": "Round · Natural Red · Myanmar",
+      "cut": "Round",
+      "color": "Natural Red",
+      "clarity": "Natural inclusions",
+      "origin": "Myanmar",
+      "treatment": "None",
+      "use": "Collector stones",
+      "note": "Untreated rubies preserve their original crystal structure and natural beauty, highly valued by gemstone purists."
+    },
+    {
+      "img": "assets/collection/rubies/ruby-pinkish-red-pear-cut-1.jpg",
+      "title": "Pear Cut Ruby",
+      "slug": "ruby-pinkish-red-pear-cut-1",
+      "short": "Pear · Pinkish Red · Africa",
+      "cut": "Pear",
+      "color": "Pinkish Red",
+      "clarity": "Eye-clean",
+      "origin": "Africa",
+      "treatment": "Heat",
+      "use": "Pendant jewellery",
+      "note": "Pear cut rubies combine brilliance with elegant elongated shape, ideal for statement pendants."
+    },
+    {
+      "img": "assets/collection/rubies/ruby-thai-emerald-cut-1.jpg",
+      "title": "Emerald Cut Ruby",
+      "slug": "ruby-thai-emerald-cut-1",
+      "short": "Emerald Cut · Dark Red · Thailand",
+      "cut": "Emerald",
+      "color": "Dark Red",
+      "clarity": "Moderately included",
+      "origin": "Thailand",
+      "treatment": "Heat",
+      "use": "Vintage-style jewellery",
+      "note": "Emerald cut rubies highlight internal crystal character and produce elegant step reflections."
+    },
+    {
+      "img": "assets/collection/rubies/ruby-marquise-natural-1.jpg",
+      "title": "Marquise Ruby",
+      "slug": "ruby-marquise-natural-1",
+      "short": "Marquise · Red · Africa",
+      "cut": "Marquise",
+      "color": "Red",
+      "clarity": "Eye-clean",
+      "origin": "Africa",
+      "treatment": "Heat",
+      "use": "High fashion jewellery",
+      "note": "Marquise rubies offer dramatic visual size and elongated brilliance for bold jewellery designs."
+    },
+    {
+      "img": "assets/collection/rubies/ruby-heart-cut-1.jpg",
+      "title": "Heart Cut Ruby",
+      "slug": "ruby-heart-cut-1",
+      "short": "Heart · Red · Africa",
+      "cut": "Heart",
+      "color": "Red",
+      "clarity": "Eye-clean",
+      "origin": "Africa",
+      "treatment": "Heat",
+      "use": "Romantic jewellery",
+      "note": "Heart-shaped rubies symbolize love and passion, popular for bespoke jewellery pieces."
+    },
+    {
+      "img": "assets/collection/rubies/ruby-star-cabochon-1.jpg",
+      "title": "Star Ruby",
+      "slug": "ruby-star-cabochon-1",
+      "short": "Cabochon · Star Effect · Sri Lanka",
+      "cut": "Cabochon",
+      "color": "Red",
+      "clarity": "Translucent",
+      "origin": "Sri Lanka",
+      "treatment": "None",
+      "use": "Collector cabochon jewellery",
+      "note": "Star rubies display a natural asterism effect caused by rutile inclusions, forming a six-rayed star under direct light."
     }
-  ],
+  ]
+}
 
+
+{
   "emeralds": [
     {
-      "img": "assets/collection/emeralds/emerald-colombian-1.jpg",
+      "img": "assets/collection/emeralds/emerald-colombian-emerald-cut-1.jpg",
       "title": "Colombian Emerald",
-      "slug": "emerald-colombian-1",
-      "desc": "Emerald · Vivid Green · Colombia"
+      "slug": "emerald-colombian-emerald-cut-1",
+      "short": "Emerald Cut · Deep Green · Colombia",
+      "cut": "Emerald Cut",
+      "color": "Deep Green",
+      "clarity": "Natural inclusions (jardin)",
+      "origin": "Colombia",
+      "treatment": "Minor oiling (traditional)",
+      "use": "Investment & fine jewellery",
+      "note": "Colombian emeralds are considered the finest in the world, known for their intense green color and classic jardin inclusions that prove natural origin."
     },
     {
-      "img": "assets/collection/emeralds/emerald-zambia-1.jpg",
+      "img": "assets/collection/emeralds/emerald-zambian-oval-1.jpg",
       "title": "Zambian Emerald",
-      "slug": "emerald-zambia-1",
-      "desc": "Emerald · Deep Green · Zambia"
+      "slug": "emerald-zambian-oval-1",
+      "short": "Oval · Bluish Green · Zambia",
+      "cut": "Oval",
+      "color": "Bluish Green",
+      "clarity": "Eye-clean to lightly included",
+      "origin": "Zambia",
+      "treatment": "Minor oiling",
+      "use": "Luxury rings and pendants",
+      "note": "Zambian emeralds offer slightly bluish-green tones with excellent transparency and durability compared to other origins."
     },
     {
-      "img": "assets/collection/emeralds/emerald-cushion-1.jpg",
-      "title": "Cushion Emerald",
-      "slug": "emerald-cushion-1",
-      "desc": "Cushion · Bright Green · Fine Clarity"
+      "img": "assets/collection/emeralds/emerald-brazilian-cushion-1.jpg",
+      "title": "Brazilian Emerald",
+      "slug": "emerald-brazilian-cushion-1",
+      "short": "Cushion · Light Green · Brazil",
+      "cut": "Cushion",
+      "color": "Light Green",
+      "clarity": "Moderately included",
+      "origin": "Brazil",
+      "treatment": "Oiling",
+      "use": "Designer jewellery",
+      "note": "Brazilian emeralds typically display lighter green hues with attractive brilliance and softer saturation."
     },
     {
-      "img": "assets/collection/emeralds/emerald-oval-1.jpg",
-      "title": "Oval Emerald",
-      "slug": "emerald-oval-1",
-      "desc": "Oval · Rich Green · Premium Origin"
+      "img": "assets/collection/emeralds/emerald-pear-cut-1.jpg",
+      "title": "Pear Cut Emerald",
+      "slug": "emerald-pear-cut-1",
+      "short": "Pear · Green · Zambia",
+      "cut": "Pear",
+      "color": "Green",
+      "clarity": "Moderately included",
+      "origin": "Zambia",
+      "treatment": "Oiling",
+      "use": "Pendant jewellery",
+      "note": "Pear shaped emeralds combine brilliance with elegant drop silhouettes ideal for statement pendants."
+    },
+    {
+      "img": "assets/collection/emeralds/emerald-round-1.jpg",
+      "title": "Round Emerald",
+      "slug": "emerald-round-1",
+      "short": "Round · Green · Brazil",
+      "cut": "Round",
+      "color": "Green",
+      "clarity": "Moderately included",
+      "origin": "Brazil",
+      "treatment": "Oiling",
+      "use": "Rings and stud jewellery",
+      "note": "Round emeralds are uncommon due to cutting challenges and are valued for balanced symmetry and brightness."
+    },
+    {
+      "img": "assets/collection/emeralds/emerald-cabochon-1.jpg",
+      "title": "Cabochon Emerald",
+      "slug": "emerald-cabochon-1",
+      "short": "Cabochon · Green · Colombia",
+      "cut": "Cabochon",
+      "color": "Green",
+      "clarity": "Translucent",
+      "origin": "Colombia",
+      "treatment": "Oiling",
+      "use": "Traditional jewellery",
+      "note": "Cabochon emeralds highlight color over brilliance and are favored in classic and antique jewellery designs."
+    },
+    {
+      "img": "assets/collection/emeralds/emerald-vintage-emerald-cut-1.jpg",
+      "title": "Vintage Cut Emerald",
+      "slug": "emerald-vintage-emerald-cut-1",
+      "short": "Emerald Cut · Deep Green · Colombia",
+      "cut": "Vintage Emerald Cut",
+      "color": "Deep Green",
+      "clarity": "Natural inclusions",
+      "origin": "Colombia",
+      "treatment": "Minor oiling",
+      "use": "Collector and heirloom jewellery",
+      "note": "Vintage cuts emphasize large facets and deeper body color, offering old-world elegance preferred by collectors."
+    },
+    {
+      "img": "assets/collection/emeralds/emerald-light-green-oval-1.jpg",
+      "title": "Light Green Emerald",
+      "slug": "emerald-light-green-oval-1",
+      "short": "Oval · Light Green · Africa",
+      "cut": "Oval",
+      "color": "Light Green",
+      "clarity": "Moderately included",
+      "origin": "Africa",
+      "treatment": "Oiling",
+      "use": "Commercial fine jewellery",
+      "note": "Light green emeralds provide softer tones suitable for everyday fine jewellery at accessible price points."
     },
     {
       "img": "assets/collection/emeralds/emerald-deep-green-cushion-1.jpg",
       "title": "Deep Green Emerald",
       "slug": "emerald-deep-green-cushion-1",
-      "desc": "Forest Green · Cushion · Dark Green · Zambia"
+      "short": "Cushion · Dark Green · Zambia",
+      "cut": "Cushion",
+      "color": "Dark Green",
+      "clarity": "Moderately included",
+      "origin": "Zambia",
+      "treatment": "Minor oiling",
+      "use": "Luxury jewellery",
+      "note": "Dark green emeralds from Zambia show strong saturation and excellent durability for premium jewellery settings."
     },
     {
       "img": "assets/collection/emeralds/emerald-investment-grade-emerald-cut-1.jpg",
       "title": "Investment Grade Emerald",
       "slug": "emerald-investment-grade-emerald-cut-1",
-      "desc": "Top Grade · Emerald · Premium · Colombia"
+      "short": "Emerald Cut · Premium Green · Colombia",
+      "cut": "Emerald Cut",
+      "color": "Premium Green",
+      "clarity": "Slight inclusions (natural jardin)",
+      "origin": "Colombia",
+      "treatment": "Minor oiling only",
+      "use": "Investment & collectors",
+      "note": "Top grade Colombian emeralds with minimal treatment are considered long-term appreciating assets among gemstone investors."
     }
   ]
 }
