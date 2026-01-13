@@ -28,12 +28,13 @@
 .collection-section{padding:40px 20px 100px}
 .collection-grid{
   max-width:1200px;
-  margin:auto;
+  margin:0 auto;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
   gap:40px;
   justify-items:center;
 }
+
 
 /* CARD */
 .collection-card{
