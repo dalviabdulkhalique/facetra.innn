@@ -60,10 +60,15 @@
 </div>
 
 <!-- HERO -->
-<section class="collection-hero">
-  <h1 class="hero-title">DIAMOND COLLECTION</h1>
-  <p class="hero-description">Certified natural diamonds curated for collectors and fine jewellery.</p>
+<section class="collection-hero diamond-hero">
+  <div class="hero-inner-wrap">
+    <h1 class="hero-title">DIAMOND COLLECTION</h1>
+    <p class="hero-description">
+      Certified natural diamonds curated for collectors and fine jewellery.
+    </p>
+  </div>
 </section>
+
 
 <!-- GRID -->
 <section class="gem-section">
@@ -120,27 +125,35 @@ fetch("../assets/collection/manifest.json",{cache:"no-store"})
 
 function buildGrid(list){
   const grid=document.getElementById("diamondGrid");
+  grid.innerHTML="";
+
   list.forEach(item=>{
     const card=document.createElement("div");
     card.className="gem-card";
+
     card.innerHTML=`
       <img src="../${item.img}" alt="${item.title}">
       <h3>${item.title}</h3>
       <p>${item.desc}</p>
       <button class="view-btn" data-slug="${item.slug}">View Details</button>
     `;
+
     grid.appendChild(card);
   });
 }
 
-document.addEventListener("click",e=>{
-  if(e.target.classList.contains("view-btn")){
-    openModal(e.target.dataset.slug);
-  }
+/* CLICK HANDLER */
+document.addEventListener("click",function(e){
+  const btn = e.target.closest(".view-btn");
+  if(!btn) return;
+
+  const slug = btn.dataset.slug;
+  openModal(slug);
 });
 
+/* OPEN MODAL */
 function openModal(slug){
-  const item=manifestData.diamonds.find(d=>d.slug===slug);
+  const item = manifestData.diamonds.find(d=>d.slug===slug);
   if(!item) return;
 
   modalImg.src="../"+item.img;
@@ -155,21 +168,21 @@ function openModal(slug){
 
   modalDesc.textContent=item.longDesc;
 
-  const pageLink=location.origin+location.pathname+"#"+item.slug;
-  const msg=`Hi Facetra,%0AEnquiry for ${item.title}%0A${pageLink}`;
-
-  whatsappBtn.href="https://wa.me/918055113448?text="+msg;
+  const link = location.origin + location.pathname + "#" + item.slug;
+  const msg = `Hi Facetra,%0AEnquiry for ${item.title}%0A${link}`;
+  whatsappBtn.href = "https://wa.me/918055113448?text=" + msg;
 
   gemModal.classList.add("active");
 }
 
-modalClose.onclick=closeModal;
-modalClose2.onclick=closeModal;
+/* CLOSE MODAL */
+modalClose.onclick = closeModal;
+modalClose2.onclick = closeModal;
 
 function closeModal(){
   gemModal.classList.remove("active");
 }
-</script>
+
 
 </body>
 </html>
