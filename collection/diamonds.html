@@ -5,62 +5,22 @@
 <title>Diamond Collection | FACETRA</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Explore FACETRA’s certified natural diamond collection including round, oval, emerald, cushion and radiant cut diamonds curated for luxury jewellery and investment.">
-
-<link rel="canonical" href="https://dalviabdulkhalique.github.io/facetra.in/collection/diamonds.html">
-
-<meta property="og:title" content="FACETRA Diamond Collection">
-<meta property="og:description" content="Certified natural diamonds curated for collectors and fine jewellery.">
-<meta property="og:type" content="website">
+<meta name="description" content="Explore FACETRA’s certified natural diamond collection including round, oval, emerald, radiant, pear and fancy color diamonds.">
 
 <link rel="icon" href="../assets/favicon/favicon-32x32.png">
 <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="../style.css">
 <link rel="stylesheet" href="../collection.css">
+
 </head>
+<body>
 
-<body class="page">
+<!-- ================= HERO ================= -->
 
-<!-- HEADER (same as site) -->
-<header class="site-header">
-  <div class="header-inner">
-    <div class="brand">
-      <img src="../logo.png" alt="FACETRA Logo">
-      <div>
-        <div class="brand-name">FACETRA</div>
-        <div class="brand-tag">Gems • Diamonds • Stones</div>
-      </div>
-    </div>
-
-    <nav class="main-nav">
-      <a href="../index.html">Home</a>
-      <a href="../collection.html" class="active">Collection</a>
-      <a href="../certification.html">Certification</a>
-      <a href="../why-facetra.html">Why FACETRA</a>
-      <a href="../about.html">About</a>
-      <a href="../contact.html">Contact</a>
-    </nav>
-
-    <div class="nav-toggle" id="navToggle">
-      <span></span><span></span><span></span>
-    </div>
-  </div>
-</header>
-
-<div class="mobile-nav" id="mobileNav">
-  <a href="../index.html">Home</a>
-  <a href="../collection.html">Collection</a>
-  <a href="../certification.html">Certification</a>
-  <a href="../why-facetra.html">Why FACETRA</a>
-  <a href="../about.html">About</a>
-  <a href="../contact.html">Contact</a>
-</div>
-
-<!-- HERO -->
-<section class="collection-hero diamond-hero">
+<section class="collection-hero">
   <div class="hero-inner-wrap">
     <h1 class="hero-title">DIAMOND COLLECTION</h1>
     <p class="hero-description">
@@ -69,50 +29,38 @@
   </div>
 </section>
 
+<!-- ================= GRID ================= -->
 
-<!-- GRID -->
-<section class="gem-section">
-  <div class="gem-grid" id="diamondGrid"></div>
+<section class="collection-section">
+  <div class="collection-grid" id="diamondGrid"></div>
 </section>
 
-<!-- MODAL -->
-<div id="gemModal" class="modal-overlay">
+<!-- ================= MODAL ================= -->
+
+<div class="modal-overlay" id="gemModal">
   <div class="modal-box">
 
-    <button class="modal-close" id="modalClose">×</button>
+    <img id="modalImg">
 
     <div class="modal-content">
-      <div class="modal-image">
-        <img id="modalImg">
-      </div>
+      <h2 id="modalTitle"></h2>
 
-      <div class="modal-info">
-        <h2 id="modalTitle"></h2>
+      <div class="modal-fields" id="modalFields"></div>
 
-        <div class="modal-fields" id="modalFields"></div>
+      <p class="modal-desc" id="modalDesc"></p>
 
-        <p id="modalDesc" class="modal-desc"></p>
-
-        <div class="modal-actions">
-          <a id="whatsappBtn" target="_blank" class="btn-whatsapp">WhatsApp Enquiry</a>
-          <button class="btn-close" id="modalClose2">Close</button>
-        </div>
+      <div class="modal-actions">
+        <a id="whatsappBtn" class="whatsapp-btn" target="_blank">WhatsApp Enquiry</a>
+        <button class="close-btn" id="modalClose">Close</button>
       </div>
     </div>
 
   </div>
 </div>
 
-<!-- FOOTER -->
-<footer class="lux-footer">
-  <div class="footer-bottom">© 2026 FACETRA. All rights reserved.</div>
-</footer>
+<!-- ================= JS ================= -->
 
-<!-- JS -->
 <script>
-const toggle=document.getElementById("navToggle");
-const mobileNav=document.getElementById("mobileNav");
-if(toggle) toggle.onclick=()=>mobileNav.classList.toggle("open");
 
 let manifestData=null;
 
@@ -142,47 +90,64 @@ function buildGrid(list){
   });
 }
 
-/* CLICK HANDLER */
+/* CLICK */
+
 document.addEventListener("click",function(e){
-  const btn = e.target.closest(".view-btn");
+  const btn=e.target.closest(".view-btn");
   if(!btn) return;
 
-  const slug = btn.dataset.slug;
+  const slug=btn.dataset.slug;
   openModal(slug);
 });
 
-/* OPEN MODAL */
+/* MODAL */
+
+const gemModal=document.getElementById("gemModal");
+const modalImg=document.getElementById("modalImg");
+const modalTitle=document.getElementById("modalTitle");
+const modalFields=document.getElementById("modalFields");
+const modalDesc=document.getElementById("modalDesc");
+const whatsappBtn=document.getElementById("whatsappBtn");
+const modalClose=document.getElementById("modalClose");
+
 function openModal(slug){
-  const item = manifestData.diamonds.find(d=>d.slug===slug);
+
+  const item=manifestData.diamonds.find(d=>d.slug===slug);
   if(!item) return;
 
   modalImg.src="../"+item.img;
   modalTitle.textContent=item.title;
 
   modalFields.innerHTML=`
-    <div>Cut: ${item.cut}</div>
-    <div>Shape: ${item.shape}</div>
-    <div>Variety: ${item.variety}</div>
-    <div>Origin: ${item.origin}</div>
+    <div>Cut: ${item.cut || "Brilliant"}</div>
+    <div>Shape: ${item.shape || "Natural"}</div>
+    <div>Variety: ${item.variety || "Colorless Diamond"}</div>
+    <div>Origin: Natural</div>
   `;
 
-  modalDesc.textContent=item.longDesc;
+  modalDesc.textContent =
+    "This certified natural diamond is selected for brilliance, symmetry and durability, making it suitable for fine jewellery and long-term gemstone investment.";
 
   const link = location.origin + location.pathname + "#" + item.slug;
-  const msg = `Hi Facetra,%0AEnquiry for ${item.title}%0A${link}`;
-  whatsappBtn.href = "https://wa.me/918055113448?text=" + msg;
+
+  const msg =
+    `Hi Facetra,%0AEnquiry for ${item.title}%0A${link}`;
+
+  whatsappBtn.href =
+    "https://wa.me/918055113448?text=" + msg;
 
   gemModal.classList.add("active");
 }
 
-/* CLOSE MODAL */
-modalClose.onclick = closeModal;
-modalClose2.onclick = closeModal;
+/* CLOSE */
 
-function closeModal(){
-  gemModal.classList.remove("active");
-}
+modalClose.onclick=()=>gemModal.classList.remove("active");
 
+gemModal.onclick=e=>{
+  if(e.target===gemModal) gemModal.classList.remove("active");
+};
+
+</script>
 
 </body>
 </html>
